@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
     <!-- pages -->
     <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>/home.css">
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>/cart.css">
+
 </head>
 
 <body>

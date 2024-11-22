@@ -14,6 +14,10 @@ switch ($route) {
         $controller = new HomeController();
         $controller->index();
         break;
+    case 'cart':
+        $controller = new CartController();
+        $controller->index();
+        break;
     default:
         echo "404 - Page Not Found";
         break;
