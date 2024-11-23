@@ -16,6 +16,8 @@ require_once 'app/Controllers/AccountController.php';
 require_once 'app/Controllers/ContactController.php';
 require_once 'app/Controllers/NewsController.php';
 require_once 'app/Controllers/FaqController.php';
+require_once 'app/Controllers/LoginController.php';
+require_once 'app/Controllers/RegisterController.php';
 require_once 'app/Controllers/BookingController.php';
 
 
@@ -53,6 +55,14 @@ switch ($route) {
     case 'booking':
         $controller = new BookingController();
         $controller->booking();
+        break;
+    case 'login':
+        $controller = new LoginController();
+        $controller->login();
+        break;
+    case 'register':
+        $controller = new RegisterController();
+        $controller->register();
         break;
     default:
         echo "404 - Page Not Found";

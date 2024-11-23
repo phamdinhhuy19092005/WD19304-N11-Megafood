@@ -39,6 +39,12 @@
     <?php elseif ($page === 'booking'): ?>
     <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
     <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>booking.css">
+    <?php elseif ($page === 'login'): ?>
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>login.css">
+    <?php elseif ($page === 'register'): ?>
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>login.css">
     <?php endif; ?>
 </head>
 
