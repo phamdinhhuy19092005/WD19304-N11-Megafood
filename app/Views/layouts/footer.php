@@ -112,12 +112,16 @@
     </div>
 </footer>
 
-<script src="<?php echo JS_BASE_URL; ?>/header.js"></script>
-<script src="<?php echo JS_BASE_URL; ?>/search.js"></script>
-<script src="<?php echo JS_PAGES_URL; ?>/faq.js"></script>
-<script src="<?php echo JS_PAGES_URL; ?>/btn_product.js"></script>
-<script src="<?php echo JS_PAGES_URL; ?>/menuItem.js"></script>
-<script src="<?php echo JS_PAGES_URL; ?>/scrollToTop.js"></script>
+
+<?php if ($page === 'home'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
+    <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
+    <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>scrollToTop.js"></script>
+<?php elseif ($page === 'products'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>faq.js"></script>
+<?php endif; ?>
 
 
 

@@ -26,19 +26,19 @@
 
 
                         <div class="cart_price">
-                            <span>99.000đ</span>
+                            <span class="price">99.000đ</span>
                         </div>
 
                         <div class="cart_btn">
                             <div class="cart_select">
-                                <button type="button" >-</button>
-                                <input type="text" value="1" min="1">
-                                <button type="button" >+</button>
+                                <button type="button" class="btn_reduce" >-</button>
+                                <input type="text" class="quantity" value="1" min="1">
+                                <button type="button" class="btn_increase">+</button>
                             </div>
                         </div>
 
                         <div class="cart_total">
-                            <span>99.000đ</span>
+                            <span class="total-price">99.000đ</span>
                         </div>
 
                     </div>
