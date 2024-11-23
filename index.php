@@ -1,4 +1,3 @@
-<!-- /index.php -->
 <?php
 
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
@@ -12,7 +11,7 @@ define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
 require_once 'app/Controllers/DetailController.php';
-
+require_once 'app/Controllers/AccountController.php';
 
 $route = $_GET['route'] ?? 'home';
 
@@ -28,7 +27,10 @@ switch ($route) {
     case 'products':
         $controller = new DetailController();
         $controller->details();
-        // $controller->products();
+        break;
+    case 'account':
+        $controller = new AccountController();
+        $controller->accounts();
         break;
     default:
         echo "404 - Page Not Found";

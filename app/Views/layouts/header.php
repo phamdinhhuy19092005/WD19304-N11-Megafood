@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>header.css">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>footer.css">
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font.css">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-quicksand.css">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-Lobster.css">
 
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -22,8 +24,12 @@
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
     <?php elseif ($page === 'cart'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>cart.css">
+    <?php elseif ($page === 'account' ||  $page === 'orders' || $page === 'changepassword' || $page === 'addressbook' || $page === 'addaddress'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css" >
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>account.css">
     <?php endif; ?>
 </head>
+
 <body>
 
     <header>
@@ -50,9 +56,11 @@
                                 <span>MENU CHÍNH</span>
                             </li>
                             <li class="item_tab">
-                                <a href="">Trang chủ</a></li>
+                                <a href="">Trang chủ</a>
+                            </li>
                             <li class="item_tab">
-                                <a href="">Giới thiệu</a></li>
+                                <a href="">Giới thiệu</a>
+                            </li>
                             <li class="item_tab tab_sp">
                                 <a href="">Sản phẩm</a>
                                 <i class="fa-solid fa-plus"></i>
@@ -185,7 +193,7 @@
                         </div>
                     </div>
                     <div class="user">
-                        <a href="../account/account.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=account">
                             <i class="bi bi-person-circle"></i>
                         </a>
                         <div class="subnav_user">
