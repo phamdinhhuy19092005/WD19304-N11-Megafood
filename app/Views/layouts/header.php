@@ -36,6 +36,9 @@
     <?php elseif ($page === 'faq'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>faq.css">
+    <?php elseif ($page === 'booking'): ?>
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>booking.css">
     <?php endif; ?>
 </head>
 
@@ -241,7 +244,7 @@
             <div class="container_nav">
                 <div class="menu_nav">
                     <ul class="list_nav">
-                        <li class="nav_item"><a href="../Home/index.html">Trang chủ</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=home">Trang chủ</a></li>
                         <li class="nav_item"><a href="../about/index.html">Giới thiệu</a></li>
                         <li class="nav_item"><a href="../product/index.html">Sản phẩm <i class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
@@ -256,7 +259,7 @@
                         <li class="nav_item"><a href="../contact/contact.html">Liên hệ</a></li>
                         <li class="nav_item"><a href="../faq/">Câu hỏi thường gặp</a></li>
                         <li class="nav_item"><a href="../storeSystem/main.html">Hệ thống cửa hàng</a></li>
-                        <li class="nav_item"><a href="../book_table/book_table.html">Đặt bàn</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                     </ul>
                 </div>
             </div>
