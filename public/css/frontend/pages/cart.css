@@ -154,6 +154,10 @@ ul.breadcrumb {
     width: 295px;
     margin-left: 69.5%;
 }
+.cart_price{
+    font-weight: 600;
+    color: #E31837;
+}
 .cart_subtotal .subtotal{
     display: flex;
 }

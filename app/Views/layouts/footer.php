@@ -121,6 +121,10 @@
     <script src="<?php echo JS_PAGES_URL; ?>scrollToTop.js"></script>
 <?php elseif ($page === 'products'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>faq.js"></script>
+<?php elseif ($page === 'cart'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>cart_btn.js"></script>
+    <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
+
 <?php endif; ?>
 
 
