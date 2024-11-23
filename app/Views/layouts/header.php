@@ -33,6 +33,9 @@
     <?php elseif ($page === 'news'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>news.css">
+    <?php elseif ($page === 'faq'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>faq.css">
     <?php endif; ?>
 </head>
 
