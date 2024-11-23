@@ -2,7 +2,7 @@
 <?php
 class CartController
 {
-    public function index()
+    public function cart()
     {
         $title = "MegaFood - Giỏ hàng";
         $page = "cart";

@@ -7,7 +7,7 @@ define('CSS_LAYOUTS_URL', BASE_URL_PUBLIC . 'css/frontend/layouts/');
 define('CSS_PAGES_URL', BASE_URL_PUBLIC . 'css/frontend/pages/');
 define('IMG_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/');
 define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
-define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages');
+define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
@@ -28,7 +28,7 @@ switch ($route) {
         break;
     case 'cart':
         $controller = new CartController();
-        $controller->index();
+        $controller->cart();
         break;
     case 'products':
         $controller = new DetailController();
