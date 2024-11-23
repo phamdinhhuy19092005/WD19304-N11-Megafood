@@ -30,6 +30,9 @@
     <?php elseif ($page === 'contact'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>contact.css">
+    <?php elseif ($page === 'news'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>news.css">
     <?php endif; ?>
 </head>
 
