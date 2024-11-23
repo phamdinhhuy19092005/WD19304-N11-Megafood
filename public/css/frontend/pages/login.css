@@ -1,0 +1,134 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --main-color: #FF7D01;
+    --secondary-color: #00B2A9;
+    --black-color: #000;
+    --white-color: #ffff;
+    --silver-gray-color: #BFBFBF;
+    --light-gray-color: #eee;
+    --gainsboro-color: #d9d9d9;
+    --reddish-pink-color: #E4465C;
+    --sky-blue-color: #64B6E4;
+    --emerald-green-color: #32B268;
+    --font-text-12: 12px;
+    --font-text-14: 14px;
+    --font-text-16: 16px;
+    --font-title-20: 20px;
+    --font-title-24: 24px;
+}
+
+
+
+/* bodywrap */
+.section {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.login {
+    width: 350px;
+}
+
+.login ul {
+    list-style: none;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid var(--light-gray-color);
+    margin-bottom: 15px;
+    padding-left: 0px;
+}
+
+.login ul li {
+    display: flex;
+    width: 175px;
+    justify-content: center;
+    align-items: center;
+}
+
+li a {
+    color: var(--black-color);
+}
+
+.login ul :hover {
+    color: var(--main-color);
+}
+
+.login .active {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.active a {
+    color: var(--main-color);
+}
+
+.login h1 {
+    margin-bottom: 15px;
+}
+
+.form_login input,
+.form_login input[type="submit"],
+.h_recover input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: var(--font-text-16);
+    outline: none;
+    border: 1px solid var(--silver-gray-color);
+    border-bottom: 2px solid var(--main-color);
+    border-radius: 4px;
+    padding: 1px 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.form_login input[type="submit"],
+.h_recover input[type="submit"] {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--light-gray-color);
+    border: none;
+    font-size: 16px;
+}
+
+.form_login input[type="submit"]:hover,
+.h_recover input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+
+}
+
+.form_login span {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 0;
+}
+
+.form_login span:hover {
+    color: var(--reddish-pink-color);
+}
+
+.h_recover {
+    margin-top: 18px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.h_recover.hidden {
+    display: block;
+}
+
+
+.social_login p {
+    margin: 15px 0;
+}
