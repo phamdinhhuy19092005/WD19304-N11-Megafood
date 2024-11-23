@@ -34,26 +34,41 @@
 
                         <ul class="list_item_menu_tab">
                             <li class="logo_tab_menu">
-                                <a href="">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=home">
                                     <img src="<?php echo IMG_BASE_URL; ?>/header/logo.png" alt="">
                                 </a>
                             </li>
                             <li class="main_item">
                                 <span>MENU CHÍNH</span>
                             </li>
-                            <li class="item_tab"><a href="">Trang chủ</a></li>
-                            <li class="item_tab"><a href="">Giới thiệu</a></li>
-                            <li class="item_tab tab_sp"><a href="">Sản phẩm</a><i class="fa-solid fa-plus"></i></li>
-                            <li class="item_tab"><a href="">Tin tức</a></li>
-                            <li class="item_tab"><a href="">Liên hệ</a></li>
-                            <li class="item_tab"><a href="">Câu hỏi thường gặp</a></li>
-                            <li class="item_tab"><a href="">Hệ thống cửa hàng</a></li>
-                            <li class="item_tab"><a href="">Đặt bàn</a></li>
+                            <li class="item_tab">
+                                <a href="">Trang chủ</a></li>
+                            <li class="item_tab">
+                                <a href="">Giới thiệu</a></li>
+                            <li class="item_tab tab_sp">
+                                <a href="">Sản phẩm</a>
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li class="item_tab">
+                                <a href="">Tin tức</a>
+                            </li>
+                            <li class="item_tab">
+                                <a href="">Liên hệ</a>
+                            </li>
+                            <li class="item_tab">
+                                <a href="">Câu hỏi thường gặp</a>
+                            </li>
+                            <li class="item_tab">
+                                <a href="">Hệ thống cửa hàng</a>
+                            </li>
+                            <li class="item_tab">
+                                <a href="">Đặt bàn</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="overlay"></div>
                     <div class="logo">
-                        <a href="../Home/index.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=home">
                             <img src="<?php echo IMG_BASE_URL; ?>/header/logo.png" alt="">
                         </a>
                     </div>
@@ -162,14 +177,26 @@
                         </div>
                     </div>
                     <div class="user">
-                        <a href="../account/account.html"><i class="bi bi-person-circle"></i></a>
+                        <a href="../account/account.html">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
                         <div class="subnav_user">
-                            <span class="icon_up"><i class="bi bi-caret-up-fill"></i></span>
+                            <span class="icon_up">
+                                <i class="bi bi-caret-up-fill"></i>
+                            </span>
                             <ul class="list_user">
-                                <li><a href="../login/login.html"><i class="bi bi-box-arrow-in-right"></i><span>Đăng
-                                            nhập</span></a></li>
-                                <li><a href="../register/register.html"><i class="bi bi-person-plus"></i><span>Đăng
-                                            kí</span></a></li>
+                                <li>
+                                    <a href="../login/login.html">
+                                        <i class="bi bi-box-arrow-in-right"></i>
+                                        <span>Đăng nhập</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../register/register.html">
+                                        <i class="bi bi-person-plus"></i>
+                                        <span>Đăng kí</span>
+                                    </a>
+                                </li>
                                 <li><a href="#"><i class="bi bi-heart"></i><span>Danh sách yêu thích</span></a></li>
                             </ul>
                         </div>
@@ -178,7 +205,7 @@
                         <span class="quantity">
                             0
                         </span>
-                        <a href="../cart/cart.html"><i class="bi bi-basket2"></i></a>
+                        <a href="<?php echo BASE_URL; ?>index.php?route=cart"><i class="bi bi-basket2"></i></a>
                     </div>
                     <button class="btn_1">Đặt món online</button>
                     <button class="btn_2">Đặt bàn</button>
