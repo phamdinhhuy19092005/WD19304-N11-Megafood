@@ -24,7 +24,7 @@ switch ($route) {
         break;
     case 'cart':
         $controller = new CartController();
-        $controller->index();
+        $controller->cart();
         break;
     case 'products':
         $controller = new DetailController();
