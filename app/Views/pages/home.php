@@ -1,10 +1,10 @@
 <div class="bodywrap">
     <div class="slide-show">
         <div class="list-img">
-            <img src="../img/slider/slider1.jpg" alt=>
-            <img src="../img/slider/slider2.jpg" alt="">
-            <img src="../img/slider/slider3.jpg" alt="">
-            <img src="../img/slider/slider4.jpg" alt="">
+            <img src="<?php echo IMG_BASE_URL; ?>/slider/slider1.jpg" alt=>
+            <img src="<?php echo IMG_BASE_URL; ?>/slider/slider2.jpg" alt="">
+            <img src="<?php echo IMG_BASE_URL; ?>/slider/slider3.jpg" alt="">
+            <img src="<?php echo IMG_BASE_URL; ?>/slider/slider4.jpg" alt="">
 
 
 
@@ -32,7 +32,7 @@
                 <a href="..//product/index.html">
                     <p>Pizza <br>(17 món ăn) </p>
                     <img style="width: 104px; height: 105px;"
-                        src="../img/category/category1.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/category/category1.webp"
                         alt="">
                 </a>
 
@@ -40,7 +40,7 @@
             <li class="category_item">
                 <a href="..//product/index.html">
                     <p>Khai vị <br>(13 món ăn) </p>
-                    <img src="../img/category/category2.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/category/category2.webp"
                         alt="">
                 </a>
 
@@ -48,14 +48,14 @@
             <li class="category_item">
                 <a href="..//product/index.html">
                     <p>Mỳ Ý <br>(7 món ăn) </p>
-                    <img src="../img/category/category3.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/category/category3.webp"
                         alt="">
                 </a>
             </li>
             <li class="category_item">
                 <a href="..//product/index.html">
                     <p>Salad <br>(7 món ăn) </p>
-                    <img src="../img/category/category4.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/category/category4.webp"
                         alt="">
                 </a>
 
@@ -68,7 +68,7 @@
         <div class="container">
 
             <div class="space_left">
-                <img src="../img/about/about1.webp" alt="">
+                <img src="<?php echo IMG_BASE_URL; ?>/about/about1.webp" alt="">
             </div>
 
             <div class="space_right">
@@ -86,25 +86,25 @@
                 <ul class="about_img">
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="../img/about/about2.webp"
+                                src="<?php echo IMG_BASE_URL; ?>/about/about2.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="../img/about/about3.webp"
+                                src="<?php echo IMG_BASE_URL; ?>/about/about3.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="../img/about/about4.webp"
+                                src="<?php echo IMG_BASE_URL; ?>/about/about4.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="../img/about/about5.webp"
+                                src="<?php echo IMG_BASE_URL; ?>/about/about5.webp"
                                 alt=""></a>
 
                     </li>
@@ -206,25 +206,25 @@
         <ul>
             <li>
                 <a href="">
-                    <img src="../img/programme/programme1.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/programme/programme1.webp"
                         alt="">
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="../img/programme/programm2.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/programme/programm2.webp"
                         alt="">
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="../img/programme/programme3.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/programme/programme3.webp"
                         alt="">
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="../img/programme/programme4.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>/programme/programme4.webp"
                         alt="">
                 </a>
             </li>
@@ -256,7 +256,7 @@
 
                 <div class="flashSale_left">
                     <a href="">
-                        <img src="../img/flash_sale/flash_sale1.webp"
+                        <img src="<?php echo IMG_BASE_URL; ?>/flash_sale/flash_sale1.webp"
                             alt="">
                     </a>
                 </div>
@@ -707,30 +707,30 @@
             <li>
                 <a href="">
                     <img class="background_img"
-                        src="../img/banner/banner1.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/banner/banner1.webp"
                         alt="">
                     <img class="overlay_img"
-                        src="../img/banner/banner_overlay1.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/banner/banner_overlay1.webp"
                         alt="">
                 </a>
             </li>
             <li>
                 <a href="">
                     <img class="background_img"
-                        src="../img/banner/banner2.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/banner/banner2.webp"
                         alt="">
                     <img class="overlay_img"
-                        src="../img/banner/banner_overlay2.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/banner/banner_overlay2.webp"
                         alt="">
                 </a>
             </li>
             <li>
                 <a href="">
                     <img class="background_img"
-                        src="../img/banner/banner3.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/banner/banner3.webp"
                         alt="">
                     <img class="overlay_img"
-                        src="../img/banner/banner_overlay3.webp"
+                        src="<?php echo IMG_BASE_URL; ?>/banner/banner_overlay3.webp"
                         alt="">
                 </a>
             </li>
@@ -1461,7 +1461,7 @@
                 <li>
                     <div class="block_thumb">
 
-                        <img src="../img/news/news1.webp"
+                        <img src="<?php echo IMG_BASE_URL; ?>/news/news1.webp"
                             alt="">
                     </div>
                     <div class="block_content">
@@ -1479,26 +1479,7 @@
             <a href="../news/news.html">
                 <li>
                     <div class="block_thumb">
-                        <img src="../img/news/news2.webp"
-                            alt="">
-                    </div>
-
-                    <div class="block_content">
-                        <h3>Đế bánh Pizza mua ở đâu đảm bảo chất lượng?</h3>
-                        <p>27/02/2024</p>
-                        <span>Nếu bạn muốn tự làm bánh pizza tại nhà thì có thể chọn mua đế bánh pizza để tiết kiệm
-                            thời
-                            gian hơn. Tuy nhiên, khi mua đế bánh, bạn cũng nên lưu ý chọn đế bánh chất lượng để đảm
-                            bảo
-                            vị ngon nhé. Vậy đế bánh pizza mua ở đâu? Hãy cùng Dola khám phá ngay trong bài viết
-                            này!</span>
-                    </div>
-                </li>
-            </a>
-            <a href="../news/news.html">
-                <li>
-                    <div class="block_thumb">
-                        <img src="../img/news/news3.webp"
+                        <img src="<?php echo IMG_BASE_URL; ?>/news/news2.webp"
                             alt="">
                     </div>
 
@@ -1517,7 +1498,26 @@
             <a href="../news/news.html">
                 <li>
                     <div class="block_thumb">
-                        <img src="../img/news/news4.webp"
+                        <img src="<?php echo IMG_BASE_URL; ?>/news/news3.webp"
+                            alt="">
+                    </div>
+
+                    <div class="block_content">
+                        <h3>Đế bánh Pizza mua ở đâu đảm bảo chất lượng?</h3>
+                        <p>27/02/2024</p>
+                        <span>Nếu bạn muốn tự làm bánh pizza tại nhà thì có thể chọn mua đế bánh pizza để tiết kiệm
+                            thời
+                            gian hơn. Tuy nhiên, khi mua đế bánh, bạn cũng nên lưu ý chọn đế bánh chất lượng để đảm
+                            bảo
+                            vị ngon nhé. Vậy đế bánh pizza mua ở đâu? Hãy cùng Dola khám phá ngay trong bài viết
+                            này!</span>
+                    </div>
+                </li>
+            </a>
+            <a href="../news/news.html">
+                <li>
+                    <div class="block_thumb">
+                        <img src="<?php echo IMG_BASE_URL; ?>/news/news4.webp"
                             alt="">
                     </div>
 
@@ -1565,7 +1565,7 @@
             <div class="statistical_thumbnail">
                 <div class="user_info">
                     <div class="avatar">
-                        <img src="../img/avatar/avatar1.webp"
+                        <img src="<?php echo IMG_BASE_URL; ?>/avatar/avatar1.webp"
                             alt="">
                     </div>
                     <div class="info">
@@ -1593,31 +1593,31 @@
         <ul class="why_content">
             <li>
                 <div class="icon_why">
-                    <img src="../img/icon/icon1.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/icon/icon1.webp" alt="">
                 </div>
                 <h3>Chất lượng món ăn hàng đầu</h3>
             </li>
             <li>
                 <div class="icon_why">
-                    <img src="../img/icon/icon2.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/icon/icon2.webp" alt="">
                 </div>
                 <h3>Dịch vụ chăm sóc khách hàng xuất xắc</h3>
             </li>
             <li>
                 <div class="icon_why">
-                    <img src="../img/icon/icon3.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/icon/icon3.webp" alt="">
                 </div>
                 <h3>Menu đa dạng phong phú</h3>
             </li>
             <li>
                 <div class="icon_why">
-                    <img src="../img/icon/icon4.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/icon/icon4.webp" alt="">
                 </div>
                 <h3>Chất lượng nguyên liệu cao cấp</h3>
             </li>
             <li>
                 <div class="icon_why">
-                    <img src="../img/icon/icon5.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/icon/icon5.webp" alt="">
                 </div>
                 <h3>Ưu đãi và khuyến mãi hấp dẫn</h3>
             </li>
@@ -1628,7 +1628,7 @@
 <section class="mailchimp">
     <div class="mailchip_thumb">
         <div class="img_left">
-            <img src="../img/mailchimp/mailchimp1.webp" alt="">
+            <img src="<?php echo IMG_BASE_URL; ?>/mailchimp/mailchimp1.webp" alt="">
         </div>
         <div class="content_center">
 
@@ -1640,7 +1640,7 @@
             </form>
         </div>
         <div class="img_right">
-            <img src="../img/mailchimp/mailchimp2.webp" alt="">
+            <img src="<?php echo IMG_BASE_URL; ?>/mailchimp/mailchimp2.webp" alt="">
         </div>
     </div>
 </section>
