@@ -7,6 +7,7 @@ define('CSS_LAYOUTS_URL', BASE_URL_PUBLIC . 'css/frontend/layouts/');
 define('CSS_PAGES_URL', BASE_URL_PUBLIC . 'css/frontend/pages/');
 define('IMG_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/');
 define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
+define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages');
 
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
@@ -14,8 +15,7 @@ require_once 'app/Controllers/DetailController.php';
 require_once 'app/Controllers/AccountController.php';
 require_once 'app/Controllers/ContactController.php';
 require_once 'app/Controllers/NewsController.php';
-require_once 'app/Controllers/BookTableController.php';
-
+require_once 'app/Controllers/FaqController.php';
 
 $route = $_GET['route'] ?? 'home';
 
@@ -44,9 +44,9 @@ switch ($route) {
         $controller = new NewsController();
         $controller->news();
         break;
-    case 'book-table':
-        $controller = new BookTableController();
-        $controller->booktable();
+    case 'faq':
+        $controller = new FaqController();
+        $controller->faq();
         break;
     default:
         echo "404 - Page Not Found";

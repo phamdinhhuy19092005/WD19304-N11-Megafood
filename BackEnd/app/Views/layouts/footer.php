@@ -114,6 +114,7 @@
 
 <script src="<?php echo JS_BASE_URL; ?>/header.js"></script>
 <script src="<?php echo JS_BASE_URL; ?>/search.js"></script>
+<script src="<?php echo JS_PAGES_URL; ?>/faq.js"></script>
 
 </body>
 

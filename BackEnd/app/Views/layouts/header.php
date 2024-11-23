@@ -33,9 +33,9 @@
     <?php elseif ($page === 'news'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>news.css">
-        <?php elseif ($page === 'book-table'): ?>
+    <?php elseif ($page === 'faq'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>book-table.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>faq.css">
     <?php endif; ?>
 </head>
 
@@ -256,7 +256,7 @@
                         <li class="nav_item"><a href="../contact/contact.html">Liên hệ</a></li>
                         <li class="nav_item"><a href="../faq/">Câu hỏi thường gặp</a></li>
                         <li class="nav_item"><a href="../storeSystem/main.html">Hệ thống cửa hàng</a></li>
-                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=book-table">Đặt bàn</a></li>
+                        <li class="nav_item"><a href="../book_table/book_table.html">Đặt bàn</a></li>
                     </ul>
                 </div>
             </div>
