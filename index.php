@@ -12,6 +12,7 @@ require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
 require_once 'app/Controllers/DetailController.php';
 require_once 'app/Controllers/AccountController.php';
+require_once 'app/Controllers/ContactController.php';
 
 $route = $_GET['route'] ?? 'home';
 
@@ -31,6 +32,10 @@ switch ($route) {
     case 'account':
         $controller = new AccountController();
         $controller->accounts();
+        break;
+    case 'contact':
+        $controller = new ContactController();
+        $controller->contact();
         break;
     default:
         echo "404 - Page Not Found";

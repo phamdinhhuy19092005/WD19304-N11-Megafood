@@ -25,8 +25,11 @@
     <?php elseif ($page === 'cart'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>cart.css">
     <?php elseif ($page === 'account' ||  $page === 'orders' || $page === 'changepassword' || $page === 'addressbook' || $page === 'addaddress'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css" >
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>account.css">
+    <?php elseif ($page === 'contact'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>contact.css">
     <?php endif; ?>
 </head>
 
