@@ -1,4 +1,3 @@
-<!-- /app/Controllers/HomeController.php -->
 <?php
 class BookTableController
 {
@@ -11,4 +10,3 @@ class BookTableController
         include __DIR__ . '/../Views/layouts/footer.php';
     }
 }
-

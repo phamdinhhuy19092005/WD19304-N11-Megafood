@@ -1,13 +1,13 @@
 <!-- /app/Controllers/HomeController.php -->
 <?php
-class CartController
+class ContactController
 {
-    public function index()
+    public function contact()
     {
-        $title = "MegaFood - Giỏ hàng";
-        $page = "cart";
+        $title = "Mega Food - Liên Hệ";
+        $page = "contact";
         include __DIR__ . '/../Views/layouts/header.php';
-        include __DIR__ . '/../Views/pages/cart.php';
+        include __DIR__ . '/../Views/pages/contact.php';
         include __DIR__ . '/../Views/layouts/footer.php';
     }
 }

@@ -1,14 +1,13 @@
 <!-- /app/Controllers/HomeController.php -->
 <?php
-class CartController
+class NewsController
 {
-    public function index()
+    public function news()
     {
-        $title = "MegaFood - Giỏ hàng";
-        $page = "cart";
+        $title = "Mega Food";
+        $page = "news";
         include __DIR__ . '/../Views/layouts/header.php';
-        include __DIR__ . '/../Views/pages/cart.php';
+        include __DIR__ . '/../Views/pages/news.php';
         include __DIR__ . '/../Views/layouts/footer.php';
     }
 }
-

@@ -12,6 +12,8 @@ require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
 require_once 'app/Controllers/DetailController.php';
 require_once 'app/Controllers/AccountController.php';
+require_once 'app/Controllers/ContactController.php';
+require_once 'app/Controllers/NewsController.php';
 require_once 'app/Controllers/BookTableController.php';
 
 
@@ -24,7 +26,7 @@ switch ($route) {
         break;
     case 'cart':
         $controller = new CartController();
-        $controller->cart();
+        $controller->index();
         break;
     case 'products':
         $controller = new DetailController();
@@ -33,6 +35,14 @@ switch ($route) {
     case 'account':
         $controller = new AccountController();
         $controller->accounts();
+        break;
+    case 'contact':
+        $controller = new ContactController();
+        $controller->contact();
+        break;
+    case 'news':
+        $controller = new NewsController();
+        $controller->news();
         break;
     case 'book-table':
         $controller = new BookTableController();

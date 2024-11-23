@@ -25,10 +25,17 @@
     <?php elseif ($page === 'cart'): ?>
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>cart.css">
     <?php elseif ($page === 'account' ||  $page === 'orders' || $page === 'changepassword' || $page === 'addressbook' || $page === 'addaddress'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css" >
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
         <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>account.css">
+    <?php elseif ($page === 'contact'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>contact.css">
+    <?php elseif ($page === 'news'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>news.css">
         <?php elseif ($page === 'book-table'): ?>
-            <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>book-table.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>book-table.css">
     <?php endif; ?>
 </head>
 
@@ -234,7 +241,7 @@
             <div class="container_nav">
                 <div class="menu_nav">
                     <ul class="list_nav">
-                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=home">Trang chủ</a></li>
+                        <li class="nav_item"><a href="../Home/index.html">Trang chủ</a></li>
                         <li class="nav_item"><a href="../about/index.html">Giới thiệu</a></li>
                         <li class="nav_item"><a href="../product/index.html">Sản phẩm <i class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
