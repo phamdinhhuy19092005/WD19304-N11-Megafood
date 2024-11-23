@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?? 'Default Title' ?></title>
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>/header.css">
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>/footer.css">
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>/font.css">
-    <!-- icon -->
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>header.css">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>footer.css">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font.css">
+
+    <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <!-- pages -->
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>/home.css">
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>/cart.css">
 
+    <!-- Page-specific CSS -->
+    <?php if ($page === 'home'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>home.css">
+    <?php elseif ($page === 'products'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>products.css">
+    <?php elseif ($page === 'product-details'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
+    <?php elseif ($page === 'cart'): ?>
+        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>cart.css">
+    <?php endif; ?>
 </head>
-
 <body>
+
     <header>
         <div class="top_header">
             <p>Chào mừng đến với MegaFood</p>

@@ -11,6 +11,7 @@ define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
+require_once 'app/Controllers/DetailController.php';
 
 
 $route = $_GET['route'] ?? 'home';
@@ -23,6 +24,11 @@ switch ($route) {
     case 'cart':
         $controller = new CartController();
         $controller->index();
+        break;
+    case 'products':
+        $controller = new DetailController();
+        $controller->details();
+        // $controller->products();
         break;
     default:
         echo "404 - Page Not Found";
