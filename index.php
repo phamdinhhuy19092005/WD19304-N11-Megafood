@@ -28,6 +28,8 @@ require_once 'app/Controllers/AccountController.php';
 require_once 'app/Controllers/ContactController.php';
 require_once 'app/Controllers/NewsController.php';
 require_once 'app/Controllers/FaqController.php';
+require_once 'app/Controllers/BookingController.php';
+
 
 $route = $_GET['route'] ?? 'home';
 
@@ -59,6 +61,10 @@ switch ($route) {
     case 'faq':
         $controller = new FaqController();
         $controller->faq();
+        break;
+    case 'booking':
+        $controller = new BookingController();
+        $controller->booking();
         break;
     default:
         echo "404 - Page Not Found";
