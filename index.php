@@ -1,5 +1,17 @@
 <?php
 
+require_once 'app/Models/config.php';
+
+$connectModel = new ConnectModel();
+$conn = $connectModel->connect();
+
+if ($conn) {
+    echo "Kết nối thành công!";
+} else {
+    echo "Kết nối không thành công!";
+}
+
+
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
 define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
 
