@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+  :root {
+    --main-color: #FF7D01;
+    --secondary-color: #00B2A9;
+    --black-color: #000;
+    --white-color: #fff;
+    --silver-gray-color: #BFBFBF;
+    --light-gray-color: #eee;
+    --gainsboro-color: #d9d9d9;
+    --reddish-pink-color: #E4465C;
+    --sky-blue-color: #64B6E4;
+    --emerald-green-color: #32B268;
+    --Crimson-Red: #E31837;
+    --font-text-12: 12px;
+    --font-text-14: 14px;
+    --font-text-16: 16px;
+    --font-title-20: 20px;
+    --font-title-24: 24px;
+    --font-title-30: 30px;
+}
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 40px;
+  }
+  
+  main {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .left, .right {
+    height: 50 0px;
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left h2, .left h3 {
+    color: var(--secondary-color);
+    font-family: lobster;
+    border-bottom: 1px solid #e31837;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .left ul {
+    list-style: none;
+    margin-bottom: 50px;
+  }
+  
+  .left ul li {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--silver-gray-color);
+  }
+  
+  .left ul li span {
+    font-weight: bold;
+    color: #333;
+    float: right;
+  }
+  
+  .phone-number {
+    font-size: 24px;
+    color: var(--main-color);
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  .phone-number:hover{
+    color: var(--secondary-color);
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  form button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background-color: var(--secondary-color);
+  }
