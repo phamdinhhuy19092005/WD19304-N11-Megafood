@@ -4,7 +4,7 @@ class NewsController
 {
     public function news()
     {
-        $title = "Mega Food";
+        $title = "Mega Food - Tin tức";
         $page = "news";
         include __DIR__ . '/../Views/layouts/header.php';
         include __DIR__ . '/../Views/pages/news.php';
