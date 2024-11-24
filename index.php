@@ -1,8 +1,8 @@
 <?php
 
-require_once 'app/Models/config.php';
+require_once './config/database.php';
 
-$connectModel = new ConnectModel();
+$connectModel = new Database();
 $conn = $connectModel->connect();
 
 if ($conn) {
@@ -41,7 +41,7 @@ switch ($route) {
         break;
     case 'products':
         $controller = new DetailController();
-        $controller->details();
+        $controller->products();
         break;
     case 'account':
         $controller = new AccountController();
