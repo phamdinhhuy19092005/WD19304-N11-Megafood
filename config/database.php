@@ -1,8 +1,5 @@
 <?php
-
-require_once 'app/Models/config.php';
-
-class ConnectModel {
+class Database {
     public $servername = "localhost";
     public $username = "root";
     public $password = "";

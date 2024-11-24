@@ -2,7 +2,7 @@
 <?php
 class DetailController
 {
-    public function details()
+    public function products()
     {
         $title = isset($_GET['id']) ? "MegaFood - Chi tiết sản phẩm" : "MegaFood - Danh sách sản phẩm";
         $page = isset($_GET['id']) ? "product-details" : "products"; 
