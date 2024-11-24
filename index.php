@@ -27,8 +27,13 @@ require_once 'app/Controllers/AccountController.php';
 require_once 'app/Controllers/ContactController.php';
 require_once 'app/Controllers/NewsController.php';
 require_once 'app/Controllers/FaqController.php';
+<<<<<<< HEAD
 require_once 'app/Controllers/BookingController.php';
 
+=======
+require_once 'app/Controllers/LoginController.php';
+require_once 'app/Controllers/RegisterController.php';
+>>>>>>> da62cdbf1c156e9469c8ced403ef87fa3cf3d302
 
 $route = $_GET['route'] ?? 'home';
 
@@ -61,9 +66,19 @@ switch ($route) {
         $controller = new FaqController();
         $controller->faq();
         break;
+<<<<<<< HEAD
     case 'booking':
         $controller = new BookingController();
         $controller->booking();
+=======
+    case 'login':
+        $controller = new LoginController();
+        $controller->login();
+        break;
+    case 'register':
+        $controller = new RegisterController();
+        $controller->register();
+>>>>>>> da62cdbf1c156e9469c8ced403ef87fa3cf3d302
         break;
     default:
         echo "404 - Page Not Found";
