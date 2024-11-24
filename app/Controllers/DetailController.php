@@ -1,5 +1,7 @@
 <!-- /app/Controllers/HomeController.php -->
 <?php
+
+include __DIR__ . '/../Models/Product.php';
 class DetailController
 {
     public function products()
@@ -11,6 +13,8 @@ class DetailController
         if (isset($_GET['id'])) {
             include __DIR__ . '/../Views/pages/product-details.php';
         } else {
+             $productModel = new Product();
+                $products = $productModel->getAllProducts();
             include __DIR__ . '/../Views/pages/products.php';
         }
 

@@ -16,36 +16,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Page-specific CSS -->
-    <?php if ($page === 'home'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>home.css">
-    <?php elseif ($page === 'products'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>products.css">
-    <?php elseif ($page === 'product-details'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-    <?php elseif ($page === 'cart'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>cart.css">
-    <?php elseif ($page === 'account' ||  $page === 'orders' || $page === 'changepassword' || $page === 'addressbook' || $page === 'addaddress'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>account.css">
-    <?php elseif ($page === 'contact'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>contact.css">
-    <?php elseif ($page === 'news'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>news.css">
-    <?php elseif ($page === 'faq'): ?>
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-        <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>faq.css">
-    <?php elseif ($page === 'booking'): ?>
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>booking.css">
-    <?php elseif ($page === 'login'): ?>
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>login.css">
-    <?php elseif ($page === 'register'): ?>
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>product-details.css">
-    <link rel="stylesheet" href="<?php echo CSS_PAGES_URL; ?>login.css">
-    <?php endif; ?>
+    <?php
+    $styles = [
+        'home' => ['home.css'],
+        'products' => ['products.css'],
+        'product-details' => ['product-details.css'],
+        'cart' => ['cart.css'],
+        'account' => ['account.css', 'product-details.css'],
+        'orders' => ['account.css', 'product-details.css'],
+        'changepassword' => ['account.css', 'product-details.css'],
+        'addressbook' => ['account.css', 'product-details.css'],
+        'addaddress' => ['account.css', 'product-details.css'],
+        'contact' => ['contact.css', 'product-details.css'],
+        'news' => ['news.css', 'product-details.css'],
+        'faq' => ['faq.css', 'product-details.css'],
+        'booking' => ['booking.css', 'product-details.css'],
+        'login' => ['login.css', 'product-details.css'],
+        'register' => ['login.css', 'product-details.css']
+    ];
+
+    if (isset($styles[$page])) {
+        foreach ($styles[$page] as $style) {
+            echo '<link rel="stylesheet" href="' . CSS_PAGES_URL . $style . '">' . PHP_EOL;
+        }
+    }
+    ?>
+
 </head>
 
 <body>
@@ -80,7 +76,7 @@
                                 <a href="">Giới thiệu</a>
                             </li>
                             <li class="item_tab tab_sp">
-                                <a href="">Sản phẩm</a>
+                                <a href="<?php echo BASE_URL; ?>index.php?route=home">Sản phẩm</a>
                                 <i class="fa-solid fa-plus"></i>
                             </li>
                             <li class="item_tab">
@@ -252,7 +248,7 @@
                     <ul class="list_nav">
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=home">Trang chủ</a></li>
                         <li class="nav_item"><a href="../about/index.html">Giới thiệu</a></li>
-                        <li class="nav_item"><a href="../product/index.html">Sản phẩm <i class="bi bi-caret-down-fill"></i></a>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm <i class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
                                 <li><a href="../detailCategories/category.html">Pizza</a></li>
                                 <li><a href="../detailCategories/category.html">Khai vị</a></li>
