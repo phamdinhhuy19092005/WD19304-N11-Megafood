@@ -29,10 +29,10 @@
 
         <ul class="category_list">
             <li class="category_item">
-                <a href="..//product/index.html">
+                <a href="<?php echo BASE_URL; ?>index.php?route=products">
                     <p>Pizza <br>(17 món ăn) </p>
                     <img style="width: 104px; height: 105px;"
-                        src="<?php echo IMG_BASE_URL; ?>/category/category1.webp"
+                        src="<?php echo IMG_BASE_URL; ?>category/category1.webp"
                         alt="">
                 </a>
 
@@ -40,7 +40,7 @@
             <li class="category_item">
                 <a href="..//product/index.html">
                     <p>Khai vị <br>(13 món ăn) </p>
-                    <img src="<?php echo IMG_BASE_URL; ?>/category/category2.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp"
                         alt="">
                 </a>
 
@@ -48,14 +48,14 @@
             <li class="category_item">
                 <a href="..//product/index.html">
                     <p>Mỳ Ý <br>(7 món ăn) </p>
-                    <img src="<?php echo IMG_BASE_URL; ?>/category/category3.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp"
                         alt="">
                 </a>
             </li>
             <li class="category_item">
                 <a href="..//product/index.html">
                     <p>Salad <br>(7 món ăn) </p>
-                    <img src="<?php echo IMG_BASE_URL; ?>/category/category4.webp"
+                    <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp"
                         alt="">
                 </a>
 
@@ -68,7 +68,7 @@
         <div class="container">
 
             <div class="space_left">
-                <img src="<?php echo IMG_BASE_URL; ?>/about/about1.webp" alt="">
+                <img src="<?php echo IMG_BASE_URL; ?>about/about1.webp" alt="">
             </div>
 
             <div class="space_right">
@@ -86,25 +86,25 @@
                 <ul class="about_img">
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="<?php echo IMG_BASE_URL; ?>/about/about2.webp"
+                                src="<?php echo IMG_BASE_URL; ?>about/about2.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="<?php echo IMG_BASE_URL; ?>/about/about3.webp"
+                                src="<?php echo IMG_BASE_URL; ?>about/about3.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="<?php echo IMG_BASE_URL; ?>/about/about4.webp"
+                                src="<?php echo IMG_BASE_URL; ?>about/about4.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
                         <a href="../sanpham/index.html"><img
-                                src="<?php echo IMG_BASE_URL; ?>/about/about5.webp"
+                                src="<?php echo IMG_BASE_URL; ?>about/about5.webp"
                                 alt=""></a>
 
                     </li>
@@ -122,7 +122,7 @@
                         <div class="product_thumbnail">
                             <a href=""><i class="fa-regular fa-heart"></i></a>
                             <a href="../product_details/detail.html">
-                                <img src="//bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
+                                <img src="<?php echo IMG_BASE_URL; ?>products/Pizza_Aloha.webp"
                                     alt="">
                             </a>
                         </div>
