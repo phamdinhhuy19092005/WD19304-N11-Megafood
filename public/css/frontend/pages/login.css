@@ -139,7 +139,8 @@ li a {
     }
 
     .login {
-        width: 70%;
+        max-width: 315px;
+        width: 315px;
         margin: 0 auto;
     }
 
