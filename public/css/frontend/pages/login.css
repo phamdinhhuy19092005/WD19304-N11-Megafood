@@ -132,3 +132,89 @@ li a {
 .social_login p {
     margin: 15px 0;
 }
+
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .login {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .login ul {
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .login ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .form_login input,
+    .form_login input[type="submit"],
+    .h_recover input {
+        height: 40px;
+        font-size: var(--font-text-14);
+        padding: 8px;
+    }
+
+    .login h1 {
+        font-size: var(--font-title-20);
+    }
+
+    .form_login span {
+        font-size: var(--font-text-14);
+    }
+
+    .social_login p {
+        font-size: var(--font-text-12);
+        margin: 10px 0;
+    }
+}
+
+
+
+@media (max-width: 376px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .login {
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+
+    .login ul {
+        height: auto;
+        border-bottom: none;
+        margin-bottom: 10px;
+    }
+
+    .login ul li {
+        width: 100%;
+        border-bottom: 1px solid var(--light-gray-color);
+        padding: 10px 0;
+    }
+
+    .form_login input,
+    .form_login input[type="submit"],
+    .h_recover input {
+        height: 35px;
+    }
+
+    .form_login span {
+        font-size: var(--font-text-12);
+        margin: 10px 0;
+    }
+
+    .h_recover {
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: var(--font-title-20);
+    }
+}
