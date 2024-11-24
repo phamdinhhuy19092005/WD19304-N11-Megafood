@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const decreaseBtns = document.querySelectorAll('.btn_reduce'); // Nút giảm
-    const increaseBtns = document.querySelectorAll('.btn_increase'); // Nút tăng
-    const quantityInputs = document.querySelectorAll('.quantity_cart'); // Ô input số lượng
-    const prices = document.querySelectorAll('.price'); // Giá gốc
-    const totalPrices = document.querySelectorAll('.total_price'); // Tổng tiền của từng sản phẩm
-    const subtotalPriceElement = document.querySelector('.subtotal_price'); // Tổng tiền giỏ hàng (subtotal)
+    const decreaseBtns = document.querySelectorAll('.btn_reduce'); 
+    const increaseBtns = document.querySelectorAll('.btn_increase'); 
+    const quantityInputs = document.querySelectorAll('.quantity_cart'); 
+    const prices = document.querySelectorAll('.price'); 
+    const totalPrices = document.querySelectorAll('.total_price'); 
+    const subtotalPriceElement = document.querySelector('.subtotal_price'); 
     
-    // Định dạng số tiền
+    // Định dạng số tiền theo chuẩn Việt Nam
     function formatCurrency(number) {
         return new Intl.NumberFormat('vi-VN').format(number);
+    }
+
+    // Chuyển đổi giá trị có dấu phân cách thành số
+    function parseCurrency(string) {
+        return parseInt(string.replace(/\./g, '')); // Loại bỏ dấu '.' rồi chuyển sang số
     }
 
     // Cập nhật tổng tiền của tất cả các sản phẩm trong giỏ hàng
@@ -17,16 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Lặp qua từng sản phẩm
         quantityInputs.forEach((input, index) => {
-            const price = parseInt(prices[index].textContent); // Lấy giá gốc sản phẩm
+            const price = parseCurrency(prices[index].textContent); // Lấy giá gốc sản phẩm
             const quantity = parseInt(input.value) || 1; // Lấy số lượng
             const total = price * quantity; // Tổng tiền cho sản phẩm này
             totalPrices[index].textContent = formatCurrency(total); // Cập nhật tổng tiền cho sản phẩm
-            prices[index].textContent = formatCurrency(total);
             totalCartPrice += total; // Cộng dồn vào tổng giỏ hàng
         });
 
         // Cập nhật tổng tiền của giỏ hàng
-        subtotalPriceElement.textContent = formatCurrency(totalCartPrice);
+        if (subtotalPriceElement) {
+            subtotalPriceElement.textContent = formatCurrency(totalCartPrice);
+        }
     }
 
     // Lặp qua từng sản phẩm và thêm sự kiện cho nút giảm và tăng
@@ -36,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let quantity = parseInt(input.value) || 1;
             if (quantity > 1) {
                 quantity -= 1;
-                input.value = quantity; // Cập nhật giá trị trong ô input
+                input.value = quantity; 
                 updateCartTotal();
             }
         });
@@ -44,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Sự kiện tăng số lượng
         increaseBtns[index].addEventListener('click', () => {
             let quantity = parseInt(input.value) || 1;
-            quantity += 1; // Tăng số lượng
-            input.value = quantity; // Cập nhật giá trị trong ô input
+            quantity += 1; 
+            input.value = quantity; 
             updateCartTotal();
         });
 
@@ -53,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         input.addEventListener('input', () => {
             let quantity = parseInt(input.value);
             if (isNaN(quantity) || quantity <= 0) {
-                input.value = 1; // Nếu nhập không hợp lệ, đặt lại giá trị mặc định
+                input.value = 1; 
             }
             updateCartTotal();
         });

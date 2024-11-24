@@ -124,6 +124,8 @@
 <?php elseif ($page === 'cart'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>cart_btn.js"></script>
     <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
+    <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
+
 <?php elseif ($page === 'booking'): ?>
     <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
 <?php elseif ($page === 'faq'): ?>
