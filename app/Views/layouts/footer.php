@@ -119,6 +119,9 @@
     <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>scrollToTop.js"></script>
+<script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
+
+
 <?php elseif ($page === 'products'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>faq.js"></script>
 <?php elseif ($page === 'cart'): ?>

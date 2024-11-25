@@ -1,7 +1,7 @@
 <div class="bodywrap">
     <div class="slide-show">
         <div class="list-img">
-            <img src="<?php echo IMG_BASE_URL; ?>/slider/slider1.jpg" alt=>
+            <img src="<?php echo IMG_BASE_URL; ?>/slider/slider1.jpg" alt="">
             <img src="<?php echo IMG_BASE_URL; ?>/slider/slider2.jpg" alt="">
             <img src="<?php echo IMG_BASE_URL; ?>/slider/slider3.jpg" alt="">
             <img src="<?php echo IMG_BASE_URL; ?>/slider/slider4.jpg" alt="">
@@ -18,7 +18,9 @@
             </div>
         </div>
     </div>
-    <script src="slider.js"></script>
+    
+
+
 
     <div class="category">
         <div class="category_title">

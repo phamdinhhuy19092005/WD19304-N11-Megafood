@@ -192,7 +192,7 @@
                             </li>
                             <div class="search_seeMore">
 
-                                <a href="/product/index.html">Xem thêm sản phẩm</a>
+                                <a href="<?php echo BASE_URL; ?>index.php?route=products">Xem thêm sản phẩm</a>
                             </div>
                         </ul>
                         <button>
