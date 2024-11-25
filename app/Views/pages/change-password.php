@@ -3,7 +3,7 @@
         <div class="container_bread_crumb">
             <ul class="List_bread_crumb">
                 <li class="home">
-                    <a href="#">
+                    <a href="<?php echo BASE_URL; ?>index.php?route=home">
                         <span>Trang chủ</span>
                     </a>
                     <span class="mr_lr">

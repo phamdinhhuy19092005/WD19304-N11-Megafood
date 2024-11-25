@@ -1,5 +1,6 @@
-<!-- /app/Controllers/HomeController.php -->
 <?php
+
+include __DIR__ . '/../Models/Auth.php';
 class RegisterController
 {
     public function register()

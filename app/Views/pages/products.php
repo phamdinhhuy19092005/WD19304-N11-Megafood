@@ -784,7 +784,7 @@
           <div class="product_topSelling_thumbnail">
             <i class="fa-regular fa-heart"></i>
             <a href="">
-              <img src="<?= htmlspecialchars($product['image']); ?>" alt="" />
+            <img src="<?php echo IMG_BASE_URL; ?>/header/logo.png" alt="Crispy Chicken" />
             </a>
           </div>
 

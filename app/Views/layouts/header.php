@@ -31,8 +31,8 @@
         'news' => ['news.css', 'product-details.css'],
         'faq' => ['faq.css', 'product-details.css'],
         'booking' => ['booking.css', 'product-details.css'],
-        'login' => ['login.css', 'product-details.css'],
-        'register' => ['login.css', 'product-details.css']
+        'login' => ['auth.css', 'product-details.css'],
+        'register' => ['auth.css', 'product-details.css']
     ];
 
     if (isset($styles[$page])) {

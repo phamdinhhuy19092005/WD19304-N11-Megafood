@@ -1,15 +1,15 @@
 <?php
 
-// require_once './config/database.php';
+require_once './config/database.php';
 
-// $connectModel = new Database();
-// $conn = $connectModel->connect();
+$connectModel = new Database();
+$conn = $connectModel->connect();
 
-// if ($conn) {
-//     echo 'Kết nối thành công';
-// } else {
-//     echo 'Kết nối thất bại';
-// }
+if ($conn) {
+    echo 'Kết nối thành công';
+} else {
+    echo 'Kết nối thất bại';
+}
 
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
 define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
@@ -22,7 +22,7 @@ define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
-require_once 'app/Controllers/DetailController.php';
+require_once 'app/Controllers/ProductController.php';
 require_once 'app/Controllers/AccountController.php';
 require_once 'app/Controllers/ContactController.php';
 require_once 'app/Controllers/NewsController.php';
@@ -43,7 +43,7 @@ switch ($route) {
         $controller->cart();
         break;
     case 'products':
-        $controller = new DetailController();
+        $controller = new ProductController();
         $controller->products();
         break;
     case 'account':

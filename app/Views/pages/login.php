@@ -2,14 +2,14 @@
         <section class="bread_crumb">
             <div class="container_bread_crumb">
                 <ul class="List_bread_crumb">
-                    <li class="home">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=home">
-                            <span>Trang chủ</span>
-                        </a>
-                        <span class="mr_lr">
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </li>
+                <li class="home">
+                    <a href="<?php echo BASE_URL; ?>index.php?route=home">
+                        <span>Trang chủ</span>
+                    </a>
+                    <span class="mr_lr">
+                        <i class="bi bi-chevron-right"></i>
+                    </span>
+                </li>
                     <li>
                         <span class="name_prd">Đăng nhập</span>
                     </li>
