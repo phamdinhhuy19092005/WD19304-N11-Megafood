@@ -32,7 +32,9 @@
         'faq' => ['faq.css', 'product-details.css'],
         'booking' => ['booking.css', 'product-details.css'],
         'login' => ['auth.css', 'product-details.css'],
-        'register' => ['auth.css', 'product-details.css']
+        'register' => ['auth.css', 'product-details.css'],
+        'storeSystem' => ['storeSystem.css', 'product-details.css'],
+
     ];
 
     if (isset($styles[$page])) {
@@ -260,7 +262,7 @@
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=news">Tin tức</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=contact">Liên hệ</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=faq">Câu hỏi thường gặp</a></li>
-                        <li class="nav_item"><a href="../storeSystem/main.html">Hệ thống cửa hàng</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=storeSystem">Hệ thống cửa hàng</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                     </ul>
                 </div>
