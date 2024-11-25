@@ -37,9 +37,10 @@
 
     if (isset($styles[$page])) {
         foreach ($styles[$page] as $style) {
-            echo '<link rel="stylesheet" href="' . CSS_PAGES_URL . $style . '">' . PHP_EOL;
+            echo '<link rel="stylesheet" href="' . CSS_PAGES_URL . $style . '?v=' . time() . '">' . PHP_EOL;
         }
     }
+
     ?>
 
 </head>

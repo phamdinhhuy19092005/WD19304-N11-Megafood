@@ -28,17 +28,40 @@
             </h1>
             <form class="form_login" action="<?php echo BASE_URL; ?>index.php?route=register" method="POST" autocomplete="off">
 
-                <input type="text" name="lastName" placeholder="Họ" id="lastName" required>
+                <div class="form_group">
+                    <input type="text" name="lastName" placeholder="Họ" id="lastName" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
 
-                <input type="text" name="firstName" placeholder="Tên" id="firstName" required>
-
-                <input type="email" name="email" placeholder="Email" id="email" required>
-
-                <input type="text" name="phone" placeholder="Số điện thoại" id="phone" pattern="[0-9]{10,11}" required>
-
-                <input type="password" name="password" placeholder="Mật khẩu" id="password" minlength="8" required>
-
-                <input type="submit" name="signUp" value="Đăng ký">
+                <div class="form_group">
+                    <input type="text" name="firstName" placeholder="Tên" id="firstName" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <input type="email" name="email" placeholder="Email" id="email" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <input type="text" name="phone" placeholder="Số điện thoại" id="phone" pattern="[0-9]{10,11}" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <input type="text" name="password" placeholder="Mật khẩu" id="password" minlength="8" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <button type="submit" name="signUp" value="Đăng ký">Đăng ký</button>
+                </div>
             </form>
 
 
