@@ -216,13 +216,13 @@
                             </span>
                             <ul class="list_user">
                                 <li>
-                                    <a href="../login/login.html">
+                                    <a href="<?php echo BASE_URL; ?>index.php?route=login">
                                         <i class="bi bi-box-arrow-in-right"></i>
                                         <span>Đăng nhập</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../register/register.html">
+                                    <a href="<?php echo BASE_URL; ?>index.php?route=register">
                                         <i class="bi bi-person-plus"></i>
                                         <span>Đăng kí</span>
                                     </a>
@@ -257,9 +257,9 @@
                                 <li><a href="../detailCategories/category.html">Thức uống</a></li>
                             </ul>
                         </li>
-                        <li class="nav_item"><a href="../news/news.html">Tin tức</a></li>
-                        <li class="nav_item"><a href="../contact/contact.html">Liên hệ</a></li>
-                        <li class="nav_item"><a href="../faq/">Câu hỏi thường gặp</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=news">Tin tức</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=contact">Liên hệ</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=faq">Câu hỏi thường gặp</a></li>
                         <li class="nav_item"><a href="../storeSystem/main.html">Hệ thống cửa hàng</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                     </ul>
