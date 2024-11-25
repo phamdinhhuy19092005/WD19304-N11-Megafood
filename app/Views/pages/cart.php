@@ -26,7 +26,7 @@
                         </div>
                 
                         <div class="cart_price">
-                            <span class="price">99000</span> 
+                            <span class="price">99.000</span>đ
                         </div>
                         
                         <div class="cart_btn">
@@ -38,7 +38,7 @@
                         </div>
                         
                         <div class="cart_total">
-                             <span class="total_price">99000</span> 
+                             <span class="total_price">99000</span>đ
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                 <div class="cart_subtotal">
                     <div class="subtotal">
                         <p>Tổng tiền:</p>
-                        <span class="subtotal_price">99000</span>
+                        <span class="subtotal_price">99000</span>đ
                     </div>
 
 
