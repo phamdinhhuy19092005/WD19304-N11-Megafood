@@ -1,12 +1,12 @@
 // Lấy danh sách yêu thích từ LocalStorage
-// function getFavorites() {
-//     return JSON.parse(localStorage.getItem("favorites")) || [];
-// }
+function getFavorites() {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+}
 
-// // Lưu danh sách yêu thích vào LocalStorage
-// function saveFavorites(favorites) {
-//     localStorage.setItem("favorites", JSON.stringify(favorites));
-// }
+//Lưu danh sách yêu thích vào LocalStorage
+function saveFavorites(favorites) {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+}
 
 // Xử lý sự kiện click vào biểu tượng trái tim
 function toggleFavorite(event) {
