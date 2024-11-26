@@ -1,20 +1,32 @@
-<!-- /app/Controllers/HomeController.php -->
 <?php
 
 include __DIR__ . '/../Models/Product.php';
+
 class ProductController
 {
     public function products()
     {
-        $title = isset($_GET['id']) ? "MegaFood - Chi tiết sản phẩm" : "MegaFood - Danh sách sản phẩm";
-        $page = isset($_GET['id']) ? "product-details" : "products";
+        $title = "MegaFood - Danh sách sản phẩm";
+        $page = "products";
         include __DIR__ . '/../Views/layouts/header.php';
 
-        if (isset($_GET['id'])) {
+        $productModel = new Product();
+
+        // Hiển thị sản phẩm theo danh mục
+        if (isset($_GET['category_id'])) {
+            $categoryId = intval($_GET['category_id']); // Lấy `category_id` từ URL
+            $products = $productModel->getProductsByCategory($categoryId); // Lấy sản phẩm theo danh mục
+            include __DIR__ . '/../Views/pages/products.php';
+        }
+        // Hiển thị chi tiết sản phẩm
+        elseif (isset($_GET['id'])) {
+            $title = "MegaFood - Chi tiết sản phẩm";
+            $page = "product-details";
             include __DIR__ . '/../Views/pages/product-details.php';
-        } else {
-            $productModel = new Product();
-            $products = $productModel->getAllProducts();
+        }
+        // Hiển thị tất cả sản phẩm
+        else {
+            $products = $productModel->getAllProducts(); // Lấy tất cả sản phẩm
             include __DIR__ . '/../Views/pages/products.php';
         }
 

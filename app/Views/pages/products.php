@@ -779,34 +779,41 @@
     </div>
 
     <ul>
-      <?php foreach ($products as $product): ?>
-        <li>
-          <div class="product_topSelling_thumbnail">
-            <i class="fa-regular fa-heart"></i>
-            <a href="">
-            <img src="<?php echo IMG_BASE_URL; ?>/header/logo.png" alt="Crispy Chicken" />
-            </a>
-          </div>
+      <?php if (!empty($products)): ?>
+        <?php foreach ($products as $product): ?>
+          <?php if ($product['id_categories'] == 5): ?> <!-- Kiểm tra nếu id_categories = 5 -->
+            <li>
+              <div class="product_topSelling_thumbnail">
+                <i class="fa-regular fa-heart"></i>
+                <a href="products?id=<?= $product['id']; ?>">
+                  <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                </a>
+              </div>
 
-          <div class="product_topSelling_info">
-            <h3 class="product_topSelling_name">
-              <?= htmlspecialchars($product['name']); ?>
-            </h3>
-            <span class="product_topSelling_content">
-            <?= htmlspecialchars($product['description'])?>
-            </span>
-            <a href="">Xem thêm</a>
-          </div>
+              <div class="product_topSelling_info">
+                <h3 class="product_topSelling_name">
+                  <?= htmlspecialchars($product['name']); ?>
+                </h3>
+                <span class="product_topSelling_content">
+                  <?= htmlspecialchars($product['description']); ?>
+                </span>
+                <a href="products?id=<?= $product['id']; ?>">Xem thêm</a>
+              </div>
 
-          <div class="product_topSelling_form">
-            <div class="product_topSelling_priceBox">
-              <span>Giá chỉ từ</span>
-              <p><?= htmlspecialchars($product['price']); ?></p>
-            </div>
-            <a href="">Thêm</a>
-          </div>
-        </li>
-      <?php endforeach; ?>
+              <div class="product_topSelling_form">
+                <div class="product_topSelling_priceBox">
+                  <span>Giá chỉ từ</span>
+                  <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
+                </div>
+                <a href="">Thêm</a>
+              </div>
+            </li>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>Không có sản phẩm nào trong danh mục này.</p>
+      <?php endif; ?>
+
     </ul>
   </div>
   <div class="see_detail">
