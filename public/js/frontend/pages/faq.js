@@ -4,8 +4,8 @@ $(document).ready(function () {
         e.preventDefault();
         var $this = $(this);
 
-        $this.parents('.faq').find('.content').slideToggle(); // Mở/đóng nội dung
-        $this.parents('.faq').toggleClass('active'); // Thêm/lấy class `active`
+        $this.parents('.faq').find('.content').slideToggle(); 
+        $this.parents('.faq').toggleClass('active'); 
     });
 });
 
