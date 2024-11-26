@@ -30,6 +30,7 @@
         'contact' => ['contact.css', 'product-details.css'],
         'news' => ['news.css', 'product-details.css'],
         'about' => ['about.css', 'product-details.css'],
+        'detailCategories' => ['detailCategories.css', 'product-details.css'],
         'faq' => ['faq.css', 'product-details.css'],
         'booking' => ['booking.css', 'product-details.css'],
         'login' => ['auth.css', 'product-details.css'],

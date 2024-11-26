@@ -900,7 +900,7 @@
 
 
             <div class="see_more">
-                <a href="">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
             </div>
 
         </section>
@@ -1038,7 +1038,7 @@
 
 
             <div class="see_more">
-                <a href="">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
             </div>
 
         </section>
@@ -1174,7 +1174,7 @@
             </ul>
 
             <div class="see_more">
-                <a href="">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
             </div>
 
         </section>
@@ -1312,7 +1312,7 @@
 
 
             <div class="see_more">
-                <a href="">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
             </div>
 
         </section>
@@ -1446,7 +1446,7 @@
             </ul>
 
             <div class="see_more">
-                <a href="">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Xem chi tiết <i class="bi bi-chevron-double-right"></i></a>
             </div>
 
         </section>
