@@ -33,7 +33,7 @@
     margin: 0px auto;
 }
 
-.row {
+.row_faq {
     display: flex;
 }
 
@@ -150,10 +150,9 @@
     background-color: var(--secondary-color);
 }
 @media (max-width:376px){
-    .row {
-        flex-direction: column;
-    }
-
+.row_faq{
+    display: block;
+}
     .left_faq,
     .right_faq {
         width: 100%;

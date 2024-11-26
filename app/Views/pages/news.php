@@ -19,7 +19,7 @@
         </section>
         <div class="blog_wrapper">
             <div class="container_news">
-                <div class="row">
+                <div class="row_news">
                     <div class="right_content">
                         <div class="list_blog">
                             <div class="item_blog">
@@ -98,7 +98,7 @@
                     <div class="blog_left_base">
                         <div class="aside_content_blog">
                             <div class="title_head">Danh mục tin tức</div>
-                            <nav class="nav_category">
+                            <div class="nav_category">
                                 <ul class="nav navbar-pills">
                                     <li class="nav_item_relative"><a href="#" title="Trang chủ">Trang chủ</a></li>
                                     <li class="nav_item_relative"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
@@ -113,7 +113,7 @@
                                     </li>
                                     <li class="nav_item_relative"><a href="#" title="Đặt hàng">Đặt hàng</a></li>
                                 </ul>
-                            </nav>
+                            </div>
                         </div>
                         <div class="blog_noibat">
                             <h2 class="h2_sidebar_blog"><a href="#">Tin tức nổi bật</a></h2>
