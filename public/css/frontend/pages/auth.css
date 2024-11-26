@@ -87,7 +87,6 @@ li a {
     border: 1px solid var(--silver-gray-color);
     border-bottom: 2px solid var(--main-color);
     border-radius: 4px;
-    /* padding: 1px 10px; */
 }
 
 
@@ -100,7 +99,6 @@ li a {
     border: 1px solid var(--silver-gray-color);
     border-bottom: 2px solid var(--main-color);
     border-radius: 4px;
-    padding: 1px 10px;
 }
 
 .form_group button {
@@ -134,6 +132,14 @@ li a {
 
 .errors span {
     color: var(--red-color);
+}
+
+.repassword {
+    text-align: center;
+}
+
+.repassword:hover {
+    color: var(--main-color);
 }
 
 .h_recover {

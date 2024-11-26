@@ -32,7 +32,9 @@
         'faq' => ['faq.css', 'product-details.css'],
         'booking' => ['booking.css', 'product-details.css'],
         'login' => ['auth.css', 'product-details.css'],
-        'register' => ['auth.css', 'product-details.css']
+        'register' => ['auth.css', 'product-details.css'],
+        'storeSystem' => ['storeSystem.css', 'product-details.css'],
+
     ];
 
     if (isset($styles[$page])) {
@@ -47,60 +49,21 @@
 
 <body>
 
-    <header>
+<header>
         <div class="top_header">
             <p>Chào mừng đến với MegaFood</p>
-        </div>
+        </div>'
         <div class="bottom_header">
             <div class="container_bt_header">
                 <div class="container_content">
                     <div class="tab_menu">
-                        <button>
-                            <div class="item_tab">
-                                <i class="fa-solid fa-bars"></i>
-                            </div>
-                        </button>
-
-                        <ul class="list_item_menu_tab">
-                            <li class="logo_tab_menu">
-                                <a href="<?php echo BASE_URL; ?>index.php?route=home">
-                                    <img src="<?php echo IMG_BASE_URL; ?>/header/logo.png" alt="">
-                                </a>
-                            </li>
-                            <li class="main_item">
-                                <span>MENU CHÍNH</span>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Trang chủ</a>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Giới thiệu</a>
-                            </li>
-                            <li class="item_tab tab_sp">
-                                <a href="<?php echo BASE_URL; ?>index.php?route=home">Sản phẩm</a>
-                                <i class="fa-solid fa-plus"></i>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Tin tức</a>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Liên hệ</a>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Câu hỏi thường gặp</a>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Hệ thống cửa hàng</a>
-                            </li>
-                            <li class="item_tab">
-                                <a href="">Đặt bàn</a>
-                            </li>
-                        </ul>
+                        <div class="item_tab">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                     </div>
-                    <div class="overlay"></div>
                     <div class="logo">
                         <a href="<?php echo BASE_URL; ?>index.php?route=home">
-                            <img src="<?php echo IMG_BASE_URL; ?>/header/logo.png" alt="">
+                            <img src="<?php echo IMG_BASE_URL; ?>header/logo.png" alt="">
                         </a>
                     </div>
                     <div class="search_container">
@@ -142,7 +105,8 @@
                             </li>
                             <li class="search_list">
                                 <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0002257-spaghetti-shrimp-rose-50.png?v=1708679386557" alt=""></a>
+                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0002257-spaghetti-shrimp-rose-50.png?v=1708679386557"
+                                        alt=""></a>
                                 <div class="search_info">
 
                                     <a href="/product_details/detail.html"><span>Mỳ Ý Tôm Sốt Kem Cà Chua</span></a><br>
@@ -201,34 +165,23 @@
                         </button>
                     </div>
                     <div class="contact">
-                        <img src="<?php echo IMG_BASE_URL; ?>/header/ship.png" alt="">
+                        <img src="<?php echo IMG_BASE_URL; ?>header/ship.png" alt="">
                         <div class="contact_content">
                             <span class="title">Giao hàng tận nơi</span>
                             <span class="phone">1900 6750</span>
                         </div>
                     </div>
                     <div class="user">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=account">
-                            <i class="bi bi-person-circle"></i>
-                        </a>
+                        <a href="<?php echo BASE_URL; ?>index.php?route=account"><i class="bi bi-person-circle"></i></a>
                         <div class="subnav_user">
-                            <span class="icon_up">
-                                <i class="bi bi-caret-up-fill"></i>
-                            </span>
+                            <span class="icon_up"><i class="bi bi-caret-up-fill"></i></span>
                             <ul class="list_user">
-                                <li>
-                                    <a href="<?php echo BASE_URL; ?>index.php?route=login">
-                                        <i class="bi bi-box-arrow-in-right"></i>
-                                        <span>Đăng nhập</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo BASE_URL; ?>index.php?route=register">
-                                        <i class="bi bi-person-plus"></i>
-                                        <span>Đăng kí</span>
-                                    </a>
-                                </li>
-                                <li><a href="#"><i class="bi bi-heart"></i><span>Danh sách yêu thích</span></a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=login"><i class="bi bi-box-arrow-in-right"></i><span>Đăng
+                                            nhập</span></a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=register"><i class="bi bi-person-plus"></i><span>Đăng
+                                            kí</span></a></li>
+                                <li><a href="../favoritesList/favoritesList.html"><i class="bi bi-heart"></i><span>Danh
+                                            sách yêu thích</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -248,8 +201,9 @@
                 <div class="menu_nav">
                     <ul class="list_nav">
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=home">Trang chủ</a></li>
-                        <li class="nav_item"><a href="../about/index.html">Giới thiệu</a></li>
-                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm <i class="bi bi-caret-down-fill"></i></a>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=about">Giới thiệu</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm <i
+                                    class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
                                 <li><a href="../detailCategories/category.html">Pizza</a></li>
                                 <li><a href="../detailCategories/category.html">Khai vị</a></li>
@@ -261,7 +215,7 @@
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=news">Tin tức</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=contact">Liên hệ</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=faq">Câu hỏi thường gặp</a></li>
-                        <li class="nav_item"><a href="../storeSystem/main.html">Hệ thống cửa hàng</a></li>
+                        <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=storeSystem">Hệ thống cửa hàng</a></li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                     </ul>
                 </div>
