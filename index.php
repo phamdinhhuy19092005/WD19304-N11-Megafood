@@ -27,6 +27,7 @@ require_once 'app/Controllers/AccountController.php';
 require_once 'app/Controllers/ContactController.php';
 require_once 'app/Controllers/NewsController.php';
 require_once 'app/Controllers/AboutController.php';
+require_once 'app/Controllers/DetailCategories.php';
 require_once 'app/Controllers/FaqController.php';
 require_once 'app/Controllers/BookingController.php';
 require_once 'app/Controllers/LoginController.php';
@@ -66,6 +67,10 @@ switch ($route) {
     case 'about':
         $controller = new AboutController();
         $controller->about();
+        break;
+    case 'detailCategories':
+        $controller = new DetailCategoriesController();
+        $controller->detailCategories();
         break;
     case 'faq':
         $controller = new FaqController();
