@@ -53,238 +53,47 @@
     </ul>
   </div>
   <!-- Sản phẩm -->
+  <!-- Pizza -->
   <div class="product_topSelling">
     <div class="product_topSelling_title">
       <a href="#">Pizza</a>
     </div>
 
     <ul>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Aloha.webp"
-              alt="" />
-          </a>
-        </div>
+      <?php if (!empty($products)): ?>
+        <?php foreach ($products as $product): ?>
+          <?php if ($product['id_categories'] == 1): ?> 
+            <li>
+              <div class="product_topSelling_thumbnail">
+                <i class="fa-regular fa-heart"></i>
+                <a href="<?= BASE_URL; ?>index.php?route=product-details&id=<?= $product['id']; ?>">
+                  <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                </a>
+              </div>
 
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza xúc xích Ý
-          </h3>
-          <span class="product_topSelling_content">
-            Bánh Pizza xúc xích cay kiểu Ý trên nền sốt cà chua mang lại...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
+              <div class="product_topSelling_info">
+                <h3 class="product_topSelling_name">
+                  <?= htmlspecialchars($product['name']); ?>
+                </h3>
+                <span class="product_topSelling_content">
+                  <?= htmlspecialchars($product['description']); ?>
+                </span>
+                <a href="products?id=<?= $product['id']; ?>">Xem thêm</a>
+              </div>
 
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>139.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Chất_Gà Nướng Dứa.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza Chất_Gà Nướng Dứa
-          </h3>
-          <span class="product_topSelling_content">
-            Hoà quyện vị giác với thịt gà nướng cùng
-            với dứa và nhiều loại...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>89.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Chất_Giăm Bông & Thịt Xông Khói.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza Chất_Giăm Bông & Thịt Xông Khói
-          </h3>
-          <span class="product_topSelling_content">
-            Vị truyền thống với thịt xông khói và thịt nguội hoà trộn với cà...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>89.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Chất_Thanh Cua và Xúc Xích Cocktail.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Chất ngất với hỗn hợp phô mai, thịt xông khói với mùi tây, thanh...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>89.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Gà Nướng 3 Vị.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza Gà Nướng 3 Vị
-          </h3>
-          <span class="product_topSelling_content">
-            Bánh Pizza được kết hợp giữa ba cách chế biến gà nướng, gà bơ...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>159.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Hải Sản Cao Cấp.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza Hải Sản Cao Cấp
-          </h3>
-          <span class="product_topSelling_content">
-            Pizza Hải sản Pesto Xanh là sự kết hợp hoàn hảo giữa tôm...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>169.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Gà Nướng Dứa.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza Gà Nướng Dứa
-          </h3>
-          <span class="product_topSelling_content">
-            Bánh pizza thịt gà mang vị ngọt của dứa kết hợp với vị cay nóng...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>139.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="../img/products/Pizza Gà Nướng 3 Vị.webp"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Pizza Gà Nướng 3 Vị
-          </h3>
-          <span class="product_topSelling_content">
-            Bánh Pizza được kết hợp giữa ba cách chế biến gà nướng, gà bơ...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>159.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
+              <div class="product_topSelling_form">
+                <div class="product_topSelling_priceBox">
+                  <span>Giá chỉ từ</span>
+                  <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
+                </div>
+                <a href="">Thêm</a>
+              </div>
+            </li>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>Không có sản phẩm nào trong danh mục này.</p>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="see_detail">
@@ -292,159 +101,47 @@
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
-
+  <!-- Khai vị -->
   <div class="product_topSelling">
     <div class="product_topSelling_title">
       <a href="#">Khai vị</a>
     </div>
 
     <ul>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
+      <?php if (!empty($products)): ?>
+        <?php foreach ($products as $product): ?>
+          <?php if ($product['id_categories'] == 2): ?>
+            <li>
+              <div class="product_topSelling_thumbnail">
+                <i class="fa-regular fa-heart"></i>
+                <a href="products?id=<?= $product['id']; ?>">
+                  <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                </a>
+              </div>
 
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
+              <div class="product_topSelling_info">
+                <h3 class="product_topSelling_name">
+                  <?= htmlspecialchars($product['name']); ?>
+                </h3>
+                <span class="product_topSelling_content">
+                  <?= htmlspecialchars($product['description']); ?>
+                </span>
+                <a href="products?id=<?= $product['id']; ?>">Xem thêm</a>
+              </div>
 
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
+              <div class="product_topSelling_form">
+                <div class="product_topSelling_priceBox">
+                  <span>Giá chỉ từ</span>
+                  <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
+                </div>
+                <a href="">Thêm</a>
+              </div>
+            </li>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>Không có sản phẩm nào trong danh mục này.</p>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="see_detail">
@@ -452,159 +149,47 @@
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
-
+  <!-- Mỳ ý -->
   <div class="product_topSelling">
     <div class="product_topSelling_title">
       <a href="#">Mỳ ý</a>
     </div>
 
     <ul>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
+      <?php if (!empty($products)): ?>
+        <?php foreach ($products as $product): ?>
+          <?php if ($product['id_categories'] == 3): ?>
+            <li>
+              <div class="product_topSelling_thumbnail">
+                <i class="fa-regular fa-heart"></i>
+                <a href="products?id=<?= $product['id']; ?>">
+                  <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                </a>
+              </div>
 
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
+              <div class="product_topSelling_info">
+                <h3 class="product_topSelling_name">
+                  <?= htmlspecialchars($product['name']); ?>
+                </h3>
+                <span class="product_topSelling_content">
+                  <?= htmlspecialchars($product['description']); ?>
+                </span>
+                <a href="products?id=<?= $product['id']; ?>">Xem thêm</a>
+              </div>
 
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
+              <div class="product_topSelling_form">
+                <div class="product_topSelling_priceBox">
+                  <span>Giá chỉ từ</span>
+                  <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
+                </div>
+                <a href="">Thêm</a>
+              </div>
+            </li>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>Không có sản phẩm nào trong danh mục này.</p>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="see_detail">
@@ -612,159 +197,47 @@
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
-
+  <!-- Salad -->
   <div class="product_topSelling">
     <div class="product_topSelling_title">
       <a href="#">Salad</a>
     </div>
 
     <ul>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
+      <?php if (!empty($products)): ?>
+        <?php foreach ($products as $product): ?>
+          <?php if ($product['id_categories'] == 4): ?> 
+            <li>
+              <div class="product_topSelling_thumbnail">
+                <i class="fa-regular fa-heart"></i>
+                <a href="products?id=<?= $product['id']; ?>">
+                  <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                </a>
+              </div>
 
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
+              <div class="product_topSelling_info">
+                <h3 class="product_topSelling_name">
+                  <?= htmlspecialchars($product['name']); ?>
+                </h3>
+                <span class="product_topSelling_content">
+                  <?= htmlspecialchars($product['description']); ?>
+                </span>
+                <a href="products?id=<?= $product['id']; ?>">Xem thêm</a>
+              </div>
 
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
-      <li>
-        <div class="product_topSelling_thumbnail">
-          <i class="fa-regular fa-heart"></i>
-          <a href="">
-            <img
-              src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-              alt="" />
-          </a>
-        </div>
-
-        <div class="product_topSelling_info">
-          <h3 class="product_topSelling_name">
-            Gà Giòn Xốt Tương Tỏi Hàn Quốc
-          </h3>
-          <span class="product_topSelling_content">
-            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi
-            kiểu Hàn được chế biến theo công...
-          </span>
-          <a href="">Xem thêm</a>
-        </div>
-
-        <div class="product_topSelling_form">
-          <div class="product_topSelling_priceBox">
-            <span>Giá chỉ từ</span>
-            <p>99.000đ</p>
-          </div>
-          <a href="">Thêm</a>
-        </div>
-      </li>
+              <div class="product_topSelling_form">
+                <div class="product_topSelling_priceBox">
+                  <span>Giá chỉ từ</span>
+                  <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
+                </div>
+                <a href="">Thêm</a>
+              </div>
+            </li>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>Không có sản phẩm nào trong danh mục này.</p>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="see_detail">
@@ -781,7 +254,7 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 5): ?> <!-- Kiểm tra nếu id_categories = 5 -->
+          <?php if ($product['id_categories'] == 5): ?> 
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart"></i>

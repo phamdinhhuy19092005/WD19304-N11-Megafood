@@ -133,6 +133,8 @@
     <script src="<?php echo JS_PAGES_URL; ?>login.js"></script>
 <?php elseif ($page === 'register'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>errors.js"></script>
+<?php elseif ($page === 'product'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
 
 <?php endif; ?>
 
