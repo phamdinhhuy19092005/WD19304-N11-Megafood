@@ -126,8 +126,10 @@
 <?php elseif ($page === 'cart'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>cart_btn.js"></script>
 <?php elseif ($page === 'faq'): ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>faq.js"></script>
 <?php elseif ($page === 'login'): ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>login.js"></script>
 <?php elseif ($page === 'register'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>errors.js"></script>

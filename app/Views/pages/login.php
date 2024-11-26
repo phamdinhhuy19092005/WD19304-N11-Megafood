@@ -22,24 +22,43 @@
             <ul>
                 <li class="active"><a href="#">ĐĂNG NHẬP</a></li>
                 <li>
-                    <a href="<?php echo BASE_URL; ?>index.php?route=register">
-                        ĐĂNG KÝ
-                    </a>
+                    <a href="<?php echo BASE_URL; ?>index.php?route=register">ĐĂNG KÝ</a>
                 </li>
             </ul>
             <h1>
                 <span>ĐĂNG NHẬP</span>
             </h1>
             <form class="form_login" method="POST" action="<?php echo BASE_URL; ?>index.php?route=login">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="password" placeholder="Mật khẩu" required>
-                <input type="submit" name="login">Đăng nhập</input>
-                <span class="toggleForm">Quên mật khẩu</span>
+                <div class="form_group">
+                    <input type="email" name="email" placeholder="Email" id="email" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <input type="text" name="password" placeholder="Mật khẩu" id="password" minlength="8" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <button type="submit" name="signUp" value="Đăng ký">Đăng ký</button>
+                </div>
+                <div class="repassword">
+                    <span class="toggleForm">Quên mật khẩu</span>
+                </div>
             </form>
 
             <div class="h_recover" id="recover-password">
-                <input type="email" placeholder="Email">
-                <input type="submit" value="Lấy lại mật khẩu">
+                <div class="form_group">
+                    <input type="email" name="email" placeholder="Email" id="email" >
+                    <div class="errors">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <button type="submit" name="signUp" value="Lấy lại mật khẩu">Đăng ký</button>
+                </div>
             </div>
             <div class="social_login">
                 <p>Hoặc đăng nhập bằng</p>
