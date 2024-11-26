@@ -1,0 +1,334 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+}
+
+:root {
+    --black-color: #000;
+    --light-gray-color: #eee;
+    --white-color: #fff;
+    --secondary-color: #00B2A9;
+    --main-color: #FF7D01;
+    --main-color-rgba: rgba(0, 106, 49, 0.5);
+    --font-text-12: 12px;
+    --font-text-14: 14px;
+    --font-text-16: 16px;
+    --font-text-18: 18px;
+    --font-text-20: 20px;
+    --font-text-24: 24px;
+    --font-text-35: 35px;
+}
+
+/* I. Header */
+
+
+/* Bredcrum */
+.bread_crumb {
+    background: var(--light-gray-color);
+    height: 54px;
+}
+
+.container_bread_crumb {
+    padding: 0px 15px;
+    max-width: 1300px;
+    height: 54px;
+    margin: auto;
+}
+
+ul.breadcrumb {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li {
+    padding-right: 10px;
+}
+
+.breadcrumb li a,
+.breadcrumb li .mr_lr {
+    color: var(--black-color);
+    padding: 0px 3px;
+}
+
+.breadcrumb li .name_prd {
+    color: var(--secondary-color);
+}
+
+.section_about_1 {
+    margin: 30px;
+}
+
+.container_about {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 15px;
+}
+
+.content_about_1 {
+    display: flex;
+}
+
+.container_img_1 {
+    flex: 0 0 41%;
+    min-width: 41%;
+    margin-right: 20px;
+    padding: 0px 10px;
+}
+
+.image_effect {
+    width: 100%;
+}
+
+.image_effect img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.container_content_firt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 0 0 59%;
+    min-width: 59%;
+    padding: 0px 10px;
+}
+
+.title_smail,
+.title_trademark,
+.content {
+    display: block;
+}
+
+.title_smail {
+    font-size: var(--font-text-18);
+    color: var(--secondary-color);
+    font-family: 'Lobster', cursive;
+}
+
+.title_trademark {
+    font-size: var(--font-text-35);
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.content {
+    font-size: var(--font-text-16);
+    color: var(--black-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tags {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.tags li {
+    border-radius: 5px;
+}
+
+.tags li span {
+    font-weight: 700;
+    font-size: var(--font-text-18);
+}
+
+.tags li i {
+    font-size: var(--font-text-24);
+    color: var(--secondary-color);
+    font-weight: 1000;
+    margin-right: 10px;
+}
+
+/* section about 2 */
+
+.content_about_2 {
+    display: flex;
+}
+
+.container_content_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 50%;
+    padding-right: 15px;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.container_content_2 {
+    padding-right: 15px;
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+}
+
+.container_service {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    /* Khoảng cách giữa các dịch vụ */
+    justify-content: space-between;
+    /* Căn đều các phần tử */
+}
+
+.service_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 15px;
+    height: 100%;
+}
+
+.service {
+    flex: 1;
+    /* Đảm bảo mỗi phần tử dịch vụ chiếm cùng một không gian */
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    flex: 0 0 31.3333%;
+    max-width: 31.3333%;
+}
+
+.title_service {
+    font-size: var(--font-text-20);
+    font-weight: 700;
+}
+
+.content_service {
+    line-height: 1.5;
+    font-size: var(--font-text-14);
+}
+
+/* section about 3 */
+
+.section_about_3 {
+    margin-bottom: 30px;
+}
+
+.title_chef {
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.title_chef p {
+    font-size: var(--font-text-18);
+    color: var(--secondary-color);
+    font-family: 'Lobster', sans-serif;
+}
+
+.title_chef .title_name {
+    font-size: var(--font-text-35);
+    color: var(--main-color);
+}
+
+/* Đặt thuộc tính của slider */
+.swiper_wrapper {
+    display: flex;
+}
+
+.item_chef {
+    width: 246px;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Đặt kích thước ảnh và hiệu ứng */
+.img_chef {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.img_chef img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    border-radius: 5px;
+}
+
+/* Tạo lớp phủ màu xanh khi hover */
+.img_chef::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 125, 0, 0.5);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.8s ease;
+}
+
+/* Hiệu ứng khi hover */
+.item_chef:hover .img_chef::after {
+    transform: scaleX(2);
+}
+
+.item_chef:hover .img_chef img {
+    transform: scale(1.1);
+}
+
+.thumb_content {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.location_chef {
+    width: 40%;
+    background-color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.content_chef {
+    color: var(--black-color);
+    background-color: var(--white-color);
+    text-align: left;
+    padding: 10px;
+    border-radius: 0px 5px 5px 5px;
+}
+
+.content_chef .name {
+    margin-bottom: 5px;
+    font-size: var(--font-text-24) !important;
+    font-weight: 600;
+}
+
+.item_chef:hover .thumb_content {
+    opacity: 1;
+}
+
+.thumb_content .content_chef span {
+    display: block;
+    font-size: 14px;
+}
