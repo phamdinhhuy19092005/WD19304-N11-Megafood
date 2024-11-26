@@ -120,6 +120,8 @@
     <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>scrollToTop.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
+
 
 <?php elseif ($page === 'cart'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>cart_btn.js"></script>
