@@ -66,7 +66,7 @@
     </div>
 
 
-    <div class="about">
+    <div class="about"> 
         <div class="container">
 
             <div class="space_left">

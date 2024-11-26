@@ -18,7 +18,7 @@
         <div class="main">
           <header class="main_header">
             <div class="logo">
-              <a href="../Home/index.html">
+              <a href="<?php echo BASE_URL; ?>index.php?route=home">
                 <img src="<?php echo IMG_BASE_URL; ?>header/logo.png" alt="" />
               </a>
             </div>
@@ -30,7 +30,7 @@
                   <div class="section_header">
                     <div class="container_ss_deader">
                       <h2>Thông tin nhận hàng</h2>
-                      <a href="../login/login.html">
+                      <a href="<?php echo BASE_URL; ?>index.php?route=login">
                         <i class="bi bi-person-circle"></i>
                         <span>Đăng nhập</span>
                       </a>
@@ -223,7 +223,7 @@
                       <tr class="product">
                         <td class="product_image">
                           <div class="product_thumbnail_wrapper">
-                            <a href="../product_details/detail.html">
+                            <a href=".<?php echo BASE_URL; ?>index.php?route=home">
                               <img
                                 src="https://bizweb.dktcdn.net/thumb/thumb/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt=""
@@ -290,7 +290,7 @@
                 </div>
                 <div class="order_summary_item_4">
                   <div class="previous_link">
-                    <a href="../cart/cart.html" class="previous_link_1"
+                    <a href="<?php echo BASE_URL; ?>index.php?route=cart" class="previous_link_1"
                       ><i class="bi bi-chevron-left"></i>Quay về giỏ hàng</a
                     >
                   </div>
