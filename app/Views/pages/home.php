@@ -40,7 +40,7 @@
 
             </li>
             <li class="category_item">
-                <a href="..//product/index.html">
+                <a href="<?php echo BASE_URL; ?>index.php?route=products">
                     <p>Khai vị <br>(13 món ăn) </p>
                     <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp"
                         alt="">
@@ -48,14 +48,14 @@
 
             </li>
             <li class="category_item">
-                <a href="..//product/index.html">
+                <a href="<?php echo BASE_URL; ?>index.php?route=products">
                     <p>Mỳ Ý <br>(7 món ăn) </p>
                     <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp"
                         alt="">
                 </a>
             </li>
             <li class="category_item">
-                <a href="..//product/index.html">
+                <a href="<?php echo BASE_URL; ?>index.php?route=products">
                     <p>Salad <br>(7 món ăn) </p>
                     <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp"
                         alt="">
@@ -87,25 +87,25 @@
 
                 <ul class="about_img">
                     <li class="about_list">
-                        <a href="../sanpham/index.html"><img
+                        <a href="<?php echo BASE_URL; ?>index.php?route=products"><img
                                 src="<?php echo IMG_BASE_URL; ?>about/about2.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
-                        <a href="../sanpham/index.html"><img
+                        <a href="<?php echo BASE_URL; ?>index.php?route=products"><img
                                 src="<?php echo IMG_BASE_URL; ?>about/about3.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
-                        <a href="../sanpham/index.html"><img
+                        <a href="<?php echo BASE_URL; ?>index.php?route=products"><img
                                 src="<?php echo IMG_BASE_URL; ?>about/about4.webp"
                                 alt=""></a>
 
                     </li>
                     <li class="about_list">
-                        <a href="../sanpham/index.html"><img
+                        <a href="<?php echo BASE_URL; ?>index.php?route=products"><img
                                 src="<?php echo IMG_BASE_URL; ?>about/about5.webp"
                                 alt=""></a>
 
@@ -118,80 +118,94 @@
         <div class="product_about">
             <span class="title2">Món ăn nổi bật</span>
             <div class="product">
-                <div class="product1">
+                    <div class="product1">
 
-                    <div class="product_variants">
-                        <div class="product_thumbnail">
-                            <a href=""><i class="fa-regular fa-heart add_to_favorites"></i></a>
-                            <a href="../product_details/detail.html">
-                                <img src="<?php echo IMG_BASE_URL; ?>products/Pizza_Aloha.webp"
-                                    alt="">
-                            </a>
-                        </div>
-
-
-                        <div class="product_info">
-                            <a href="../product_details/detail.html">
-                                <h1 class="product_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h1>
-                            </a>
-                            <div class="product_content">
-                                <span>
-                                    Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế
-                                    biến
-                                    theo công...
-                                </span><br>
-                                <a href="">Xem thêm</a>
+                        <div class="product_variants">
+                            <div class="product_thumbnail">
+                                <i class="fa-regular fa-heart add_to_favorites" 
+                                    data-name="Gà Giòn Xốt Tương Tỏi Hàn Quốc" 
+                                    data-image="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060">
+                                  </i>
+                                <a href="../product_details/detail.html">
+                                    <img src="//bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
+                                        alt="">
+                                </a>
                             </div>
-                        </div>
 
-                        <div class="group_form">
-                            <div class="price_box">
-                                <span>Giá chỉ từ</span><br>
-                                <p>99.000đ</p>
+
+                            <div class="product_info">
+                                <a href="../product_details/detail.html">
+                                    <h1 class="product_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h1>
+                                </a>
+                                <div class="product_content">
+                                    <span>
+                                        Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế
+                                        biến
+                                        theo công...
+                                    </span><br>
+                                    <a href="">Xem thêm</a>
+                                </div>
                             </div>
-                            <a href="">Thêm</a>
+
+                            <div class="group_form">
+                                <div class="price_box">
+                                    <span>Giá chỉ từ</span><br>
+                                    <p>99.000đ</p>
+                                </div>
+                                <a href="javascript:void(0)" class="add_to_cart" 
+                                    data-name="Gà Giòn Xốt Tương Tỏi Hàn Quốc" 
+                                    data-image="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060">
+                                    Thêm
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="product1">
+                    <div class="product1">
 
-                    <div class="product_variants">
-                        <div class="product_thumbnail">
-                            <a href=""><i class="fa-regular fa-heart add_to_favorites"></i></a>
-                            <a href="../product_details/detail.html">
-                                <img src="//bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                    alt="">
-                            </a>
-                        </div>
-
-
-                        <div class="product_info">
-                            <a href="../product_details/detail.html">
-                                <h1 class="product_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h1>
-                            </a>
-                            <div class="product_content">
-                                <span>
-                                    Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế
-                                    biến
-                                    theo công...
-                                </span><br>
-                                <a href="">Xem thêm</a>
+                        <div class="product_variants">
+                            <div class="product_thumbnail">
+                                <i class="fa-regular fa-heart add_to_favorites" 
+                                    data-name="Gà Giòn Xốt Tương Tỏi Hàn Quốc" 
+                                    data-image="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060">
+                                </i>
+                                <a href="../product_details/detail.html">
+                                    <img src="//bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
+                                        alt="">
+                                </a>
                             </div>
-                        </div>
 
-                        <div class="group_form">
-                            <div class="price_box">
-                                <span>Giá chỉ từ</span><br>
-                                <p>99.000đ</p>
+
+                            <div class="product_info">
+                                <a href="../product_details/detail.html">
+                                    <h1 class="product_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h1>
+                                </a>
+                                <div class="product_content">
+                                    <span>
+                                        Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế
+                                        biến
+                                        theo công...
+                                    </span><br>
+                                    <a href="">Xem thêm</a>
+                                </div>
                             </div>
-                            <a href="">Thêm</a>
+
+                            <div class="group_form">
+                                <div class="price_box">
+                                    <span>Giá chỉ từ</span><br>
+                                    <p>99.000đ</p>
+                                </div>
+                                <a href="javascript:void(0)" class="add_to_cart" 
+                                    data-name="Gà Giòn Xốt Tương Tỏi Hàn Quốc" 
+                                    data-image="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060">
+                                    Thêm
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
-
-
-            </div>
 
 
 

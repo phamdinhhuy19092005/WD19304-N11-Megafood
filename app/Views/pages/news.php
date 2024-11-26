@@ -3,7 +3,7 @@
             <div class="container_bread_crumb">
                 <ul class="List_bread_crumb">
                     <li class="home">
-                        <a href="#">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=home">
                             <span>Trang chủ</span>
                         </a>
                         <span class="mr_lr">
@@ -100,18 +100,18 @@
                             <div class="title_head">Danh mục tin tức</div>
                             <div class="nav_category">
                                 <ul class="nav navbar-pills">
-                                    <li class="nav_item_relative"><a href="#" title="Trang chủ">Trang chủ</a></li>
-                                    <li class="nav_item_relative"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
-                                    <li class="nav_item_relative"><a href="#" title="Sản phẩm">Sản phẩm</a></li>
-                                    <li class="nav_item_relative"><a href="#" title="Tin tức">Tin tức</a></li>
-                                    <li class="nav_item_relative"><a href="#" title="Liên hệ">Liên hệ</a></li>
-                                    <li class="nav_item_relative"><a href="#" title="Câu hỏi thường gặp">Câu hỏi thường
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=home" title="Trang chủ">Trang chủ</a></li>
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=about" title="Giới thiệu">Giới thiệu</a></li>
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=products" title="Sản phẩm">Sản phẩm</a></li>
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=news" title="Tin tức">Tin tức</a></li>
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=contact" title="Liên hệ">Liên hệ</a></li>
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=faq" title="Câu hỏi thường gặp">Câu hỏi thường
                                             gặp</a>
                                     </li>
-                                    <li class="nav_item_relative"><a href="#" title="Hệ thống cửa hàng">Hệ thống cửa
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=storeSystem" title="Hệ thống cửa hàng">Hệ thống cửa
                                             hàng</a>
                                     </li>
-                                    <li class="nav_item_relative"><a href="#" title="Đặt hàng">Đặt hàng</a></li>
+                                    <li class="nav_item_relative"><a href="<?php echo BASE_URL; ?>index.php?route=booking" title="Đặt hàng">Đặt bàn</a></li>
                                 </ul>
                             </div>
                         </div>

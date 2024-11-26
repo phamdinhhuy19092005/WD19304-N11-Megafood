@@ -82,19 +82,19 @@
                     <h3>Tin tức</h3>
                     <div class="after"></div>
                     <div class="content_top_small">
-                        <a href="../news/news.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
                             <img src="<?php echo IMG_BASE_URL; ?>/news/news1.webp" alt="">
                             <span>Đế bánh Pizza mua ở đâu đảm bảo chất lượng</span>
                         </a>
-                        <a href="../news/news.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
                             <img src="<?php echo IMG_BASE_URL; ?>/news/news2.webp" alt="">
                             <span>Cách làm pizza xốt Mayonnaise thơm béo ngon ngất ngây</span>
                         </a>
-                        <a href="../news/news.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
                             <img src="<?php echo IMG_BASE_URL; ?>/news/news3.webp" alt="">
                             <span>Pasta là món ăn của nước nào? Pasta và Spaghetti có gì khác nhau?</span>
                         </a>
-                        <a href="../news/news.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
                             <img src="<?php echo IMG_BASE_URL; ?>/news/news4.webp" alt="">
                             <span>Tiết lộ tính cách qua cách ăn pizza cực thú vị</span>
                         </a>
