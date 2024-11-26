@@ -32,6 +32,8 @@ require_once 'app/Controllers/BookingController.php';
 require_once 'app/Controllers/LoginController.php';
 require_once 'app/Controllers/RegisterController.php';
 require_once 'app/Controllers/StoreSystemController.php';
+require_once 'app/Controllers/PaymentController.php';
+
 
 
 $route = $_GET['route'] ?? 'home';
@@ -84,6 +86,10 @@ switch ($route) {
     case 'storeSystem':
         $controller = new StoreSystemController();
         $controller->storeSystem();
+        break;
+    case 'payment':
+        $controller = new PaymentController();
+        $controller->payment();
         break;
     default:
         echo "404 - Page Not Found";

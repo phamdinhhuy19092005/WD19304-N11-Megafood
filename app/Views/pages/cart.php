@@ -56,7 +56,7 @@
 
 
                     <div class="pay">
-                        <a href="../payment/index.html"><button type="button">Thanh toán</button></a>
+                        <a href="<?php echo BASE_URL; ?>index.php?route=payment"><button type="button">Thanh toán</button></a>
                     </div>
                 </div>
             </div>

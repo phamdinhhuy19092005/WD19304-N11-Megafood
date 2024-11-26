@@ -122,7 +122,7 @@
 
                     <div class="product_variants">
                         <div class="product_thumbnail">
-                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-regular fa-heart add_to_favorites"></i></a>
                             <a href="../product_details/detail.html">
                                 <img src="<?php echo IMG_BASE_URL; ?>products/Pizza_Aloha.webp"
                                     alt="">
@@ -158,7 +158,7 @@
 
                     <div class="product_variants">
                         <div class="product_thumbnail">
-                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-regular fa-heart add_to_favorites"></i></a>
                             <a href="../product_details/detail.html">
                                 <img src="//bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -268,7 +268,7 @@
                 <ul>
                     <li>
                         <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="../product_details/detail.html">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -299,7 +299,7 @@
                     </li>
                     <li>
                         <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="../product_details/detail.html">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -330,7 +330,7 @@
                     </li>
                     <li>
                         <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="../product_details/detail.html">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -361,7 +361,7 @@
                     </li>
                     <li>
                         <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="../product_details/detail.html">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -412,11 +412,7 @@
             <ul class="product_topSelling_list">
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                    <i class="fa-regular fa-heart add_to_favorites" 
-                               data-name="Gà Giòn Xốt Tương Tỏi Hàn Quốc" 
-                               data-image="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060" 
-                               data-id="1">
-                            </i>
+                    <i class="fa-regular fa-heart add_to_favorites" ></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -444,7 +440,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -472,7 +468,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -500,7 +496,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -528,7 +524,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -556,7 +552,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -584,7 +580,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -612,7 +608,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -640,7 +636,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -668,7 +664,7 @@
                 </li>
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart add_to_favorites"></i>
                         <a href="">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                 alt="">
@@ -782,7 +778,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -812,7 +808,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -842,7 +838,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -872,7 +868,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -920,7 +916,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -950,7 +946,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -980,7 +976,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1010,7 +1006,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1058,7 +1054,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1088,7 +1084,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1118,7 +1114,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1148,7 +1144,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1194,7 +1190,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1224,7 +1220,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1254,7 +1250,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1284,7 +1280,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1332,7 +1328,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1362,7 +1358,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1392,7 +1388,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">
@@ -1421,7 +1417,7 @@
                 <li>
                     <div class="product_category">
                         <div class="product_category_thumbnail">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart add_to_favorites"></i>
                             <a href="">
                                 <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
                                     alt="">

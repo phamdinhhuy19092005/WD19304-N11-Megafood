@@ -19,7 +19,7 @@
     </section>
     <div class="layout_contact">
         <div class="container_contact">
-            <div class="row">
+            <div class="row_contact">
                 <div class="right_contact">
                     <div class="contacts">
                         <h4 class="title_contact" class="title_contact">Thông tin cửa hàng</h4>

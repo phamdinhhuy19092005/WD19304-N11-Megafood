@@ -35,6 +35,8 @@
         'login' => ['auth.css', 'product-details.css'],
         'register' => ['auth.css', 'product-details.css'],
         'storeSystem' => ['storeSystem.css', 'product-details.css'],
+        'payment' => ['payment.css', 'product-details.css'],
+
 
     ];
 
