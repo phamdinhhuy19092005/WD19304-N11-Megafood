@@ -1,3 +1,8 @@
+<? include __DIR__ . '/../Models/Product.php'; ?>
+<?php
+$productModel = new Product();
+$products = $productModel->getAllProducts();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +58,7 @@
 
 <body>
 
-<header>
+    <header>
         <div class="top_header">
             <p>Chào mừng đến với MegaFood</p>
         </div>'
@@ -76,91 +81,29 @@
                             <div class="search_title">
                                 <span>Sản phẩm</span>
                             </div>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0003870-bbq-chicken-platter-2pcs.png?v=1708679416963"
-                                        alt=""></a>
-                                <div class="search_info">
+                            <?php
+                            if (is_array($products) && !empty($products)) {
+                                foreach ($products as $product): ?>
 
-                                    <a href="/product_details/detail.html/product_details/detail.html"><span>Pizza Chất
-                                            Thanh Cua và Xúc Xích Cocktail</span></a><br>
-                                    <p>99.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0003260-hambacon-500.png?v=1708679412507"
-                                        alt=""></a>
-                                <div class="search_info">
-                                    <a href="/product_details/detail.html"><span>Pizza Chất Giăm Bông & Thịt Xông
-                                            Khói</span></a><br>
-                                    <p>89.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0003258-chicken-delight-500.png?v=1708679415137"
-                                        alt=""></a>
-                                <div class="search_info">
+                                    <li class="search_list">
+                                        <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+                                            <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                                        </a>
+                                        <div class="search_info">
+                                            <a href="/product_details/detail.html">
+                                                <span><?= htmlspecialchars($product['name']); ?></span>
+                                            </a>
+                                                <br>
+                                            <p><?= htmlspecialchars($product['price']); ?></p>
+                                        </div>
+                                    </li>
 
-                                    <a href="/product_details/detail.html"><span>Pizza Chất Gà Nướng Dứa</span></a><br>
-                                    <p>89.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0002257-spaghetti-shrimp-rose-50.png?v=1708679386557"
-                                        alt=""></a>
-                                <div class="search_info">
-
-                                    <a href="/product_details/detail.html"><span>Mỳ Ý Tôm Sốt Kem Cà Chua</span></a><br>
-                                    <p>139.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0002254-spicy-sausage-spaghetti.png?v=1708679389827"
-                                        alt=""></a>
-                                <div class="search_info">
-
-                                    <a href="/product_details/detail.html"><span>Mỳ Ý Cay Xúc Xích</span></a><br>
-                                    <p>119.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0002255-spaghetti-ham-mushroom-5.png?v=1708679391590"
-                                        alt=""></a>
-                                <div class="search_info">
-
-                                    <a href="/product_details/detail.html"><span>Mỳ Ý Giăm Bông Và Nấm Sốt
-                                            Kem</span></a><br>
-                                    <p>119.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0003870-bbq-chicken-platter-2pcs.png?v=1708679416963"
-                                        alt=""></a>
-                                <div class="search_info">
-
-                                    <a href="/product_details/detail.html"><span>Gà Nướng BBQ (2 miếng)</span></a><br>
-                                    <p>99.000đ</p>
-                                </div>
-                            </li>
-                            <li class="search_list">
-                                <a href="/product_details/detail.html"><img
-                                        src="//bizweb.dktcdn.net/thumb/compact/100/510/571/products/0003950-crispy-chicken-with-k-sa.png?v=1708679418013"
-                                        alt=""></a>
-                                <div class="search_info">
-
-                                    <a href="/product_details/detail.html"><span>Gà Giòn Xốt Hàn - Truyền Thống (5
-                                            miếng)</span></a><br>
-                                    <p>249.000đ</p>
-                                </div>
-                            </li>
+                                <?php endforeach; ?>
+                            <?php } else {
+                                echo 'Không có sản phẩm nào.';
+                            }
+                            ?>
                             <div class="search_seeMore">
-
                                 <a href="<?php echo BASE_URL; ?>index.php?route=products">Xem thêm sản phẩm</a>
                             </div>
                         </ul>

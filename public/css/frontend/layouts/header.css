@@ -189,8 +189,9 @@ body {
 }
 
 #searchResults{
+    overflow-y: auto;
+    max-height: 500px;
     position: absolute;
-    max-width: 100%; 
     width: 410px;
     top: 100%;
     background-color: var(--white-color);

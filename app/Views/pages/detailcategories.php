@@ -141,61 +141,11 @@
                             </div>
                         </aside>
 
-                        <!-- filter size -->
-                         <aside class="filter_size">
-                            <div class="title_filter">Kích thước</div>
-                            <div class="content_size">
-                                <ul>
-                                    <li class="filter_item_size">
-                                        <label for="filter_nho_6inch">
-                                                <input type="checkbox" id="filter_nho_6inch" hidden>
-                                                <span>Nhỏ 6 inch</span>
-                                        </label>
-                                    </li>
-                                    <li class="filter_item_size"> 
-                                        <label for="filter_vua_9inch">
-                                                <input type="checkbox" id="filter_vua_9inch" hidden>
-                                                <span>Vừa 9 inch</span>
-                                        </label>
-                                    </li>
-                                    <li class="filter_item_size"> 
-                                            <label for="filter_lon_12inch">
-                                                <input type="checkbox" id="filter_lon_12inch" hidden>
-                                                <span>Lớn 12 inch</span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                         </aside>
-                         <!-- filter under -->
-                         <aside class="filter_under">
-                            <div class="title_filter">Đế</div>
-                                <div class="content_under">
-                                    <ul>
-                                        <li class="filter_item_under">
-                                            <span>
-                                                <label for="de_day">
-                                                    <input type="checkbox" id="de_day" hidden>
-                                                    <span>Đế dày</span>
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li class="filter_item_under">
-                                            <span>
-                                                <label for="de_gion_mong">
-                                                    <input type="checkbox" id="de_gion_mong" hidden>
-                                                    <span>Đế Mỏng giòn</span>
-                                                </label>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                         </aside>
+                        
+                         
 
                 </div>
-                <a href="" class="img_effect">
-                    <img src="https://bizweb.dktcdn.net/100/510/571/themes/941527/assets/banner_col.jpg?1727255430829" alt="">
-                </a>
+                
             </aside>
             <!-- category -->
             <div class="block_collection">
@@ -207,7 +157,6 @@
                                 <li class="btn_quick_sort"><a href="">Mặc định</a></li>
                                 <li class="btn_quick_sort"><a href="">Tên A-Z</a></li>
                                 <li class="btn_quick_sort"><a href="">Tên Z-A</a></li>
-                                <li class="btn_quick_sort"><a href="">Hàng</a></li>
                                 <li class="btn_quick_sort"><a href="">Giá thấp đến cao</a></li>
                                 <li class="btn_quick_sort"><a href="">Giá cao đến thấp</a></li>
                             </ul>

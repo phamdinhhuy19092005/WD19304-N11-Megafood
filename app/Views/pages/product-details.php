@@ -19,7 +19,7 @@
                     </span>
                 </li>
                 <li>
-                    <span class="name_prd">Gà Giòn Xốt Tương Tỏi Hàn Quốc</span>
+                    <span class="name_prd"><?= htmlspecialchars($product['name']); ?></span>
                 </li>
 
             </ul>
@@ -34,22 +34,6 @@
                         <div class="product_img_block">
                             <div class="gallery_top">
                                 <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
-                            </div>
-                            <div class="gallery_bottom">
-                                <ul class="list_gallery_bottom dis_flex">
-                                    <!-- Khi có border -->
-                                    <li class="item_gallery_border selected">
-                                        <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
-                                    </li>
-                                    <!-- Các ảnh khác -->
-                                    <?php if (!empty($product['additional_images'])): ?>
-                                        <?php foreach ($product['additional_images'] as $image): ?>
-                                            <li class="item_gallery">
-                                                <img src="<?= IMG_BASE_URL . htmlspecialchars($image); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
-                                            </li>
-                                        <?php endforeach; ?>
-                                    <?php endif; ?>
-                                </ul>
                             </div>
                         </div>
 
@@ -107,32 +91,6 @@
                                                 99.000₫
                                             </span>
                                         </span>
-                                    </div>
-                                    <div class="form-product">
-                                        <div class="select_swatch">
-                                            <div class="seclect_prd">
-                                                Loại: <span class="value_roperties">3 miếng</span>
-                                            </div>
-                                        </div>
-                                        <div class="thump_swatch">
-                                            <div class="swatch_element">
-                                                <input id="swatch-0-3-mieng" type="radio" name="option-0"
-                                                    value="3 miếng" checked>
-                                                <label for="swatch-0-3-mieng">3 miếng</label> </label>
-                                            </div>
-
-                                            <div class="swatch_element">
-                                                <input id="swatch-0-5-mieng" type="radio" name="option-0"
-                                                    value="5 miếng">
-                                                <label for="swatch-0-5-mieng">5 miếng</label> </label>
-                                            </div>
-
-                                            <div class="swatch_element">
-                                                <input id="swatch-0-9-mieng" type="radio" name="option-0"
-                                                    value="9 miếng">
-                                                <label for="swatch-0-9-mieng">9 miếng</label> </label>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <!-- Ghi chú -->
