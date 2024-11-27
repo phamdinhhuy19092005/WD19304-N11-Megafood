@@ -152,11 +152,11 @@ $products = $productModel->getAllProducts();
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm <i
                                     class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
-                                <li><a href="../detailCategories/category.html">Pizza</a></li>
-                                <li><a href="../detailCategories/category.html">Khai vị</a></li>
-                                <li><a href="../detailCategories/category.html">Mỳ ý</a></li>
-                                <li><a href="../detailCategories/category.html">Salad</a></li>
-                                <li><a href="../detailCategories/category.html">Thức uống</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories"">Pizza</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories"">Khai vị</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories"">Mỳ ý</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories"">Salad</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories"">Thức uống</a></li>
                             </ul>
                         </li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=news">Tin tức</a></li>
