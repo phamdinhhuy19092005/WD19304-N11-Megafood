@@ -62,7 +62,7 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 1): ?> 
+          <?php if ($product['id_categories'] == 1): ?>
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart add_to_favorites" 
@@ -218,7 +218,7 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 4): ?> 
+          <?php if ($product['id_categories'] == 4): ?>
             <li>
               <div class="product_topSelling_thumbnail">
               <i class="fa-regular fa-heart add_to_favorites" 
@@ -261,7 +261,7 @@
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
-
+  <!-- Thức uống -->
   <div class="product_topSelling">
     <div class="product_topSelling_title">
       <a href="#">Thức uống</a>
@@ -270,7 +270,7 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 5): ?> 
+          <?php if ($product['id_categories'] == 5): ?>
             <li>
               <div class="product_topSelling_thumbnail">
               <i class="fa-regular fa-heart add_to_favorites" 
