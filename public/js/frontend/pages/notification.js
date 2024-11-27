@@ -1,5 +1,4 @@
-let favoriteList = JSON.parse(sessionStorage.getItem("favorites")) || []; 
-
+let favoriteList = []; 
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".add_to_cart");
   
@@ -42,28 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-  // yêu thích
   document.addEventListener("DOMContentLoaded", () => {
     const favorites = document.querySelectorAll(".add_to_favorites");
   
     favorites.forEach((icon) => {
-      const productName = icon.getAttribute("data-name");
-
-      if (favoriteList.some((item) => item.name === productName)) {
-        icon.classList.add("active");
-        icon.classList.replace("fa-regular", "fa-solid");
-      }
-
       icon.addEventListener("click", () => {
+        const productName = icon.getAttribute("data-name");
         const productImage = icon.getAttribute("data-image");
+        
 
         if (icon.classList.contains("active")) {
           // Xóa sản phẩm khỏi danh sách yêu thích
           favoriteList = favoriteList.filter((item) => item.name !== productName);
           icon.classList.remove("active");
-          icon.classList.replace("fa-solid", "fa-regular");
           showDeleteNotification(productName,productImage);
+          icon.classList.replace("fa-solid", "fa-regular");
         } else {
           // Thêm sản phẩm vào danh sách yêu thích
           favoriteList.push({ name: productName, image: productImage });
@@ -71,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
           icon.classList.replace("fa-regular", "fa-solid");
           showAddNotification(productName,productImage);
         }
-        sessionStorage.setItem("favorites", JSON.stringify(favoriteList));
       });
     });
   
