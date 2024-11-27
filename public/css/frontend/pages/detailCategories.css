@@ -147,11 +147,12 @@ ul.breadcrumb {
 
 .row_category_detail {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    /* gap: 20px; */
 }
 
 .sidebar {
-    max-width: 25%;
+    width: 25%;
 }
 
 .title_sidebar {
@@ -167,6 +168,7 @@ ul.breadcrumb {
 .sidebar_content,
 .filter_content {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .nav_item_category {
@@ -346,6 +348,10 @@ input[type="checkbox"]+span:hover{
 }
 
 /* product */
+.block_collection{
+    max-width: 72%;
+}
+
 .products_view {
     width: 100%;
     margin: 0 auto;
@@ -354,7 +360,6 @@ input[type="checkbox"]+span:hover{
 }
 
 .row_product ul {
-    /* max-width: 1271px; */
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
