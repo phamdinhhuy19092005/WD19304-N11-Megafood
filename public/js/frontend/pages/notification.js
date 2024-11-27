@@ -1,30 +1,46 @@
 let favoriteList = JSON.parse(sessionStorage.getItem("favorites")) || []; 
+let cart = JSON.parse(sessionStorage.getItem("cart")) || []; 
 
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".add_to_cart");
+    const notificationContainer = document.createElement("div");
+    notificationContainer.className = "notification-container";
+    document.body.appendChild(notificationContainer);
   
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
+        const productId = button.getAttribute("data-id");
         const productName = button.getAttribute("data-name");
         const productImage = button.getAttribute("data-image");
-  
-        showNotification(productName, productImage);
+        const productPrice = button.getAttribute("data-price");
+
+        const existingProductIndex = cart.findIndex(item => item.id === productId);
+
+        if (existingProductIndex === -1) {
+                // Nếu sản phẩm chưa có trong giỏ hàng, thêm vào giỏ
+                cart.push({id: productId, name: productName, image: productImage, price: productPrice, quantity: 1});
+                showNotification(productName, productImage, "Đã thêm vào giỏ hàng");
+            } else {
+                // Nếu sản phẩm đã có, tăng số lượng sản phẩm lên
+                cart[existingProductIndex].quantity += 1;
+                showNotification(productName, productImage, "Sản phẩm đã được cập nhật trong giỏ hàng");
+            }
+        sessionStorage.setItem("cart", JSON.stringify(cart));
       });
     });
   
-    function showNotification(name, image) {
+    function showNotification(name, image, message) {
       const notification = document.createElement("div");
       notification.className = "notification";
       notification.innerHTML = `
-        <div class="notification_container">
+        <div class="notification_container" style="max-width: 300px;height: 100px;">
           <img src="${image}" alt="${name}" />
           <div class="notification_content">
-            <p class="notification_title">Đã thêm vào giỏ:</p>
+            <p class="notification_title" style="font-weight: bold;">${message}:</p>
             <div class="notification_name"><strong>${name}</strong></div>
-            <div class="notification_cart"><strong>Bấm vào <a href="../cart/cart.html">đây</a> để tới giỏ hàng</strong></div>
-          </div>
         </div>
-        <span class="notification-close"><i class="bi bi-x-lg"></i></span>
+        <br>
+        <br>
       `;
   
       document.body.appendChild(notification);
@@ -33,12 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         notification.remove();
       }, 3000);
-  
-      //close
-      const closeButton = notification.querySelector(".notification-close");
-      closeButton.addEventListener("click", () => {
-        notification.remove();
-      });
     }
   });
 
@@ -68,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
           showDeleteNotification(productName,productImage);
         } else {
           // Thêm sản phẩm vào danh sách yêu thích
-          favoriteList.push({ name: productName, image: productImage });
+          favoriteList.push({id: productId, name: productName, image: productImage });
           icon.classList.add("active");
           icon.classList.replace("fa-regular", "fa-solid");
           showAddNotification(productName,productImage);
@@ -84,14 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="notification_add_hearts">
           <img src="${image}" alt="${message}" />
           <div class="notification_content">
-          <div class="notification_title">Đã thêm vào yêu thích:</div>
+          <div class="notification_title" style="font-weight: bold;">Đã thêm vào yêu thích:</div>
           <div class="notification_name_add">
             <strong>${message}</strong>
           </div>
-          <div class="log_list_favorite"><strong>Tới <a href="../favoritesList/favoritesList.html">danh sách yêu thích</a> !</strong></div>
-          </div>
         </div>
-        <span class="notification-close">&times;</span>
       `;
   
       document.body.appendChild(notification);
@@ -101,10 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
         notification.remove();
       }, 3000);
   
-      const closeButton = notification.querySelector(".notification-close");
-      closeButton.addEventListener("click", () => {
-        notification.remove();
-      });
+    //   const closeButton = notification.querySelector(".notification-close");
+    //   closeButton.addEventListener("click", () => {
+    //     notification.remove();
+    //   });
     }
     function showDeleteNotification(message, image) {
         const notification = document.createElement("div");
@@ -113,14 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="notification_delete_hearts">
           <img src="${image}" alt="${message}" />
           <div class="notification_content">
-          <div class="notification_title">Đã bỏ yêu thích:</div>
+          <div class="notification_title" style="font-weight: bold;">Đã bỏ yêu thích:</div>
           <div class="notification_name_delete">
             <strong>${message}</strong>
           </div>
-          <div class="log_list_favorite"><strong>Tới <a href="../favoritesList/favoritesList.html">danh sách yêu thích</a> !</strong></div>
-          </div>
         </div>
-        <span class="notification-close">&times;</span>
       `;
     
         document.body.appendChild(notification);
@@ -130,10 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
           notification.remove();
         }, 3000);
     
-        const closeButton = notification.querySelector(".notification-close");
-        closeButton.addEventListener("click", () => {
-          notification.remove();
-        });
+        // // const closeButton = notification.querySelector(".notification-close");
+        // closeButton.addEventListener("click", () => {
+        //   notification.remove();
+        // });
       }
   });
   

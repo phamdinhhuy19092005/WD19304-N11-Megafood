@@ -90,7 +90,13 @@
                   <span>Giá chỉ từ</span>
                   <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                 </div>
-                <a href="">Thêm</a>
+                <a href="javascript:void(0)" class="add_to_cart" 
+                data-id="<?= htmlspecialchars($product['id']); ?>" 
+                data-name="<?= htmlspecialchars($product['name']); ?>" 
+                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>"
+                data-price="<?= number_format($product['price'], 0, ',', '.'); ?>">
+                Thêm
+              </a>
               </div>
             </li>
           <?php endif; ?>
