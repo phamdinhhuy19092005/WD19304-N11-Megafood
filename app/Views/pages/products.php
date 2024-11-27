@@ -62,11 +62,11 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 1): ?> 
+          <?php if ($product['id_categories'] == 1): ?>
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart"></i>
-                <a href="<?= BASE_URL; ?>index.php?route=product-details&id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -114,7 +114,7 @@
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart"></i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -162,7 +162,7 @@
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart"></i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -206,11 +206,11 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 4): ?> 
+          <?php if ($product['id_categories'] == 4): ?>
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart"></i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -245,7 +245,7 @@
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
-
+  <!-- Thức uống -->
   <div class="product_topSelling">
     <div class="product_topSelling_title">
       <a href="#">Thức uống</a>
@@ -254,11 +254,11 @@
     <ul>
       <?php if (!empty($products)): ?>
         <?php foreach ($products as $product): ?>
-          <?php if ($product['id_categories'] == 5): ?> 
+          <?php if ($product['id_categories'] == 5): ?>
             <li>
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart"></i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>

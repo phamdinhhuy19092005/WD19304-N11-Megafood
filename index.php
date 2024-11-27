@@ -1,9 +1,9 @@
 <?php
 
-// require_once './config/database.php';
+require_once './config/database.php';
 
-// $connectModel = new Database();
-// $conn = $connectModel->connect();
+$connectModel = new Database();
+$conn = $connectModel->connect();
 
 // if ($conn) {
 //     echo 'Kết nối thành công';
@@ -51,6 +51,10 @@ switch ($route) {
     case 'products':
         $controller = new ProductController();
         $controller->products();
+        break;
+    case 'product-detail':
+        $controller = new ProductController();
+        $controller->productDetail();
         break;
     case 'account':
         $controller = new AccountController();

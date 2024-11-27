@@ -114,6 +114,8 @@
 
 <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
 <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
+<script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
+
 
 <?php if ($page === 'home'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
@@ -133,9 +135,6 @@
     <script src="<?php echo JS_PAGES_URL; ?>login.js"></script>
 <?php elseif ($page === 'register'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>errors.js"></script>
-<?php elseif ($page === 'product'): ?>
-    <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
-
 <?php endif; ?>
 
 

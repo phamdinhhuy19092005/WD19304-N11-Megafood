@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="form_group">
-                    <button type="submit" name="signUp" value="Đăng ký">Đăng ký</button>
+                    <button type="submit" name="login" value="Đăng ký">Đăng nhập</button>
                 </div>
                 <div class="repassword">
                     <span class="toggleForm">Quên mật khẩu</span>
