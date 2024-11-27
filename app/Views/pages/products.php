@@ -65,8 +65,12 @@
           <?php if ($product['id_categories'] == 1): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-                <i class="fa-regular fa-heart"></i>
-                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+                <i class="fa-regular fa-heart add_to_favorites" 
+                data-id="<?= htmlspecialchars($product['id']); ?>" 
+                data-name="<?= htmlspecialchars($product['name']); ?>" 
+                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                </i>
+                <a href="<?= BASE_URL; ?>index.php?route=product-details&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -113,8 +117,12 @@
           <?php if ($product['id_categories'] == 2): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-                <i class="fa-regular fa-heart"></i>
-                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+              <i class="fa-regular fa-heart add_to_favorites" 
+                data-id="<?= htmlspecialchars($product['id']); ?>" 
+                data-name="<?= htmlspecialchars($product['name']); ?>" 
+                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                </i>
+                <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -161,8 +169,12 @@
           <?php if ($product['id_categories'] == 3): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-                <i class="fa-regular fa-heart"></i>
-                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+              <i class="fa-regular fa-heart add_to_favorites" 
+                data-id="<?= htmlspecialchars($product['id']); ?>" 
+                data-name="<?= htmlspecialchars($product['name']); ?>" 
+                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                </i>
+                <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -209,8 +221,12 @@
           <?php if ($product['id_categories'] == 4): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-                <i class="fa-regular fa-heart"></i>
-                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+              <i class="fa-regular fa-heart add_to_favorites" 
+                data-id="<?= htmlspecialchars($product['id']); ?>" 
+                data-name="<?= htmlspecialchars($product['name']); ?>" 
+                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                </i>
+                <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -257,8 +273,12 @@
           <?php if ($product['id_categories'] == 5): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-                <i class="fa-regular fa-heart"></i>
-                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+              <i class="fa-regular fa-heart add_to_favorites" 
+                data-id="<?= htmlspecialchars($product['id']); ?>" 
+                data-name="<?= htmlspecialchars($product['name']); ?>" 
+                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                </i>
+                <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
