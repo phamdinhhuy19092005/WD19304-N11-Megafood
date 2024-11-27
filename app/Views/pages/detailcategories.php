@@ -69,25 +69,25 @@
                     <div class="title_sidebar">Danh mục sản phẩm</div>
                     <nav class="nav_category">
                         <ul class="navbars_pills">
-                            <li class="nav_item_category"><a href="" class="mn">Trang chủ</a></li>
-                            <li class="nav_item_category"><a href="" class="mn">Giới thiệu</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=home" class="mn">Trang chủ</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=about" class="mn">Giới thiệu</a></li>
                             <li class="nav_item_category"><div class="nav_item_category_header ">
-                                <a href="../product/index.html" class="mn">Sản phẩm</a>
+                                <a href="<?php echo BASE_URL; ?>index.php?route=products" class="mn">Sản phẩm</a>
                                 <i class="bi bi-plus-lg toggle-menu"></i>
                             </div>
                                 <ul class="menu_down">
-                                    <li class="nav_item_product"><a href="">Pizza</a></li>
-                                    <li class="nav_item_product"><a href="">Khai vị</a></li>
-                                    <li class="nav_item_product"><a href="">Mỳ ý</a></li>
-                                    <li class="nav_item_product"><a href="">Salad</a></li>
-                                    <li class="nav_item_product"><a href="">Thức uống</a></li>
+                                    <li class="nav_item_product"><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Pizza</a></li>
+                                    <li class="nav_item_product"><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Khai vị</a></li>
+                                    <li class="nav_item_product"><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Mỳ ý</a></li>
+                                    <li class="nav_item_product"><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Salad</a></li>
+                                    <li class="nav_item_product"><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Thức uống</a></li>
                                 </ul>
                             </li>
-                            <li class="nav_item_category"><a href="" class="mn">Tin tức</a></li>
-                            <li class="nav_item_category"><a href="" class="mn">Liên hệ</a></li>
-                            <li class="nav_item_category"><a href="" class="mn">Câu hỏi thường gặp</a></li>
-                            <li class="nav_item_category"><a href="" class="mn">Hệ thống cửa hàng</a></li>
-                            <li class="nav_item_category"><a href="" class="mn">Đặt bàn</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=news" class="mn">Tin tức</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=contact" class="mn">Liên hệ</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=faq" class="mn">Câu hỏi thường gặp</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=storeSystem" class="mn">Hệ thống cửa hàng</a></li>
+                            <li class="nav_item_category"><a href="<?php echo BASE_URL; ?>index.php?route=booking" class="mn">Đặt bàn</a></li>
                         </ul>
                     </nav>
                 </div>

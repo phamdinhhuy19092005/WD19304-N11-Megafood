@@ -140,6 +140,8 @@
     <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
+<?php elseif ($page === 'detailCategories'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>display_sudMenu.js"></script>
 <?php endif; ?>
 
 
