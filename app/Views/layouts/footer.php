@@ -121,6 +121,7 @@
     <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
 
 
 <?php elseif ($page === 'cart'): ?>
@@ -133,8 +134,10 @@
     <script src="<?php echo JS_PAGES_URL; ?>login.js"></script>
 <?php elseif ($page === 'register'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>errors.js"></script>
-<?php elseif ($page === 'product'): ?>
+<?php elseif ($page === 'products'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
 
 <?php endif; ?>
 
