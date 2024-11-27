@@ -19,39 +19,47 @@
   </section>
   <!-- Danh mục -->
   <div class="category">
-    <div class="category_title">
-      <b>Nổi bật</b><br />
-      <a href="..//sanpham/index.html">Danh mục nổi bật</a>
-    </div>
+        <div class="category_title">
 
-    <ul>
-      <li>
-        <p>Pizza <br />(17 món ăn)</p>
-        <a href=""><img
-            style="width: 104px; height: 105px"
-            src="https://bizweb.dktcdn.net/100/510/571/collections/0002624-seafood-pesto-300.png?v=1709192852903"
-            alt="" /></a>
-      </li>
-      <li>
-        <p>Khai vị <br />(13 món ăn)</p>
-        <a href=""><img
-            src="https://bizweb.dktcdn.net/100/510/571/collections/0003862-bbq-ribs-platter-300.png?v=1709192861850"
-            alt="" /></a>
-      </li>
-      <li>
-        <p>Mỳ Ý <br />(7 món ăn)</p>
-        <a href=""><img
-            src="https://bizweb.dktcdn.net/100/510/571/collections/0002257-spaghetti-shrimp-rose-30.png?v=1709192871587"
-            alt="" /></a>
-      </li>
-      <li>
-        <p>Salad <br />(7 món ăn)</p>
-        <a href=""><img
-            src="https://bizweb.dktcdn.net/100/510/571/collections/0002250-signature-salad-300.png?v=1709192880573"
-            alt="" /></a>
-      </li>
-    </ul>
-  </div>
+            <b>Nổi bật</b><br>
+            <a href="..//sanpham/index.html">Danh mục nổi bật</a>
+        </div>
+
+        <ul class="category_list">
+            <li class="category_item">
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+                    <p>Pizza <br>(17 món ăn) </p>
+                    <img style="width: 104px; height: 105px;"
+                        src="<?php echo IMG_BASE_URL; ?>category/category1.webp"
+                        alt="">
+                </a>
+
+            </li>
+            <li class="category_item">
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+                    <p>Khai vị <br>(13 món ăn) </p>
+                    <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp"
+                        alt="">
+                </a>
+
+            </li>
+            <li class="category_item">
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+                    <p>Mỳ Ý <br>(7 món ăn) </p>
+                    <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp"
+                        alt="">
+                </a>
+            </li>
+            <li class="category_item">
+                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+                    <p>Salad <br>(7 món ăn) </p>
+                    <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp"
+                        alt="">
+                </a>
+
+            </li>
+        </ul>
+    </div>
   <!-- Sản phẩm -->
   <!-- Pizza -->
   <div class="product_topSelling">
