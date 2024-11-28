@@ -190,7 +190,7 @@ body {
 
 #searchResults{
     overflow-y: auto;
-    max-height: 500px;
+    max-height: 400px;
     position: absolute;
     width: 410px;
     top: 100%;
@@ -207,11 +207,11 @@ body {
     margin-bottom: 20px;
     margin-left: 10px;
     position: relative;
-    color: #006a31;
+    color: var(--main-color);
 }
 
 .search_title span::before{
-    background: #006a31;
+    background: var(--main-color);
     content: '';
     right: 0;
     left: 0;
@@ -252,7 +252,7 @@ body {
     text-align: center;
 }
 .search_seeMore a{
-    color: #fff;
+    color: var(--white-color);
     font-size: 16px;
     font-weight: 600;
     padding: 10px 30px;
@@ -272,7 +272,7 @@ body {
     outline: none;
     flex: 1;
     font-size: 13px;
-    color: #333;
+    color: var(--black-color);
     margin: 15px;
 }
 
@@ -554,7 +554,7 @@ body {
 
 
 ::-webkit-scrollbar-track {
-    background: #f0f0f0;
+    background: var(--white-color);
     border-radius: 5px;
 }
 
@@ -569,7 +569,7 @@ body {
 }
 
 ::-webkit-scrollbar-corner {
-    background: #f0f0f0;
+    background: var(--white-color);
 }
 
 /* reponsive */

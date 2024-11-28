@@ -54,6 +54,11 @@ ul.breadcrumb {
     max-width: 975px;
 }
 
+.cartwrap_left p{
+    margin: 10px;
+    text-align: center;
+}
+
 /* productCart_header */
 .productCart_header ul {
     width: 955px;
@@ -71,6 +76,7 @@ ul.breadcrumb {
 .productCart_header ul li:nth-child(n+2) {
     width: 16%;
 }
+
 
 /* productCart_body */
 .productCart_body{

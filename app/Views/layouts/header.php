@@ -93,8 +93,8 @@ $products = $productModel->getAllProducts();
                                             <a href="/product_details/detail.html">
                                                 <span><?= htmlspecialchars($product['name']); ?></span>
                                             </a>
-                                                <br>
-                                            <p><?= htmlspecialchars($product['price']); ?></p>
+                                            <br>
+                                            <p><?= number_format($product['price'], 0, ',', '.'); ?></p>
                                         </div>
                                     </li>
 

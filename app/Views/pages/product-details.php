@@ -128,7 +128,7 @@
                                     </div>
                                     <div class="group-button">
                                         <button title="Thêm vào giỏ hàng" class="btn_add_to_cart">
-                                            <a href="#">THÊM VÀO GIỎ</a>
+                                            <a href="<?= BASE_URL; ?>index.php?route=cart">THÊM VÀO GIỎ</a>
                                         </button>
                                         <button title="Đặt bàn ngay" class="btn_phone">
                                             <a href="#">ĐẶT BÀN NGAY</a>

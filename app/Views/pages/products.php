@@ -90,7 +90,7 @@
                   <span>Giá chỉ từ</span>
                   <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                 </div>
-                <a href="">Thêm</a>
+                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
               </div>
             </li>
           <?php endif; ?>
