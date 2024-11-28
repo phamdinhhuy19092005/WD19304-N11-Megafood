@@ -494,7 +494,7 @@
                         <h3 class="product_topSelling_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
                         <span class="product_topSelling_content">
                             Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                            theo công...
+                            theo công...    
                         </span>
                         <a href="">Xem thêm</a>
 

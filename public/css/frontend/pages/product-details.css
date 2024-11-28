@@ -636,6 +636,16 @@ ul.list_img_prd {
     display: none;
     z-index: 1000;
     animation: slide-in 0.5s ease;
+    margin-bottom: 10px; 
+}
+
+
+.notification_container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(163, 245, 163);
+    border-radius: 10px;
 }
 
 .notification img {
@@ -644,14 +654,6 @@ ul.list_img_prd {
     border-radius: 8px;
     margin-right: 10px;
 }
-
-.notification_container {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: rgb(163, 245, 163);
-}
-
 .notification_name {
     color: green;
 }
@@ -674,12 +676,11 @@ ul.list_img_prd {
 }
 
 @keyframes slide-in {
-    from {
+    0% {
         opacity: 0;
         transform: translateX(100%);
     }
-
-    to {
+    100% {
         opacity: 1;
         transform: translateX(0);
     }

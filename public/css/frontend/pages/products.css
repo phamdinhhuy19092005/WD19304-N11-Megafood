@@ -80,7 +80,7 @@ ul.breadcrumb {
 .category_title b {
     font-family: 'Lobster', cursive;
     color: var(--secondary-color);
-    font-size: 20px;
+    font-size: var(--font-title-20);
 }
 
 .category_title a {
@@ -91,14 +91,14 @@ ul.breadcrumb {
     font-size: 40px;
 }
 
-.category ul {
+.category_list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.category ul li {
-    width: 310px;
-    height: 122px;
+.category_list .category_item {
+    width: 24%;
+    min-height: 122px;
     background-color: var(--main-color);
     list-style: none;
     display: flex;
@@ -108,23 +108,34 @@ ul.breadcrumb {
     cursor: pointer;
 }
 
-.category ul li:hover {
-    background-color: var(--secondary-color);
+.category_list .category_item a {
+    width: 310px;
+    height: 122px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
 }
 
-.category ul li p {
-    font-size: 16px;
+.category_list .category_item a:hover {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+
+}
+
+.category_list .category_item a p {
+    font-size: var(--font-text-16);
     color: #FFFFFF;
     margin-left: 10px;
-    font-weight: 600;
 }
 
-.category ul li img {
+.category_list .category_item a img {
     width: 100px;
     height: 72px;
     margin-right: 10px;
 
 }
+
 
 .body_wrap {
     margin-bottom: 30px;
