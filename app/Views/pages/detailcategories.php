@@ -154,27 +154,30 @@
                         <div class="sort_cate_left">
                             <h3><i class="fa-solid fa-arrow-down-a-z"></i> Xếp theo: </h3>
                             <ul>    
-                                <li class="btn_quick_sort"><a href="">Mặc định</a></li>
-                                <li class="btn_quick_sort"><a href="">Tên A-Z</a></li>
-                                <li class="btn_quick_sort"><a href="">Tên Z-A</a></li>
-                                <li class="btn_quick_sort"><a href="">Giá thấp đến cao</a></li>
-                                <li class="btn_quick_sort"><a href="">Giá cao đến thấp</a></li>
+                                <li class="btn_quick_sort" data-sort="default"><a href="javascript:void(0)">Mặc định</a></li>
+                                <li class="btn_quick_sort" data-sort="az"><a href="javascript:void(0)">Tên A-Z</a></li>
+                                <li class="btn_quick_sort" data-sort="za"><a href="javascript:void(0)">Tên Z-A</a></li>
+                                <li class="btn_quick_sort" data-sort="price-asc"><a href="">Giá thấp đến cao</a></li>
+                                <li class="btn_quick_sort" data-sort="price-desc"><a href="">Giá cao đến thấp</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <section class="products_view">
                         <div class="row_product">
-                            <ul>
+                            <ul id="product_List">
                             <?php if (!empty($products)): ?>
                               <?php foreach ($products as $product): ?>
                                 <?php if ($product['id_categories'] == 1): ?>
-                                <li>
+                                <li data-name="<?= htmlspecialchars($product['name']); ?>" data-price= "<?=$product['price']; ?>" >
                                     <div class="product_topSelling_thumbnail">
                                       <i class="fa-regular fa-heart add_to_favorites" 
                                       data-id="<?= htmlspecialchars($product['id']); ?>" 
                                       data-name="<?= htmlspecialchars($product['name']); ?>" 
-                                      data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                                      data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>"
+
+                                      >
+                                      
                                       </i>
                                       <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                                         <img
