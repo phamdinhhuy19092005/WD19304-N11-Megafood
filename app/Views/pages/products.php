@@ -19,47 +19,47 @@
   </section>
   <!-- Danh mục -->
   <div class="category">
-        <div class="category_title">
+    <div class="category_title">
 
-            <b>Nổi bật</b><br>
-            <a href="..//sanpham/index.html">Danh mục nổi bật</a>
-        </div>
-
-        <ul class="category_list">
-            <li class="category_item">
-                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                    <p>Pizza <br>(17 món ăn) </p>
-                    <img style="width: 104px; height: 105px;"
-                        src="<?php echo IMG_BASE_URL; ?>category/category1.webp"
-                        alt="">
-                </a>
-
-            </li>
-            <li class="category_item">
-                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                    <p>Khai vị <br>(13 món ăn) </p>
-                    <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp"
-                        alt="">
-                </a>
-
-            </li>
-            <li class="category_item">
-                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                    <p>Mỳ Ý <br>(7 món ăn) </p>
-                    <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp"
-                        alt="">
-                </a>
-            </li>
-            <li class="category_item">
-                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                    <p>Salad <br>(7 món ăn) </p>
-                    <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp"
-                        alt="">
-                </a>
-
-            </li>
-        </ul>
+      <b>Nổi bật</b><br>
+      <a href="..//sanpham/index.html">Danh mục nổi bật</a>
     </div>
+
+    <ul class="category_list">
+      <li class="category_item">
+        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+          <p>Pizza <br>(17 món ăn) </p>
+          <img style="width: 104px; height: 105px;"
+            src="<?php echo IMG_BASE_URL; ?>category/category1.webp"
+            alt="">
+        </a>
+
+      </li>
+      <li class="category_item">
+        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+          <p>Khai vị <br>(13 món ăn) </p>
+          <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp"
+            alt="">
+        </a>
+
+      </li>
+      <li class="category_item">
+        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+          <p>Mỳ Ý <br>(7 món ăn) </p>
+          <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp"
+            alt="">
+        </a>
+      </li>
+      <li class="category_item">
+        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
+          <p>Salad <br>(7 món ăn) </p>
+          <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp"
+            alt="">
+        </a>
+
+      </li>
+    </ul>
+  </div>
   <!-- Sản phẩm -->
   <!-- Pizza -->
   <div class="product_topSelling">
@@ -73,10 +73,7 @@
           <?php if ($product['id_categories'] == 1): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-                <i class="fa-regular fa-heart add_to_favorites" 
-                data-id="<?= htmlspecialchars($product['id']); ?>" 
-                data-name="<?= htmlspecialchars($product['name']); ?>" 
-                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                <i class="fa-regular fa-heart add_to_favorites">
                 </i>
                 <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
@@ -98,8 +95,8 @@
                   <span>Giá chỉ từ</span>
                   <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                 </div>
-                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
-              </div>
+                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                </div>
             </li>
           <?php endif; ?>
         <?php endforeach; ?>
@@ -125,10 +122,10 @@
           <?php if ($product['id_categories'] == 2): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-              <i class="fa-regular fa-heart add_to_favorites" 
-                data-id="<?= htmlspecialchars($product['id']); ?>" 
-                data-name="<?= htmlspecialchars($product['name']); ?>" 
-                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                <i class="fa-regular fa-heart add_to_favorites"
+                  data-id="<?= htmlspecialchars($product['id']); ?>"
+                  data-name="<?= htmlspecialchars($product['name']); ?>"
+                  data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
                 <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
@@ -177,10 +174,10 @@
           <?php if ($product['id_categories'] == 3): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-              <i class="fa-regular fa-heart add_to_favorites" 
-                data-id="<?= htmlspecialchars($product['id']); ?>" 
-                data-name="<?= htmlspecialchars($product['name']); ?>" 
-                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                <i class="fa-regular fa-heart add_to_favorites"
+                  data-id="<?= htmlspecialchars($product['id']); ?>"
+                  data-name="<?= htmlspecialchars($product['name']); ?>"
+                  data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
                 <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
@@ -229,10 +226,10 @@
           <?php if ($product['id_categories'] == 4): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-              <i class="fa-regular fa-heart add_to_favorites" 
-                data-id="<?= htmlspecialchars($product['id']); ?>" 
-                data-name="<?= htmlspecialchars($product['name']); ?>" 
-                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                <i class="fa-regular fa-heart add_to_favorites"
+                  data-id="<?= htmlspecialchars($product['id']); ?>"
+                  data-name="<?= htmlspecialchars($product['name']); ?>"
+                  data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
                 <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
@@ -281,10 +278,10 @@
           <?php if ($product['id_categories'] == 5): ?>
             <li>
               <div class="product_topSelling_thumbnail">
-              <i class="fa-regular fa-heart add_to_favorites" 
-                data-id="<?= htmlspecialchars($product['id']); ?>" 
-                data-name="<?= htmlspecialchars($product['name']); ?>" 
-                data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                <i class="fa-regular fa-heart add_to_favorites"
+                  data-id="<?= htmlspecialchars($product['id']); ?>"
+                  data-name="<?= htmlspecialchars($product['name']); ?>"
+                  data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
                 <a href="products?id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />

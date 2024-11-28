@@ -16,8 +16,9 @@
                         <div class="productCart_thumbnail">
                             <!-- Liên kết đến trang chi tiết sản phẩm -->
                             <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product_id; ?>">
-                                <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
+                                <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                             </a>
+
                             <div class="productCart_info">
                                 <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product_id; ?>" class="productCart_name"><?= htmlspecialchars($product['name']); ?></a>
                                 <p><?= $product['quantity']; ?> miếng</p>
@@ -40,40 +41,28 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <p>Tổng cộng:
+
+                <div class="cart_subtotal">
                     <?php
                     $total = 0;
                     foreach ($cart as $product) {
                         $total += $product['price'] * $product['quantity'];
                     }
-                    // Hiển thị tổng số tiền của giỏ hàng
-                    echo number_format($total, 0, ',', '.') . ' VND';
                     ?>
-                </p>
-                <!-- Chuyển hướng đến trang thanh toán -->
-                <a href="<?= BASE_URL; ?>index.php?route=checkout">Thanh toán</a>
+                    <div class="subtotal">
+                        <p>Tổng tiền:</p>
+                        <span class="subtotal_price"><?php echo number_format($total, 0, ',', '.'); ?></span>đ
+                    </div>
+
+                    <div class="pay">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=payment"><button type="button">Thanh toán</button></a>
+                    </div>
+                </div>
+
             <?php else: ?>
                 <p>Giỏ hàng của bạn hiện tại trống.</p>
             <?php endif; ?>
 
-
-
-
-
-
-
-
-            <div class="cart_subtotal">
-                <div class="subtotal">
-                    <p>Tổng tiền:</p>
-                    <span class="subtotal_price">99000</span>đ
-                </div>
-
-
-                <div class="pay">
-                    <a href="<?php echo BASE_URL; ?>index.php?route=payment"><button type="button">Thanh toán</button></a>
-                </div>
-            </div>
         </div>
 
 
