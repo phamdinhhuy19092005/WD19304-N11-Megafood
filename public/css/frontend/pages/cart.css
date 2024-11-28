@@ -1,7 +1,8 @@
 * {
     font-family: 'Quicksand', sans-serif;
 }
-.bodywrap{
+
+.bodywrap {
     margin-bottom: 40px;
 }
 
@@ -28,6 +29,7 @@ ul.breadcrumb {
 .breadcrumb li {
     padding-right: 10px;
 }
+
 .breadcrumb li a,
 .breadcrumb li .mr_lr {
     color: var(--black-color);
@@ -41,20 +43,22 @@ ul.breadcrumb {
 
 
 /* Bodywrap */
-.bodywrap{
+.bodywrap {
     padding-top: 50px;
 }
-.cartwrap{
+
+.cartwrap {
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.cartwrap .cartwrap_left{
+
+.cartwrap .cartwrap_left {
     max-width: 975px;
 }
 
-.cartwrap_left p{
+.cartwrap_left p {
     margin: 10px;
     text-align: center;
 }
@@ -65,68 +69,98 @@ ul.breadcrumb {
     display: flex;
     border: 1px solid #EBEBEB;
 }
-.productCart_header ul li{
+
+.productCart_header ul li {
     padding: 9px;
     font-weight: 600;
 }
+
 .productCart_header ul li:nth-child(1) {
     width: 51%;
     margin-left: 10px;
 }
+
 .productCart_header ul li:nth-child(n+2) {
     width: 16%;
 }
 
 
 /* productCart_body */
-.productCart_body{
+.productCart_body {
     width: 955px;
     border: 1px solid #EBEBEB;
 
 }
-.productCart_thumbnail{
+
+.productCart_thumbnail {
     padding: 10px 0;
     display: flex;
     align-items: center;
 }
-.productCart_info{
-    width: 35%;
+
+.productCart_thumbnail a img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.productCart_info {
+    padding: 0px 30px;
+    width: 37%;
+}
+
+.productCart_info span {
+    margin-bottom: 10px;
+    font-size: 16px;
     display: block;
 }
-.productCart_info a img{
+
+.productCart_info span a {
+    font-size: 16px;
+}
+
+.productCart_info a img {
     float: left;
     margin-left: 10px;
 }
-.productCart_info .productCart_name{
+
+.productCart_info .productCart_name {
     padding-bottom: 5px;
-    padding-top: 40px;
     color: #000;
-    font-size: 13px;
     font-weight: 700;
     line-height: 18px;
 }
-.productCart_info p{
+
+.productCart_info {
+    display: block;
+}
+
+.productCart_info p {
     font-size: 12px;
     padding-bottom: 5px;
 }
-.productCart_info .delete{
+
+.productCart_info .delete {
     color: var(--main-color);
     border: none;
     background-color: #FFFFFF;
     font-weight: 600;
     cursor: pointer;
 }
-.cart_price{
+
+.cart_price {
     width: 14.5%;
 }
-.cart_price span{
+
+.cart_price span {
     color: #E31837;
     font-weight: 600;
 }
-.cart_btn{
+
+.cart_btn {
     width: 18.5%;
 }
-.cart_btn .cart_select{
+
+.cart_btn .cart_select {
     width: 92px;
     height: 35px;
     border: 1px solid #000;
@@ -135,7 +169,8 @@ ul.breadcrumb {
     justify-content: center;
     border-radius: 5px;
 }
-.cart_select button{
+
+.cart_select button {
     width: 25px;
     height: 25px;
     font-size: 20px;
@@ -146,48 +181,74 @@ ul.breadcrumb {
     font-weight: 600;
     cursor: pointer;
 }
-.cart_select input{
+
+.cart_select input {
     width: 35%;
     text-align: center;
     border: none;
 }
-.cart_total{
+
+.cart_total {
+    max-width: 100px;
     font-weight: 600;
     color: #E31837;
 }
-.cart_subtotal{
+
+.cart_subtotal {
     margin-top: 30px;
     width: 295px;
     margin-left: 69.5%;
-    
+
 }
-.subtotal{
+
+.subtotal {
     font-weight: 600;
     color: #E31837;
 }
-.cart_price{
-    font-weight: 600;
-    color: #E31837;
-}
-.cart_subtotal .subtotal{
+
+.total_price {
     display: flex;
+    align-items: center;
 }
-.subtotal{
+
+.total_price span {
+    margin-left: 10px;
+}
+
+.subtotal_price {
+    font-size: 16px;
+}
+
+.cart_price {
+    font-weight: 600;
+    color: #E31837;
+}
+
+.cart_subtotal .subtotal {
+    display: flex;
+    align-items: center;
+}
+
+.subtotal {
     margin-bottom: 10px;
 }
-.subtotal p{
+
+.subtotal p {
     font-size: 16px;
     width: 80%;
 }
-.subtotal span{
+
+.subtotal span {
     color: #E31837;
     font-weight: 600;
 }
-.pay{
+
+.pay {
     width: 296px;
     text-align: center;
 }
-.pay a button{
+
+.pay a button {
     width: 100%;
     height: 43px;
     border-radius: 5px;
@@ -197,12 +258,13 @@ ul.breadcrumb {
     background-color: var(--main-color);
     cursor: pointer;
 }
-.pay a button:hover{
+
+.pay a button:hover {
     background-color: var(--secondary-color);
 }
 
 /* cartwrap_right */
-.cartwrap_right{
+.cartwrap_right {
     width: 297px;
     height: 124px;
     background-color: var(--main-color);
@@ -211,29 +273,34 @@ ul.breadcrumb {
     align-items: center;
     justify-content: center;
 }
-form{
+
+form {
     width: 275px;
     height: 104px;
 }
-form h4{
+
+form h4 {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
     margin-bottom: 5px;
 }
-.timedeli_modal{
+
+.timedeli_modal {
     width: 275px;
     height: 35px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
-.timedeli_modal .input_group_date_pick{
+
+.timedeli_modal .input_group_date_pick {
     width: 112px;
     height: 35px;
     border: none;
 }
-.timedeli_modal .input_group_date_pick input{
+
+.timedeli_modal .input_group_date_pick input {
     width: 132px;
     padding: 0 10px;
     background-color: #fff;
@@ -243,11 +310,13 @@ form h4{
     border-radius: 5px;
     outline: none;
 }
-.timedeli_modal .input_group_date_time{
+
+.timedeli_modal .input_group_date_time {
     width: 112px;
     border: none;
 }
-.timedeli_modal .input_group_date_time select{
+
+.timedeli_modal .input_group_date_time select {
     width: 132px;
     height: 35px;
     background-color: #fff;
@@ -257,12 +326,14 @@ form h4{
     color: #898787;
     outline: none;
 }
-.bill{
+
+.bill {
     width: 275px;
     margin-top: 10px;
     display: flex;
 }
-.bill input{
+
+.bill input {
     border: 2px solid #fff;
     padding: 7px;
     border-radius: 2px;
@@ -274,7 +345,8 @@ form h4{
     align-items: center;
     justify-content: center;
 }
-.bill label{
+
+.bill label {
     color: #fff;
     font-size: 16px;
     font-weight: bold;

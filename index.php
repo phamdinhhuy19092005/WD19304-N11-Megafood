@@ -49,13 +49,19 @@ switch ($route) {
 
         $controller = new CartController();
 
-        if ($action === 'add') {
-            $controller->add();
-        } else {
-            $controller->cart();
+        switch ($action) {
+            case 'add':
+                $controller->add();  
+                break;
+            case 'remove':
+                $controller->remove();  
+                break;
+            case 'view':
+            default:
+                $controller->cart();  
+                break;
         }
         break;
-
     case 'products':
         $controller = new ProductController();
         $controller->products();
