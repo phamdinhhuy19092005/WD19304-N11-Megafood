@@ -110,7 +110,7 @@ ul.breadcrumb {
 }
 
 .category_list .category_item a {
-    width: 310px;
+    width: 100%;
     height: 122px;
     display: flex;
     justify-content: space-between;
@@ -120,7 +120,6 @@ ul.breadcrumb {
 
 .category_list .category_item a:hover {
     background-color: var(--secondary-color);
-    font-weight: 600;
 
 }
 
@@ -343,6 +342,14 @@ input[type="checkbox"]+span:hover{
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
 }
+.btn_quick_sort.active{
+    background-color: var(--secondary-color);
+
+}
+.btn_quick_sort.active a{
+    color: var(--white-color);
+
+}
 
 .btn_quick_sort a {
     color: var(--main-color);
@@ -350,6 +357,7 @@ input[type="checkbox"]+span:hover{
 
 .btn_quick_sort:hover {
     background-color: var(--secondary-color);
+
 }
 
 .btn_quick_sort:hover a {
