@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Models/Product.php';
+require_once __DIR__ . '/../Models/News.php';  
 
 class HomeController
 {
@@ -12,6 +13,7 @@ class HomeController
         include __DIR__ . '/../Views/layouts/header.php';
 
         $productModel = new Product();
+        $newModel = new News();
 
         if (isset($_GET['category_id'])) {
             $categoryId = intval($_GET['category_id']);
@@ -20,6 +22,7 @@ class HomeController
             $products = $productModel->getAllProducts();
         }
 
+        $news = $newModel->getAllNews();
         $featuredProducts = $productModel->getProductFeatured();
 
         include __DIR__ . '/../Views/pages/home.php';

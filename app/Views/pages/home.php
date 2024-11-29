@@ -1030,82 +1030,24 @@
         </div>
 
         <ul class="news_thumbnail">
-            <a href="../news/news.html">
-                <li>
-                    <div class="block_thumb">
-
-                        <img src="<?php echo IMG_BASE_URL; ?>/news/news1.webp"
-                            alt="">
-                    </div>
-                    <div class="block_content">
-                        <h3>Đế bánh Pizza mua ở đâu đảm bảo chất lượng?</h3>
-                        <p>27/02/2024</p>
-                        <span>Nếu bạn muốn tự làm bánh pizza tại nhà thì có thể chọn mua đế bánh pizza để tiết kiệm
-                            thời
-                            gian hơn. Tuy nhiên, khi mua đế bánh, bạn cũng nên lưu ý chọn đế bánh chất lượng để đảm
-                            bảo
-                            vị ngon nhé. Vậy đế bánh pizza mua ở đâu? Hãy cùng Dola khám phá ngay trong bài viết
-                            này!</span>
-                    </div>
-                </li>
-            </a>
-            <a href="../news/news.html">
-                <li>
-                    <div class="block_thumb">
-                        <img src="<?php echo IMG_BASE_URL; ?>/news/news2.webp"
-                            alt="">
-                    </div>
-
-                    <div class="block_content">
-                        <h3>Đế bánh Pizza mua ở đâu đảm bảo chất lượng?</h3>
-                        <p>27/02/2024</p>
-                        <span>Nếu bạn muốn tự làm bánh pizza tại nhà thì có thể chọn mua đế bánh pizza để tiết kiệm
-                            thời
-                            gian hơn. Tuy nhiên, khi mua đế bánh, bạn cũng nên lưu ý chọn đế bánh chất lượng để đảm
-                            bảo
-                            vị ngon nhé. Vậy đế bánh pizza mua ở đâu? Hãy cùng Dola khám phá ngay trong bài viết
-                            này!</span>
-                    </div>
-                </li>
-            </a>
-            <a href="../news/news.html">
-                <li>
-                    <div class="block_thumb">
-                        <img src="<?php echo IMG_BASE_URL; ?>/news/news3.webp"
-                            alt="">
-                    </div>
-
-                    <div class="block_content">
-                        <h3>Đế bánh Pizza mua ở đâu đảm bảo chất lượng?</h3>
-                        <p>27/02/2024</p>
-                        <span>Nếu bạn muốn tự làm bánh pizza tại nhà thì có thể chọn mua đế bánh pizza để tiết kiệm
-                            thời
-                            gian hơn. Tuy nhiên, khi mua đế bánh, bạn cũng nên lưu ý chọn đế bánh chất lượng để đảm
-                            bảo
-                            vị ngon nhé. Vậy đế bánh pizza mua ở đâu? Hãy cùng Dola khám phá ngay trong bài viết
-                            này!</span>
-                    </div>
-                </li>
-            </a>
-            <a href="../news/news.html">
-                <li>
-                    <div class="block_thumb">
-                        <img src="<?php echo IMG_BASE_URL; ?>/news/news4.webp"
-                            alt="">
-                    </div>
-
-                    <div class="block_content">
-                        <h3>Đế bánh Pizza mua ở đâu đảm bảo chất lượng?</h3>
-                        <p>27/02/2024</p>
-                        <span>Nếu bạn muốn tự làm bánh pizza tại nhà thì có thể chọn mua đế bánh pizza để tiết kiệm
-                            thời
-                            gian hơn. Tuy nhiên, khi mua đế bánh, bạn cũng nên lưu ý chọn đế bánh chất lượng để đảm
-                            bảo
-                            vị ngon nhé. Vậy đế bánh pizza mua ở đâu? Hãy cùng Dola khám phá ngay trong bài viết
-                            này!</span>
-                    </div>
-                </li>
-            </a>
+            <?php if (!empty($news)): ?>
+                <?php foreach ($news as $newsItem): ?>
+                    <a href="../news/news.php?id=<?php echo $newsItem['id']; ?>"> <!-- Assuming dynamic link based on news id -->
+                        <li>
+                            <div class="block_thumb">
+                                <img src="<?php echo IMG_BASE_URL . '/' . $newsItem['img_url']; ?>" alt="News Image">
+                            </div>
+                            <div class="block_content">
+                                <h3><?php echo htmlspecialchars($newsItem['name']); ?></h3>
+                                <p><?php echo htmlspecialchars($newsItem['created_at']); ?></p>
+                                <span><?php echo htmlspecialchars($newsItem['description']); ?></span>
+                            </div>
+                        </li>
+                    </a>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No news available at the moment.</p>
+            <?php endif; ?>
 
         </ul>
     </div>

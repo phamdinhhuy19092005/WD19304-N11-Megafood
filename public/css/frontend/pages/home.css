@@ -1194,6 +1194,9 @@ body {
 .block_content h3 {
     margin-top: 8px;
     margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .block_content p {
@@ -1689,7 +1692,7 @@ body {
 
 @media (max-width: 376px) {
 
-    .bodywrap{
+    .bodywrap {
         overflow: hidden;
     }
 
