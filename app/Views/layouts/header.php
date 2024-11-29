@@ -66,7 +66,7 @@ $products = $productModel->getAllProducts();
             <div class="container_bt_header">
                 <div class="container_content">
                     <div class="tab_menu">
-                    <button>
+                        <button>
                             <div class="item_tab">
                                 <i class="fa-solid fa-bars"></i>
                             </div>
@@ -155,7 +155,15 @@ $products = $productModel->getAllProducts();
                     </div>
                     <div class="cart">
                         <span class="quantity">
-                            0
+                            <?php
+                            $totalQuantity = 0;
+                            if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+                                foreach ($_SESSION['cart'] as $product) {
+                                    $totalQuantity += $product['quantity']; // Cộng dồn số lượng
+                                }
+                            }
+                            echo $totalQuantity;
+                            ?>
                         </span>
                         <a href="<?php echo BASE_URL; ?>index.php?route=cart"><i class="bi bi-basket2"></i></a>
                     </div>

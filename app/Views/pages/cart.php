@@ -31,9 +31,11 @@
                             </div>
                             <div class="cart_btn">
                                 <div class="cart_select">
-                                    <button type="button" class="btn_reduce" data-id="<?= $product_id; ?>">-</button>
-                                    <input type="text" class="quantity_cart" value="<?= $product['quantity']; ?>" min="1" data-id="<?= $product_id; ?>">
-                                    <button type="button" class="btn_increase" data-id="<?= $product_id; ?>">+</button>
+                                    <div class="cart_select">
+                                        <button type="button" class="btn_reduce" data-id="<?= $product_id; ?>">-</button>
+                                        <input type="text" class="quantity_cart" value="<?= $product['quantity']; ?>" min="1" data-id="<?= $product_id; ?>" data-old-value="<?= $product['quantity']; ?>">
+                                        <button type="button" class="btn_increase" data-id="<?= $product_id; ?>">+</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="cart_total">

@@ -421,9 +421,8 @@ ul.list_img_prd {
 
 /* -- voucher product */
 .voucher_product {
-    /* width: 95%; */
     margin-left: 35px;
-    margin-top: 60px;
+    margin-top: 115px;
     padding: 10px 20px;
     border: 1px dashed var(--main-color);
     border-radius: 5px;

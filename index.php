@@ -2,6 +2,7 @@
 session_start();
 require_once './config/database.php';
 
+// Kết nối Database
 $connectModel = new Database();
 $conn = $connectModel->connect();
 
@@ -11,6 +12,7 @@ if ($conn) {
     echo 'Kết nối thất bại';
 }
 
+// Định nghĩa đường dẫn
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
 define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
 
@@ -20,6 +22,7 @@ define('IMG_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/');
 define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
+// Load các controller
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
 require_once 'app/Controllers/ProductController.php';
@@ -35,8 +38,7 @@ require_once 'app/Controllers/RegisterController.php';
 require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
 
-
-
+// Xử lý route
 $route = $_GET['route'] ?? 'home';
 
 switch ($route) {
@@ -45,20 +47,22 @@ switch ($route) {
         $controller->index();
         break;
     case 'cart':
-        $action = $_GET['action'] ?? 'view'; 
-
+        $action = $_GET['action'] ?? 'view';
         $controller = new CartController();
 
         switch ($action) {
             case 'add':
-                $controller->add();  
+                $controller->add();
                 break;
             case 'remove':
-                $controller->remove();  
+                $controller->remove();
+                break;
+            case 'updateQuantity':
+                $controller->updateQuantity();
                 break;
             case 'view':
             default:
-                $controller->cart();  
+                $controller->cart();
                 break;
         }
         break;

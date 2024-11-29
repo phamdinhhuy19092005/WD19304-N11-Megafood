@@ -78,13 +78,13 @@
                         <div class="full_width">
                             <div class="details">
                                 <h1 class="title_product">
-                                <?= htmlspecialchars($product['name']); ?>
+                                    <?= htmlspecialchars($product['name']); ?>
                                 </h1>
                                 <form action="" method="post">
                                     <div class="price_box">
                                         <span class="special_price">
                                             <span class="product_price">
-                                            <?= number_format($product['price'], 0, ',', '.'); ?> VNĐ
+                                                <?= number_format($product['price'], 0, ',', '.'); ?> VNĐ
                                             </span>
                                         </span>
                                     </div>
@@ -94,7 +94,6 @@
                                         <label>Ghi chú</label>
                                         <textarea class="note_content"
                                             placeholder="Nhập ghi chú của bạn tại đây..."></textarea>
-
                                     </div>
 
                                     <!-- Số lượng -->
@@ -123,12 +122,12 @@
                                         </button>
                                     </div>
                                     <div class="group-button">
-                                        <button title="Thêm vào giỏ hàng" class="btn_add_to_cart">
-                                            <a href="<?= BASE_URL; ?>index.php?route=cart">THÊM VÀO GIỎ</a>
-                                        </button>
-                                        <button title="Đặt bàn ngay" class="btn_phone">
-                                            <a href="#">ĐẶT BÀN NGAY</a>
-                                        </button>
+                                            <button title="Thêm vào giỏ hàng" class="btn_add_to_cart">
+                                                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">THÊM VÀO GIỎ HÀNG</a>
+                                            </button>
+                                            <button title="Đặt bàn ngay" class="btn_phone">
+                                                <a href="#">ĐẶT BÀN NGAY</a>
+                                            </button>
                                     </div>
 
                                 </form>
