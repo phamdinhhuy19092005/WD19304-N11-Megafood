@@ -97,49 +97,24 @@
                         <!-- filter price -->
                         <aside class="filter_price">
                             <div class="title_filter">Chọn mức giá</div>
-                                <div class="content_price">
-                                    <ul>
-                                        <li class="filter_item_price">
-                                            <span>
-                                                <label for="filter_duoi_100-000d">
-                                                    <input type="checkbox" id="filter_duoi_100-000d">
-                                                    Dưới 100.000đ
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_100-000d-200-000d">
-                                                <input type="checkbox" id="filter_100-000d-200-000d">
-                                                Từ 100.000đ - 200.000đ
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_200-000d-300-000d">
-                                                <input type="checkbox" id="filter_200-000d-300-000d">
-                                                Từ 200.000đ - 300.000đ
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_300-000d-500-000d">
-                                                <input type="checkbox" id="filter_300-000d-500-000d">
-                                                Từ 300.000đ - 500.000đ
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_500-000d-1-000-000d">
-                                                <input type="checkbox" id="filter_500-000d-1-000-000d">
-                                                Từ 500.000đ - 1 triệu
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_tren-1-000-000d">
-                                                <input type="checkbox" id="filter_tren-1-000-000d">
-                                                Trên 1 triệu
-                                            </label>
-                                        </span></li>
-                                    </ul>
+                            <div class="content_price">
+                                <ul>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_duoi_100-000d"> Dưới 100.000đ</label>
+                                    </li>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_100-000d-200-000d"> Từ 100.000đ - 200.000đ</label>
+                                    </li>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_200-000d-300-000d"> Từ 200.000đ - 300.000đ</label>
+                                    </li>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_300-000d-500-000d"> Từ 300.000đ - 500.000đ</label>
+                                    </li>
+                                </ul>
                             </div>
                         </aside>
+
 
                         
                          
