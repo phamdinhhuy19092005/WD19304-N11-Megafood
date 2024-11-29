@@ -20,7 +20,7 @@ class HomeController
             $products = $productModel->getAllProducts();
         }
 
-        $featuredProducts = $productModel->getProductFeatured();
+        // $featuredProducts = $productModel->getProductFeatured();
 
         include __DIR__ . '/../Views/pages/home.php';
         include __DIR__ . '/../Views/layouts/footer.php';
