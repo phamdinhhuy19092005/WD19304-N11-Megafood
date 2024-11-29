@@ -109,7 +109,7 @@ ul.breadcrumb {
 }
 
 .category_list .category_item a {
-    width: 310px;
+    width: 100%;
     height: 122px;
     display: flex;
     justify-content: space-between;
@@ -119,8 +119,12 @@ ul.breadcrumb {
 
 .category_list .category_item a:hover {
     background-color: var(--secondary-color);
+<<<<<<< HEAD
+=======
     font-weight: 600;
+    transition: all 0.3s ease;
 
+>>>>>>> ec5b5689d1e6014bd5f167444c195db23f977f66
 }
 
 .category_list .category_item a p {
@@ -134,6 +138,11 @@ ul.breadcrumb {
     height: 72px;
     margin-right: 10px;
 
+}
+
+.category_list .category_item a:hover img {
+    transform: rotate(10deg);
+    transition: all 0.3s ease;
 }
 
 
