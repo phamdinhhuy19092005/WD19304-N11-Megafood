@@ -189,9 +189,12 @@ ul.breadcrumb {
 }
 
 .cart_total {
-    max-width: 100px;
+    display: flex;
     font-weight: 600;
     color: #E31837;
+}
+.cart_total span{
+    margin-right: 5px;
 }
 
 .cart_subtotal {

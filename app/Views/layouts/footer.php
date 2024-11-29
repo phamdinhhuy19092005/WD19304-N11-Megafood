@@ -144,6 +144,10 @@
     <script src="<?php echo JS_PAGES_URL; ?>display_sudMenu.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>sort_detailcategories.js"></script>
+    <script src="<?php echo JS_PAGES_URL; ?>filter_detailcategories.js"></script>
+
+
 <?php endif; ?>
 
 

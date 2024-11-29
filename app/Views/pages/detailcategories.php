@@ -97,49 +97,24 @@
                         <!-- filter price -->
                         <aside class="filter_price">
                             <div class="title_filter">Chọn mức giá</div>
-                                <div class="content_price">
-                                    <ul>
-                                        <li class="filter_item_price">
-                                            <span>
-                                                <label for="filter_duoi_100-000d">
-                                                    <input type="checkbox" id="filter_duoi_100-000d">
-                                                    Dưới 100.000đ
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_100-000d-200-000d">
-                                                <input type="checkbox" id="filter_100-000d-200-000d">
-                                                Từ 100.000đ - 200.000đ
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_200-000d-300-000d">
-                                                <input type="checkbox" id="filter_200-000d-300-000d">
-                                                Từ 200.000đ - 300.000đ
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_300-000d-500-000d">
-                                                <input type="checkbox" id="filter_300-000d-500-000d">
-                                                Từ 300.000đ - 500.000đ
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_500-000d-1-000-000d">
-                                                <input type="checkbox" id="filter_500-000d-1-000-000d">
-                                                Từ 500.000đ - 1 triệu
-                                            </label>
-                                        </span></li>
-                                        <li class="filter_item_price"><span>
-                                            <label for="filter_tren-1-000-000d">
-                                                <input type="checkbox" id="filter_tren-1-000-000d">
-                                                Trên 1 triệu
-                                            </label>
-                                        </span></li>
-                                    </ul>
+                            <div class="content_price">
+                                <ul>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_duoi_100-000d"> Dưới 100.000đ</label>
+                                    </li>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_100-000d-200-000d"> Từ 100.000đ - 200.000đ</label>
+                                    </li>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_200-000d-300-000d"> Từ 200.000đ - 300.000đ</label>
+                                    </li>
+                                    <li class ="filter_item_price">
+                                        <label><input type="checkbox" id="filter_300-000d-500-000d"> Từ 300.000đ - 500.000đ</label>
+                                    </li>
+                                </ul>
                             </div>
                         </aside>
+
 
                         
                          
@@ -154,27 +129,30 @@
                         <div class="sort_cate_left">
                             <h3><i class="fa-solid fa-arrow-down-a-z"></i> Xếp theo: </h3>
                             <ul>    
-                                <li class="btn_quick_sort"><a href="">Mặc định</a></li>
-                                <li class="btn_quick_sort"><a href="">Tên A-Z</a></li>
-                                <li class="btn_quick_sort"><a href="">Tên Z-A</a></li>
-                                <li class="btn_quick_sort"><a href="">Giá thấp đến cao</a></li>
-                                <li class="btn_quick_sort"><a href="">Giá cao đến thấp</a></li>
+                                <li class="btn_quick_sort" data-sort="default"><a href="javascript:void(0)">Mặc định</a></li>
+                                <li class="btn_quick_sort" data-sort="az"><a href="javascript:void(0)">Tên A-Z</a></li>
+                                <li class="btn_quick_sort" data-sort="za"><a href="javascript:void(0)">Tên Z-A</a></li>
+                                <li class="btn_quick_sort" data-sort="price-asc"><a href="">Giá thấp đến cao</a></li>
+                                <li class="btn_quick_sort" data-sort="price-desc"><a href="">Giá cao đến thấp</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <section class="products_view">
                         <div class="row_product">
-                            <ul>
+                            <ul id="product_List">
                             <?php if (!empty($products)): ?>
                               <?php foreach ($products as $product): ?>
                                 <?php if ($product['id_categories'] == 1): ?>
-                                <li>
+                                <li data-name="<?= htmlspecialchars($product['name']); ?>" data-price= "<?=$product['price']; ?>" >
                                     <div class="product_topSelling_thumbnail">
                                       <i class="fa-regular fa-heart add_to_favorites" 
                                       data-id="<?= htmlspecialchars($product['id']); ?>" 
                                       data-name="<?= htmlspecialchars($product['name']); ?>" 
-                                      data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                                      data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>"
+
+                                      >
+                                      
                                       </i>
                                       <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                                         <img
