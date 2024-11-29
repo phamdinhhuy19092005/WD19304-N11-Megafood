@@ -22,12 +22,8 @@ class HomeController
             $products = $productModel->getAllProducts();
         }
 
-<<<<<<< HEAD
         $news = $newModel->getAllNews();
         $featuredProducts = $productModel->getProductFeatured();
-=======
-        // $featuredProducts = $productModel->getProductFeatured();
->>>>>>> 102bfbc70abf51e0d1d1c9bd5cd5c4c4ea0e9cc4
 
         include __DIR__ . '/../Views/pages/home.php';
         include __DIR__ . '/../Views/layouts/footer.php';

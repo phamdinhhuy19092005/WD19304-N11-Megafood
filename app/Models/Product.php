@@ -41,14 +41,13 @@ class Product
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Lấy sản phẩm nổi bật
-    // public function getProductFeatured()
-    // {
-    //     $query = "SELECT id, name, description, price, image_url, id_categories 
-    //           FROM " . $this->table . " 
-    //           WHERE is_featured = TRUE"; 
-    //     $stmt = $this->conn->prepare($query);
-    //     $stmt->execute();
-    //     return $stmt->fetchAll(PDO::FETCH_ASSOC); 
-    // }
+    public function getProductFeatured()
+    {
+        $query = "SELECT id, name, description, price, image_url, id_categories 
+              FROM " . $this->table . " 
+              WHERE is_featured = TRUE"; 
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    }
 }
