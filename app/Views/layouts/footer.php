@@ -115,6 +115,7 @@
 <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
 <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
 <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
+<script src="<?php echo JS_PAGES_URL; ?>btn_Cart.js"></script>
 
 
 <?php if ($page === 'home'): ?>
@@ -124,10 +125,10 @@
     <script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
+    
 
 
 <?php elseif ($page === 'cart'): ?>
-    <script src="<?php echo JS_PAGES_URL; ?>cart_btn.js"></script>
 <?php elseif ($page === 'faq'): ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>faq.js"></script>

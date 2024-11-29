@@ -1,3 +1,5 @@
+function btnCart(){
+
 document.addEventListener("DOMContentLoaded", () => {
     const decreaseBtns = document.querySelectorAll('.btn_reduce'); 
     const increaseBtns = document.querySelectorAll('.btn_increase'); 
@@ -68,3 +70,49 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cập nhật tổng tiền ngay khi trang được tải
     updateCartTotal();
 });
+}
+
+
+function cartQuantity() {
+    // Hàm để cập nhật số lượng sản phẩm trong giỏ hàng
+    function updateCartQuantity() {
+        let totalQuantity = 0;
+
+        // Lấy tất cả các ô nhập số lượng sản phẩm
+        const quantities = document.querySelectorAll('.quantity_cart');
+
+        // Tính tổng số lượng
+        quantities.forEach(input => {
+            totalQuantity += parseInt(input.value, 10) || 0; // Chuyển giá trị thành số nguyên
+        });
+
+        // Lưu tổng số lượng vào Session Storage
+        sessionStorage.setItem('cartQuantity', totalQuantity);
+
+        // Hiển thị tổng số lượng lên .quantity
+        document.querySelector('.cart .quantity').textContent = totalQuantity;
+    }
+
+    // Gọi hàm để khởi tạo giá trị khi trang load
+    updateCartQuantity();
+
+    // Lấy dữ liệu từ Session Storage (nếu có) và cập nhật giao diện
+    const savedQuantity = sessionStorage.getItem('cartQuantity');
+    if (savedQuantity) {
+        document.querySelector('.cart .quantity').textContent = savedQuantity;
+    }
+
+    // Lắng nghe sự kiện thay đổi số lượng trong giỏ hàng
+    const quantityInputs = document.querySelectorAll('.quantity_cart');
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', updateCartQuantity); // Cập nhật khi người dùng thay đổi
+    });
+}
+
+// // Gọi hàm khi trang được tải
+// document.addEventListener('DOMContentLoaded', cartQuantity);
+
+
+cartQuantity();
+btnCart();
+
