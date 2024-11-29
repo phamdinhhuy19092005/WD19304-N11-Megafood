@@ -855,7 +855,6 @@ body {
 
 .add_to_favorites.active {
     color: var(--main-color);
-    transform: scale(1.2);
 }
 
 
@@ -1003,6 +1002,7 @@ body {
 
 .product_action {
     max-width: 1300px;
+    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;

@@ -1,7 +1,7 @@
-<!-- /app/Controllers/HomeController.php -->
 <?php
 
 require_once __DIR__ . '/../Models/Product.php';
+
 class HomeController
 {
     public function index()
@@ -20,6 +20,7 @@ class HomeController
             $products = $productModel->getAllProducts();
         }
 
+        $featuredProducts = $productModel->getProductFeatured();
 
         include __DIR__ . '/../Views/pages/home.php';
         include __DIR__ . '/../Views/layouts/footer.php';
