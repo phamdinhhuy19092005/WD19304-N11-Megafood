@@ -33,27 +33,27 @@
             <div class="category_wrapper">
                 <ul class="category_list">
                     <li class="category_item">
-                        <a href="../detailCategories/category.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
                             <p>Pizza <br>(17 món ăn) </p>
                             <img style="width: 104px; height: 105px;" src="<?php echo IMG_BASE_URL; ?>category/category1.webp" alt="">
                         </a>
 
                     </li>
                     <li class="category_item">
-                        <a href="../detailCategories/category.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
                             <p>Khai vị <br>(13 món ăn) </p>
                             <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp" alt="">
                         </a>
 
                     </li>
                     <li class="category_item">
-                        <a href="../detailCategories/category.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
                             <p>Mỳ Ý <br>(7 món ăn) </p>
                             <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp" alt="">
                         </a>
                     </li>
                     <li class="category_item">
-                        <a href="../detailCategories/category.html">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
                             <p>Salad <br>(7 món ăn) </p>
                             <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp" alt="">
                         </a>
