@@ -61,14 +61,35 @@ $products = $productModel->getAllProducts();
     <header>
         <div class="top_header">
             <p>Chào mừng đến với MegaFood</p>
-        </div>'
+        </div>
         <div class="bottom_header">
             <div class="container_bt_header">
                 <div class="container_content">
                     <div class="tab_menu">
-                        <div class="item_tab">
-                            <i class="fa-solid fa-bars"></i>
-                        </div>
+                    <button>
+                            <div class="item_tab">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </button>
+
+                        <ul class="list_item_menu_tab">
+                            <li class="logo_tab_menu">
+                                <a href="">
+                                    <img src="../header/img/logo-mobile.png" alt="">
+                                </a>
+                            </li>
+                            <li class="main_item">
+                                <span>MENU CHÍNH</span>
+                            </li>
+                            <li class="item_tab"><a href="">Trang chủ</a></li>
+                            <li class="item_tab"><a href="">Giới thiệu</a></li>
+                            <li class="item_tab tab_sp"><a href="">Sản phẩm</a><i class="fa-solid fa-plus"></i></li>
+                            <li class="item_tab"><a href="">Tin tức</a></li>
+                            <li class="item_tab"><a href="">Liên hệ</a></li>
+                            <li class="item_tab"><a href="">Câu hỏi thường gặp</a></li>
+                            <li class="item_tab"><a href="">Hệ thống cửa hàng</a></li>
+                            <li class="item_tab"><a href="">Đặt bàn</a></li>
+                        </ul>
                     </div>
                     <div class="logo">
                         <a href="<?php echo BASE_URL; ?>index.php?route=home">

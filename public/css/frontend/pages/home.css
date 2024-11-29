@@ -135,7 +135,7 @@ body {
 }
 
 .category_list .category_item a {
-    width: 310px;
+    width: 100%;
     height: 122px;
     display: flex;
     justify-content: space-between;

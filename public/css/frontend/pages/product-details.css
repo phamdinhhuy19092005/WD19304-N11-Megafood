@@ -549,7 +549,7 @@ ul.list_img_prd {
 }
 
 .product_topSelling_thumbnail i {
-    font-size: var(--font-title-20);
+    font-size: var(--font-text-20);
     color: var(--main-color);
     margin-top: 20px;
     margin-left: 85%;
