@@ -47,11 +47,7 @@
 
                             <div class="description_product">
                                 <div class="row_contnet">
-                                    <span>Gà Giòn Xốt Tương Tỏi Hàn Quốc là món gà chiên giòn rụm, với lớp da vàng
-                                        ươm, giòn tan. Gà được phủ đều một lớp xốt tương tỏi đậm đà, kết hợp giữa vị
-                                        cay nhẹ, mặn ngọt hài hòa đặc trưng của ẩm thực Hàn Quốc. Hương thơm nồng
-                                        của tỏi hòa quyện cùng vị tương đậm, tạo nên sự hấp dẫn khó cưỡng, làm bùng
-                                        nổ vị giác ngay từ miếng đầu tiên.</span>
+                                    <span><?= htmlspecialchars($product['description']); ?></span>
                                 </div>
 
                                 <div class="row_img_prd">
@@ -82,13 +78,13 @@
                         <div class="full_width">
                             <div class="details">
                                 <h1 class="title_product">
-                                    Gà Giòn Xốt Tương Tỏi Hàn Quốc
+                                <?= htmlspecialchars($product['name']); ?>
                                 </h1>
                                 <form action="" method="post">
                                     <div class="price_box">
                                         <span class="special_price">
                                             <span class="product_price">
-                                                99.000₫
+                                            <?= number_format($product['price'], 0, ',', '.'); ?> VNĐ
                                             </span>
                                         </span>
                                     </div>
