@@ -48,7 +48,7 @@ $products = $productModel->getAllProducts();
 
     if (isset($styles[$page])) {
         foreach ($styles[$page] as $style) {
-            echo '<link rel="stylesheet" href="' . CSS_PAGES_URL . $style . '?v=' . time() . '">' . PHP_EOL;
+            echo '<link rel="stylesheet" href="' . CSS_PAGES_URL . htmlspecialchars($style, ENT_QUOTES, 'UTF-8') . '?v=' . time() . '">' . PHP_EOL;
         }
     }
 
@@ -75,7 +75,7 @@ $products = $productModel->getAllProducts();
                         <ul class="list_item_menu_tab">
                             <li class="logo_tab_menu">
                                 <a href="">
-                                    <img src="../header/img/logo-mobile.png" alt="">
+                                    <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
                                 </a>
                             </li>
                             <li class="main_item">
