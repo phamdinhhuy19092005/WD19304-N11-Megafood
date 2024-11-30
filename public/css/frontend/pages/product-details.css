@@ -883,6 +883,10 @@ ul li.item_blog_small .block_content {
     border-radius: 5px;
 }
 
+.notification_voucher{
+    display: none;
+}
+
 @media (max-width: 1024px) {
 
     .bodywrap {
