@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const notification = document.createElement("div");
       notification.className = "notification";
       notification.innerHTML = `
-        <div class="notification_container" style="max-width: 300px;height: 100px;">
-          <img src="${image}" alt="${name}" />
+        <div class="notification_container" style="width: 300px;height: 100px;">
+          <img src="${image}" alt="${name}" />  
           <div class="notification_content">
             <p class="notification_title" style="font-weight: bold;">${message}:</p>
             <div class="notification_name"><strong>${name}</strong></div>
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const notification = document.createElement("div");
       notification.className = "notification";
       notification.innerHTML = `
-        <div class="notification_add_hearts">
+        <div class="notification_add_hearts" style="width: 100px;height: 100px;">
           <img src="${image}" alt="${message}" />
           <div class="notification_content">
           <div class="notification_title" style="font-weight: bold;">Đã thêm vào yêu thích:</div>
