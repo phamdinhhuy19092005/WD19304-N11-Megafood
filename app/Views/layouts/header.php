@@ -24,7 +24,7 @@ $products = $productModel->getAllProducts();
     <?php
     $styles = [
         'home' => ['home.css'],
-        'products' => ['products.css', 'product-details.css'],
+        'products' => ['products.css', 'product-details.css',],
         'product-details' => ['product-details.css'],
         'cart' => ['cart.css'],
         'account' => ['account.css', 'product-details.css'],
