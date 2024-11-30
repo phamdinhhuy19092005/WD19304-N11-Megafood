@@ -1,8 +1,9 @@
 <footer>
+
     <div class="footer_wrap">
         <div class="bg_footer"></div>
         <ul class="footer_thumb">
-            <li>
+            <li class="item_thumb">
                 <div class="content_top">
                     <h3>Về chúng tôi</h3>
                     <div class="after"></div>
@@ -13,14 +14,14 @@
                 <div class="content_bottom">
                     <h3>Hình thức thanh toán</h3>
                     <div class="after"></div>
-                    <img src="<?php echo IMG_BASE_URL; ?>/payment/payment1.webp" alt="">
-                    <img src="<?php echo IMG_BASE_URL; ?>/payment/payment2.webp" alt="">
-                    <img src="<?php echo IMG_BASE_URL; ?>/payment/payment3.webp" alt="">
+                    <img src="../img/payment/payment1.webp" alt="">
+                    <img src="../img/payment/payment2.webp" alt="">
+                    <img src="../img/payment/payment3.webp" alt="">
 
 
                 </div>
             </li>
-            <li>
+            <li class="item_thumb">
                 <div class="content_top">
 
                     <h3>Thông tin</h3>
@@ -58,7 +59,7 @@
 
                 </div>
             </li>
-            <li>
+            <li class="item_thumb">
                 <div class="content_top">
                     <h3>Chính sách và hướng dẫn</h3>
                     <div class="after"></div>
@@ -77,25 +78,25 @@
 
                 </div>
             </li>
-            <li>
+            <li class="item_thumb">
                 <div class="content_top">
                     <h3>Tin tức</h3>
                     <div class="after"></div>
                     <div class="content_top_small">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
-                            <img src="<?php echo IMG_BASE_URL; ?>/news/news1.webp" alt="">
+                        <a href="../news/news.html">
+                            <img src="../img/news/news1.webp" alt="">
                             <span>Đế bánh Pizza mua ở đâu đảm bảo chất lượng</span>
                         </a>
-                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
-                            <img src="<?php echo IMG_BASE_URL; ?>/news/news2.webp" alt="">
+                        <a href="../news/news.html">
+                            <img src="../img/news/news2.webp" alt="">
                             <span>Cách làm pizza xốt Mayonnaise thơm béo ngon ngất ngây</span>
                         </a>
-                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
-                            <img src="<?php echo IMG_BASE_URL; ?>/news/news3.webp" alt="">
+                        <a href="../news/news.html">
+                            <img src="../img/news/news3.webp" alt="">
                             <span>Pasta là món ăn của nước nào? Pasta và Spaghetti có gì khác nhau?</span>
                         </a>
-                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
-                            <img src="<?php echo IMG_BASE_URL; ?>/news/news4.webp" alt="">
+                        <a href="../news/news.html">
+                            <img src="../img/news/news4.webp" alt="">
                             <span>Tiết lộ tính cách qua cách ăn pizza cực thú vị</span>
                         </a>
                     </div>
@@ -107,6 +108,7 @@
             <span>
                 Bản quyền thuộc về
                 <b>Mega Food.</b>
+
             </span>
         </div>
     </div>
@@ -125,7 +127,7 @@
     <script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>favorite.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
-    
+
 
 
 <?php elseif ($page === 'cart'): ?>

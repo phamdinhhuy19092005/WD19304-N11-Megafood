@@ -181,11 +181,11 @@ $products = $productModel->getAllProducts();
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm <i
                                     class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
-                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Pizza</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Khai vị</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Mỳ ý</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Salad</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">Thức uống</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=1">Pizza</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=2">Khai vị</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=3">Mỳ ý</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=4">Salad</a></li>
+                                <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=5">Thức uống</a></li>
                             </ul>
                         </li>
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=news">Tin tức</a></li>

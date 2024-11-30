@@ -109,7 +109,8 @@
     </ul>
   </div>
   <div class="see_detail">
-    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories" title="Xem chi tiết">Xem chi tiết
+    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=1" title="Xem chi tiết">
+      Xem chi tiết
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
@@ -131,7 +132,7 @@
                   data-name="<?= htmlspecialchars($product['name']); ?>"
                   data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -162,7 +163,8 @@
     </ul>
   </div>
   <div class="see_detail">
-    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories" title="Xem chi tiết">Xem chi tiết
+    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=2" title="Xem chi tiết">
+      Xem chi tiết
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
@@ -184,7 +186,7 @@
                   data-name="<?= htmlspecialchars($product['name']); ?>"
                   data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -215,7 +217,7 @@
     </ul>
   </div>
   <div class="see_detail">
-    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories" title="Xem chi tiết">Xem chi tiết
+    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=3" title="Xem chi tiết">Xem chi tiết
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
@@ -237,7 +239,7 @@
                   data-name="<?= htmlspecialchars($product['name']); ?>"
                   data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -268,7 +270,7 @@
     </ul>
   </div>
   <div class="see_detail">
-    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories" title="Xem chi tiết">Xem chi tiết
+    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=4" title="Xem chi tiết">Xem chi tiết
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
@@ -290,7 +292,7 @@
                   data-name="<?= htmlspecialchars($product['name']); ?>"
                   data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                 </i>
-                <a href="products?id=<?= $product['id']; ?>">
+                <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                 </a>
               </div>
@@ -322,7 +324,7 @@
     </ul>
   </div>
   <div class="see_detail">
-    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories" title="Xem chi tiết">Xem chi tiết
+    <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=5" title="Xem chi tiết">Xem chi tiết
       <span><i class="bi bi-chevron-double-right"></i></span>
     </a>
   </div>
