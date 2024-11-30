@@ -12,6 +12,10 @@ class DetailCategoriesController
 
         $categoriesModel = new Categories();
         $categories = $categoriesModel->getAllCategory();
+
+        foreach ($categories as &$category) {
+            $category['product_count'] = $categoriesModel->getProductCountByCategory($category['id']);
+        }
         
         // Gọi giao diện
         include __DIR__ . '/../Views/layouts/header.php';

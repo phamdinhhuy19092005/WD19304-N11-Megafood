@@ -48,7 +48,6 @@
                     <?php else: ?>
                         <p>No categories available at the moment.</p>
                     <?php endif; ?>
-
                 </ul>
 
             </div>
