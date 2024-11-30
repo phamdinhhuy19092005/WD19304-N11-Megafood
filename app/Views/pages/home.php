@@ -117,7 +117,11 @@
                             <li>
                                 <div class="product_category">
                                     <div class="product_category_thumbnail">
-                                        <i class="fa-regular fa-heart add_to_favorites"></i>
+                                        <i class="fa-regular fa-heart add_to_favorites" 
+                                        data-id="<?= htmlspecialchars($product['id']); ?>"
+                                        data-name="<?= htmlspecialchars($product['name']); ?>"
+                                        data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                                        </i>
                                         <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                                             <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
                                         </a>
