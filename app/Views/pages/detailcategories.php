@@ -62,7 +62,12 @@
   </div>
 
   <div class="container_category_detail">
-    <h1 class="title_page_category"><span>Salad</span></h1>
+    <?php foreach ($categories as $categoryItem): ?>
+      <?php if ($categoryItem['id'] == $_GET['category_id']): ?>
+        <h1 class="title_page_category"><span><?php echo $categoryItem['name']; ?></span></h1>
+      <?php endif; ?>
+    <?php endforeach; ?>
+
     <div class="row_category_detail">
       <aside class="sidebar">
         <div class="sidebar_content">
