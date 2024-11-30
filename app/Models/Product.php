@@ -24,6 +24,7 @@ class Product
     // Lấy sản phẩm theo danh mục
     public function getProductsByCategory($categoryId)
     {
+        // Sử dụng đúng cột 'id_categories'
         $query = "SELECT id, name, description, price, image_url, id_categories FROM " . $this->table . " WHERE id_categories = :id_categories";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id_categories', $categoryId, PDO::PARAM_INT);

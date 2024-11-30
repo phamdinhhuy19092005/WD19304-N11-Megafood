@@ -29,50 +29,32 @@
             <a href="..//sanpham/index.html">Danh mục nổi bật</a>
         </div>
         <div class="category_body">
-                <button class="category_prev_btn">❮</button>
+            <button class="category_prev_btn">❮</button>
             <div class="category_wrapper">
                 <ul class="category_list">
-                    <li class="category_item">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                            <p>Pizza <br>(17 món ăn) </p>
-                            <img style="width: 104px; height: 105px;" src="<?php echo IMG_BASE_URL; ?>category/category1.webp" alt="">
-                        </a>
-
-                    </li>
-                    <li class="category_item">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                            <p>Khai vị <br>(13 món ăn) </p>
-                            <img src="<?php echo IMG_BASE_URL; ?>category/category2.webp" alt="">
-                        </a>
-
-                    </li>
-                    <li class="category_item">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                            <p>Mỳ Ý <br>(7 món ăn) </p>
-                            <img src="<?php echo IMG_BASE_URL; ?>category/category3.webp" alt="">
-                        </a>
-                    </li>
-                    <li class="category_item">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                            <p>Salad <br>(7 món ăn) </p>
-                            <img src="<?php echo IMG_BASE_URL; ?>category/category4.webp" alt="">
-                        </a>
-
-                    </li>
-                    <li class="category_item">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories">
-                            <p>Salad <br>(7 món ăn) </p>
-                            <img src="<?php echo IMG_BASE_URL; ?>category/category5.webp" alt="">
-                        </a>
-
-                    </li>
+                    <?php if (!empty($categories)): ?>
+                        <?php foreach ($categories as $categoryItem): ?>
+                            <li class="category_item">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=<?php echo $categoryItem['id']; ?>">
+                                    <p>
+                                        <?php echo $categoryItem['name']; ?>
+                                        <br>
+                                        (<?php echo $categoryItem['product_count']; ?> món ăn)
+                                    </p>
+                                    <img src="<?php echo IMG_BASE_URL . '/' . $categoryItem['image_url']; ?>" alt="Category Image">
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No categories available at the moment.</p>
+                    <?php endif; ?>
 
                 </ul>
-                
+
             </div>
             <button class="category_next_btn">❯</button>
         </div>
-        
+
     </div>
 
 
