@@ -14,9 +14,9 @@
                 <div class="content_bottom">
                     <h3>Hình thức thanh toán</h3>
                     <div class="after"></div>
-                    <img src="../img/payment/payment1.webp" alt="">
-                    <img src="../img/payment/payment2.webp" alt="">
-                    <img src="../img/payment/payment3.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/payment/payment1.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/payment/payment2.webp" alt="">
+                    <img src="<?php echo IMG_BASE_URL; ?>/payment/payment3.webp" alt="">
 
 
                 </div>
@@ -83,20 +83,20 @@
                     <h3>Tin tức</h3>
                     <div class="after"></div>
                     <div class="content_top_small">
-                        <a href="../news/news.html">
-                            <img src="../img/news/news1.webp" alt="">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
+                            <img src="<?php echo IMG_BASE_URL; ?>/news/news1.webp" alt="">
                             <span>Đế bánh Pizza mua ở đâu đảm bảo chất lượng</span>
                         </a>
-                        <a href="../news/news.html">
-                            <img src="../img/news/news2.webp" alt="">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
+                            <img src="<?php echo IMG_BASE_URL; ?>/news/news2.webp" alt="">
                             <span>Cách làm pizza xốt Mayonnaise thơm béo ngon ngất ngây</span>
                         </a>
-                        <a href="../news/news.html">
-                            <img src="../img/news/news3.webp" alt="">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
+                            <img src="<?php echo IMG_BASE_URL; ?>/news/news3.webp" alt="">
                             <span>Pasta là món ăn của nước nào? Pasta và Spaghetti có gì khác nhau?</span>
                         </a>
-                        <a href="../news/news.html">
-                            <img src="../img/news/news4.webp" alt="">
+                        <a href="<?php echo BASE_URL; ?>index.php?route=news">
+                            <img src="<?php echo IMG_BASE_URL; ?>/news/news4.webp" alt="">
                             <span>Tiết lộ tính cách qua cách ăn pizza cực thú vị</span>
                         </a>
                     </div>
@@ -117,10 +117,11 @@
 <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
 <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
 <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
+<script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
+
 
 
 <?php if ($page === 'home'): ?>
-    <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>scrollToTop.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
@@ -143,7 +144,6 @@
     <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
 <?php elseif ($page === 'detailCategories'): ?>
-    <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>display_sudMenu.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>sort_detailcategories.js"></script>
