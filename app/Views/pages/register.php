@@ -26,6 +26,9 @@
             <h1>
                 <span>ĐĂNG KÝ</span>
             </h1>
+
+
+
             <form class="form_login" action="<?php echo BASE_URL; ?>index.php?route=register" method="POST" autocomplete="off">
 
                 <div class="form_group">
@@ -63,6 +66,8 @@
                     <button type="submit" name="signUp" value="Đăng ký">Đăng ký</button>
                 </div>
             </form>
+
+            
 
 
             <div class="social_login">

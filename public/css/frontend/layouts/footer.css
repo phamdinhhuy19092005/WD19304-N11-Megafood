@@ -189,3 +189,9 @@
         padding: 0px 20px;
     }
 }
+
+@media (max-width: 376px) {
+    footer {
+        display: none;
+    }
+}

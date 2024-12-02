@@ -42,6 +42,7 @@ require_once 'app/Controllers/RegisterController.php';
 require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
 require_once 'app/Controllers/LogoutController.php';
+require_once 'app/Controllers/FavoritesListController.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';
@@ -126,6 +127,10 @@ switch ($route) {
     case 'logout':
         $controller = new LogoutController();
         $controller->logout();
+        break;
+    case 'favorites':
+        $controller = new FavoritesListController();
+        $controller->favoritesList();
         break;
 
     default:

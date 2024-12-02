@@ -31,13 +31,19 @@
                 <div class="row row_acc">
                     <div class="block_account">
                         <h2 class="title_account">TRANG TÀI KHOẢN</h2>
-                        <p>Xin chào, <span>Phạm Huy</span> !</p>
+                        <?php
+                        if (session_status() == PHP_SESSION_NONE) {
+                            session_start();
+                        }
+                        ?>
+
+                        <p>Xin chào, <span><?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : ''; ?></span>!</p>
 
                         <!-- Danh sách danh mục -->
 
                         <ul>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account" class="title_info active">
                                     Thông tin tài khoản
                                 </a>
                             </li>
@@ -52,7 +58,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=addressbook" class="title_info active">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=addressbook" class="title_info">
                                     Sổ địa chỉ (1)
                                 </a>
                             </li>
