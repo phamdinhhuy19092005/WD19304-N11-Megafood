@@ -122,12 +122,12 @@
                                         </button>
                                     </div>
                                     <div class="group-button">
-                                            <button title="Thêm vào giỏ hàng" class="btn_add_to_cart">
-                                                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">THÊM VÀO GIỎ HÀNG</a>
-                                            </button>
-                                            <button title="Đặt bàn ngay" class="btn_phone">
-                                                <a href="#">ĐẶT BÀN NGAY</a>
-                                            </button>
+                                        <button title="Thêm vào giỏ hàng" class="btn_add_to_cart">
+                                            <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">THÊM VÀO GIỎ HÀNG</a>
+                                        </button>
+                                        <button title="Đặt bàn ngay" class="btn_phone">
+                                            <a href="#">ĐẶT BÀN NGAY</a>
+                                        </button>
                                     </div>
 
                                 </form>
@@ -207,9 +207,7 @@
                                                             <span>Giá chỉ từ</span>
                                                             <p><?= number_format($relatedProduct['price'], 0, ',', '.'); ?>đ</p>
                                                         </div>
-                                                        <a href="javascript:void(0)" class="add_to_cart" data-name="<?= htmlspecialchars($relatedProduct['name']); ?>" data-image="<?= htmlspecialchars($relatedProduct['image_url']); ?>">
-                                                            Thêm
-                                                        </a>
+                                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                                     </div>
                                                 </li>
                                             <?php endif; ?>

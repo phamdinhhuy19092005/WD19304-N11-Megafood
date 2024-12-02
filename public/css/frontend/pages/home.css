@@ -753,7 +753,7 @@ body {
 
 
 .product_topSelling_thumbnail a img {
-    width: 238px;
+    width: 100%;
     height: 182px;
     transition: all 0.3s ease;
 }
