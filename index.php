@@ -25,6 +25,10 @@ define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
 
+//BackEnd
+define('CSS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/layouts/');
+define('CSS_PAHES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
+
 
 // Load các controller
 require_once 'app/Controllers/HomeController.php';
