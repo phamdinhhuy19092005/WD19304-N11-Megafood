@@ -81,26 +81,17 @@ class CartController
             session_start();
         }
 
-        $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
-        $quantity_change = isset($_POST['quantity_change']) ? intval($_POST['quantity_change']) : 0;
+        $productId = isset($_POST['product_id']) ? intval($_POST['product_id']) : 0;
+        $quantity = isset($_POST['quantity']) ? intval($_POST['quantity']) : 1;
 
-        if (isset($_SESSION['cart'][$id])) {
-            $current_quantity = $_SESSION['cart'][$id]['quantity'];
-            $new_quantity = $current_quantity + $quantity_change;
-
-            // Đảm bảo số lượng không nhỏ hơn 1
-            if ($new_quantity < 1) {
-                $new_quantity = 1;
+        if ($productId && $quantity > 0) {
+            if (isset($_SESSION['cart'][$productId])) {
+                $_SESSION['cart'][$productId]['quantity'] = $quantity;  // Update the quantity
             }
-
-            $_SESSION['cart'][$id]['quantity'] = $new_quantity;
-
-            // Gửi phản hồi thành công
-            echo json_encode(['success' => true]);
-        } else {
-            // Sản phẩm không tồn tại trong giỏ hàng
-            echo json_encode(['success' => false]);
         }
+
+        // After updating the quantity, redirect to the cart page to reflect the changes
+        header('Location: index.php?route=cart&action=view');
         exit();
     }
 }

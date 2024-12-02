@@ -6,27 +6,24 @@ require_once './config/database.php';
 $connectModel = new Database();
 $conn = $connectModel->connect();
 
-if ($conn) {
-    echo 'Kết nối thành công';
-} else {
-    echo 'Kết nối thất bại';
-}
+// if ($conn) {
+//     echo 'Kết nối thành công';
+// } else {
+//     echo 'Kết nối thất bại';
+// }
 
 // Định nghĩa đường dẫn
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
 define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
 
-//FrontEnd
+// frontEnd
+
 define('CSS_LAYOUTS_URL', BASE_URL_PUBLIC . 'css/frontend/layouts/');
 define('CSS_PAGES_URL', BASE_URL_PUBLIC . 'css/frontend/pages/');
 define('IMG_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/');
 define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
-
-//BackEnd
-define('CSS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/layouts/');
-define('CSS_PAGES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
 
 
 // Load các controller
@@ -44,6 +41,7 @@ require_once 'app/Controllers/LoginController.php';
 require_once 'app/Controllers/RegisterController.php';
 require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
+require_once 'app/Controllers/LogoutController.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';
@@ -125,6 +123,11 @@ switch ($route) {
         $controller = new PaymentController();
         $controller->payment();
         break;
+    case 'logout':
+        $controller = new LogoutController();
+        $controller->logout();
+        break;
+
     default:
         echo "404 - Page Not Found";
         break;

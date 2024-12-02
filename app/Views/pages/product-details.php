@@ -48,7 +48,14 @@
                             <div class="description_product">
                                 <div class="row_contnet">
                                     <span><?= htmlspecialchars($product['description']); ?></span>
+                                    <div class="gallery_top">
+                                        <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
+                                    </div>
                                 </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1ac06d65db8502322eb31f60804e5e588a510d3d
                             </div>
                         </div>
 

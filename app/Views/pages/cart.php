@@ -33,13 +33,20 @@
                                 <div class="cart_select">
                                     <div class="cart_select">
                                         <button type="button" class="btn_reduce" data-id="<?= $product_id; ?>">-</button>
-                                        <input type="text" class="quantity_cart" value="<?= $product['quantity']; ?>" min="1" data-id="<?= $product_id; ?>" data-old-value="<?= $product['quantity']; ?>">
+                                        <input type="text" class="quantity_cart" value="<?= $product['quantity']; ?>" min="1" data-id="<?= $product_id; ?>">
                                         <button type="button" class="btn_increase" data-id="<?= $product_id; ?>">+</button>
                                     </div>
+                                    <form id="updateForm" method="POST" action="index.php?route=cart&action=updateQuantity" style="display: none;">
+                                        <input type="hidden" name="product_id" id="product_id">
+                                        <input type="hidden" name="action" id="action">
+                                        <input type="hidden" name="quantity" id="quantity">
+                                    </form>
+
+
                                 </div>
                             </div>
                             <div class="cart_total">
-                                <span class="total_price"><?= number_format($product['price'] * $product['quantity'], 0, ',', '.'); ?></span> VND
+                                <span class="total_price"> <?= number_format($product['price'] * $product['quantity'], 0, ',', '.'); ?></span> VND
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -69,7 +76,9 @@
                 </div>
 
             <?php else: ?>
-                <p>Giỏ hàng của bạn hiện tại trống.</p>
+                <p>
+                    <img src="<?php echo IMG_BASE_URL; ?>cart/empty-cart-2130356-1800917.webp" alt="">
+                </p>
             <?php endif; ?>
 
         </div>
