@@ -82,6 +82,6 @@ function btnProducts(){
     updateButtons();
     }
     
-    btnProducts();
     btnCategories();
+    btnProducts();
   

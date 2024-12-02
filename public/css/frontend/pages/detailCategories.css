@@ -141,9 +141,8 @@ ul.breadcrumb {
 
 /*  */
 .container_category_detail {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-bottom: 10px;
+    width: 100%;
+    margin: 20px auto;
 }
 
 .title_page_category {
@@ -155,8 +154,8 @@ ul.breadcrumb {
 
 .row_category_detail {
     display: flex;
-    justify-content: space-between;
-    /* gap: 20px; */
+    /* justify-content: space-between; */
+    gap: 75px;
 }
 
 .sidebar {
