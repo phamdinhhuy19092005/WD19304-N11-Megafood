@@ -1,0 +1,319 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: 14px;
+}
+
+body {
+    background-color: #F8F8FB;
+}
+
+:root {
+    --main-color: #FF7D01;
+    --white-color: #ffff;
+    --secondary-color: #00B2A9;
+    --dark-blue-color: #242939;
+    --gunmetal-color: #1F2433;
+    --black-color: #000;
+    --silver-gray-color: #BFBFBF;
+    --light-gray-color: #eee;
+    --gainsboro-color: #d9d9d9;
+    --grayish-blue-color: #484f66;
+    --slate-gray-color: #7C8197;
+    --font-text-12: 12px;
+    --font-text-14: 14px;
+    --font-text-16: 16px;
+    --font-text-20: 20px;
+    --font-text-24: 24px;
+}
+
+
+.sidenav_header,
+.header_admin {
+    box-shadow: 2px 2px 5px rgba(208, 205, 205, 0.3);
+}
+
+aside.sidenav {
+    width: 17%;
+}
+
+/* sidenav-header */
+.side_header {
+    position: fixed;
+    float: left;
+    min-height: 790px;
+    background-color: var(--dark-blue-color);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.brand_logo {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+
+
+.btn__tool {
+    position: relative;
+    width: 40px;
+    /* Điều chỉnh kích thước nếu cần */
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Thanh trên */
+.btn__tool::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--grayish-blue-color);
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+/* Thanh giữa */
+.btn__tool::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--grayish-blue-color);
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+/* Thanh dưới cùng */
+.btn__tool-bar {
+    display: block;
+    width: 17px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--grayish-blue-color);
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.btn__tool:hover::before,
+.btn__tool:hover::after,
+.btn__tool:hover .btn__tool-bar {
+    width: 25px;
+    transition: width 0.5s ease, background-color 0.3s ease;
+    background-color: var(--light-gray-color);
+}
+
+/* menu_wrapper */
+
+.menu_wrapper {
+    margin-top: 20px;
+}
+
+.item_menu a {
+    padding: 9px 30px;
+}
+
+/* Style for the taskbar */
+.taskbar {
+    width: 100%;
+    display: inline-block;
+}
+
+
+/* trạng thái khi có active */
+.taskbar-button.active,
+.dropdown-menu.active {
+    background-color: var(--gunmetal-color);
+    color: #ffff;
+}
+
+.taskbar-button.active i {
+    color: #384AD7;
+}
+
+.taskbar-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 27px;
+    border: none;
+    cursor: pointer;
+    color: var(--slate-gray-color);
+}
+
+.taskbar-button:hover {
+    background-color: var(--gunmetal-color);
+    color: #ffff;
+}
+
+.taskbar-button:hover .icon_taskbar i {
+    color: #536BE2;
+}
+
+.icon_taskbar {
+    margin-right: 10px;
+}
+
+.icon_taskbar i {
+    font-size: 18px;
+}
+
+/* CSS cho menu dropdown */
+.dropdown-menu {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: var(--dark-blue-color);
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Khi thêm lớp show */
+.dropdown-menu.show {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 500px;
+    /* Đặt chiều cao tối đa phù hợp với nội dung */
+}
+
+.item_dropdow_menu {
+    background-color: var(--gunmetal-color);
+
+}
+
+.item_dropdow_menu.active {
+    background-color: var(--gunmetal-color);
+    color: #fff;
+}
+
+.item_dropdow_menu.active i {
+    color: #536BE2;
+}
+
+.item_dropdow_menu.active a {
+    color: #ffff;
+}
+
+/* Khi thêm lớp show */
+.dropdown-menu.show {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 500px;
+}
+
+
+
+.item_dropdow_menu i {
+    font-size: 5px;
+    margin-right: 10px;
+}
+
+.item_dropdow_menu a {
+    color: var(--slate-gray-color);
+}
+
+.dropdown-menu .item_dropdow_menu {
+    cursor: pointer;
+    color: var(--slate-gray-color);
+    padding: 15px 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu .item_dropdow_menu:hover {
+    background-color: var(--gunmetal-color);
+    color: #ffff;
+}
+
+.dropdown-menu .item_dropdow_menu:hover i {
+    color: #536BE2;
+}
+
+.dropdown-menu .item_dropdow_menu:hover a {
+    color: #ffff;
+}
+
+/* header */
+header {
+    max-height: 65px;
+    background-color: var(--white-color);
+    color: white;
+    display: flex;
+}
+
+.header_admin {
+    line-height: 50px;
+    display: flex;
+    width: 84%;
+    margin-left: 16%;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100000;
+    background-color: var(--white-color);
+}
+
+.btn_shop {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn_shop a {
+    color: var(--black-color);
+}
+
+.btn_shop:hover {
+    color: var(--gunmetal-color);
+}
+
+.logo_ninja {
+    display: flex;
+    align-items: center;
+}
+
+.logo_ninja img {
+    max-width: 38px;
+    max-height: 38px;
+}
+
+.info_users {
+    display: flex;
+    align-items: center;
+}
+
+.info_users span {
+    margin-right: 5px;
+}
+
+.name_users {
+    font-weight: bold;
+}
+
+.header_rigth {
+    padding: 3px 10px;
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+}

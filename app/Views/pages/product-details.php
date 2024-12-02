@@ -49,26 +49,6 @@
                                 <div class="row_contnet">
                                     <span><?= htmlspecialchars($product['description']); ?></span>
                                 </div>
-
-                                <div class="row_img_prd">
-                                    <ul class="list_img_prd">
-                                        <li class="item_img_prd">
-                                            <img src="	https://placehold.co/150x100?text=MegaFood" alt="">
-                                        </li>
-
-                                        <li class="item_img_prd">
-                                            <img src="	https://placehold.co/150x100?text=MegaFood" alt="">
-                                        </li>
-
-                                        <li class="item_img_prd">
-                                            <img src="	https://placehold.co/150x100?text=MegaFood" alt="">
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="view_all_dct">
-                                    <span>Xem thêm</span>
-                                </div>
                             </div>
                         </div>
 
@@ -101,11 +81,11 @@
                                         <div class="custom_btn_number">
                                             <label class="sl">Số lượng:</label>
                                             <div class="input_number_product">
-                                                <button class="btn_num">
+                                                <button class="btn_num btn_minus">
                                                     <i class="bi bi-dash-lg"></i>
                                                 </button>
-                                                <span class="show_num">1</span>
-                                                <button class="btn_num">
+                                                <span class="show_num" id="quantity_display">1</span>
+                                                <button class="btn_num btn_plus" >
                                                     <i class="bi bi-plus-lg"></i>
                                                 </button>
                                             </div>

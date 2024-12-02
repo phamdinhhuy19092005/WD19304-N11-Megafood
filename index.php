@@ -16,11 +16,18 @@ if ($conn) {
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
 define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
 
+//FrontEnd
 define('CSS_LAYOUTS_URL', BASE_URL_PUBLIC . 'css/frontend/layouts/');
 define('CSS_PAGES_URL', BASE_URL_PUBLIC . 'css/frontend/pages/');
 define('IMG_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/');
 define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
+
+
+//BackEnd
+define('CSS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/layouts/');
+define('CSS_PAGES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
+
 
 // Load các controller
 require_once 'app/Controllers/HomeController.php';

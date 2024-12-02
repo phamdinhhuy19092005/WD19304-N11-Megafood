@@ -148,6 +148,7 @@
     <script src="<?php echo JS_PAGES_URL; ?>sort_detailcategories.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
 <?php elseif ($page === 'product-details'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>saveVoucher.js"></script>
 
 
