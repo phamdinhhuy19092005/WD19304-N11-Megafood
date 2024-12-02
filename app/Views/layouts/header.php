@@ -81,14 +81,14 @@ $products = $productModel->getAllProducts();
                             <li class="main_item">
                                 <span>MENU CHÍNH</span>
                             </li>
-                            <li class="item_tab"><a href="">Trang chủ</a></li>
-                            <li class="item_tab"><a href="">Giới thiệu</a></li>
-                            <li class="item_tab tab_sp"><a href="">Sản phẩm</a><i class="fa-solid fa-plus"></i></li>
-                            <li class="item_tab"><a href="">Tin tức</a></li>
-                            <li class="item_tab"><a href="">Liên hệ</a></li>
-                            <li class="item_tab"><a href="">Câu hỏi thường gặp</a></li>
-                            <li class="item_tab"><a href="">Hệ thống cửa hàng</a></li>
-                            <li class="item_tab"><a href="">Đặt bàn</a></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=home">Trang chủ</a></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=about">Giới thiệu</a></li>
+                            <li class="item_tab tab_sp"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm</a><i class="fa-solid fa-plus"></i></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=news">Tin tức</a></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=contact">Liên hệ</a></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=faq">Câu hỏi thường gặp</a></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=storeSystem">Hệ thống cửa hàng</a></li>
+                            <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                         </ul>
                     </div>
                     <div class="logo">
@@ -167,8 +167,8 @@ $products = $productModel->getAllProducts();
                         </span>
                         <a href="<?php echo BASE_URL; ?>index.php?route=cart"><i class="bi bi-basket2"></i></a>
                     </div>
-                    <button class="btn_1">Đặt món online</button>
-                    <button class="btn_2">Đặt bàn</button>
+                    <a href="<?php echo BASE_URL; ?>index.php?route=booking"><button class="btn_1">Đặt món online</button></a>
+                    <a href="<?php echo BASE_URL; ?>index.php?route=booking"><button  class="btn_2">Đặt bàn</button></a>
                 </div>
             </div>
         </div>

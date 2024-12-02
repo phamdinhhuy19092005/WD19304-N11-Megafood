@@ -674,11 +674,8 @@ body {
 }
 
 .product_topSelling .product_topSelling_list {
-    max-width: 1300px;
     /* width: 100%; */
     display: flex;
-    justify-content: space-between;
-    /* overflow: hidden; */
     position: relative;
     margin: auto;
     align-items: center;
@@ -753,7 +750,6 @@ body {
 
 
 .product_topSelling_thumbnail a img {
-    width: 100%;
     height: 182px;
     transition: all 0.3s ease;
 }

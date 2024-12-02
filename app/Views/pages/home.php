@@ -367,90 +367,9 @@
             <button class="prev_btn">❮</button>
 
             <ul class="product_topSelling_list">
-                <li class="product_topSelling_li">
-                    <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart add_to_favorites"></i>
-                        <a href="">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                alt="">
-                        </a>
-                    </div>
-
-
-                    <div class="product_topSelling_info">
-                        <h3 class="product_topSelling_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                        <span class="product_topSelling_content">
-                            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                            theo công...
-                        </span>
-                        <a href="">Xem thêm</a>
-
-                    </div>
-
-                    <div class="product_topSelling_form">
-                        <div class="product_topSelling_priceBox">
-                            <span>Giá chỉ từ</span>
-                            <p>99.000đ</p>
-                        </div>
-                        <a href="">Thêm</a>
-                    </div>
-                </li>
-                <li class="product_topSelling_li">
-                    <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart add_to_favorites"></i>
-                        <a href="">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                alt="">
-                        </a>
-                    </div>
-
-
-                    <div class="product_topSelling_info">
-                        <h3 class="product_topSelling_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                        <span class="product_topSelling_content">
-                            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                            theo công...
-                        </span>
-                        <a href="">Xem thêm</a>
-
-                    </div>
-
-                    <div class="product_topSelling_form">
-                        <div class="product_topSelling_priceBox">
-                            <span>Giá chỉ từ</span>
-                            <p>99.000đ</p>
-                        </div>
-                        <a href="">Thêm</a>
-                    </div>
-                </li>
-                <li class="product_topSelling_li">
-                    <div class="product_topSelling_thumbnail">
-                        <i class="fa-regular fa-heart add_to_favorites"></i>
-                        <a href="">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                alt="">
-                        </a>
-                    </div>
-
-
-                    <div class="product_topSelling_info">
-                        <h3 class="product_topSelling_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                        <span class="product_topSelling_content">
-                            Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                            theo công...
-                        </span>
-                        <a href="">Xem thêm</a>
-
-                    </div>
-
-                    <div class="product_topSelling_form">
-                        <div class="product_topSelling_priceBox">
-                            <span>Giá chỉ từ</span>
-                            <p>99.000đ</p>
-                        </div>
-                        <a href="">Thêm</a>
-                    </div>
-                </li>
+                
+                
+                
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
                         <i class="fa-regular fa-heart add_to_favorites"></i>
