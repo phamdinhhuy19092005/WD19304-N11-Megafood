@@ -42,3 +42,33 @@ radios.forEach(radio => {
         updateMainImage(newSrc);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the closest elements for quantity display and buttons
+    const quantityDisplay = document.getElementById('quantity_display');
+    const quantityContainer = document.querySelector('.quantity_prd'); // parent of the buttons
+    
+    // Ensure that the buttons exist within the quantity container
+    const btnPlus = quantityContainer.querySelector('.btn_plus');
+    const btnMinus = quantityContainer.querySelector('.btn_minus');
+
+    // Check if the buttons are correctly found
+    if (btnPlus && btnMinus) {
+        // Increase quantity
+        btnPlus.addEventListener('click', function() {
+            let currentQuantity = parseInt(quantityDisplay.innerText);
+            currentQuantity += 1;
+            quantityDisplay.innerText = currentQuantity;
+        });
+
+        // Decrease quantity, ensuring it doesn't go below 1
+        btnMinus.addEventListener('click', function() {
+            let currentQuantity = parseInt(quantityDisplay.innerText);
+            if (currentQuantity > 1) {
+                currentQuantity -= 1;
+                quantityDisplay.innerText = currentQuantity;
+            }
+        });
+    }
+});
+

@@ -155,8 +155,8 @@ $products = $productModel->getAllProducts();
                             <ul class="list_user">
                                 <?php
                                 if (isset($_SESSION['email'])) {
-                                    echo "<li><a href='#'><i class='bi bi-person'></i><span>Welcome, " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "</span></a></li>";
-                                    echo "<li><a href='" . BASE_URL . "index.php?route=logout'><i class='bi bi-box-arrow-right'></i><span>Đăng xuất</span></a></li>";
+                                    echo "<li><a href='<?php echo BASE_URL; ?>index.php?route=account'><i class='bi bi-person'></i><span>Welcome, " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "</span></a></li>";
+                                    echo "<li><a href='" . BASE_URL . "index.php?route=log'><i class='bi bi-box-arrow-right'></i><span>Đăng xuất</span></a></li>";
                                 } else {
                                     echo "<li><a href='" . BASE_URL . "index.php?route=login'><i class='bi bi-box-arrow-in-right'></i><span>Đăng nhập</span></a></li>";
                                     echo "<li><a href='" . BASE_URL . "index.php?route=register'><i class='bi bi-person-plus'></i><span>Đăng kí</span></a></li>";

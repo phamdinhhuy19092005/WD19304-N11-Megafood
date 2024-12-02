@@ -52,7 +52,10 @@
                                         <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
                                     </div>
                                 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1ac06d65db8502322eb31f60804e5e588a510d3d
                             </div>
                         </div>
 
@@ -85,11 +88,11 @@
                                         <div class="custom_btn_number">
                                             <label class="sl">Số lượng:</label>
                                             <div class="input_number_product">
-                                                <button class="btn_num">
+                                                <button class="btn_num btn_minus">
                                                     <i class="bi bi-dash-lg"></i>
                                                 </button>
-                                                <span class="show_num">1</span>
-                                                <button class="btn_num">
+                                                <span class="show_num" id="quantity_display">1</span>
+                                                <button class="btn_num btn_plus" >
                                                     <i class="bi bi-plus-lg"></i>
                                                 </button>
                                             </div>
