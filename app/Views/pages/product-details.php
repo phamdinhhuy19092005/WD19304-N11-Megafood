@@ -48,27 +48,11 @@
                             <div class="description_product">
                                 <div class="row_contnet">
                                     <span><?= htmlspecialchars($product['description']); ?></span>
+                                    <div class="gallery_top">
+                                        <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
+                                    </div>
                                 </div>
 
-                                <div class="row_img_prd">
-                                    <ul class="list_img_prd">
-                                        <li class="item_img_prd">
-                                            <img src="	https://placehold.co/150x100?text=MegaFood" alt="">
-                                        </li>
-
-                                        <li class="item_img_prd">
-                                            <img src="	https://placehold.co/150x100?text=MegaFood" alt="">
-                                        </li>
-
-                                        <li class="item_img_prd">
-                                            <img src="	https://placehold.co/150x100?text=MegaFood" alt="">
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="view_all_dct">
-                                    <span>Xem thêm</span>
-                                </div>
                             </div>
                         </div>
 

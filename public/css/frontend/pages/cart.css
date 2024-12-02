@@ -54,12 +54,10 @@ ul.breadcrumb {
     justify-content: space-between;
 }
 
-.cartwrap .cartwrap_left {
-    max-width: 975px;
-}
 
-.cartwrap_left p {
+.cartwrap_left p.none_cart {
     margin: 10px;
+    padding: 10px;
     text-align: center;
 }
 
