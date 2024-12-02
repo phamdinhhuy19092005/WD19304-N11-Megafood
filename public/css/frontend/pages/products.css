@@ -165,7 +165,7 @@ ul.breadcrumb {
 }
 
 .category_list .category_item a {
-    width: 100%;
+    width: 310px;
     height: 122px;
     display: flex;
     justify-content: space-between;
@@ -176,7 +176,6 @@ ul.breadcrumb {
 .category_list .category_item a:hover {
     background-color: var(--secondary-color);
     font-weight: 600;
-    transition: all 0.3s ease;
 
 }
 
@@ -188,13 +187,13 @@ ul.breadcrumb {
 
 .category_list .category_item a img {
     width: 100px;
-    height: 72px;
+    height: 80px;
     margin-right: 10px;
 
 }
 
-.category_list .category_item a:hover img {
-    transform: rotate(10deg);
+.category_list .category_item:hover img {
+    transform: rotate(15deg);
     transition: all 0.3s ease;
 }
 
