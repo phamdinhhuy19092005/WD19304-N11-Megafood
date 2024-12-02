@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Models/Product.php';
+require_once __DIR__ . '/../Models/Categories.php';
 
 
 class ProductController
@@ -13,15 +14,21 @@ class ProductController
         include __DIR__ . '/../Views/layouts/header.php';
 
         $productModel = new Product();
+        $categoriesModel = new Categories();
 
         if (isset($_GET['category_id'])) {
-            // Lọc sản phẩm theo danh mục
             $categoryId = intval($_GET['category_id']);
             $products = $productModel->getProductsByCategory($categoryId);
         } else {
-            // Hiển thị tất cả sản phẩm
             $products = $productModel->getAllProducts();
         }
+
+        $categories = $categoriesModel->getAllCategory(); 
+
+        foreach ($categories as &$category) {
+            $category['product_count'] = $categoriesModel->getProductCountByCategory($category['id']);
+        }
+
 
         include __DIR__ . '/../Views/pages/products.php';
         include __DIR__ . '/../Views/layouts/footer.php';
