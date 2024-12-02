@@ -19,36 +19,37 @@
   </section>
   <!-- Danh mục -->
   <div class="category">
-    <div class="category_title">
+        <div class="category_title">
 
-      <b>Nổi bật</b><br>
-      <a href="..//sanpham/index.html">Danh mục nổi bật</a>
-    </div>
+            <b>Nổi bật</b><br>
+            <a href="..//sanpham/index.html">Danh mục nổi bật</a>
+        </div>
+        <div class="category_body">
+            <button class="category_prev_btn">❮</button>
+            <div class="category_wrapper">
+                <ul class="category_list">
+                    <?php if (!empty($categories)): ?>
+                        <?php foreach ($categories as $categoryItem): ?>
+                            <li class="category_item">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=<?php echo $categoryItem['id']; ?>">
+                                    <p>
+                                        <?php echo $categoryItem['name']; ?>
+                                        <br>
+                                        (<?php echo $categoryItem['product_count']; ?> món ăn)
+                                    </p>
+                                    <img src="<?php echo IMG_BASE_URL . '/' . $categoryItem['image_url']; ?>" alt="Category Image">
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No categories available at the moment.</p>
+                    <?php endif; ?>
+                </ul>
 
-    <div class="category_body">
-      <button class="category_prev_btn">❮</button>
-      <div class="category_wrapper">
-        <ul class="category_list">
-          <?php if (!empty($categories)): ?>
-            <?php foreach ($categories as $categoryItem): ?>
-              <li class="category_item">
-                <a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=<?php echo $categoryItem['id']; ?>">
-                  <p>
-                    <?php echo $categoryItem['name']; ?>
-                    <br>
-                    (<?php echo $categoryItem['product_count']; ?> món ăn)
-                  </p>
-                  <img src="<?php echo IMG_BASE_URL . '/' . $categoryItem['image_url']; ?>" alt="Category Image">
-                </a>
-              </li>
-            <?php endforeach; ?>
-          <?php else: ?>
-            <p>No categories available at the moment.</p>
-          <?php endif; ?>
-        </ul>
+            </div>
+            <button class="category_next_btn">❯</button>
+        </div>
 
-      </div>
-      <button class="category_next_btn">❯</button>
     </div>
 
     <div class="container_category_detail">
@@ -183,4 +184,3 @@
         </div>
       </div>
     </div>
-  </div>

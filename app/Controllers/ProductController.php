@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../Models/Product.php';
 
+
 class ProductController
 {
     public function products()
@@ -57,4 +58,5 @@ class ProductController
         include __DIR__ . '/../Views/pages/product-details.php';
         include __DIR__ . '/../Views/layouts/footer.php';
     }
+   
 }
