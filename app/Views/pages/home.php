@@ -855,7 +855,7 @@
         <ul class="news_thumbnail">
             <?php if (!empty($news)): ?>
                 <?php foreach ($news as $newsItem): ?>
-                    <a href="../news/news.php?id=<?php echo $newsItem['id']; ?>"> Assuming dynamic link based on news id
+                    <a href="../news/news.php?id=<?php echo $newsItem['id']; ?>">
                         <li>
                             <div class="block_thumb">
                                 <img src="<?php echo IMG_BASE_URL . '/' . $newsItem['img_url']; ?>" alt="News Image">
