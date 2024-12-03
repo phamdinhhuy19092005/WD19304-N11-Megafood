@@ -946,7 +946,7 @@
         <ul class="news_thumbnail">
             <?php if (!empty($news)): ?>
                 <?php foreach ($news as $newsItem): ?>
-                    <a href="../news/news.php?id=<?php echo $newsItem['id']; ?>"> <!-- Assuming dynamic link based on news id -->
+                    <a href="../news/news.php?id=<?php echo $newsItem['id']; ?>"> Assuming dynamic link based on news id
                         <li>
                             <div class="block_thumb">
                                 <img src="<?php echo IMG_BASE_URL . '/' . $newsItem['img_url']; ?>" alt="News Image">
@@ -1065,7 +1065,7 @@
             <span>Nhập email của bạn và nhận nhiều chương trình ưu đãi hấp dẫn từ cửa hàng!</span>
             <form action="">
                 <input type="email" placeholder="Nhập Email nhận tin khuyến mãi">
-                <button type="button">ĐĂNG KÝ</button>
+                <button type="submit">ĐĂNG KÝ</button>
             </form>
         </div>
         <div class="img_right">

@@ -1,5 +1,4 @@
 * {
-    font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -157,7 +156,7 @@ body {
 }
 
 .category_prev_btn {
-    left: -20px;
+    left: -30px;
     /* Điều chỉnh để căn khoảng cách bên trái */
 }
 
@@ -1532,7 +1531,7 @@ body {
 
     .logo img {
         width: 150px;
-        height: auto;
+        /* height: auto; */
     }
 
     .search_container {
@@ -1555,7 +1554,7 @@ body {
 
     .category_list .category_item {
         width: 90%;
-        height: auto;
+        /* height: auto; */
     }
 
     .slide-show {
@@ -1589,17 +1588,17 @@ body {
     .product_topSelling_thumbnail a img,
     .news_thumbnail a li img {
         width: 100%;
-        height: auto;
+        /* height: auto; */
     }
 
     .banner_thumbnail li {
         width: 100%;
-        height: auto;
+        /* height: auto; */
     }
 
     .banner_thumbnail li a img {
         width: 100%;
-        height: auto;
+        /* height: auto; */
     }
 
     .flashSale_thumbnail {
@@ -1662,13 +1661,9 @@ body {
         width: 100%;
     }
 
-    .product_fs {
-        width: 90%;
-        height: 450px;
-    }
 
     .flashSale {
-        max-height: 1000px;
+        display: none;
     }
 
     .category,
