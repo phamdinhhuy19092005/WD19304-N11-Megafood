@@ -367,6 +367,10 @@ form {
 
 .product_table {
     margin-bottom: 20px;
+    border-spacing: 0 15px;
+}
+.product{
+
 }
 
 .product_image {

@@ -151,6 +151,8 @@
 <?php elseif ($page === 'product-details'): ?>
     <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>saveVoucher.js"></script>
+<?php elseif ($page === 'payment'): ?>
+    <script src="<?php echo JS_PAGES_URL; ?>orderSuccessfully.js"></script>
 
 
 
