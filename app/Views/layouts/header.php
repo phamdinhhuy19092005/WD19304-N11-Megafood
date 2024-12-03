@@ -19,30 +19,33 @@ $products = $productModel->getAllProducts();
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <!-- font Lobster -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 
     <!-- Page-specific CSS -->
     <?php
     $styles = [ 
         'home' => ['home.css'],
-        'products' => ['products.css', 'product-details.css',],
-        'product-details' => ['product-details.css'],
+        'products' => ['products.css', '',],
+        'product-details' => ['product-detail.css'],
         'cart' => ['cart.css'],
-        'account' => ['account.css', 'product-details.css'],
-        'orders' => ['account.css', 'product-details.css'],
-        'changepassword' => ['account.css', 'product-details.css'],
-        'addressbook' => ['account.css', 'product-details.css'],
-        'addaddress' => ['account.css', 'product-details.css'],
-        'contact' => ['contact.css', 'product-details.css'],
-        'news' => ['news.css', 'product-details.css'],
-        'about' => ['about.css', 'product-details.css'],
-        'detailCategories' => ['detailCategories.css', 'product-details.css', 'home.css'],
-        'faq' => ['faq.css', 'product-details.css'],
-        'booking' => ['booking.css', 'product-details.css'],
-        'login' => ['auth.css', 'product-details.css'],
-        'register' => ['auth.css', 'product-details.css'],
-        'storeSystem' => ['storeSystem.css', 'product-details.css'],
-        'payment' => ['payment.css', 'product-details.css', 'font-quicksand.css'],
-        'favorites' => ['favorites.css', 'product-details.css'],
+        'account' => ['account.css', ''],
+        'orders' => ['account.css', ''],
+        'changepassword' => ['account.css', ''],
+        'addressbook' => ['account.css', ''],
+        'addaddress' => ['account.css', ''],
+        'contact' => ['contact.css', ''],
+        'news' => ['news.css', ''],
+        'about' => ['about.css', ''],
+        'detailCategories' => ['detailCategories.css', '', 'home.css'],
+        'faq' => ['faq.css', ''],
+        'booking' => ['booking.css', ''],
+        'login' => ['auth.css', ''],
+        'register' => ['auth.css', ''],
+        'storeSystem' => ['storeSystem.css', ''],
+        'payment' => ['payment.css', '', 'font-quicksand.css'],
+        'favorites' => ['favorites.css', ''],
 
     ];
 
@@ -91,6 +94,7 @@ $products = $productModel->getAllProducts();
                             <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                         </ul>
                     </div>
+                    <div class="overlay"></div>
                     <div class="logo">
                         <a href="<?php echo BASE_URL; ?>index.php?route=home">
                             <img src="<?php echo IMG_BASE_URL; ?>header/logo.png" alt="">

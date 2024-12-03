@@ -39,42 +39,6 @@ button {
     cursor: pointer;
 }
 
-/* section - 1 */
-
-.bread_crumb {
-    background: var(--light-gray-color);
-    height: 54px;
-    margin-bottom: 30px;
-}
-
-.container_bread_crumb {
-    height: 100%;
-    padding: 0px 15px;
-    max-width: 1300px;
-    margin: auto;
-}
-
-ul.List_bread_crumb {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-}
-
-.List_bread_crumb li {
-    padding-right: 10px;
-}
-
-.List_bread_crumb li a,
-.List_bread_crumb li .mr_lr {
-    color: var(--black-color);
-    padding: 0px 3px;
-}
-
-.List_bread_crumb li .name_prd {
-    color: var(--secondary-color);
-}
-
 
 /* section - 2 */
 
