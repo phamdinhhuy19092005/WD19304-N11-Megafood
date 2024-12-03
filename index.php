@@ -50,7 +50,6 @@ require_once 'app/Controllers/FavoritesListController.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';
-
 switch ($route) {
     case 'home':
         $controller = new HomeController();
