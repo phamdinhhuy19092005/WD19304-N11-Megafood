@@ -47,7 +47,7 @@ require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
 require_once 'app/Controllers/LogoutController.php';
 require_once 'app/Controllers/FavoritesListController.php';
-require_once 'app/Controllers/Bo-Login-Controller.php';
+require_once 'app/Controllers/Bo-LoginController.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';

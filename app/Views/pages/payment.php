@@ -295,11 +295,33 @@ if (isset($styles[$page])) {
               <div class="previous_link">
                 <a href="<?php echo BASE_URL; ?>index.php?route=cart" class="previous_link_1"><i class="bi bi-chevron-left"></i>Quay về giỏ hàng</a>
               </div>
-              <button class="btn_checkout"><span>Đặt hàng</span></button>
+              <button type="button" class="btn_checkout" id="orderButton"><span>Đặt hàng</span></button>
             </div>
+
+
+            <div id="successOverlay" class="overlay" style="display: none;">
+                <div class="overlay-content">
+                  <div class="tick-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" class="tick">
+                      <circle cx="26" cy="26" r="20" fill="none" class="tick-circle" />
+                      <path fill="none" d="M14 27l8 8 16-16" class="tick-check" />
+                    </svg>
+                  </div>
+    <b>Đặt hàng thành công</b><br>
+    <p>Một email xác nhận đã được gửi tới tanh7164@gmail.com <br> Xin vui lòng kiểm tra mail của bạn</p>
+    <button id="closeOverlay">Đóng</button>
+  </div>
+</div>
+
+
+
+
           </div>
         </div>
       </div>
     </aside>
   </form>
 </div>
+
+
+<script src="<?php echo JS_PAGES_URL; ?>orderSuccessfully.js"></script>
