@@ -16,7 +16,7 @@ $conn = $connectModel->connect();
 define('BASE_URL', '/MegaFood_DA1_N11/BackEnd/');
 define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
 
-// frontEnd
+// FE
 
 define('CSS_LAYOUTS_URL', BASE_URL_PUBLIC . 'css/frontend/layouts/');
 define('CSS_PAGES_URL', BASE_URL_PUBLIC . 'css/frontend/pages/');
@@ -25,12 +25,13 @@ define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
 
-//BackEnd
+// BO
 define('CSS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/layouts/');
 define('CSS_PAHES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
 
 
 // Load các controller
+// FE
 require_once 'app/Controllers/HomeController.php';
 require_once 'app/Controllers/CartController.php';
 require_once 'app/Controllers/ProductController.php';
@@ -47,12 +48,40 @@ require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
 require_once 'app/Controllers/LogoutController.php';
 require_once 'app/Controllers/FavoritesListController.php';
+
+// BO
 require_once 'app/Controllers/Bo-LoginController.php';
+require_once 'app/Controllers/AdminController.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';
-
 switch ($route) {
+    case 'admin':
+        $controller = new AdminController();
+        $action = $_GET['action'] ?? 'login';
+
+        switch ($action) {
+            case 'login':
+                $controller->login();
+                break;
+            case 'dashboard':
+                $controller->dashboard();
+                break;
+            case 'manage-users':
+                $controller->manageUsers();
+                break;
+            case 'manage-orders':
+                $controller->manageOrders();
+                break;
+            case 'settings':
+                $controller->settings();
+                break;
+            default:
+                echo "404 - Admin Page Not Found";
+                break;
+        }
+        break;
+
     case 'home':
         $controller = new HomeController();
         $controller->index();
