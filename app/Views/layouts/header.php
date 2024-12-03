@@ -91,6 +91,7 @@ $products = $productModel->getAllProducts();
                             <li class="item_tab"><a href="<?php echo BASE_URL; ?>index.php?route=booking">Đặt bàn</a></li>
                         </ul>
                     </div>
+                    <div class="overlay"></div>
                     <div class="logo">
                         <a href="<?php echo BASE_URL; ?>index.php?route=home">
                             <img src="<?php echo IMG_BASE_URL; ?>header/logo.png" alt="">
