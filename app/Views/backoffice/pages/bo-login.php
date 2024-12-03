@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?? 'Default Title' ?></title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="../../font.css">
-</head>
-<body>
+
     <div class="container">
 
         <div class="cart_body">
@@ -21,10 +11,8 @@
                     <label class="input-label" for="">Password</label>
                     <input type="password" class="password" placeholder="8+ characters required">
                 </div>
-                
+                <a href="<?php echo BASE_URL; ?>index.php?route=bo-Home"></a>
                 <button type="submit" class="submit">Sign in</button>
             </form>
         </div>
     </div>
-</body>
-</html>

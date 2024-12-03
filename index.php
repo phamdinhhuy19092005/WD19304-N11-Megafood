@@ -26,8 +26,9 @@ define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
 
 // BO
+define('JS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'js/backoffice/layouts/');
 define('CSS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/layouts/');
-define('CSS_PAHES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
+define('CSS_PAGES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
 
 
 // Load các controller
@@ -50,7 +51,6 @@ require_once 'app/Controllers/LogoutController.php';
 require_once 'app/Controllers/FavoritesListController.php';
 
 // BO
-require_once 'app/Controllers/Bo-LoginController.php';
 require_once 'app/Controllers/AdminController.php';
 
 // Xử lý route
@@ -64,8 +64,8 @@ switch ($route) {
             case 'login':
                 $controller->login();
                 break;
-            case 'dashboard':
-                $controller->dashboard();
+            case 'bo-Home':
+                $controller->homeAdmin();
                 break;
             case 'manage-users':
                 $controller->manageUsers();

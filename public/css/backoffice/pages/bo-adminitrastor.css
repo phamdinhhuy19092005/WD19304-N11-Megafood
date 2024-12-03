@@ -1,0 +1,173 @@
+.k-content{
+    border: #5578eb;
+}
+
+
+
+.k-portlet_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 1px rgba(100, 150, 150,0.5);
+    width: 100%;
+}
+
+.k-portlet{
+    width: 100%;
+}
+
+.k-portlet_body{
+    width: 100%;
+
+}
+
+.k-portlet_head-title{
+    font-size: 18px;
+}
+
+.btn-brand{
+    padding: 10px;
+    background-color: #5578eb;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-brand i{
+    margin-right: 10px;
+}
+
+.row_search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.datatable_filter{
+    padding: 10px;
+    border: gainsboro;
+}
+
+
+.form-control {
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 4px 10px; 
+    font-size: 16px; 
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+    margin-left: 5px;
+}
+
+.form-control:hover {
+    border-color: #aaa;
+}
+
+
+.form-control:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    outline: none; 
+}
+
+
+.k-content_body{
+    box-shadow: 0 0 5px gainsboro;
+    margin-right: 20px;
+    text-align: center;
+    width: 98%;
+}
+
+.datatable_wrapper{
+    width: 100%;
+}
+
+.k-portlet_mobile-body{
+    width: 100%;
+}
+
+.k-portlet_mobile-body{
+    width: 100%;
+}
+.data_table{
+    width: 98%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #646C9A  ;
+    margin-bottom: 20px;
+}
+th,td{
+    padding: 12px;
+    border: 1px solid #F8F8FB;
+    text-align: left;
+}
+.status .status_badge {
+    font-size: 0.8rem;
+    padding: 8px;
+    color: #FFFFFF;
+    background-color: #1DC9B7;
+    border-radius: 2rem;
+}
+.actions i{
+    cursor: pointer;
+}
+.odd{
+    background-color: #f2f1f1;
+}
+
+
+.table-controls{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.entries-total{
+    width: 75%;
+    text-align: left;
+    padding: 10px;
+}
+.entries-display{
+    width: 12%;
+    text-align: left;
+}
+.pagination-controls{
+    width: 13%;
+    text-align: left;
+}
+
+.pagination-controls button{
+    width: 15%;
+    padding: 5px;
+    border: none;
+    /* color:#aba7c9; */
+    border-radius: 5px;
+}
+.pagination-controls .prev,.next{
+    background-color: #dedcdc;
+
+}
+.pagination-controls .prev:hover,.next:hover{
+    background-color: #5D78FF;
+    color: #fff;
+
+    cursor: pointer;
+
+}
+.pagination-controls .page:hover{
+    background-color: #5D78FF;
+    color: #fff;
+    cursor: pointer;
+
+
+}
+.pagination-controls .page_active{
+    color: #fff;
+    background-color: #5D78FF;
+
+}
+
+
+
+

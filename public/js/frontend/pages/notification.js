@@ -8,11 +8,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(notificationContainer);
   
     buttons.forEach((button) => {
-      button.addEventListener("click", () => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault(); // Ngăn tải lại trang
         const productId = button.getAttribute("data-id");
         const productName = button.getAttribute("data-name");
         const productImage = button.getAttribute("data-image");
         const productPrice = button.getAttribute("data-price");
+
+        fetch(button.getAttribute("href"), {
+          method: "GET",
+          })
+          .then(response => response.json()) // Giả sử PHP trả về JSON
+          .then(data => {
+              if (data.success) {
+                  showNotification(productName, productImage, "Đã thêm vào giỏ hàng");
+              } else {
+                  console.error("Lỗi khi thêm sản phẩm vào giỏ hàng:", data.error);
+              }
+          })
+          .catch(error => console.error("Lỗi mạng:", error));
 
         const existingProductIndex = cart.findIndex(item => item.id === productId);
 

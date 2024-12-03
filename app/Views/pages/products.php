@@ -66,8 +66,7 @@
               <div class="product_topSelling_thumbnail">
                 <i class="fa-regular fa-heart add_to_favorites"
                   data-id="<?= htmlspecialchars($product['id']); ?>"
-                  data-name="<?= htmlspecialchars($product['name']); ?>"
-                  data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                  >
                 </i>
                 <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                   <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
@@ -89,7 +88,14 @@
                   <span>Giá chỉ từ</span>
                   <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                 </div>
-                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1" 
+                  class="add_to_cart"
+                  data-id="<?= htmlspecialchars($product['id']); ?>"
+                  data-name="<?= htmlspecialchars($product['name']); ?>"
+                  data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>"
+                  data-price="<?= htmlspecialchars($product['price']); ?>">
+                  Thêm
+                </a>
               </div>
             </li>
           <?php endif; ?>

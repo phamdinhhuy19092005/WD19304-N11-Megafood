@@ -6,11 +6,17 @@ class AdminController
     {
         $title = "Admin - Đăng nhập";
         $page = "bo-Login";
+        include __DIR__ . '/../Views/backoffice/layouts/header.php';
         include __DIR__ . '/../Views/backoffice/pages/bo-login.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
-    public function dashboard()
+    public function homeAdmin()
     {
-        echo "Welcome to Admin Dashboard";
+        $title = "Admin - Trang chủ";
+        $page = "bo-Home";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-homeAdmin.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
     public function manageUsers()

@@ -1,0 +1,57 @@
+/* Container chính */
+.k-content_body-parameter {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Bố cục của hàng */
+.row-parameter {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Mỗi cột */
+.col-parameter {
+    flex: 1; /* Đảm bảo mỗi cột chiếm cùng diện tích */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề của bảng thống kê */
+.k-portlet-paramter-head {
+    padding: 15px;
+}
+
+/* Tiêu đề bảng */
+.head-label-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Phần thân của bảng */
+.k-portlet-body {
+    padding: 20px;
+}
+
+/* Widget hiển thị số liệu */
+.k-widget-19 {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Tiêu đề widget */
+.k-widget-19-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Nội dung số liệu */
+.k-widget-19-content {
+    font-size: 24px;
+    font-weight: bold;
+}

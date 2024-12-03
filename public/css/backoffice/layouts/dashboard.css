@@ -8,7 +8,7 @@
     font-size: 14px;
 }
 
-body {
+body{
     background-color: #F8F8FB;
 }
 
@@ -47,6 +47,7 @@ aside.sidenav {
     float: left;
     min-height: 790px;
     background-color: var(--dark-blue-color);
+    max-width: 15%;
 }
 
 .brand {
@@ -58,8 +59,17 @@ aside.sidenav {
 .brand_logo {
     margin-right: 10px;
     padding: 10px;
+    max-width: 20%;
 }
 
+
+.brand_logo a{
+    width: 100%;
+}
+
+.brand_logo a img{
+    width: 100%;
+}
 
 
 .btn__tool {
@@ -139,13 +149,11 @@ aside.sidenav {
 
 
 /* trạng thái khi có active */
-.taskbar-button.active,
-.dropdown-menu.active {
-    background-color: var(--gunmetal-color);
+.taskbar-button.active,.dropdown-menu.active {
+    background-color: var(--gunmetal-color); 
     color: #ffff;
 }
-
-.taskbar-button.active i {
+.taskbar-button.active i{
     color: #384AD7;
 }
 
@@ -194,12 +202,10 @@ aside.sidenav {
     max-height: 500px;
     /* Đặt chiều cao tối đa phù hợp với nội dung */
 }
-
 .item_dropdow_menu {
     background-color: var(--gunmetal-color);
-
+    
 }
-
 .item_dropdow_menu.active {
     background-color: var(--gunmetal-color);
     color: #fff;
@@ -280,7 +286,7 @@ header {
     border-radius: 5px;
 }
 
-.btn_shop a {
+.btn_shop a{
     color: var(--black-color);
 }
 
@@ -317,3 +323,4 @@ header {
     color: #333;
     border-radius: 20px;
 }
+
