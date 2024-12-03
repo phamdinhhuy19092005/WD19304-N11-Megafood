@@ -41,8 +41,7 @@ class FavoritesListController
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
                 exit();
             } else {
-                echo 'Sản phẩm này đã có trong danh sách yêu thích.';
-            }
+                header('Location: ' . $_SERVER['HTTP_REFERER']);            }
         } else {
             echo 'Lỗi: Tham số không hợp lệ.';
         }
@@ -77,8 +76,6 @@ class FavoritesListController
         $page = "favorites";
 
         $favorites = $_SESSION['favorites'] ?? [];
-
-        var_dump($_GET);
 
         include __DIR__ . '/../Views/layouts/header.php';
         include __DIR__ . '/../Views/pages/favoritesList.php';

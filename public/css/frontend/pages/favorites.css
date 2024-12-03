@@ -67,7 +67,7 @@ ul.breadcrumb {
 }
 
 .product_topSelling_thumbnail i {
-    font-size: var(--font-title-20);
+    font-size: 20px;
     color: var(--main-color);
     margin-top: 20px;
     margin-left: 85%;
