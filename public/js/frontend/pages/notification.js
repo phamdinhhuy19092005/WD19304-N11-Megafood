@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="notification_add_hearts">
           <h3 style="font-weight: bold;">Tuyệt vời</h3>
           <div class="notification_content">
-          <div class="notification_title">Bạn đã thêm vào yêu thích</div>
+          <div class="notification_title_add">Bạn đã thêm vào yêu thích</div>
           </div>
         </div>
       `;
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="notification_delete_hearts">
           <h3 style="font-weight: bold;">Thông báo</h3>
           <div class="notification_content">
-          <div class="notification_title">bạn đã bỏ yêu thích</div>
+          <div class="notification_title_delete">bạn đã bỏ yêu thích</div>
           </div>
         </div>
       `;
