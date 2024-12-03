@@ -33,14 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const notification = document.createElement("div");
       notification.className = "notification";
       notification.innerHTML = `
-        <div class="notification_container" style="width: 300px;height: 100px;">
-          <img src="${image}" alt="${name}" />  
+        <div class="notification_container">
+          <h3>Tuyệt vời</h3>
+          <br>
           <div class="notification_content">
-            <p class="notification_title" style="font-weight: bold;">${message}:</p>
-            <div class="notification_name"><strong>${name}</strong></div>
+            <div class="notification_name">Bạn đã thêm vào giỏ hàng</div>
         </div>
-        <br>
-        <br>
       `;
   
       document.body.appendChild(notification);
@@ -91,12 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const notification = document.createElement("div");
       notification.className = "notification";
       notification.innerHTML = `
-        <div class="notification_add_hearts" style="width: 100px;height: 100px;">
-          <img src="${image}" alt="${message}" />
+        <div class="notification_add_hearts">
+          <h3 style="font-weight: bold;">Tuyệt vời</h3>
           <div class="notification_content">
-          <div class="notification_title" style="font-weight: bold;">Đã thêm vào yêu thích:</div>
-          <div class="notification_name_add">
-            <strong>${message}</strong>
+          <div class="notification_title">Bạn đã thêm vào yêu thích</div>
           </div>
         </div>
       `;
@@ -118,11 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
         notification.className = "notification";
         notification.innerHTML = `
         <div class="notification_delete_hearts">
-          <img src="${image}" alt="${message}" />
+          <h3 style="font-weight: bold;">Thông báo</h3>
           <div class="notification_content">
-          <div class="notification_title" style="font-weight: bold;">Đã bỏ yêu thích:</div>
-          <div class="notification_name_delete">
-            <strong>${message}</strong>
+          <div class="notification_title">bạn đã bỏ yêu thích</div>
           </div>
         </div>
       `;

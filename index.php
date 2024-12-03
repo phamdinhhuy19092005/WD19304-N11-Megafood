@@ -47,6 +47,7 @@ require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
 require_once 'app/Controllers/LogoutController.php';
 require_once 'app/Controllers/FavoritesListController.php';
+require_once 'app/Controllers/Bo-Login-Controller.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';
@@ -137,6 +138,10 @@ switch ($route) {
     case 'favorites':
         $controller = new FavoritesListController();
         $controller->favoritesList();
+        break;
+    case 'bo-Login':
+        $controller = new BoLoginController();
+        $controller->boLogin();
         break;
 
     default:
