@@ -11,7 +11,7 @@ $products = $productModel->getAllProducts();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?? 'Default Title' ?></title>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>header.css?v=<?php echo time() ?>">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>header.css?u=<?php echo time() ?>">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>footer.css">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-quicksand.css">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-Lobster.css">
@@ -28,7 +28,7 @@ $products = $productModel->getAllProducts();
     $styles = [ 
         'home' => ['home.css'],
         'products' => ['products.css', '',],
-        'product-details' => ['product-detail.css'],
+        'product-details' => ['product-details.css'],
         'cart' => ['cart.css'],
         'account' => ['account.css', ''],
         'orders' => ['account.css', ''],

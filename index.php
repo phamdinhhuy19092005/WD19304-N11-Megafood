@@ -1,10 +1,18 @@
 <?php
 session_start();
+// Thư viện phpmailer
+require_once './config/phpmailer/Exception.php';
+require_once './config/phpmailer/PHPMailer.php';
+require_once './config/phpmailer/SMTP.php';
+
+require_once './config/function.php';
 require_once './config/database.php';
 
 // Kết nối Database
 $connectModel = new Database();
 $conn = $connectModel->connect();
+
+// sendMail('tanh7164@gmail.com', 'Mega Food', 'test mail');
 
 // if ($conn) {
 //     echo 'Kết nối thành công';
@@ -167,7 +175,20 @@ switch ($route) {
         break;
     case 'favorites':
         $controller = new FavoritesListController();
-        $controller->favoritesList();
+        $action = $_GET['action'] ?? 'view'; // Default action is 'view'
+
+        switch ($action) {
+            case 'add':  // Changed this to match the URL
+                $controller->addToFavorites();
+                break;
+            case 'remove':
+                $controller->removeFromFavorites();
+                break;
+            case 'view':
+            default:
+                $controller->favoritesList();
+                break;
+        }
         break;
     case 'bo-Login':
         $controller = new BoLoginController();
