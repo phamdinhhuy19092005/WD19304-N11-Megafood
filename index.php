@@ -175,7 +175,20 @@ switch ($route) {
         break;
     case 'favorites':
         $controller = new FavoritesListController();
-        $controller->favoritesList();
+        $action = $_GET['action'] ?? 'view'; // Default action is 'view'
+
+        switch ($action) {
+            case 'add':  // Changed this to match the URL
+                $controller->addToFavorites();
+                break;
+            case 'remove':
+                $controller->removeFromFavorites();
+                break;
+            case 'view':
+            default:
+                $controller->favoritesList();
+                break;
+        }
         break;
     case 'bo-Login':
         $controller = new BoLoginController();

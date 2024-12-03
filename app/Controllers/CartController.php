@@ -2,11 +2,17 @@
 
 class CartController
 {
-    public function add()
+
+    public function __construct()
     {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
+    }
+
+    public function add()
+    {
+
 
         // Retrieve product details from the GET request
         $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
