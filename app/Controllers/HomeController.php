@@ -26,6 +26,7 @@ class HomeController
 
         $news = $newModel->getAllNews();
         $featuredProducts = $productModel->getProductFeatured();
+        $saleProducts = $productModel->getProductSale();
 
         $categories = $categoriesModel->getAllCategory(); 
 

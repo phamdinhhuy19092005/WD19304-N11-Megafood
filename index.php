@@ -25,6 +25,10 @@ define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 
 
+//BackEnd
+define('CSS_LAYOUTS_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/layouts/');
+define('CSS_PAHES_BO_URL', BASE_URL_PUBLIC . 'css/backoffice/pages/');
+
 
 // Load các controller
 require_once 'app/Controllers/HomeController.php';
@@ -42,6 +46,8 @@ require_once 'app/Controllers/RegisterController.php';
 require_once 'app/Controllers/StoreSystemController.php';
 require_once 'app/Controllers/PaymentController.php';
 require_once 'app/Controllers/LogoutController.php';
+require_once 'app/Controllers/FavoritesListController.php';
+require_once 'app/Controllers/Bo-Login-Controller.php';
 
 // Xử lý route
 $route = $_GET['route'] ?? 'home';
@@ -64,6 +70,9 @@ switch ($route) {
                 break;
             case 'updateQuantity':
                 $controller->updateQuantity();
+                break;
+            case 'payment':
+                $controller->payment();
                 break;
             case 'view':
             default:
@@ -126,6 +135,14 @@ switch ($route) {
     case 'logout':
         $controller = new LogoutController();
         $controller->logout();
+        break;
+    case 'favorites':
+        $controller = new FavoritesListController();
+        $controller->favoritesList();
+        break;
+    case 'bo-Login':
+        $controller = new BoLoginController();
+        $controller->boLogin();
         break;
 
     default:

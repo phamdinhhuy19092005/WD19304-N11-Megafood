@@ -2,10 +2,8 @@
 
 class CartController
 {
-    // Method to add items to the cart
     public function add()
     {
-        // Start session if not started
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
@@ -17,9 +15,7 @@ class CartController
         $price = isset($_GET['price']) ? floatval($_GET['price']) : 0;
         $quantity = isset($_GET['quantity']) ? intval($_GET['quantity']) : 1;
 
-        // Ensure data is valid
         if ($id && $name && $price && $image_url && $quantity > 0) {
-            // Initialize the cart session if not already set
             if (!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = [];
             }
@@ -86,12 +82,35 @@ class CartController
 
         if ($productId && $quantity > 0) {
             if (isset($_SESSION['cart'][$productId])) {
-                $_SESSION['cart'][$productId]['quantity'] = $quantity;  // Update the quantity
+                $_SESSION['cart'][$productId]['quantity'] = $quantity;
             }
         }
 
-        // After updating the quantity, redirect to the cart page to reflect the changes
         header('Location: index.php?route=cart&action=view');
         exit();
+    }
+
+    public function payment()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $title = "MegaFood - Thanh toán";
+        $page = "payment";
+
+        // Lấy danh sách sản phẩm từ giỏ hàng
+        $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+
+        // Tính tổng tiền
+        $totalPrice = 0;
+        foreach ($cart as $item) {
+            $totalPrice += $item['price'] * $item['quantity'];
+        }
+
+        // Hiển thị giao diện thanh toán
+        include __DIR__ . '/../Views/layouts/header.php';
+        include __DIR__ . '/../Views/pages/payment.php';
+        include __DIR__ . '/../Views/layouts/footer.php';
     }
 }

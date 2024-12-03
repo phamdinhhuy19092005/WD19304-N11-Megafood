@@ -141,7 +141,7 @@ ul.breadcrumb {
 
 /*  */
 .container_category_detail {
-    width: 100%;
+    max-width: 1300px;
     margin: 20px auto;
 }
 
@@ -154,7 +154,6 @@ ul.breadcrumb {
 
 .row_category_detail {
     display: flex;
-    /* justify-content: space-between; */
     gap: 75px;
 }
 

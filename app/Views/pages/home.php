@@ -107,7 +107,7 @@
 
 
         <div class="product_about">
-            <span class="title2">Món ăn nổi bật 1</span>
+            <span class="title2">Món ăn nổi bật</span>
             <div class="product">
                 <ul class="product_action">
 
@@ -116,10 +116,10 @@
                             <li>
                                 <div class="product_category">
                                     <div class="product_category_thumbnail">
-                                        <i class="fa-regular fa-heart add_to_favorites" 
-                                        data-id="<?= htmlspecialchars($product['id']); ?>"
-                                        data-name="<?= htmlspecialchars($product['name']); ?>"
-                                        data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
+                                        <i class="fa-regular fa-heart add_to_favorites"
+                                            data-id="<?= htmlspecialchars($product['id']); ?>"
+                                            data-name="<?= htmlspecialchars($product['name']); ?>"
+                                            data-image="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>">
                                         </i>
                                         <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
                                             <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
@@ -220,133 +220,42 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Sản phẩm đang được giảm giá -->
             <div class="product_fs">
                 <ul>
-                    <li>
-                        <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart add_to_favorites"></i>
-                            <a href="../product_details/detail.html">
-                                <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                    alt="">
-                            </a>
-                        </div>
+                    <?php if (!empty($products)): ?>
+                        <?php foreach ($saleProducts as $product): ?>
+                            <li>
+                                <div class="product_thumbnail_fs">
+                                    <i class="fa-regular fa-heart add_to_favorites"></i>
+                                    <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $product['id']; ?>">
+                                        <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                                    </a>
+                                </div>
+                                <div class="product_info_fs">
+                                    <a class="productFs_name_link" href="">
+                                        <h3 class="productFs_name"><?php echo $product['name']  ?></h3>
+                                    </a>
+                                    <span class="productFs_content">
+                                        <?php echo $product['description']  ?>
+                                    </span>
+                                    <a class="see_more" href="">Xem thêm</a>
+                                </div>
+                                <div class="product_form_fs">
+                                    <div class="priceFs_box">
+                                        <span>Giá chỉ từ</span>
+                                        <p>99.000đ</p>
+                                    </div>
+                                    <a href="">Thêm</a>
+                                </div>
+                            </li>
 
-
-                        <div class="product_info_fs">
-                            <a class="productFs_name_link" href="">
-                                <h3 class="productFs_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                            </a>
-
-                            <span class="productFs_content">
-                                Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                                theo công...
-                            </span>
-                            <a class="see_more" href="">Xem thêm</a>
-
-                        </div>
-
-                        <div class="product_form_fs">
-                            <div class="priceFs_box">
-                                <span>Giá chỉ từ</span>
-                                <p>99.000đ</p>
-                            </div>
-                            <a href="">Thêm</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart add_to_favorites"></i>
-                            <a href="../product_details/detail.html">
-                                <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                    alt="">
-                            </a>
-                        </div>
-
-
-                        <div class="product_info_fs">
-                            <a class="productFs_name_link" href="">
-                                <h3 class="productFs_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                            </a>
-
-                            <span class="productFs_content">
-                                Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                                theo công...
-                            </span>
-                            <a class="see_more" href="">Xem thêm</a>
-
-                        </div>
-
-                        <div class="product_form_fs">
-                            <div class="priceFs_box">
-                                <span>Giá chỉ từ</span>
-                                <p>99.000đ</p>
-                            </div>
-                            <a href="">Thêm</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart add_to_favorites"></i>
-                            <a href="../product_details/detail.html">
-                                <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                    alt="">
-                            </a>
-                        </div>
-
-
-                        <div class="product_info_fs">
-                            <a class="productFs_name_link" href="">
-                                <h3 class="productFs_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                            </a>
-
-                            <span class="productFs_content">
-                                Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                                theo công...
-                            </span>
-                            <a class="see_more" href="">Xem thêm</a>
-
-                        </div>
-
-                        <div class="product_form_fs">
-                            <div class="priceFs_box">
-                                <span>Giá chỉ từ</span>
-                                <p>99.000đ</p>
-                            </div>
-                            <a href="">Thêm</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product_thumbnail_fs">
-                            <i class="fa-regular fa-heart add_to_favorites"></i>
-                            <a href="../product_details/detail.html">
-                                <img src="https://bizweb.dktcdn.net/thumb/large/100/510/571/products/0003952-crispy-chicken-with-sg-s.png?v=1708679420060"
-                                    alt="">
-                            </a>
-                        </div>
-
-
-                        <div class="product_info_fs">
-                            <a class="productFs_name_link" href="">
-                                <h3 class="productFs_name">Gà Giòn Xốt Tương Tỏi Hàn Quốc</h3>
-                            </a>
-
-                            <span class="productFs_content">
-                                Những miếng gà tươi ngon tẩm bột chiên giòn phủ xốt tương tỏi kiểu Hàn được chế biến
-                                theo công...
-                            </span>
-                            <a class="see_more" href="">Xem thêm</a>
-
-                        </div>
-
-                        <div class="product_form_fs">
-                            <div class="priceFs_box">
-                                <span>Giá chỉ từ</span>
-                                <p>99.000đ</p>
-                            </div>
-                            <a href="">Thêm</a>
-                        </div>
-                    </li>
+                        <?php
+                        endforeach;
+                        ?>
+                    <?php else: ?>
+                        <p>Không có sản phẩm nào đang giảm giá.</p>
+                    <?php endif; ?>
 
                 </ul>
             </div>
@@ -367,9 +276,9 @@
             <button class="prev_btn">❮</button>
 
             <ul class="product_topSelling_list">
-                
-                
-                
+
+
+
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
                         <i class="fa-regular fa-heart add_to_favorites"></i>
@@ -683,7 +592,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -740,7 +649,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -799,7 +708,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -856,7 +765,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -878,7 +787,7 @@
         </section>
 
         <!-- Thức uống -->
-        <section id="thucuong" class="product_main">
+        <section id="thuc-uong" class="product_main">
 
             <div class="title_module">
                 <a href="">Thức uống</a>
@@ -915,7 +824,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>

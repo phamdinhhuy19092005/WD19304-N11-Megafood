@@ -28,6 +28,7 @@ body {
     --main-color: #FF7D01;
     --font-text-12: 12px;
     --font-text-14: 14px;
+    --font-text-18: 18px;
 }
 
 /* I. Header */
@@ -522,8 +523,8 @@ body {
 .list_subnav {
     position: absolute;
     top: 113%;
-    left: -3px;
-    width: 120px;
+    left: -40px;
+    width: 200px;
     background-color: var(--white-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -540,6 +541,17 @@ body {
     padding: 5px;
 }
 
+.logo_brand img {
+    width: 100%;
+}
+
+.list_subnav hr {
+    border: 1px solid var(--light-gray-color);
+    margin: 0px auto;
+    width: 5%;
+
+}
+
 .list_subnav li a {
     color: var(--black-color);
     width: 100%;
@@ -553,8 +565,15 @@ body {
     transform: translateY(0);
 }
 
+.nav_item:hover .list_subnav hr {
+    width: 90%;
+    transition: all 1.5s ease;
+}
+
 .list_subnav li a:hover {
     color: var(--secondary-color);
+    font-size: var(--font-text-18);
+    transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar {

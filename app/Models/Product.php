@@ -51,4 +51,14 @@ class Product
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC); 
     }
+
+    public function getProductSale()
+    {
+        $query = "SELECT id, name, description, price, image_url, id_categories 
+              FROM " . $this->table . " 
+              WHERE sale = TRUE"; 
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    }
 }

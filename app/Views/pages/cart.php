@@ -71,8 +71,11 @@
 
 
                     <div class="pay">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=payment"><button type="button">Thanh toán</button></a>
+                        <a href="<?php echo BASE_URL . 'index.php?route=cart&action=payment'; ?>">
+                            <button type="button">Thanh toán</button>
+                        </a>
                     </div>
+
                 </div>
 
             <?php else: ?>
