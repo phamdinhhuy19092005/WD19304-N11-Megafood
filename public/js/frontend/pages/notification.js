@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="notification_container">
           <h3>Tuyệt vời</h3>
           <br>
+          <br>
           <div class="notification_content">
             <div class="notification_name">Bạn đã thêm vào giỏ hàng</div>
         </div>
