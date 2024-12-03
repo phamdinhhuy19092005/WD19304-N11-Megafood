@@ -70,6 +70,9 @@ switch ($route) {
             case 'updateQuantity':
                 $controller->updateQuantity();
                 break;
+            case 'payment':
+                $controller->payment();
+                break;
             case 'view':
             default:
                 $controller->cart();

@@ -11,7 +11,7 @@ $products = $productModel->getAllProducts();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?? 'Default Title' ?></title>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>header.css">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>header.css?v=<?php echo time() ?>">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>footer.css">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-quicksand.css">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-Lobster.css">
@@ -22,7 +22,7 @@ $products = $productModel->getAllProducts();
 
     <!-- Page-specific CSS -->
     <?php
-    $styles = [
+    $styles = [ 
         'home' => ['home.css'],
         'products' => ['products.css', 'product-details.css',],
         'product-details' => ['product-details.css'],
@@ -41,7 +41,7 @@ $products = $productModel->getAllProducts();
         'login' => ['auth.css', 'product-details.css'],
         'register' => ['auth.css', 'product-details.css'],
         'storeSystem' => ['storeSystem.css', 'product-details.css'],
-        'payment' => ['payment.css', 'product-details.css'],
+        'payment' => ['payment.css', 'product-details.css', 'font-quicksand.css'],
         'favorites' => ['favorites.css', 'product-details.css'],
 
     ];
@@ -201,6 +201,10 @@ $products = $productModel->getAllProducts();
                         <li class="nav_item"><a href="<?php echo BASE_URL; ?>index.php?route=products">Sản phẩm <i
                                     class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
+                                <div class="logo_brand">
+                                <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
+                                </div>
+                                <hr>
                                 <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=1">Pizza</a></li>
                                 <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=2">Khai vị</a></li>
                                 <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=3">Mỳ ý</a></li>

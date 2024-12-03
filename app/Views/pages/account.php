@@ -62,7 +62,7 @@
                         </h2>
 
                         <div class="form-signup">
-                            <p><strong>Họ tên:</strong> <?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : ''; ?></p>
+                            <p><strong>Họ tên:</strong><?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : ''; ?></p>
                             <p><strong>Email:</strong> <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></p>
 
                             <p><strong>Địa chỉ :</strong> Công Viên Phần Mềm Quang Trung quận 12, Quận 12, TP Hồ Chí

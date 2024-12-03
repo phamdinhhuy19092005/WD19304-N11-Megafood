@@ -276,9 +276,9 @@
             <button class="prev_btn">❮</button>
 
             <ul class="product_topSelling_list">
-                
-                
-                
+
+
+
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">
                         <i class="fa-regular fa-heart add_to_favorites"></i>
@@ -592,7 +592,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -649,7 +649,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -708,7 +708,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -765,7 +765,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
@@ -787,7 +787,7 @@
         </section>
 
         <!-- Thức uống -->
-        <section id="thucuong" class="product_main">
+        <section id="thuc-uong" class="product_main">
 
             <div class="title_module">
                 <a href="">Thức uống</a>
@@ -824,7 +824,7 @@
                                             <span>Giá chỉ từ</span>
                                             <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                                         </div>
-                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                                        <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
                                     </div>
                                 </div>
                             </li>
