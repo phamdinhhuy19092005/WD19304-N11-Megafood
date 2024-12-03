@@ -155,13 +155,6 @@ ul.breadcrumb {
     animation: slide-in 0.5s ease;
 }
 
-.notification img {
-    width: 60px;
-    height: 50px;
-    border-radius: 8px;
-    margin-right: 10px;
-}
-
 .notification_container {
     display: flex;
     align-items: center;
@@ -203,16 +196,12 @@ ul.breadcrumb {
 }
 
 .notification_add_hearts {
-    display: flex;
-    align-items: center;
     padding: 10px;
     background-color: rgb(163, 245, 163);
     border-radius: 5px;
 }
 
 .notification_delete_hearts {
-    display: flex;
-    align-items: center;
     padding: 10px;
     background-color: rgb(237, 206, 175);
     border-radius: 5px;
