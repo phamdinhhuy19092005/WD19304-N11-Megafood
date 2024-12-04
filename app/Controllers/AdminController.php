@@ -19,21 +19,5 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
-    public function manageUsers()
-    {
-        // Quản lý người dùng
-        echo "Admin User Management";
-    }
-
-    public function manageOrders()
-    {
-        // Quản lý đơn hàng
-        echo "Admin Order Management";
-    }
-
-    public function settings()
-    {
-        // Cài đặt admin
-        echo "Admin Settings";
-    }
+    
 }

@@ -115,8 +115,7 @@
                                                 </td>
 
                                                 <td>
-                                                    <p>Hẻm 382 Tân Kỳ Tân Quý, Phường Sơn Kỳ, Quận Tân Phú, Thành
-                                                        phố Hồ Chí Minh, 72011, Việt Nam</p>
+                                                    <p style="text-align: center; background: orange; color: white; border-radius: 10px;">Chờ xử lý</p>
                                                 </td>
                                             </tr>
 

@@ -200,6 +200,10 @@ label {
     justify-content: center;
 }
 
+.row {
+    display: flex;
+}
+
 .btn_row button {
     padding: 10px;
     background: none;
@@ -293,7 +297,7 @@ form#customer_address {
         padding: 10px;
     }
 
-    .row.row_acc {
+    .row {
         display: flex;
     }
 

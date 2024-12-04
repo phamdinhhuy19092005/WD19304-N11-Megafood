@@ -24,6 +24,7 @@ class FavoritesListController
             $exists = false;
             foreach ($_SESSION['favorites'] as $favorite) {
                 if ($favorite['id'] == $id) {
+
                     $exists = true;
                     break;
                 }
@@ -41,7 +42,8 @@ class FavoritesListController
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
                 exit();
             } else {
-                header('Location: ' . $_SERVER['HTTP_REFERER']);            }
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+            }
         } else {
             echo 'Lỗi: Tham số không hợp lệ.';
         }

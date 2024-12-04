@@ -72,7 +72,7 @@ switch ($route) {
             case 'login':
                 $controller->login();
                 break;
-            case 'bo-Home':
+            case 'homeAdmin':
                 $controller->homeAdmin();
                 break;
             case 'manage-users':
@@ -178,7 +178,7 @@ switch ($route) {
         $action = $_GET['action'] ?? 'view'; // Default action is 'view'
 
         switch ($action) {
-            case 'add':  // Changed this to match the URL
+            case 'add':  
                 $controller->addToFavorites();
                 break;
             case 'remove':
@@ -189,10 +189,6 @@ switch ($route) {
                 $controller->favoritesList();
                 break;
         }
-        break;
-    case 'bo-Login':
-        $controller = new BoLoginController();
-        $controller->boLogin();
         break;
 
     default:
