@@ -15,6 +15,12 @@
     <?php
     $styles = [ 
         'bo-Home' => ['bo-homeAdmin.css', 'bo-adminitrastor.css', 'customer.css'],
+        'bo-Administrator' => [ 'bo-adminitrastor.css', 'customer.css'],
+        'bo-Access' => [ 'bo-adminitrastor.css', 'customer.css'],
+        'bo-Category' => [ 'bo-adminitrastor.css', 'customer.css'],
+        'bo-Product' => [ 'bo-adminitrastor.css', 'customer.css'],
+        'bo-Order' => [ 'customer.css', 'bo-Order.css'],
+        'bo-Customer' => [ 'customer.css'],
 
     ];
 

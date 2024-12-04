@@ -10,6 +10,8 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/pages/bo-login.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
+
+    // Trang chủ admin
     public function homeAdmin()
     {
         $title = "Admin - Trang chủ";

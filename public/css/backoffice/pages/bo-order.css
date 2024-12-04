@@ -1,0 +1,22 @@
+.box{
+    padding: 20px   ;
+}
+.list-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item-box{
+    padding: 30px   ;
+    width: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.item-box div h1{
+    font-size: 40px;
+}

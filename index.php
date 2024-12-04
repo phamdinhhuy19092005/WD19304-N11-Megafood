@@ -66,7 +66,7 @@ $route = $_GET['route'] ?? 'home';
 switch ($route) {
     case 'admin':
         $controller = new AdminController();
-        $action = $_GET['action'] ?? 'login';
+        $action = $_GET['action'] ?? 'bo-Product';
 
         switch ($action) {
             case 'login':
@@ -75,14 +75,23 @@ switch ($route) {
             case 'homeAdmin':
                 $controller->homeAdmin();
                 break;
-            case 'manage-users':
-                $controller->manageUsers();
+            case 'bo-Administrator':
+                $controller->adminitrastor();
                 break;
-            case 'manage-orders':
-                $controller->manageOrders();
+            case 'bo-Access':
+                $controller->access();
                 break;
-            case 'settings':
-                $controller->settings();
+            case 'bo-Category':
+                $controller->adminCategory();
+                break;
+            case 'bo-Order':
+                $controller->adminOrder();
+                break;
+            case 'bo-Customer':
+                $controller->adminCustomer();
+                break;
+            case 'bo-Product':
+                $controller->adminProduct();
                 break;
             default:
                 echo "404 - Admin Page Not Found";
