@@ -47,7 +47,7 @@ aside.sidenav {
     float: left;
     min-height: 790px;
     background-color: var(--dark-blue-color);
-    max-width: 15%;
+    max-width: 16%;
 }
 
 .brand {
@@ -59,7 +59,7 @@ aside.sidenav {
 .brand_logo {
     margin-right: 10px;
     padding: 10px;
-    max-width: 20%;
+    /* max-width: 20%; */
 }
 
 
@@ -133,10 +133,6 @@ aside.sidenav {
 
 /* menu_wrapper */
 
-.menu_wrapper {
-    margin-top: 20px;
-}
-
 .item_menu a {
     padding: 9px 30px;
 }
@@ -157,6 +153,12 @@ aside.sidenav {
     color: #384AD7;
 }
 
+.taskbar-button a{
+    display: flex;
+    align-items: center;
+    color: var(--slate-gray-color);
+}
+
 .taskbar-button {
     display: flex;
     align-items: center;
@@ -169,6 +171,10 @@ aside.sidenav {
 .taskbar-button:hover {
     background-color: var(--gunmetal-color);
     color: #ffff;
+}
+
+.taskbar-button:hover a{
+    color: var(--white-color) ;
 }
 
 .taskbar-button:hover .icon_taskbar i {

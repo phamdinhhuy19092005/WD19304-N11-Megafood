@@ -66,7 +66,7 @@ $route = $_GET['route'] ?? 'home';
 switch ($route) {
     case 'admin':
         $controller = new AdminController();
-        $action = $_GET['action'] ?? 'bo-Product';
+        $action = $_GET['action'] ?? 'login';
 
         switch ($action) {
             case 'login':

@@ -159,6 +159,7 @@
     margin-bottom: 20px;
 }
 th,td{
+    text-align: center;
     padding: 12px;
     border: 1px solid #F8F8FB;
 }

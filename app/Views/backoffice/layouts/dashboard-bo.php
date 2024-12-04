@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_BO_URL; ?>dashboard.css">
+    <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_BO_URL; ?>dashboard.css?v= <?php echo time() ?>">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-quicksand.css">
     <link rel="stylesheet" href="<?php echo CSS_LAYOUTS_URL; ?>font-Lobster.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -13,14 +13,14 @@
     <title><?= $title ?? 'Default Title' ?></title>
 
     <?php
-    $styles = [ 
+    $styles = [
         'bo-Home' => ['bo-homeAdmin.css', 'bo-adminitrastor.css', 'customer.css'],
-        'bo-Administrator' => [ 'bo-adminitrastor.css', 'customer.css'],
-        'bo-Access' => [ 'bo-adminitrastor.css', 'customer.css'],
-        'bo-Category' => [ 'bo-adminitrastor.css', 'customer.css'],
-        'bo-Product' => [ 'bo-adminitrastor.css', 'customer.css'],
-        'bo-Order' => [ 'customer.css', 'bo-Order.css'],
-        'bo-Customer' => [ 'customer.css'],
+        'bo-Administrator' => ['bo-adminitrastor.css', 'customer.css'],
+        'bo-Access' => ['bo-adminitrastor.css', 'customer.css'],
+        'bo-Category' => ['bo-adminitrastor.css', 'customer.css'],
+        'bo-Product' => ['bo-adminitrastor.css', 'customer.css'],
+        'bo-Order' => ['customer.css', 'bo-Order.css'],
+        'bo-Customer' => ['customer.css'],
 
     ];
 
@@ -44,7 +44,7 @@
                     <div class="brand">
                         <div class="brand_logo">
                             <a href="#">
-                                <img src="../../header/img/logo.png" alt="Logo">
+                            <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
                             </a>
                         </div>
                         <div class="brand_tools">
@@ -60,11 +60,13 @@
                                 <ul class="list_taskbar">
                                     <div class="group_taskbar">
                                         <!--Tổng quan-->
-                                        <li class="taskbar-button active" onclick="toggleDropdown('overviewDropdown')">
-                                            <div class="icon_taskbar">
-                                                <i class="bi bi-bar-chart-fill"></i>
-                                            </div>
-                                            <span>Tổng quan</span>
+                                        <li class="taskbar-button" onclick="toggleDropdown('overviewDropdown')">
+                                            <a href="<?php echo BASE_URL . '?route=admin&action=homeAdmin'; ?>">
+                                                <div class="icon_taskbar">
+                                                    <i class="bi bi-bar-chart-fill"></i>
+                                                </div>
+                                                <span>Tổng quan</span>
+                                            </a>
                                         </li>
                                     </div>
 
@@ -79,7 +81,7 @@
                                         <ul class="dropdown-menu" id="customerDropdown">
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="#">Danh sách khách hàng</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Customer'; ?>">Danh sách khách hàng</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -95,11 +97,11 @@
                                         <ul class="dropdown-menu" id="productDropdown">
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="#">Danh mục</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Category'; ?>">Danh mục</a>
                                             </li>
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="#">Sản phẩm</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Product'; ?>">Sản phẩm</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -128,11 +130,11 @@
                                             <span>Quản trị</span>
                                         </li>
                                         <ul class="dropdown-menu" id="adminstratorDropdown">
-                                            <li class="item_dropdow_menu"> 
+                                            <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
                                                 <a href="../html/orders.html">Quản trị viên</a>
                                             </li>
-                                            <li class="item_dropdow_menu"> 
+                                            <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
                                                 <a href="../html/orders.html">Quyền truy cập</a>
                                             </li>
@@ -149,13 +151,13 @@
                 <div class="header_admin">
                     <div class="header_left">
                         <div class="btn_shop">
-                            <a href="#">Cửa hàng</a>
+                            <a href="<?php echo BASE_URL ?>">Cửa hàng</a>
                         </div>
                     </div>
                     <div class="header_rigth">
                         <div class="info_users">
                             <span>Xin chào,</span>
-                            <span class="name_users">Huypham</span>
+                            <span class="name_users"><?php echo $_SESSION['admin_name'] ?></span>
                             <div class="logo_ninja">
                                 <img src="	https://uudam.vn/backoffice/assets/img/users/ninja.png" alt="">
                             </div>

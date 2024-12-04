@@ -1,11 +1,13 @@
 /* Container chính */
 .k-content_body-parameter {
-    padding: 20px;
+    /* padding: 20px; */
     background-color: #f9f9f9;
 }
 
 /* Bố cục của hàng */
 .row-parameter {
+    width: 98%;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -34,7 +36,7 @@
 
 /* Phần thân của bảng */
 .k-portlet-body {
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Widget hiển thị số liệu */
