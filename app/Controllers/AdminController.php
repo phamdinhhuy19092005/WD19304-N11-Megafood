@@ -10,6 +10,8 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/pages/bo-login.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
+
+    // Trang chủ admin
     public function homeAdmin()
     {
         $title = "Admin - Trang chủ";
@@ -19,21 +21,63 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
-    public function manageUsers()
+    //Trang quản trị viên
+    public function adminitrastor()
     {
-        // Quản lý người dùng
-        echo "Admin User Management";
+        $title = "Admin - Quản trị viên";
+        $page = "bo-Administrator";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-Administrator.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
-    public function manageOrders()
+    //Trang quyền truy cập
+    public function access()
     {
-        // Quản lý đơn hàng
-        echo "Admin Order Management";
+        $title = "Admin - Quyền truy cập";
+        $page = "bo-Access";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-Access.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
-    public function settings()
+    //Trang quản lí danh mục
+    public function adminCategory()
     {
-        // Cài đặt admin
-        echo "Admin Settings";
+        $title = "Admin - Quản lí danh mục";
+        $page = "bo-Category";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-Category.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+
+    //Trang quản lí sản phẩm
+    public function adminProduct()
+    {
+        $title = "Admin - Quản lí sản phẩm";
+        $page = "bo-Product";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-Product.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+
+    //Trang quản lí đơn hàng
+    public function adminOrder()
+    {
+        $title = "Admin - Quản lí đơn hàng";
+        $page = "bo-Order";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-Order.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+
+    //Trang quản lí khách hàng
+    public function adminCustomer()
+    {
+        $title = "Admin - Quản lí khách hàng";
+        $page = "bo-Customer";
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-Customer.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 }
