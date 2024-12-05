@@ -21,7 +21,7 @@
                 </div>
                 <div class="k-portlet_mobile-head-toolbar">
                     <div class="k-portlet_mobile-head-toolbar_wrapper">
-                        <a href="../html/createCustomer.html"><i class="fa-solid fa-plus"></i>Tạo mới</a>
+                        <a href="<?php echo BASE_URL . '?route=admin&action=bo-CreateCustomer'; ?>"><i class="fa-solid fa-plus"></i>Tạo mới</a>
                     </div>
                 </div>
             </div>

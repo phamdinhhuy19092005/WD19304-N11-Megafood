@@ -3,8 +3,8 @@ class Database {
     public $servername = "localhost";
     public $username = "root";
     public $password = "";
-    public $port = 3306;
-    // public $port = 3366;
+    // public $port = 3306;
+    public $port = 3366;
     public $conn;
 
     public function connect() {

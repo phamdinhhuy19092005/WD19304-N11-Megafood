@@ -28,7 +28,7 @@ if (isset($styles[$page])) {
               <div class="section_header">
                 <div class="container_ss_deader">
                   <h2>Thông tin nhận hàng</h2>
-                  <a href="<?php echo BASE_URL; ?>index.php?route=account">
+                  <a href="<?php echo BASE_URL; ?>index.php?route=login">
                     <i class="bi bi-person-circle"></i>
                     <span><?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : 'Đăng Nhập'; ?></span>
                   </a>

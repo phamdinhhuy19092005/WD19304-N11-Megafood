@@ -745,7 +745,7 @@ ul li.item_blog_small .block_content {
     border-radius: 5px;
 }
 
-.notification_voucher{
+.notification_voucher {
     display: none;
 }
 
@@ -785,6 +785,11 @@ ul li.item_blog_small .block_content {
 
     .row_contnet span {
         font-size: 14px;
+    }
+
+    .row_contnet hr {
+        margin: 30px 0px;
+        border: 1px solid var(--light-gray-color);
     }
 
     .title_voucher {
@@ -888,6 +893,10 @@ ul li.item_blog_small .block_content {
 
     ul.list_prd_relate li {
         width: 60%;
+    }
+
+    .user_rating {
+        width: 100%;
     }
 
 }

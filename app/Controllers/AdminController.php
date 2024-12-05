@@ -7,6 +7,8 @@ require_once __DIR__ . '/../Models/Categories.php';
 
 class AdminController
 {
+    // ============================= PAGE ADMIN ============================= //
+
     // Login admin
     public function login()
     {
@@ -116,6 +118,8 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/pages/bo-Customer.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
+
+    // ============================= CREATED ============================= //
 
     public function createCategory()
     {

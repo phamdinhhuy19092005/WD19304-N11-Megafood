@@ -202,6 +202,7 @@ label {
 
 .row {
     display: flex;
+    justify-content: space-between;
 }
 
 .btn_row button {
@@ -297,9 +298,10 @@ form#customer_address {
         padding: 10px;
     }
 
-    .row {
+    /* .row {
         display: flex;
-    }
+        justify-content: space-between;
+    } */
 
     ul.list_prd_relate li {
         width: 35%;

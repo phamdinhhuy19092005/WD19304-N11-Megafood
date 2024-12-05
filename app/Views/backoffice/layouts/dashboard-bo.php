@@ -21,9 +21,10 @@
         'bo-Product' => ['bo-adminitrastor.css', 'customer.css'],
         'bo-Order' => ['customer.css', 'bo-Order.css'],
         'bo-Customer' => ['customer.css'],
+
         'bo-CreateCategory' => ['customer.css', 'bo-createcategory.css'],
         'bo-CreateAdministrator' => ['customer.css', 'bo-createAdministrator.css', 'bo-adminitrastor.css'],
-        'bo-CreateCustomer' => ['customer.css', 'bo-createCustomer.css'],
+        'bo-CreateCustomer' => ['bo-createCustomer.css'],
         'bo-CreateProduct' => ['customer.css', 'bo-createProduct.css', 'bo-createcategory.css'],
 
     ];
@@ -121,7 +122,7 @@
                                         <ul class="dropdown-menu" id="orderDropdown">
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="../html/orders.html">Danh sách đơn hàng</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Order'; ?>">Danh sách đơn hàng</a>
                                             </li>
                                         </ul>
                                     </div>

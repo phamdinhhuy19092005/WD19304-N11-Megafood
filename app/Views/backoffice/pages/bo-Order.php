@@ -22,7 +22,7 @@
                                     <span>Đang chờ thanh toán</span>
                                 </div>
                                 <div>
-                                    <h1>15</h1>
+                                    <h1>0</h1>
                                 </div>
                             </li>
 
@@ -32,7 +32,7 @@
                                     <span>Đang chờ xử lí trong tháng</span>
                                 </div>
                                 <div>
-                                    <h1>15</h1>
+                                    <h1>0</h1>
                                 </div>
                             </li>
 
@@ -42,7 +42,7 @@
                                     <span>Đã hoàn thành trong tháng</span>
                                 </div>
                                 <div>
-                                    <h1>15</h1>
+                                    <h1>0</h1>
                                 </div>
                             </li>
 
@@ -52,7 +52,7 @@
                                     <span>Đã hủy trong tháng</span>
                                 </div>
                                 <div>
-                                    <h1>15</h1>
+                                    <h1>0</h1>
                                 </div>
                             </li>
                         </ul>
@@ -83,7 +83,7 @@
                             <tbody>
                                 <tr class="odd">
                                     <td class="id">1</td>
-                                    <td class="usename">tuanspider</td>
+                                    <td class="code">0001</td>
                                     <td class="name">Tuấn</td>
                                     <td class="email">tanh7164@gmail.com</td>
                                     <td class="phone_number">0332493487</td>

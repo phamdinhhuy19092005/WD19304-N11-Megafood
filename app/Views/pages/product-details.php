@@ -48,9 +48,7 @@
                             <div class="description_product">
                                 <div class="row_contnet">
                                     <span><?= htmlspecialchars($product['description']); ?></span>
-                                    <div class="gallery_top">
-                                        <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>">
-                                    </div>
+                                    <hr>
                                 </div>
                             </div>
                         </div>
