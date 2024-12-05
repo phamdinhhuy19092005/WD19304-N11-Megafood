@@ -66,7 +66,7 @@
 }
 .search_container input{
     border-radius: 5px;
-    padding: 2px;
+    padding: 2px 5px;
     outline: none;
     border: 1px solid #aba7c9;
 }
@@ -200,7 +200,9 @@
     color: #646C9A;
     margin-bottom: 20px;
 }
-
+th{
+    cursor: pointer;
+}
 th,
 td {
     text-align: center;

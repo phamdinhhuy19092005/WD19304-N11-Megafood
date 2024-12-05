@@ -46,8 +46,8 @@
                         <table  class="data_table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Tên</th>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">Tên</th>
                                     <th>Hình ảnh</th>
                                     <th>Trạng thái</th>
                                     <th>Thương hiệu</th>
