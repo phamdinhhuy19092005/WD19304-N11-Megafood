@@ -160,5 +160,15 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
-    
+
+     // ============================= EDIT ============================= //
+     public function editProduct()
+     {
+         $title = "Admin - Chỉnh sửa sản phẩm";
+         $page = "bo-EditProduct";
+ 
+         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+         include __DIR__ . '/../Views/backoffice/pages/bo-EditProduct.php';
+         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+     }
 }

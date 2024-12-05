@@ -1,0 +1,128 @@
+/* Bố cục chính của dòng */
+.row_edit {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Canh lề trên cùng */
+    justify-content: space-between; /* Giữa các phần tử */
+}
+
+.col_edit_1{
+    width: 39.5%;
+}
+
+.col_edit_1 img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Form chỉnh sửa */
+#form_edit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Đảm bảo form chiếm toàn bộ chiều rộng */
+}
+
+/* Các trường nhập liệu */
+.item_input_edit {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Đảm bảo mỗi trường nhập chiếm hết chiều rộng */
+}
+
+/* Nhãn các trường nhập */
+.item_input_edit label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #646c9a;
+}
+
+/* Ô nhập liệu */
+.item_input_edit input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Hiệu ứng khi người dùng focus vào ô nhập liệu */
+.item_input_edit input:focus {
+    outline: none;
+}
+
+/* Hình ảnh sản phẩm */
+.col_edit_1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Phần chỉnh sửa sản phẩm */
+.product-preview {
+    padding: 20px;
+}
+
+/* Các phần tử trong cột 2 */
+.col_edit_2 {
+    flex: 1;
+}
+
+.k-content_foot{
+    text-align: left;
+    width: 98%;
+    margin-left: 20px;
+}
+
+.btn-primary_ac{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #5578eb;
+    border: none; 
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-right: 10px;
+}
+
+.btn-primary_ac:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.btn-primary_ac:active {
+    background-color: #003f7f;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: black;
+    background-color: #fff;
+    border: none; 
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1); 
+    margin-right: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: gainsboro; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.btn-secondary:active {
+    background-color: #003f7f;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

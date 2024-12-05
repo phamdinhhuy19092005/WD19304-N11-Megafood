@@ -26,6 +26,8 @@
         'bo-CreateAdministrator' => ['customer.css', 'bo-createAdministrator.css', 'bo-adminitrastor.css'],
         'bo-CreateCustomer' => ['bo-createCustomer.css'],
         'bo-CreateProduct' => ['customer.css', 'bo-createProduct.css', 'bo-createcategory.css'],
+        
+        'bo-EditProduct' => ['customer.css', 'bo-editProduct.css'],
 
     ];
 
