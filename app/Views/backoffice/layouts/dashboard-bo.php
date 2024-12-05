@@ -21,9 +21,10 @@
         'bo-Product' => ['bo-adminitrastor.css', 'customer.css'],
         'bo-Order' => ['customer.css', 'bo-Order.css'],
         'bo-Customer' => ['customer.css'],
+
         'bo-CreateCategory' => ['customer.css', 'bo-createcategory.css'],
         'bo-CreateAdministrator' => ['customer.css', 'bo-createAdministrator.css', 'bo-adminitrastor.css'],
-        'bo-CreateCustomer' => ['customer.css', 'bo-createCustomer.css'],
+        'bo-CreateCustomer' => ['bo-createCustomer.css'],
         'bo-CreateProduct' => ['customer.css', 'bo-createProduct.css', 'bo-createcategory.css'],
 
     ];

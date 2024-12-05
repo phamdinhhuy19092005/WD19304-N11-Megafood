@@ -13,7 +13,7 @@ if (isset($_POST["signUp"])) {
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    echo $hashedPassword;
+    // echo $hashedPassword;
 
     $checkEmail = "SELECT * FROM users WHERE email = :email";
     $stmt = $conn->prepare($checkEmail);
