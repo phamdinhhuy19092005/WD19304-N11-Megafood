@@ -93,6 +93,18 @@ switch ($route) {
             case 'bo-Product':
                 $controller->adminProduct();
                 break;
+            case 'bo-CreateCategory':
+                $controller->createCategory();
+                break;
+            case 'bo-CreateAdministrator':
+                $controller->createAdministrator();
+                break;
+            case 'bo-CreateCustomer':
+                $controller->createCustomer();
+                break;
+            case 'bo-CreateProduct':
+                $controller->createProduct();
+                break;
             default:
                 echo "404 - Admin Page Not Found";
                 break;

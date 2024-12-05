@@ -1,0 +1,73 @@
+
+.k-portlet_mobile-head-title h3{
+    font-size: 1.3rem;
+    padding: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.dropdown-checkbox {
+    display: none;
+}
+
+.form-control{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.dropdown-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown-content {
+    display: none;
+    /* position: absolute; */
+    width: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+.dropdown-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #EBEDF2;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    cursor: pointer;
+}
+
+.dropdown-content li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-content li:hover {
+    background-color: #f1f1f1;
+}
+.dropdown-checkbox{
+    margin-top: 10px;
+}
+
+/* Hiển thị dropdown khi checkbox được chọn */
+.dropdown-checkbox:checked+.dropdown-btn+.dropdown-content {
+    display: block;
+}

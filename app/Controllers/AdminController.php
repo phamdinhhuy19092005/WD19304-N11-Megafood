@@ -116,4 +116,43 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/pages/bo-Customer.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
+
+    public function createCategory()
+    {
+        $title = "Admin - Tạo danh mục";
+        $page = "bo-CreateCategory";
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-CreateCategory.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+    public function createAdministrator()
+    {
+        $title = "Admin - Tạo quản trị viên";
+        $page = "bo-CreateAdministrator";
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-CreateAdministrator.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+
+    public function createCustomer()
+    {
+        $title = "Admin - Tạo khách hàng";
+        $page = "bo-CreateCustomer";
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-CreateCustomer.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+
+    public function createProduct()
+    {
+        $title = "Admin - Tạo sản phẩm";
+        $page = "bo-CreateProduct";
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-CreateProduct.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
 }
