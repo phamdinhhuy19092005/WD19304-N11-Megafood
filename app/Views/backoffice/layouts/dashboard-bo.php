@@ -144,7 +144,7 @@
                                             </li>
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="../html/orders.html">Quyền truy cập</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Access'; ?>">Quyền truy cập</a>
                                             </li>
                                         </ul>
                                     </div>

@@ -65,8 +65,10 @@
     width: 20%;
 }
 .search_container input{
+    border-radius: 5px;
     padding: 2px;
     outline: none;
+    border: 1px solid #aba7c9;
 }
 .search_container input:focus{
     border: 1px solid #387DFF;
