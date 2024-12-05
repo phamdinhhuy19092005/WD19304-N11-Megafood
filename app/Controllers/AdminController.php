@@ -155,4 +155,6 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/pages/bo-CreateProduct.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
+
+    
 }
