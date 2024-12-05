@@ -22,6 +22,7 @@
                 </div>
 
                 <!-- tìm kiếm ở đây -->
+                
 
 
                 <div class="k-portlet_head-toolbar">
@@ -32,11 +33,17 @@
             </div>
         </div>
 
+        <div class="search_container">
+                    <label for="">Search:</label>
+                    <input type="text"  name="" id="searchInput">
+                        
+                </div>
+
         <div class="k-portlet_body">
             <div class="datatable_wrapper">
                 <div class="k-portlet_mobile-body">
                     <div class="table_user-list">
-                        <table class="data_table">
+                        <table  class="data_table">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -52,7 +59,7 @@
                                     <th>Hành động</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="search_list">
                                 <?php foreach ($products as $product): ?>
                                     <tr class="odd">
                                         <td class="id"><?= $product['id']; ?></td>
