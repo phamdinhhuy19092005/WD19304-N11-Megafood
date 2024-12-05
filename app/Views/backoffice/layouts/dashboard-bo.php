@@ -117,7 +117,7 @@
                                         <ul class="dropdown-menu" id="orderDropdown">
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="../html/orders.html">Danh sách đơn hàng</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Order'; ?>">Danh sách đơn hàng</a>
                                             </li>
                                         </ul>
                                     </div>

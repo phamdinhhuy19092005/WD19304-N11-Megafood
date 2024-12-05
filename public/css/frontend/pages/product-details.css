@@ -890,4 +890,8 @@ ul li.item_blog_small .block_content {
         width: 60%;
     }
 
+    .user_rating{
+        width: 100%;
+    }
+
 }

@@ -11,7 +11,7 @@
     <div class="k-content_body-parameter">
         <div class="row-parameter">
 
-            <div class="col-parameter">
+            <div class="col-parameter" >
                 <div class="k-portlet-parameter">
                     <div class="k-portlet-paramter-head">
                         <div class="head-label">

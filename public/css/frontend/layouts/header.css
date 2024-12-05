@@ -195,6 +195,8 @@ body {
 }
 
 #searchResults {
+    overflow: scroll;
+    max-height: 500px;
     position: absolute;
     max-width: 100%;
     width: 410px;
@@ -212,11 +214,11 @@ body {
     margin-bottom: 20px;
     margin-left: 10px;
     position: relative;
-    color: #006a31;
+    color: var(--main-color);
 }
 
 .search_title span::before {
-    background: #006a31;
+    background: var(--main-color);
     content: '';
     right: 0;
     left: 0;
