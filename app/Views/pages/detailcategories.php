@@ -169,7 +169,7 @@
                               <span>Giá chỉ từ</span>
                               <p><?= number_format($product['price'], 0, ',', '.'); ?> VND</p>
                             </div>
-                            <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">Thêm</a>
+                            <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1" class="add_to_cart">Thêm</a>
                           </div>
                         </li>
                       <?php endif; ?>
