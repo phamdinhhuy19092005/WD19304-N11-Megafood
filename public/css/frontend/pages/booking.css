@@ -130,4 +130,11 @@
   form button:hover {
     background-color: var(--secondary-color);
   }
+
+  @media(max-width:376px){
+    main{
+      flex-direction: column;
+    }
+  }
+  
   
