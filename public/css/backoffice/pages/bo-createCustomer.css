@@ -261,17 +261,7 @@ header {
     display: flex;
 }
 
-.header_admin {
-    line-height: 50px;
-    display: flex;
-    width: 84%;
-    margin-left: 16%;
-    position: fixed;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100000;
-    background-color: var(--white-color);
-}
+
 
 .btn_shop {
     display: inline-block;

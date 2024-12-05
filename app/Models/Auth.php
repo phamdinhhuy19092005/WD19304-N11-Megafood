@@ -100,7 +100,6 @@ if (isset($_POST['submitAdmin'])) {
     if ($stmt->rowCount() > 0) {
         $admin = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // So sánh mật khẩu nếu không mã hóa (so sánh trực tiếp)
         if ($password === $admin['password']) {
             // Đăng nhập thành công, bắt đầu session
             if (session_status() == PHP_SESSION_NONE) {
