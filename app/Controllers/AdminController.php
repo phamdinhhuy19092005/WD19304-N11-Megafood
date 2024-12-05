@@ -229,4 +229,13 @@ class AdminController
             die('Yêu cầu không hợp lệ.');
         }
     }
+    public function editCustomer()
+    {
+        $title = "Admin - Chỉnh sửa khách hàng";
+        $page = "bo-EditCustomer";
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-EditCusstomer.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
 }

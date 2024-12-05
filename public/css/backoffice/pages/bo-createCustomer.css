@@ -393,10 +393,35 @@ header {
     margin-top: 10px;
     outline: none;
 }
+
 .form-group input:focus{
     border: 1px solid #387DFF;
     box-shadow: 0 0 1px rgba(56, 125, 255, 0.5);
     background-color: #F8FAFF;
+}
+
+
+.form-group-select{
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.form-group-select label{
+    font-size: 14px;
+    
+}
+.form-group-select select{
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #EBEDF2;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.allow-login,.channel{
+    width: 50%;
 }
 
 
@@ -434,4 +459,19 @@ header {
 .k-form_actions .btn-cancel:hover{
     cursor: pointer;
     background-color: #F4F5F8;
+}
+
+.k-form_actions .btn-delete{ 
+    padding: 10px;
+    border: none;
+    background-color: #FFEBF1;
+    border-radius: 5px;
+    border: 1px solid #FD397A;
+    color: #FD397A;
+    float: right;
+}
+.k-form_actions .btn-delete:hover{
+    cursor: pointer;
+    color: #FFEBF1;
+    background-color: #FD397A;
 }

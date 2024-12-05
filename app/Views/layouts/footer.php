@@ -118,6 +118,7 @@
 <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
 <!-- <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script> -->
 <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
+<script src="<?php echo JS_PAGES_URL; ?>display_sudMenu.js"></script>
 
 
 

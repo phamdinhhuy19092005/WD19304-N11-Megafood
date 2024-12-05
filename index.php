@@ -114,6 +114,9 @@ switch ($route) {
             case 'updateProduct':
                 $controller->updateProduct();
                 break;
+            case 'bo-EditCustomer':
+                $controller->editCustomer();
+                break;
             default:
                 echo "404 - Admin Page Not Found";
                 break;
