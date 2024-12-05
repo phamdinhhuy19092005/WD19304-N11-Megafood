@@ -22,7 +22,7 @@
                 </div>
                 <div class="k-portlet_head-toolbar">
                     <div class="k-portlet_head-toolbar-wrapper">
-                        <a class="btn-brand"><i class="fa-solid fa-plus"></i>Tạo sản phẩm</a>
+                        <a href="#" class="btn-brand"><i class="fa-solid fa-plus"></i>Tạo sản phẩm</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($products as $product): ?>
-                                    <tr class="odd">   
+                                    <tr class="odd">
                                         <td class="id"><?= $product['id']; ?></td>
                                         <td class="name"><?= $product['name']; ?></td>
                                         <td class="img"><img style="width: 100px; height: 100px;" src="<?= IMG_BASE_URL . $product['image_url']; ?>" alt=""></td>
@@ -63,7 +63,13 @@
                                         <td class="updater">[CEO] Pham Dinh Huy</td>
                                         <td class="created_at"><?= $product['created_at']; ?></td>
                                         <td class="update_date"><?= $product['updated_at']; ?></td>
-                                        <td class="actions"><i class="fa-solid fa-eye"></i></td>
+                                        <td class="actions">
+                                            
+                                            <a href="<?php echo BASE_URL . '?route=admin&action=bo-EditProduct&id=' . $product['id']; ?>">
+                                                 <i class="fa-solid fa-eye"></i>
+                                            </a>
+
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
 

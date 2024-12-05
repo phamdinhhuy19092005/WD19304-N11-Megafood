@@ -37,14 +37,35 @@
     color: #646c9a;
 }
 
+.item_input_edit textarea {
+    outline: none;
+    padding: 10px;
+    min-height: 200px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.box_item{
+    display: flex;
+    gap: 20px;
+}
+
+
 /* Ô nhập liệu */
 .item_input_edit input {
+    outline: none;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     transition: border-color 0.3s ease;
 }
+
+.item_input_edit 
 
 /* Hiệu ứng khi người dùng focus vào ô nhập liệu */
 .item_input_edit input:focus {

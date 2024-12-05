@@ -29,6 +29,9 @@ define('BASE_URL_PUBLIC', '/MegaFood_DA1_N11/BackEnd/public/');
 define('CSS_LAYOUTS_URL', BASE_URL_PUBLIC . 'css/frontend/layouts/');
 define('CSS_PAGES_URL', BASE_URL_PUBLIC . 'css/frontend/pages/');
 define('IMG_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/');
+
+define('IMG_PRODUCT_BASE_URL', BASE_URL_PUBLIC . 'img/frontend/layouts/products');
+
 define('JS_BASE_URL', BASE_URL_PUBLIC . 'js/frontend/layouts/components/');
 define('JS_PAGES_URL', BASE_URL_PUBLIC . 'js/frontend/pages/');
 

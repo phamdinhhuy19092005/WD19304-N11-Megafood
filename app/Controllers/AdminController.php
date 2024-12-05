@@ -126,6 +126,7 @@ class AdminController
         $title = "Admin - Tạo danh mục";
         $page = "bo-CreateCategory";
 
+
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
         include __DIR__ . '/../Views/backoffice/pages/bo-CreateCategory.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
@@ -161,14 +162,38 @@ class AdminController
     }
 
 
-     // ============================= EDIT ============================= //
-     public function editProduct()
-     {
-         $title = "Admin - Chỉnh sửa sản phẩm";
-         $page = "bo-EditProduct";
- 
-         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
-         include __DIR__ . '/../Views/backoffice/pages/bo-EditProduct.php';
-         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
-     }
+    // ============================= EDIT ============================= //
+    public function editProduct()
+    {
+        $title = "Admin - Chỉnh sửa sản phẩm";
+        $page = "bo-EditProduct";
+
+        $productModel = new Product();
+
+        if (isset($_GET['id'])) {
+            $id = intval($_GET['id']);
+            $product = $productModel->getProductById($id); // Fetch product by ID
+
+            if (!$product) {
+                die('Không có sản phẩm với ID này');
+            }
+
+            $isFeatured = $product['is_featured'];
+            $categoryId = $product['id_categories'];
+            $sale = $product['sale'];
+            // $status = $$product['status'];
+        } else {
+            die('Không có ID sản phẩm');
+        }
+
+        $fullPath = $product['image_url'];
+        
+        $relativePath = str_replace('/MegaFood_DA1_N11/BackEnd/public/img/frontend/layouts/', '', $fullPath);
+
+        $products = $productModel->getAllProducts();
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-EditProduct.php';  // Ensure that $product is available here
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
 }

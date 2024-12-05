@@ -35,30 +35,31 @@ class Product
     // Lấy sản phẩm theo ID
     public function getProductById($id)
     {
-        $query = "SELECT id, name, description, price, image_url, id_categories FROM " . $this->table . " WHERE id = :id";
+        $query = "SELECT id, name, description, price, image_url, id_categories, is_featured, sale, status FROM " . $this->table . " WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+
     public function getProductFeatured()
     {
         $query = "SELECT id, name, description, price, image_url, id_categories 
               FROM " . $this->table . " 
-              WHERE is_featured = TRUE"; 
+              WHERE is_featured = TRUE";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getProductSale()
     {
         $query = "SELECT id, name, description, price, image_url, id_categories 
               FROM " . $this->table . " 
-              WHERE sale = TRUE"; 
+              WHERE sale = TRUE";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
