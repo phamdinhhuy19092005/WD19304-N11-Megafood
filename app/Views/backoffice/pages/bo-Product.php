@@ -58,13 +58,13 @@
                                             <span class="status_badge"><?= $product['status']; ?></span>
                                         </td>
                                         <td class="trademark">Mega Food</td>
-                                        <td class="category">--0--</td>
+                                        <td class="category"><?= $product['id_categories']; ?></td>
                                         <td class="creater">[CEO] Pham Dinh Huy</td>
                                         <td class="updater">[CEO] Pham Dinh Huy</td>
                                         <td class="created_at"><?= $product['created_at']; ?></td>
                                         <td class="update_date"><?= $product['updated_at']; ?></td>
                                         <td class="actions">
-                                            
+
                                             <a href="<?php echo BASE_URL . '?route=admin&action=bo-EditProduct&id=' . $product['id']; ?>">
                                                  <i class="fa-solid fa-eye"></i>
                                             </a>

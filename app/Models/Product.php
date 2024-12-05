@@ -62,4 +62,39 @@ class Product
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // ========================= ADD PRODUCT =========================//
+
+
+
+
+    // ========================= EDIT PRODUCT =========================//
+    public function updateProduct($id, $name, $img, $price, $description, $status, $category_id, $is_featured, $sale)
+    {
+        $query = "UPDATE " . $this->table . " 
+              SET 
+                  name = :name, 
+                  image_url = :img, 
+                  price = :price, 
+                  description = :description, 
+                  status = :status, 
+                  id_categories = :category_id, 
+                  is_featured = :is_featured, 
+                  sale = :sale
+              WHERE id = :id";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+        $stmt->bindParam(':img', $img, PDO::PARAM_STR);
+        $stmt->bindParam(':price', $price, PDO::PARAM_STR);
+        $stmt->bindParam(':description', $description, PDO::PARAM_STR);
+        $stmt->bindParam(':status', $status, PDO::PARAM_STR);
+        $stmt->bindParam(':category_id', $category_id, PDO::PARAM_INT);
+        $stmt->bindParam(':is_featured', $is_featured, PDO::PARAM_BOOL);
+        $stmt->bindParam(':sale', $sale, PDO::PARAM_BOOL);
+
+        return $stmt->execute();
+    }
 }

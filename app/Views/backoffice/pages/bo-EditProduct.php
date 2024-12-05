@@ -18,7 +18,7 @@
                 <img src="<?= IMG_BASE_URL . ($product['image_url']); ?>" alt="">
             </div>
             <div class="col_edit_2">
-                <form action="" id="form_edit">
+                <form action="<?= BASE_URL . '?route=admin&action=updateProduct&id=' . htmlspecialchars($product['id']); ?>" id="form_edit" method="post">
                     <div class="item_input_edit">
                         <label for="">Tên sản phẩm</label>
                         <input type="text" name="name" placeholder="Tên sản phẩm" value="<?= htmlspecialchars($product['name']); ?>">
@@ -63,7 +63,7 @@
 
                     <div class="k-content_foot">
                         <div class="k-form_actions">
-                            <button class="btn-primary_ac">Lưu</button>
+                            <button class="btn-primary_ac" name="update">Lưu</button>
                             <button class="btn-secondary">Hủy</button>
                         </div>
                     </div>

@@ -47,7 +47,7 @@ aside.sidenav {
     float: left;
     min-height: 790px;
     background-color: var(--dark-blue-color);
-    max-width: 16%;
+    max-width: 17%;
 }
 
 .brand {
@@ -276,8 +276,8 @@ header {
 .header_admin {
     line-height: 50px;
     display: flex;
-    width: 84%;
-    margin-left: 16%;
+    width: 83%;
+    margin-left: 17%;
     position: fixed;
     align-items: center;
     justify-content: space-between;

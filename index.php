@@ -111,6 +111,9 @@ switch ($route) {
             case 'bo-EditProduct':
                 $controller->editProduct();
                 break;
+            case 'updateProduct':
+                $controller->updateProduct();
+                break;
             default:
                 echo "404 - Admin Page Not Found";
                 break;
@@ -205,7 +208,7 @@ switch ($route) {
         $action = $_GET['action'] ?? 'view'; // Default action is 'view'
 
         switch ($action) {
-            case 'add':  
+            case 'add':
                 $controller->addToFavorites();
                 break;
             case 'remove':
