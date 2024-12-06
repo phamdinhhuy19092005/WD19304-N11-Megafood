@@ -13,7 +13,7 @@
 
 
 
-    <form action="" class="k-form" method="POST">
+    <form action="<?= BASE_URL . '?route=admin&action=bo-Customer&id=' . htmlspecialchars($product['id']); ?>" class="k-form" method="POST">
         <div class="k-form_body">
             <div class="k-form_head">
                 <div class="k-form_head-title">
@@ -22,27 +22,23 @@
             </div>
             <div class="form-group">
                 <label for="">Họ</label><br>
-                <input type="text" id="firstName" name="firstName" class="form-control"
-                    placeholder="Nhập họ"
-                    value="<?= htmlspecialchars($user['first_name'] ?? '') ?>">
+                <input type="text" id="firstName" name="first_name" class="form-control" placeholder="Nhập họ" value="<?= htmlspecialchars($user['first_name'] ?? '') ?>">
             </div>
             <div class="form-group">
                 <label for="">Tên</label><br>
-                <input type="text" id="lastName" name="lastName" class="form-control"
-                    placeholder="Nhập tên"
-                    value="<?= htmlspecialchars($user['last_name'] ?? '') ?>">
+                <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Nhập tên" value="<?= htmlspecialchars($user['last_name'] ?? '') ?>">
             </div>
             <div class="form-group">
                 <label for="">E-mail</label><br>
-                <input type="email" id="email" name="email" class="form-control"
-                    placeholder="Nhập E-mail"
-                    value="<?= htmlspecialchars($user['email'] ?? '') ?>">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Nhập E-mail" value="<?= htmlspecialchars($user['email'] ?? '') ?>">
             </div>
             <div class="form-group">
                 <label for="">Số điện thoại</label><br>
-                <input type="text" id="phone" name="phone" class="form-control"
-                    placeholder="Nhập số điện thoại"
-                    value="<?= htmlspecialchars($user['phone'] ?? '') ?>">
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Nhập số điện thoại" value="<?= htmlspecialchars($user['phone'] ?? '') ?>">
+            </div>
+            <div class="form-group">
+                <label for="">Trạng thái</label><br>
+                <input type="text" id="status" name="status" class="form-control" placeholder="Nhập trạng thái" value="<?= htmlspecialchars($user['status'] ?? '') ?>">
             </div>
             <div class="form-group-select">
                 <div class="allow-login">
@@ -67,11 +63,12 @@
         </div>
         <div class="k-form_foot">
             <div class="k-form_actions">
-                <button type="submit" class="btn-save">Lưu</button>
+                <button type="submit" name="updateCustomer" class="btn-save">Lưu</button>
                 <button type="button" class="btn-cancel" onclick="window.history.back();">Hủy</button>
-                <button type="button" class="btn-delete" onclick="deleteCustomer(<?= $user['id'] ?>)">Xóa tài khoản</button>
+                <button type="button" class="btn-delete">Xóa tài khoản</button>
             </div>
         </div>
     </form>
+
 
 </div>

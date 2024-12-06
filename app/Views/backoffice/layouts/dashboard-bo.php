@@ -26,7 +26,7 @@
         'bo-CreateAdministrator' => ['customer.css', 'bo-createAdministrator.css', 'bo-adminitrastor.css'],
         'bo-CreateCustomer' => ['bo-createCustomer.css'],
         'bo-CreateProduct' => ['customer.css', 'bo-createProduct.css', 'bo-createcategory.css'],
-        
+
         'bo-EditProduct' => ['customer.css', 'bo-editProduct.css'],
         'bo-EditCustomer' => ['customer.css', 'bo-createCustomer.css'],
 
@@ -52,7 +52,7 @@
                     <div class="brand">
                         <div class="brand_logo">
                             <a href="#">
-                            <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
+                                <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
                             </a>
                         </div>
                         <div class="brand_tools">
@@ -133,14 +133,14 @@
                                     <div class="group_taskbar">
                                         <li class="taskbar-button" onclick="toggleDropdown('adminstratorDropdown')">
                                             <div class="icon_taskbar">
-                                                <i class="fa-solid fa-cart-plus"></i>
+                                                <i class="bi bi-person-bounding-box"></i>
                                             </div>
                                             <span>Quản trị</span>
                                         </li>
                                         <ul class="dropdown-menu" id="adminstratorDropdown">
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>
-                                                <a href="../html/orders.html">Quản trị viên</a>
+                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Administrator'; ?>">Quản trị viên</a>
                                             </li>
                                             <li class="item_dropdow_menu">
                                                 <i class="fa-solid fa-circle"></i>

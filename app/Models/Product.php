@@ -75,6 +75,12 @@ class Product
             throw new TypeError("Dữ liệu truyền vào phải là mảng.");
         }
 
+        // Kiểm tra kết nối cơ sở dữ liệu
+        if (!$this->conn) {
+            throw new RuntimeException("Không thể kết nối đến cơ sở dữ liệu.");
+        }
+
+        // Tạo câu truy vấn
         $sql = "UPDATE products SET 
                     name = ?, 
                     image_url = ?, 
@@ -88,15 +94,16 @@ class Product
 
         $stmt = $this->conn->prepare($sql);
 
+        // Kiểm tra và thực thi câu lệnh
         return $stmt->execute([
-            $data['name'],
-            $data['image_url'],
-            $data['price'],
-            $data['description'],
-            $data['status'],
-            $data['id_categories'],
-            $data['is_featured'],
-            $data['sale'],
+            $data['name'] ?? '',
+            $data['image_url'] ?? '',
+            $data['price'] ?? 0,
+            $data['description'] ?? '',
+            $data['status'] ?? '',
+            $data['id_categories'] ?? 0,
+            $data['is_featured'] ?? 0,
+            $data['sale'] ?? 0,
             $id
         ]);
     }

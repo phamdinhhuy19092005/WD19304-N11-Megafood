@@ -41,17 +41,16 @@
 }
 
 /* Widget hiển thị số liệu */
-.k-widget-19 {
-    padding: 15px;
-    border-radius: 5px;
+.k-widget-19-content{
+    font-size: 50px;
 }
 
 /* Tiêu đề widget */
-.k-widget-19-title {
+/* .k-widget-19-title {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
-}
+} */
 
 /* Nội dung số liệu */
 .k-widget-19-content {

@@ -15,7 +15,7 @@
         <div class="row-parameter">
 
             <div class="col-parameter" >
-                <div class="k-portlet-parameter">
+                <div class="k-portlet-parameter"style="background-color: #FD397A; color: #ffffff;"   >
                     <div class="k-portlet-paramter-head">
                         <div class="head-label">
                             <h3 class="head-label-title">Khách hàng mới</h3>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="col-parameter">
-                <div class="k-portlet-parameter">
+                <div class="k-portlet-parameter" style="background-color: #5867DC; color: #ffffff;">
                     <div class="k-portlet-paramter-head">
                         <div class="head-label">
                             <h3 class="head-label-title">Đơn hàng mới</h3>
@@ -46,7 +46,7 @@
                     <div class="k-portlet-body">
                         <div class="k-widget-19">
                             <div class="k-widget-19-title">
-                                <div class="k-widget-19-content">
+                                <div class="k-widget-19-content" >
                                     0
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="col-parameter">
-                <div class="k-portlet-parameter">
+                <div class="k-portlet-parameter" style="background-color: #FFB822; color: #ffffff;" >
                     <div class="k-portlet-paramter-head">
                         <div class="head-label">
                             <h3 class="head-label-title">Danh mục</h3>
@@ -79,7 +79,7 @@
 
 
             <div class="col-parameter">
-                <div class="k-portlet-parameter">
+                <div class="k-portlet-parameter" style="background-color: #FD397A; color: #ffffff;">
                     <div class="k-portlet-paramter-head">
                         <div class="head-label">
                             <h3 class="head-label-title">Sản phẩm</h3>

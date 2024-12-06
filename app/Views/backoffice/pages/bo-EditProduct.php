@@ -18,7 +18,7 @@
                 <img src="<?= IMG_BASE_URL . ($product['image_url']); ?>" alt="">
             </div>
             <div class="col_edit_2">
-                <form action="<?= BASE_URL . '?route=admin&action=bo-Product&id=' . htmlspecialchars($product['id']); ?>" id="form_edit" method="post">
+                <form action="<?= BASE_URL . '?route=admin&action=updateProduct&id=' . htmlspecialchars($product['id']); ?>" id="form_edit" method="post">
                     <div class="item_input_edit">
                         <label for="">Tên sản phẩm</label>
                         <input type="text" name="name" placeholder="Tên sản phẩm" value="<?= htmlspecialchars($product['name']); ?>">

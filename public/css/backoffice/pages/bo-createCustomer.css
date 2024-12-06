@@ -368,6 +368,7 @@ header {
 }
 
 .k-form {
+    display: block;
     width: 98%;
 }
 .k-form_body{
@@ -436,6 +437,7 @@ header {
     padding: 5px 10px;
 }
 .k-form_actions .btn-save{ 
+    width: 10%;
     padding: 10px;
     border: none;
     background-color: #5867DD;

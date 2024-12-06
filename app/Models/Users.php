@@ -41,4 +41,30 @@ class Users
 
         return $user ? $user : null;
     }
+
+    public function updateCustomer($id, $data)
+    {
+        if (!is_array($data)) {
+            throw new TypeError("Dữ liệu truyền vào phải là mảng.");
+        }
+
+        $sql = "UPDATE users SET 
+                first_name = ?, 
+                last_name = ?, 
+                email = ?, 
+                phone = ?, 
+                status = ? 
+            WHERE id = ?";
+
+        $stmt = $this->conn->prepare($sql);
+
+        return $stmt->execute([
+            $data['first_name'],  
+            $data['last_name'],  
+            $data['email'],       
+            $data['phone'],     
+            $data['status'],     
+            $id                   
+        ]);
+    }
 }
