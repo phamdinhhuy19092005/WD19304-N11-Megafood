@@ -8,6 +8,9 @@
         </div>
     </div>
 
+
+    
+
     <div class="k-content_body-parameter">
         <div class="row-parameter">
 
@@ -107,7 +110,20 @@
                     <h3 class="k-portlet_head-title">Khách hàng nổi bật</h3>
                 </div>
 
+
+
+                
             </div>
+            <div class="search_container">
+                <label for="">Search:</label>
+                <input type="text"  name="" id="searchInput">
+                    
+            </div>
+
+
+            
+
+
         </div>
 
         <div class="k-portlet_body">
@@ -127,7 +143,7 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="search_list">
 
                                 <?php foreach ($users as $user): ?>
                                     <tr class="odd">

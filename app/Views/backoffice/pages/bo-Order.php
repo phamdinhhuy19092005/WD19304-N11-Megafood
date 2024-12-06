@@ -11,6 +11,9 @@
             </div>
         </div>
 
+
+        
+
         <div class="k-content_body">
             <div class="k-portlet_mobile">
                 <div class="box-portlet">
@@ -63,6 +66,14 @@
                         <h3>Danh sách đơn hàng </h3>
                     </div>
                 </div>
+                
+                <div class="search_container">
+                    <label for="">Search:</label>
+                    <input type="text"  name="" id="searchInput">
+                        
+                </div>
+
+
                 <div class="k-portlet_mobile-body">
                     <div class="table_user-list">
                         <table class="data_table">
@@ -80,7 +91,7 @@
                                     <th>Hành động</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class ="search_list">
                                 <tr class="odd">
                                     <td class="id">1</td>
                                     <td class="code">0001</td>

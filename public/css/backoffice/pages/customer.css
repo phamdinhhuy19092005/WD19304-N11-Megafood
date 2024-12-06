@@ -60,6 +60,22 @@
 
 }
 
+.search_container{
+    margin: 10px 0px;
+    width: 20%;
+}
+.search_container input{
+    border-radius: 5px;
+    padding: 2px 5px;
+    outline: none;
+    border: 1px solid #aba7c9;
+}
+.search_container input:focus{
+    border: 1px solid #387DFF;
+    box-shadow: 0 0 1px rgba(56, 125, 255, 0.5);
+    background-color: #F8FAFF;
+}
+
 .k-portlet_body {
     width: 100%;
     margin-bottom: 20px;
@@ -184,7 +200,9 @@
     color: #646C9A;
     margin-bottom: 20px;
 }
-
+th{
+    cursor: pointer;
+}
 th,
 td {
     text-align: center;
