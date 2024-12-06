@@ -123,6 +123,7 @@ class AdminController
 
     // ============================= CREATED ============================= //
 
+    // ============ CATEGORY ============ //
     public function createCategory()
     {
         $title = "Admin - Tạo danh mục";
@@ -133,6 +134,7 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/pages/bo-CreateCategory.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
+    // ============ CATEGORY ============ //
     public function createAdministrator()
     {
         $title = "Admin - Tạo quản trị viên";
@@ -264,8 +266,89 @@ class AdminController
         $title = "Admin - Chỉnh sửa khách hàng";
         $page = "bo-EditCustomer";
 
+        $userModel = new Users();
+
+        if (isset($_GET['id'])) {
+            $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+            if (!$id) {
+                die('ID không hợp lệ');
+            }
+
+            $user = $userModel->getUserById($id);
+
+            if (!$user) {
+                die('Không tìm thấy khách hàng với ID này.');
+            }
+        } else {
+            die('Không có ID khách hàng');
+        }
+
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
-        include __DIR__ . '/../Views/backoffice/pages/bo-EditCusstomer.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-EditCustomer.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
+
+    public function updateCustomer()
+    {
+        // echo "đã vào trang update";
+        $userModel = new Users();
+
+        $userId = intval($_GET['id']);
+
+        $firstName = trim($_POST['first_name'] ?? '');
+        $lastName = trim($_POST['last_name'] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $phone = trim($_POST['phone'] ?? '');
+        $status = trim($_POST['status'] ?? '');
+
+        if (empty($firstName) || empty($lastName) || empty($email) || empty($phone)) {
+            die('Vui lòng điền đầy đủ thông tin bắt buộc.');
+        }
+
+        $result = $userModel->updateCustomer($userId, [
+            'first_name' => $firstName,
+            'last_name'  => $lastName,
+            'email'      => $email,
+            'phone'      => $phone,
+            'status'     => $status
+        ]);
+
+        // Debugging: In ra giá trị để kiểm tra
+        // echo "<pre>";
+        // print_r([
+        //     'first_name' => $firstName,
+        //     'last_name'  => $lastName,
+        //     'email'      => $email,
+        //     'phone'      => $phone,
+        //     'status'     => $status
+        // ]);
+        // echo "</pre>";
+        // exit;
+
+        if ($result) {
+            header('Location: ' . BASE_URL . '?route=admin&action=bo-Customer');
+            exit;
+        } else {
+            echo "Cập nhật khách hàng thất bại! Vui lòng thử lại.";
+        }
+    }
+
+    public function deleteCustomer()
+    {
+        if (isset($_GET['id'])) {
+            $userId = intval($_GET['id']);
+
+            $userModel = new Users();
+            $result = $userModel->deleteCustomer($userId);
+
+            if ($result) {
+                header('Location: ' . BASE_URL . '?route=admin&action=bo-Customer');
+                exit;
+            } else {
+                echo "Xóa khách hàng thất bại! Vui lòng thử lại.";
+            }
+        } else {
+            die('Không có ID khách hàng');
+        }
     }
 }
