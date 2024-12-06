@@ -56,7 +56,11 @@
                                     </td>
                                     <td class="last_logged"><?= $user['created_at']; ?></td>
                                     <td class="created_at"><?= $user['created_at']; ?></td>
-                                    <td class="actions"><i class="fa-solid fa-eye"></i></td>
+                                    <td class="actions">
+                                        <a href="<?php echo BASE_URL . '?route=admin&action=bo-EditCustomer&id=' . $user['id']; ?>">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                    </td>
 
                                 </tr>
                             <?php endforeach; ?>

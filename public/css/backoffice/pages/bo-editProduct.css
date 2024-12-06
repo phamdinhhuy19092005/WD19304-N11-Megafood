@@ -2,15 +2,17 @@
 .row_edit {
     display: flex;
     gap: 20px;
-    align-items: flex-start; /* Canh lề trên cùng */
-    justify-content: space-between; /* Giữa các phần tử */
+    align-items: flex-start;
+    /* Canh lề trên cùng */
+    justify-content: space-between;
+    /* Giữa các phần tử */
 }
 
-.col_edit_1{
+.col_edit_1 {
     width: 39.5%;
 }
 
-.col_edit_1 img{
+.col_edit_1 img {
     width: 100%;
     height: 100%;
 }
@@ -20,14 +22,16 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%; /* Đảm bảo form chiếm toàn bộ chiều rộng */
+    width: 100%;
+    /* Đảm bảo form chiếm toàn bộ chiều rộng */
 }
 
 /* Các trường nhập liệu */
 .item_input_edit {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Đảm bảo mỗi trường nhập chiếm hết chiều rộng */
+    width: 100%;
+    /* Đảm bảo mỗi trường nhập chiếm hết chiều rộng */
 }
 
 /* Nhãn các trường nhập */
@@ -49,7 +53,7 @@
     box-sizing: border-box;
 }
 
-.box_item{
+.box_item {
     display: flex;
     gap: 20px;
 }
@@ -65,7 +69,11 @@
     transition: border-color 0.3s ease;
 }
 
-.item_input_edit 
+.item_input_edit input[type='checkbox'] {
+    width: 50px;
+}
+
+.item_input_edit
 
 /* Hiệu ứng khi người dùng focus vào ô nhập liệu */
 .item_input_edit input:focus {
@@ -89,30 +97,30 @@
     flex: 1;
 }
 
-.k-content_foot{
+.k-content_foot {
     text-align: left;
     width: 98%;
     margin-left: 20px;
 }
 
-.btn-primary_ac{
+.btn-primary_ac {
     display: inline-block;
     padding: 10px 15px;
     font-size: 16px;
     color: #ffffff;
     background-color: #5578eb;
-    border: none; 
+    border: none;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease-in-out; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-right: 10px;
 }
 
 .btn-primary_ac:hover {
-    background-color: #0056b3; 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary_ac:active {
@@ -121,24 +129,24 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn-secondary{
+.btn-secondary {
     display: inline-block;
     padding: 10px 15px;
     font-size: 16px;
     color: black;
     background-color: #fff;
-    border: none; 
+    border: none;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease-in-out; 
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
     margin-right: 10px;
 }
 
 .btn-secondary:hover {
-    background-color: gainsboro; 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+    background-color: gainsboro;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary:active {
@@ -146,4 +154,3 @@
     transform: scale(0.98);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-

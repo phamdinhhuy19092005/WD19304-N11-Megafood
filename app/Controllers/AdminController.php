@@ -183,6 +183,7 @@ class AdminController
             $isFeatured = $product['is_featured'];
             $categoryId = $product['id_categories'];
             $sale = $product['sale'];
+            $status = $product['status'];
         } else {
             die('Không có ID sản phẩm');
         }
@@ -194,7 +195,7 @@ class AdminController
         $products = $productModel->getAllProducts();
 
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
-        include __DIR__ . '/../Views/backoffice/pages/bo-EditProduct.php';  // Ensure that $product is available here
+        include __DIR__ . '/../Views/backoffice/pages/bo-EditProduct.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
@@ -202,37 +203,82 @@ class AdminController
     {
         $productModel = new Product();
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
-            if (!isset($_GET['id'])) {
-                die('Không tìm thấy ID sản phẩm.');
-            }
+        // if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
+        //     if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+        //         die('Không tìm thấy ID sản phẩm hợp lệ.');
+        //     }
 
             $productId = intval($_GET['id']);
-            $name = $_POST['name'];
-            $img = $_POST['img'];
-            $price = str_replace('.', '', $_POST['price']); 
-            $description = $_POST['mota'];
-            $status = $_POST['status'];
-            $categoryId = $_POST['category_id'];
-            $isFeatured = ($_POST['is_featured'] === 'true') ? true : false;
-            $sale = ($_POST['sale'] === 'true') ? true : false;
 
-            $result = $productModel->updateProduct($productId, $name, $img, $price, $description, $status, $categoryId, $isFeatured, $sale);
+            $name = trim($_POST['name']);
+            $img = trim($_POST['img']);
+            $price = str_replace('.', '', trim($_POST['price']));
+            $description = trim($_POST['mota']);
+            $status = trim($_POST['status']);
+            $categoryId = intval($_POST['category_id']);
+
+            $isFeatured = isset($_POST['is_featured']) ? true : false;
+            $sale = isset($_POST['sale']) ? true : false;
+
+            if (empty($name) || empty($img) || empty($price) || empty($description) || empty($status) || $categoryId <= 0) {
+                die('Vui lòng nhập đầy đủ thông tin và kiểm tra lại.');
+            }
+
+
+            // Gọi phương thức cập nhật
+            $result = $productModel->updateProduct($productId, [
+                'name' => $name,
+                'image_url' => $img,
+                'price' => $price,
+                'description' => $description,
+                'status' => $status,
+                'id_categories' => $categoryId,
+                'is_featured' => $isFeatured,
+                'sale' => $sale
+            ]);
+
+            // Debugging: In ra giá trị để kiểm tra
+            // echo "<pre>";
+            // print_r([
+            //     'name' => $name,
+            //     'image_url' => $img,
+            //     'price' => $price,
+            //     'description' => $description,
+            //     'status' => $status,
+            //     'id_categories' => $categoryId,
+            //     'is_featured' => $isFeatured,
+            //     'sale' => $sale
+            // ]);
+            // echo "</pre>";
+            exit;
 
             if ($result) {
                 header('Location: ' . BASE_URL . '?route=admin&action=bo-Product');
                 exit;
             } else {
-                echo "Cập nhật sản phẩm thất bại!";
+                echo "Cập nhật sản phẩm thất bại! Vui lòng thử lại.";
             }
-        } else {
-            die('Yêu cầu không hợp lệ.');
-        }
+        
     }
+
+
     public function editCustomer()
     {
         $title = "Admin - Chỉnh sửa khách hàng";
         $page = "bo-EditCustomer";
+
+        $userModel = new Users();
+
+        if (isset($_GET['id'])) {
+            $id = intval($_GET['id']);
+            $user = $userModel->getUserById($id);
+
+            if (!$user) {
+                die('Không có khách hàng với ID này.');
+            }
+        } else {
+            die('Không có ID khách hàng.');
+        }
 
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
         include __DIR__ . '/../Views/backoffice/pages/bo-EditCusstomer.php';

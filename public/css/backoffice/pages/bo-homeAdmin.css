@@ -7,7 +7,7 @@
 /* Bố cục của hàng */
 .row-parameter {
     width: 98%;
-    margin-bottom: 20px;
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -15,7 +15,8 @@
 
 /* Mỗi cột */
 .col-parameter {
-    flex: 1; /* Đảm bảo mỗi cột chiếm cùng diện tích */
+    flex: 1;
+    /* Đảm bảo mỗi cột chiếm cùng diện tích */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;

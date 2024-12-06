@@ -26,7 +26,7 @@
 
                 <div class="k-portlet_head-toolbar">
                     <div class="k-portlet_head-toolbar-wrapper">
-                        <a href="#" class="btn-brand"><i class="fa-solid fa-plus"></i>Tạo sản phẩm</a>
+                        <a href="<?php echo BASE_URL . '?route=admin&action=bo-CreateProduct'; ?>" class="btn-brand"><i class="fa-solid fa-plus"></i>Tạo sản phẩm</a>
                     </div>
                 </div>
             </div>

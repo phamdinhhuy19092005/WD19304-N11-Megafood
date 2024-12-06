@@ -18,7 +18,7 @@
                 <img src="<?= IMG_BASE_URL . ($product['image_url']); ?>" alt="">
             </div>
             <div class="col_edit_2">
-                <form action="<?= BASE_URL . '?route=admin&action=updateProduct&id=' . htmlspecialchars($product['id']); ?>" id="form_edit" method="post">
+                <form action="<?= BASE_URL . '?route=admin&action=bo-Product&id=' . htmlspecialchars($product['id']); ?>" id="form_edit" method="post">
                     <div class="item_input_edit">
                         <label for="">Tên sản phẩm</label>
                         <input type="text" name="name" placeholder="Tên sản phẩm" value="<?= htmlspecialchars($product['name']); ?>">
@@ -42,8 +42,13 @@
                     <div class="box_item">
                         <div class="item_input_edit">
                             <label for="">Trạng thái</label>
-                            <input type="text" name="status" placeholder="Trạng thái sản phẩm" value="In Stock">
+                            <select name="status" id="status">
+                                <option value="In Stock" <?= $status == 'In Stock' ? 'selected' : '' ?>>In Stock</option>
+                                <option value="Out of Stock" <?= $status == 'Out of Stock' ? 'selected' : '' ?>>Out of Stock</option>
+                                <option value="On Sale" <?= $status == 'On Sale' ? 'selected' : '' ?>>On Sale</option>
+                            </select>
                         </div>
+
 
                         <div class="item_input_edit">
                             <label for="">Danh mục</label>
@@ -51,14 +56,15 @@
                         </div>
 
                         <div class="item_input_edit">
-                            <label for="">Nổi bật</label>
-                            <input type="text" name="is_featured" placeholder="Sản phẩm nổi bật" value="<?= htmlspecialchars($isFeatured); ?>">
+                            <label for="is_featured">Nổi bật</label>
+                            <input type="checkbox" name="is_featured" value="1" <?= ($isFeatured) ? 'checked' : ''; ?>>
                         </div>
 
                         <div class="item_input_edit">
-                            <label for="">Sale</label>
-                            <input type="text" name="sale" id="sale" placeholder="Giảm giá" value="<?= htmlspecialchars($sale); ?>">
+                            <label for="sale">Sale</label>
+                            <input type="checkbox" name="sale" value="1" <?= ($sale) ? 'checked' : ''; ?>>
                         </div>
+
                     </div>
 
                     <div class="k-content_foot">

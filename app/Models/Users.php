@@ -23,4 +23,22 @@ class Users
 
         return $users;
     }
+
+    public function getUserById($id)
+    {
+        if (!$id || !is_numeric($id)) {
+            return null;
+        }
+
+        $query = "SELECT id, first_name, last_name, email, phone, status, created_at FROM " . $this->table . " WHERE id = :id LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $user ? $user : null;
+    }
 }

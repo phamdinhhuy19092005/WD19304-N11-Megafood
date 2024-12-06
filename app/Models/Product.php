@@ -69,32 +69,35 @@ class Product
 
 
     // ========================= EDIT PRODUCT =========================//
-    public function updateProduct($id, $name, $img, $price, $description, $status, $category_id, $is_featured, $sale)
+    public function updateProduct($id, $data)
     {
-        $query = "UPDATE " . $this->table . " 
-              SET 
-                  name = :name, 
-                  image_url = :img, 
-                  price = :price, 
-                  description = :description, 
-                  status = :status, 
-                  id_categories = :category_id, 
-                  is_featured = :is_featured, 
-                  sale = :sale
-              WHERE id = :id";
+        if (!is_array($data)) {
+            throw new TypeError("Dữ liệu truyền vào phải là mảng.");
+        }
 
-        $stmt = $this->conn->prepare($query);
+        $sql = "UPDATE products SET 
+                    name = ?, 
+                    image_url = ?, 
+                    price = ?, 
+                    description = ?, 
+                    status = ?, 
+                    id_categories = ?, 
+                    is_featured = ?, 
+                    sale = ? 
+                WHERE id = ?";
 
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-        $stmt->bindParam(':img', $img, PDO::PARAM_STR);
-        $stmt->bindParam(':price', $price, PDO::PARAM_STR);
-        $stmt->bindParam(':description', $description, PDO::PARAM_STR);
-        $stmt->bindParam(':status', $status, PDO::PARAM_STR);
-        $stmt->bindParam(':category_id', $category_id, PDO::PARAM_INT);
-        $stmt->bindParam(':is_featured', $is_featured, PDO::PARAM_BOOL);
-        $stmt->bindParam(':sale', $sale, PDO::PARAM_BOOL);
+        $stmt = $this->conn->prepare($sql);
 
-        return $stmt->execute();
+        return $stmt->execute([
+            $data['name'],
+            $data['image_url'],
+            $data['price'],
+            $data['description'],
+            $data['status'],
+            $data['id_categories'],
+            $data['is_featured'],
+            $data['sale'],
+            $id
+        ]);
     }
 }
