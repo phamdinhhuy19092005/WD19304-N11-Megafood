@@ -1,28 +1,27 @@
-$(document).ready(function() {
-    $('#orderButton').click(function() {
-        // Dữ liệu ví dụ (tuỳ chỉnh theo dự án của bạn)
-        let orderData = {
-            email: 'tanh7164@gmail.com', // Email khách hàng
-            subject: 'order successfully',
-            content: '<p>Cảm ơn bạn đã đặt hàng tại Mega Food!</p>'
-        };
+// $(document).ready(function() {
+//     $('#orderButton').click(function() {
+//         let orderData = {
+//             email: 'tanh7164@gmail.com',
+//             subject: 'order successfully',
+//             content: '<p>Cảm ơn bạn đã đặt hàng tại Mega Food!</p>'
+//         };
 
-        // Gửi AJAX request
-        $.ajax({
-url: './config/process_order.php', // Đường dẫn xử lý server
-method: 'POST',
-data: orderData,
-success: function(response) {
-    if (response.trim() === "success") {
-        $('#successOverlay').fadeIn(); // Hiển thị overlay thành công
-    } else {
-        alert('Lỗi từ server: ' + response); // Hiển thị chi tiết lỗi từ server
-    }
-},
-error: function(xhr, status, error) {
-    alert('Lỗi AJAX: ' + error); // Lỗi từ phía client
-}
-});
-
-    });
-});
+//         $.ajax({
+//             url: './config/process_order.php',
+//             method: 'POST',
+//             data: orderData,
+//             success: function(response) {
+//                 if (response.trim() === "success") {
+//                     // $('#successOverlay').fadeIn(); // Hiển thị overlay thành công
+//                 } else {
+//                     // Hiển thị lỗi trong giao diện thay vì alert
+//                     $('#errorMessage').text('Đã xảy ra lỗi. Vui lòng thử lại sau.').fadeIn();
+//                 }
+//             },
+//             error: function() {
+//                 // Hiển thị lỗi trong giao diện thay vì alert
+//                 $('#errorMessage').text('Lỗi khi gửi yêu cầu. Vui lòng kiểm tra kết nối mạng và thử lại.').fadeIn();
+//             }
+//         });
+//     });
+// });

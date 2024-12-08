@@ -1,14 +1,14 @@
-
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
+
+
+
+
 //Hàm gửi mail
 function sendMail($to, $subject, $content){
-
-
-
-
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -41,3 +41,4 @@ try {
 
 
 }
+?>

@@ -137,6 +137,9 @@ li a {
 .repassword {
     text-align: center;
 }
+.toggleForm{
+    cursor: pointer;
+}
 
 .repassword:hover {
     color: var(--main-color);
