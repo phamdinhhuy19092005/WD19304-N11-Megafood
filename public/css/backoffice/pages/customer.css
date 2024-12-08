@@ -44,6 +44,27 @@
 
 }
 
+/* --- */
+.status_badge{
+    font-size: 12px;
+    padding: 3px 5px;
+    color: #FFFFFF;
+    border-radius: 2rem;
+}
+.status_badge.active {
+    background-color: #1DC9B7;
+}
+
+.status_badge.banned{
+    background-color: #dc3545;
+}
+
+.status_badge.pending{
+    background-color: #ffc107;
+}
+
+/* --- */
+
 .k-content__head-breadcrumb-link:hover {
     color: #6982FF;
 }
@@ -61,17 +82,19 @@
 
 }
 
-.search_container{
+.search_container {
     margin: 10px 0px;
     width: 20%;
 }
-.search_container input{
+
+.search_container input {
     border-radius: 5px;
     padding: 2px 5px;
     outline: none;
     border: 1px solid #aba7c9;
 }
-.search_container input:focus{
+
+.search_container input:focus {
     border: 1px solid #387DFF;
     box-shadow: 0 0 1px rgba(56, 125, 255, 0.5);
     background-color: #F8FAFF;
@@ -201,9 +224,11 @@
     color: #646C9A;
     margin-bottom: 20px;
 }
-th{
+
+th {
     cursor: pointer;
 }
+
 th,
 td {
     text-align: center;
@@ -215,13 +240,6 @@ td {
     color: #5578EB;
 }
 
-.status .status_badge {
-    font-size: 12px;
-    padding: 3px 5px;
-    color: #FFFFFF;
-    background-color: #1DC9B7;
-    border-radius: 2rem;
-}
 
 .actions i {
     cursor: pointer;

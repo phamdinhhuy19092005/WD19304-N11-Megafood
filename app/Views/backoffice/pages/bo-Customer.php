@@ -60,7 +60,7 @@
                                     <td class="email"><?= $user['email']; ?></td>
                                     <td class="access_channel">Website</td>
                                     <td class="status">
-                                        <span class="status_badge"><?= $user['status']; ?></span>
+                                        <span class="status_badge <?= htmlspecialchars($user['status'] ?? '') ?> "><?= $user['status']; ?></span>
                                     </td>
                                     <td class="last_logged"><?= $user['created_at']; ?></td>
                                     <td class="created_at"><?= $user['created_at']; ?></td>

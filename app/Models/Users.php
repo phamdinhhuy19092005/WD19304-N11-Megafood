@@ -48,6 +48,11 @@ class Users
             throw new TypeError("Dữ liệu truyền vào phải là mảng.");
         }
 
+        if (!$this->conn) {
+            throw new RuntimeException("Không thể kết nối đến cơ sở dữ liệu.");
+        }
+
+
         $sql = "UPDATE users SET 
                 first_name = ?, 
                 last_name = ?, 
@@ -59,12 +64,26 @@ class Users
         $stmt = $this->conn->prepare($sql);
 
         return $stmt->execute([
-            $data['first_name'],  
-            $data['last_name'],  
-            $data['email'],       
-            $data['phone'],     
-            $data['status'],     
-            $id                   
+            $data['first_name'],
+            $data['last_name'],
+            $data['email'],
+            $data['phone'],
+            $data['status'],
+            $id
         ]);
+    }
+
+    public function deleteCustomer($id)
+    {
+        if (!$id || !is_numeric($id)) {
+            return false;
+        }
+
+        $query = "DELETE FROM " . $this->table . " WHERE id = :id LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        return $stmt->execute();
     }
 }

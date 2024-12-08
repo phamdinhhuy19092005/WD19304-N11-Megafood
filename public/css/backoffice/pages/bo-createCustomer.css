@@ -357,12 +357,14 @@ header {
 .k-content__head-breadcrumb-link:hover {
     color: #6982FF;
 }
+
 .k-form_head {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.k-form_head-title h3{
+
+.k-form_head-title h3 {
     font-size: 1.3rem;
     padding: 10px;
 }
@@ -371,22 +373,27 @@ header {
     display: block;
     width: 98%;
 }
-.k-form_body{
+
+.k-form_body {
     width: 100%;
     background-color: #FFFFFF;
     border-radius: 5px;
     padding: 20px;
     border-bottom: 1px solid #EBEDF2;
 }
-.form-group{
+
+.form-group {
     padding: 10px;
     margin-bottom: 10px;
 }
-.form-group label{
+
+.form-group label {
+    display: block;
     font-size: 14px;
-    
+
 }
-.form-group input{
+
+.form-group input {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -395,23 +402,29 @@ header {
     outline: none;
 }
 
-.form-group input:focus{
+select {
+    margin-top: 10px;
+}
+
+.form-group input:focus {
     border: 1px solid #387DFF;
     box-shadow: 0 0 1px rgba(56, 125, 255, 0.5);
     background-color: #F8FAFF;
 }
 
 
-.form-group-select{
+.form-group-select {
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
 }
-.form-group-select label{
+
+.form-group-select label {
     font-size: 14px;
-    
+
 }
-.form-group-select select{
+
+.form-group-select select {
     width: 40%;
     padding: 10px;
     border-radius: 5px;
@@ -421,22 +434,37 @@ header {
     cursor: pointer;
 }
 
-.allow-login,.channel{
+.allow-login,
+.channel {
     width: 50%;
 }
 
+.allow-login label,
+.channel label {
+    display: block;
+}
 
-.k-form_foot{
+
+.box-group {
+    display: flex;
+}
+
+.box-group > .form-group, .form-group-select {
+    width: 50%;
+}
+.k-form_foot {
     width: 100%;
     background-color: #FFFFFF;
     border-radius: 5px;
     padding: 20px;
     border-bottom: 1px solid #EBEDF2;
 }
-.k-form_actions{
+
+.k-form_actions {
     padding: 5px 10px;
 }
-.k-form_actions .btn-save{ 
+
+.k-form_actions .btn-save {
     width: 10%;
     padding: 10px;
     border: none;
@@ -444,13 +472,15 @@ header {
     border-radius: 5px;
     color: #fff;
     opacity: 0.9;
-    
+
 }
-.k-form_actions .btn-save:hover{
+
+.k-form_actions .btn-save:hover {
     opacity: 1;
     cursor: pointer;
 }
-.k-form_actions .btn-cancel{ 
+
+.k-form_actions .btn-cancel {
     padding: 10px;
     border: none;
     background-color: #FFFFFF;
@@ -458,12 +488,13 @@ header {
     border: 1px solid #dbdcdc;
 
 }
-.k-form_actions .btn-cancel:hover{
+
+.k-form_actions .btn-cancel:hover {
     cursor: pointer;
     background-color: #F4F5F8;
 }
 
-.k-form_actions .btn-delete{ 
+.k-form_actions .btn-delete {
     padding: 10px;
     border: none;
     background-color: #FFEBF1;
@@ -472,7 +503,8 @@ header {
     color: #FD397A;
     float: right;
 }
-.k-form_actions .btn-delete:hover{
+
+.k-form_actions .btn-delete:hover {
     cursor: pointer;
     color: #FFEBF1;
     background-color: #FD397A;
