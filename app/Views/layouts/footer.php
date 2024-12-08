@@ -152,8 +152,6 @@
     <script src="<?php echo JS_PAGES_URL; ?>detail.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>saveVoucher.js"></script>
 <?php elseif ($page === 'payment'): ?>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="<?php echo JS_PAGES_URL; ?>sendMail.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>orderSuccessfully.js"></script>
 
 
