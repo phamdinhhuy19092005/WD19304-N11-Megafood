@@ -329,6 +329,10 @@ form#customer_address {
         min-width: 100px;
     }
 
+    .row{
+        display: block;
+    }
+
     .row.row_acc {
         margin: 0;
         display: block;

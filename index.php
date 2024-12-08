@@ -81,9 +81,9 @@ switch ($route) {
             case 'bo-Administrator':
                 $controller->adminitrastor();
                 break;
-            case 'bo-Access':
-                $controller->access();
-                break;
+            // case 'bo-Access':
+            //     $controller->access();
+            //     break;
             case 'bo-Category':
                 $controller->adminCategory();
                 break;
@@ -165,10 +165,31 @@ switch ($route) {
         $controller = new ProductController();
         $controller->productDetail();
         break;
-    case 'account':
-        $controller = new AccountController();
-        $controller->accounts();
-        break;
+        case 'account':
+            $controller = new AccountController();
+            $action = $_GET['action'] ?? 'account';
+        
+            switch ($action) {
+                case 'account':
+                    $controller->accounts();  // Call the accounts method
+                    break;
+                case 'orders':
+                    $controller->orders(); 
+                    break;
+                case 'changepassword':
+                    $controller->changePassword();  
+                    break;
+                case 'addressbook':
+                    $controller->addressBook(); 
+                    break;
+                case 'addaddress':
+                    $controller->addAddress();  
+                    break;
+                default:
+                    $controller->accounts();  
+            }
+            break;
+        
     case 'contact':
         $controller = new ContactController();
         $controller->contact();

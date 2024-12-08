@@ -12,7 +12,7 @@ class Categories
         $this->conn = $database->connect();
     }
 
-    // Lấy tất cả tin tức
+    // Lấy tất cả danh mục
     public function getAllCategory()
     {
         $query = "SELECT * FROM " . $this->table;

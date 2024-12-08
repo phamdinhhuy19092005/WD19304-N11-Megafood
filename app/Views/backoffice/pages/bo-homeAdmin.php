@@ -18,7 +18,7 @@
                 <div class="k-portlet-parameter"style="background-color: #FD397A; color: #ffffff;"   >
                     <div class="k-portlet-paramter-head">
                         <div class="head-label">
-                            <h3 class="head-label-title">Khách hàng mới</h3>
+                            <h3 class="head-label-title">Khách hàng </h3>
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@
                         <div class="k-widget-19">
                             <div class="k-widget-19-title">
                                 <div class="k-widget-19-content" >
-                                    0
+                                    <?php echo $orderCount ?>
                                 </div>
                             </div>
                         </div>

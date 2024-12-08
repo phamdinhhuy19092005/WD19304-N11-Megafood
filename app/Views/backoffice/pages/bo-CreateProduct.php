@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="row">
-        <form action="">
+        <form action="<?php echo BASE_URL . '?route=admin&action=bo-CreateProduct'; ?>" method="POST" autocomplete="off">
             <div class="form_left">
                 <div class="k-portlet">
                     <div class="k-portlet_head">

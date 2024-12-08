@@ -142,10 +142,6 @@
                                                 <i class="fa-solid fa-circle"></i>
                                                 <a href="<?php echo BASE_URL . '?route=admin&action=bo-Administrator'; ?>">Quản trị viên</a>
                                             </li>
-                                            <li class="item_dropdow_menu">
-                                                <i class="fa-solid fa-circle"></i>
-                                                <a href="<?php echo BASE_URL . '?route=admin&action=bo-Access'; ?>">Quyền truy cập</a>
-                                            </li>
                                         </ul>
                                     </div>
 
@@ -165,7 +161,10 @@
                     <div class="header_rigth">
                         <div class="info_users">
                             <span>Xin chào,</span>
-                            <span class="name_users"><?php echo $_SESSION['admin_name'] ?></span>
+                            <span class="name_users">
+                                <?php echo isset($_SESSION['admin_name']) ? $_SESSION['admin_name'] : 'Khách'; ?>
+                            </span>
+
                             <div class="logo_ninja">
                                 <img src="	https://uudam.vn/backoffice/assets/img/users/ninja.png" alt="">
                             </div>

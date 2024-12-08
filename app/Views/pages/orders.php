@@ -43,22 +43,22 @@
 
                         <ul>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account" class="title_info active">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=account" class="title_info">
                                     Thông tin tài khoản
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=orders" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=orders" class="title_info active">
                                     Đơn hàng của bạn
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=changepassword" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=changepassword" class="title_info">
                                     Đổi mật khẩu
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=addressbook" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=addaddress" class="title_info">
                                     Sổ địa chỉ (1)
                                 </a>
                             </li>
@@ -78,7 +78,7 @@
                                                 <th>Ngày</th>
                                                 <th>Tên người nhận</th>
                                                 <th>Địa chỉ</th>
-                                                <th>Giá trị đơn hàng</th>
+                                                <th>SL đơn hàng</th>
                                                 <th>TT thanh toán</th>
                                                 <th>TT vận chuyển</th>
                                             </tr>
@@ -86,38 +86,39 @@
 
                                         <tbody>
 
-                                            <tr>
-                                                <td>
-                                                    <p>Gà Xốt Cay Hàn Quốc</p>
-                                                </td>
+                                            <?php foreach ($orders as $order): ?>
+                                                <tr>
+                                                    <td>
+                                                        <p>HK-00<?php echo $order['id'] ?></p>
+                                                    </td>
 
-                                                <td>
-                                                    <p>31/12/2024</p>
-                                                </td>
+                                                    <td>
+                                                        <p><?php echo $order['created_at'] ?></p>
+                                                    </td>
 
-                                                <td>
-                                                    <p>Phạm Đình Huy</p>
+                                                    <td>
+                                                        <p><?php echo $order['customer_name'] ?></p>
+                                                    </td>
 
-                                                </td>
+                                                    <td>
+                                                        <p><?php echo $order['shipping_address'] ?></p>
+                                                    </td>
 
-                                                <td>
-                                                    <p>123 Đường ABC, Phan Rang, Ninh Thuận</p>
-                                                </td>
+                                                    <td>
+                                                        <p><?php echo $order['total_product'] ?></p>
+                                                    </td>
 
-                                                <td>
-                                                    <p>49.000 VND</p>
-                                                </td>
+                                                    <td style="color: #E31837;">
+                                                        <strong>
+                                                            <p><?php echo number_format($order['total_price'], 0, ',', '.'); ?> VND</p>
+                                                        </strong>
+                                                    </td>
 
-                                                <td style="color: #E31837;">
-                                                    <strong>
-                                                        <p>49.000 VND</p>
-                                                    </strong>
-                                                </td>
-
-                                                <td>
-                                                    <p style="text-align: center; background: orange; color: white; border-radius: 10px;">Chờ xử lý</p>
-                                                </td>
-                                            </tr>
+                                                    <td>
+                                                        <p style="text-align: center; padding: 2px; font-size: 12px; background: orange; color: white; border-radius: 10px;"><?php echo $order['status'] ?></p>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
 
                                         </tbody>
                                     </table>

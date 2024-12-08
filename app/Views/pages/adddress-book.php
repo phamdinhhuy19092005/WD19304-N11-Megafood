@@ -43,22 +43,22 @@
 
                         <ul>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account" class="title_info active">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=account" class="title_info">
                                     Thông tin tài khoản
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=orders" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=orders" class="title_info">
                                     Đơn hàng của bạn
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=changepassword" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=changepassword" class="title_info">
                                     Đổi mật khẩu
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=addressbook" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=addaddress" class="title_info  active">
                                     Sổ địa chỉ (1)
                                 </a>
                             </li>

@@ -338,17 +338,17 @@ ul.list_img_prd {
     color: var(--white-color);
 }
 
-
-.button_actions .btn_wishlist {
-    background-color: var(--main-color);
+.btn_favorites {
+    background: var(--main-color);
     display: flex;
+    width: 10%;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
     border-radius: 5px;
-    min-inline-size: 50px;
-    height: 50px;
-    border: none;
+}
+
+.btn_favorites i{
+    color: var(--white-color);
 }
 
 .btn_wishlist i {
@@ -369,6 +369,7 @@ ul.list_img_prd {
     border: none;
     width: 49%;
     height: 50px;
+    color: var(--white-color);
 }
 
 .group-button button a {

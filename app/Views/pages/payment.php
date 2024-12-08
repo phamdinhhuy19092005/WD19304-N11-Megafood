@@ -11,7 +11,9 @@ if (isset($styles[$page])) {
 
 ?>
 <div class="body_wrap">
-  <form action="">
+
+
+  <form action="<?php echo BASE_URL; ?>index.php?route=cart&action=payment" method="post">
     <!-- main -->
     <div class="main">
       <header class="main_header">
@@ -56,7 +58,7 @@ if (isset($styles[$page])) {
                         type="text"
                         class="field_input_form"
                         data-bind="name"
-                        value="<?php echo isset($_SESSION['first_name']) ? $_SESSION['first_name'] : ''; ?>"
+                        value="<?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : 'Đăng Nhập'; ?>"
                         placeholder="Họ và tên" />
                     </div>
                   </div>
@@ -69,12 +71,12 @@ if (isset($styles[$page])) {
                         class="field_input_form"
                         data-bind="phone"
                         value=""
-                        placeholder="Số điện thoại (tùy chọn)" />
+                        placeholder="Số điện thoại (tùy chọn)" required />
                     </div>
                     <div class="field_select_phone">
                       <select name="phone_region" id="phone_region">
-                        <option value="US">USA</option>
                         <option value="VN">VIE</option>
+                        <option value="US">USA</option>
                         <option value="THA">THA</option>
                         <option value="FRA">FRA</option>
                       </select>
@@ -89,90 +91,7 @@ if (isset($styles[$page])) {
                         class="field_input_form"
                         data-bind="address"
                         value=""
-                        placeholder="Địa chỉ (tùy chọn)" />
-                    </div>
-                  </div>
-
-                  <div class="field_address">
-                    <div class="field_input_address">
-                      <!-- <label for="province" class="field_label">Tỉnh thành</label> -->
-                      <select name="province" id="province" class="province">
-                        <option value="">Chọn tỉnh thành</option>
-                        <option value="AG">An Giang</option>
-                        <option value="BV">Bà Rịa - Vũng Tàu</option>
-                        <option value="BK">Bắc Kạn</option>
-                        <option value="BG">Bắc Giang</option>
-                        <option value="BN">Bắc Ninh</option>
-                        <option value="BL">Bạc Liêu</option>
-                        <option value="BT">Bến Tre</option>
-                        <option value="BD">Bình Dương</option>
-                        <option value="BĐ">Bình Định</option>
-                        <option value="BP">Bình Phước</option>
-                        <option value="BTN">Bình Thuận</option>
-                        <option value="CM">Cà Mau</option>
-                        <option value="CB">Cao Bằng</option>
-                        <option value="CT">Cần Thơ</option>
-                        <option value="ĐT">Đà Nẵng</option>
-                        <option value="DD">Đắk Lắk</option>
-                        <option value="ĐN">Đắk Nông</option>
-                        <option value="DB">Điện Biên</option>
-                        <option value="ĐB">Đồng Nai</option>
-                        <option value="ĐT">Đồng Tháp</option>
-                        <option value="GL">Gia Lai</option>
-                        <option value="HG">Hà Giang</option>
-                        <option value="HN">Hà Nội</option>
-                        <option value="HT">Hà Tĩnh</option>
-                        <option value="HD">Hải Dương</option>
-                        <option value="HP">Hải Phòng</option>
-                        <option value="HG">Hậu Giang</option>
-                        <option value="HB">Hòa Bình</option>
-                        <option value="HY">Hưng Yên</option>
-                        <option value="KH">Khánh Hòa</option>
-                        <option value="KG">Kiên Giang</option>
-                        <option value="KT">Kon Tum</option>
-                        <option value="LC">Lai Châu</option>
-                        <option value="LS">Lạng Sơn</option>
-                        <option value="LC">Lào Cai</option>
-                        <option value="LD">Lâm Đồng</option>
-                        <option value="LA">Long An</option>
-                        <option value="ND">Nam Định</option>
-                        <option value="NA">Nghệ An</option>
-                        <option value="NB">Ninh Bình</option>
-                        <option value="NT">Ninh Thuận</option>
-                        <option value="PT">Phú Thọ</option>
-                        <option value="PY">Phú Yên</option>
-                        <option value="QB">Quảng Bình</option>
-                        <option value="QNg">Quảng Ngãi</option>
-                        <option value="QN">Quảng Nam</option>
-                        <option value="QN">Quảng Ninh</option>
-                        <option value="QT">Quảng Trị</option>
-                        <option value="SG">TP. Hồ Chí Minh</option> <!-- Đã thêm TP. Hồ Chí Minh -->
-                        <option value="ST">Sóc Trăng</option>
-                        <option value="SL">Sơn La</option>
-                        <option value="TH">Thanh Hóa</option>
-                        <option value="TH">Thái Bình</option>
-                        <option value="TN">Thái Nguyên</option>
-                        <option value="TT">Thừa Thiên - Huế</option>
-                        <option value="TG">Tiền Giang</option>
-                        <option value="TV">Trà Vinh</option>
-                        <option value="TQ">Tuyên Quang</option>
-                        <option value="VL">Vĩnh Long</option>
-                        <option value="VP">Vĩnh Phúc</option>
-                        <option value="YB">Yên Bái</option>
-                      </select>
-
-                    </div>
-                  </div>
-
-                  <div class="field_address">
-                    <div class="field_input_address">
-                      <input name="district" id="district" type="text" class="field_input_form"  placeholder="Quận huyện (tùy chọn)" value="">
-                    </div>
-
-                  </div>
-                  <div class="field_address">
-                    <div class="field_input_address">
-                      <input name="district" id="district" type="text" class="field_input_form" placeholder="Phường xã (tùy chọn)" value="">
+                        placeholder="Địa chỉ (vd: 123/Đ.ABC/HCM)" required />
                     </div>
                   </div>
                 </div>
@@ -197,6 +116,7 @@ if (isset($styles[$page])) {
               </div>
               <div class="section_ship_content">
                 <div class="alert_info">
+                  <input type="hidden" name="shipping" value="Giao hàng tận nơi">
                   <input type="radio" id="delivery" name="delivery" checked>
                   <label for="delivery">Giao hàng tận nơi</label> <span>40.000 VND</span>
                 </div>
@@ -212,11 +132,11 @@ if (isset($styles[$page])) {
                 <div class="content_method_box_row">
                   <div class="radio_wrapper">
                     <div class="radio_input">
-                      <input type="radio" id="transfer1" />
+                      <input type="radio" id="transfer1" name="payment" value="chuyenkhoan" />
                       <label for="transfer1" class="radio_label_primary">Chuyển khoản</label>
                     </div>
                     <!-- icon -->
-                    <label for="" class="radio_label">
+                    <label for="transfer1" class="radio_label">
                       <span class="radio_label_accessory">
                         <i class="bi bi-cash"></i>
                       </span>
@@ -224,15 +144,16 @@ if (isset($styles[$page])) {
                   </div>
                 </div>
               </div>
+
               <div class="content_method_box">
                 <div class="content_method_box_row">
                   <div class="radio_wrapper">
                     <div class="radio_input">
-                      <input type="radio" id="transfer2" />
-                      <label class="radio_label_primary" for="transfer2">Thu hộ (COD)</label>
+                      <input type="radio" id="transfer2" name="payment" value="cod" />
+                      <label for="transfer2" class="radio_label_primary">Thu hộ (COD)</label>
                     </div>
                     <!-- icon -->
-                    <label for="" class="radio_label">
+                    <label for="transfer2" class="radio_label">
                       <span class="radio_label_accessory">
                         <i class="bi bi-cash"></i>
                       </span>
@@ -240,6 +161,7 @@ if (isset($styles[$page])) {
                   </div>
                 </div>
               </div>
+
             </section>
           </div>
         </article>
@@ -247,7 +169,10 @@ if (isset($styles[$page])) {
     </div>
     <!-- aside -->
     <aside class="sidebar_aside">
-      <div class="sidebar_header">Đơn hàng (1 sản phẩm)</div>
+      <div class="sidebar_header">Đơn hàng (
+        <?php echo $totalQuantity; ?>
+        sản phẩm)</div>
+      <input type="hidden" name="total_product" value="<?php echo $totalQuantity; ?>">
       <div class="sidebar_content">
         <div class="order_summary">
           <div class="order_summary_section">
@@ -255,6 +180,7 @@ if (isset($styles[$page])) {
             <div class="order_summary_item_1">
               <table class="product_table">
                 <tbody>
+
                   <?php if (!empty($cart)): ?>
                     <?php foreach ($cart as $id => $item): ?>
                       <?php $subtotal = $item['price'] * $item['quantity']; ?>
@@ -282,6 +208,8 @@ if (isset($styles[$page])) {
                       <td colspan="3">Giỏ hàng của bạn đang trống.</td>
                     </tr>
                   <?php endif; ?>
+
+
                 </tbody>
               </table>
 
@@ -313,7 +241,7 @@ if (isset($styles[$page])) {
                 <div class="fieldset">
                   <div class="fieldset_input_btn">
                     <div class="fieldset_input">
-                      <input type="text" placeholder="Nhập mã giảm giá" />
+                      <input type="text" name="code" placeholder="Nhập mã giảm giá" />
                     </div>
                     <button class="fieldset_btn">
                       <span>Áp dụng</span>
@@ -338,8 +266,10 @@ if (isset($styles[$page])) {
                 <tfoot class="total_line_table_footer">
                   <tr class="total_line_payment">
                     <th class="total_line_name"><span>Tổng cộng</span></th>
+                    <input type="hidden" name="total_price" value="<?php echo $totalPrice + 40000; ?>">
                     <td class="total_line_price"><span><?php echo number_format($totalPrice + 40000, 0, ',', '.') . 'đ'; ?></span></td>
                   </tr>
+
                 </tfoot>
               </table>
             </div>
@@ -347,7 +277,7 @@ if (isset($styles[$page])) {
               <div class="previous_link">
                 <a href="<?php echo BASE_URL; ?>index.php?route=cart" class="previous_link_1"><i class="bi bi-chevron-left"></i>Quay về giỏ hàng</a>
               </div>
-              <button type="button" class="btn_checkout" id="orderButton"><span>Đặt hàng</span></button>
+              <button type="submit" name="btnPayment" class="btn_checkout" id="orderButton"><span>Đặt hàng</span></button>
             </div>
 
 
@@ -360,6 +290,7 @@ if (isset($styles[$page])) {
                   </svg>
                 </div>
                 <b>Đặt hàng thành công</b><br>
+                <b><?php echo number_format($totalPrice + 40000, 0, ',', '.') . 'đ'; ?></b><br>
                 <p>Một email xác nhận đã được gửi tới <span><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></span> <br> Xin vui lòng kiểm tra mail của bạn</p>
                 <button id="closeOverlay">Đóng</button>
               </div>
@@ -368,40 +299,40 @@ if (isset($styles[$page])) {
             <script>
               $(document).ready(function() {
                 $('#orderButton').click(function() {
-                  // Dữ liệu ví dụ (tuỳ chỉnh theo dự án của bạn)
                   let orderData = {
-                    email: '<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?>', // Email khách hàng
+                    email: '<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?>',
+                    totalPrice: <?php echo number_format($totalPrice + 40000, 0, ',', '.') . 'VND'; ?>,
+                    content: '<p>Cảm ơn bạn đã đặt hàng tại Mega Food!</p>',
                     subject: 'order successfully',
                     content: '<p>Cảm ơn bạn đã đặt hàng tại Mega Food!</p>'
                   };
 
                   // Gửi AJAX request
                   $.ajax({
-                    url: './config/process_order.php', // Đường dẫn xử lý server
+                    url: './config/process_order.php',
                     method: 'POST',
                     data: orderData,
                     success: function(response) {
                       if (response.trim() === "success") {
-                        $('#successOverlay').fadeIn(); // Hiển thị overlay thành công
+                        $('#successOverlay').fadeIn();
                       } else {
-                        alert('Lỗi từ server: ' + response); // Hiển thị chi tiết lỗi từ server
+                        alert('Lỗi từ server: ' + response);
                       }
                     },
                     error: function(xhr, status, error) {
-                      alert('Lỗi AJAX: ' + error); // Lỗi từ phía client
+                      alert('Lỗi AJAX: ' + error);
                     }
                   });
 
                 });
               });
             </script>
-
-
-
-
           </div>
         </div>
       </div>
     </aside>
   </form>
+
+
+
 </div>

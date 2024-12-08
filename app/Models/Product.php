@@ -42,7 +42,7 @@ class Product
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-
+    // Lấy sản phẩm nổi bật
     public function getProductFeatured()
     {
         $query = "SELECT id, name, description, price, image_url, id_categories 
@@ -52,7 +52,7 @@ class Product
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
+    // Lấy sản phẩm giảm giá
     public function getProductSale()
     {
         $query = "SELECT id, name, description, price, image_url, id_categories 
@@ -64,6 +64,39 @@ class Product
     }
 
     // ========================= ADD PRODUCT =========================//
+    public function createProduct($data)
+    {
+
+        
+        // Kiểm tra nếu dữ liệu truyền vào là mảng
+        if (!is_array($data)) {
+            throw new TypeError("Dữ liệu truyền vào phải là mảng.");
+        }
+
+        // Kiểm tra kết nối cơ sở dữ liệu
+        if (!$this->conn) {
+            throw new RuntimeException("Không thể kết nối đến cơ sở dữ liệu.");
+        }
+
+        // Tạo câu truy vấn
+        $sql = "INSERT INTO products (name, image_url, price, description, status, id_categories, is_featured, sale) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        $stmt = $this->conn->prepare($sql);
+
+        // Thực thi câu lệnh
+        return $stmt->execute([
+            $data['name'] ?? '',
+            $data['image_url'] ?? '',
+            $data['price'] ?? 0,
+            $data['description'] ?? '',
+            $data['status'] ?? '',
+            $data['id_categories'] ?? 0,
+            $data['is_featured'] ?? 0,
+            $data['sale'] ?? 0
+        ]);
+    }
+
 
 
 
@@ -75,12 +108,10 @@ class Product
             throw new TypeError("Dữ liệu truyền vào phải là mảng.");
         }
 
-        // Kiểm tra kết nối cơ sở dữ liệu
         if (!$this->conn) {
             throw new RuntimeException("Không thể kết nối đến cơ sở dữ liệu.");
         }
 
-        // Tạo câu truy vấn
         $sql = "UPDATE products SET 
                     name = ?, 
                     image_url = ?, 
@@ -94,7 +125,6 @@ class Product
 
         $stmt = $this->conn->prepare($sql);
 
-        // Kiểm tra và thực thi câu lệnh
         return $stmt->execute([
             $data['name'] ?? '',
             $data['image_url'] ?? '',

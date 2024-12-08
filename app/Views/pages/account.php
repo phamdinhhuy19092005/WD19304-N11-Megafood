@@ -35,23 +35,23 @@
 
                         <ul>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account" class="title_info active">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=account" class="title_info active">
                                     Thông tin tài khoản
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=orders" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=orders" class="title_info">
                                     Đơn hàng của bạn
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=changepassword" class="title_info">
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=changepassword" class="title_info">
                                     Đổi mật khẩu
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo BASE_URL; ?>index.php?route=account&page=addressbook" class="title_info">
-                                    Sổ địa chỉ (1)
+                                <a href="<?php echo BASE_URL; ?>index.php?route=account&action=addaddress" class="title_info">
+                                    Sổ địa chỉ (0)
                                 </a>
                             </li>
                         </ul>
@@ -62,11 +62,10 @@
                         </h2>
 
                         <div class="form-signup">
-                            <p><strong>Họ tên:</strong><?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : ''; ?></p>
+                            <p><strong>Họ tên:</strong> <?php echo isset($_SESSION['first_name']) && isset($_SESSION['last_name']) ? $_SESSION['first_name'] . " " . $_SESSION['last_name'] : ''; ?></p>
                             <p><strong>Email:</strong> <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></p>
 
-                            <p><strong>Địa chỉ :</strong> Công Viên Phần Mềm Quang Trung quận 12, Quận 12, TP Hồ Chí
-                                Minh, Vietnam</p>
+                            <p><strong>Địa chỉ :</strong> </p>
                         </div>
                     </div>
                 </div>

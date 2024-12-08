@@ -65,7 +65,7 @@
                                         <td class="id"><?= $product['id']; ?></td>
                                         <td class="name"><?= $product['name']; ?></td>
                                         <td class="img"><img style="width: 100px; height: 100px;" src="<?= IMG_BASE_URL . $product['image_url']; ?>" alt=""></td>
-                                        <td class="status">
+                                        <td class="status <?= $product['status']; ?>">
                                             <span class="status_badge"><?= $product['status']; ?></span>
                                         </td>
                                         <td class="trademark">Mega Food</td>

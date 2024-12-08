@@ -3,10 +3,14 @@ require_once __DIR__ . '/../Models/Auth.php';
 require_once __DIR__ . '/../Models/Users.php';
 require_once __DIR__ . '/../Models/Product.php';
 require_once __DIR__ . '/../Models/Categories.php';
+require_once __DIR__ . '/../Models/Orders.php';
+require_once __DIR__ . '/../Models/Admin.php';
 
 
 class AdminController
 {
+
+    
     // ============================= PAGE ADMIN ============================= //
 
     // Login admin
@@ -28,16 +32,22 @@ class AdminController
         $userModel = new Users();
         $productModel = new Product();
         $categoriesModel = new Categories();
+        $orderModel = new Orders();
 
 
+        
+        
+        
+        $orders = $orderModel->getAllOrder();
         $products = $productModel->getAllProducts();
         $users = $userModel->getAllUser();
         $categories = $categoriesModel->getAllCategory();
-
-
+        
+        
         $productCount = count($products);
         $usersCount = count($users);
         $categoryCount = count(($categories));
+        $orderCount = count($orders);
 
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
         include __DIR__ . '/../Views/backoffice/pages/bo-homeAdmin.php';
@@ -49,20 +59,25 @@ class AdminController
     {
         $title = "Admin - Quản trị viên";
         $page = "bo-Administrator";
+
+        $adminModel = new Admins();
+
+        $admins = $adminModel->getAllAdmin();
+
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
         include __DIR__ . '/../Views/backoffice/pages/bo-Administrator.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
     //Trang quyền truy cập
-    public function access()
-    {
-        $title = "Admin - Quyền truy cập";
-        $page = "bo-Access";
-        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
-        include __DIR__ . '/../Views/backoffice/pages/bo-Access.php';
-        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
-    }
+    // public function access()
+    // {
+    //     $title = "Admin - Quyền truy cập";
+    //     $page = "bo-Access";
+    //     include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+    //     include __DIR__ . '/../Views/backoffice/pages/bo-Access.php';
+    //     include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    // }
 
     //Trang quản lí danh mục
     public function adminCategory()
@@ -102,6 +117,13 @@ class AdminController
     {
         $title = "Admin - Quản lí đơn hàng";
         $page = "bo-Order";
+
+        $orderModel = new Orders();
+
+        $orders = $orderModel->getAllOrder();
+
+        $usersCount = count($orders);
+
         include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
         include __DIR__ . '/../Views/backoffice/pages/bo-Order.php';
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
@@ -167,6 +189,7 @@ class AdminController
 
 
     // ============================= EDIT ============================= //
+    // ===== PRODUCT ===== //
     public function editProduct()
     {
         $title = "Admin - Chỉnh sửa sản phẩm";
@@ -261,6 +284,8 @@ class AdminController
 
 
 
+
+    // ===== CUSTOMER ===== //
     public function editCustomer()
     {
         $title = "Admin - Chỉnh sửa khách hàng";

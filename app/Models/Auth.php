@@ -55,27 +55,19 @@ if (isset($_POST['login'])) {
 
     if ($stmt->rowCount() > 0) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        echo "Mật khẩu lưu trong DB: " . $user['password'];
-        echo "<br>Mật khẩu nhập: " . $password;
+       
 
         if (password_verify($password, $user['password'])) {
-            echo "<br>Đăng nhập thành công!";
-
-            // Start session if not already started
             if (session_status() == PHP_SESSION_NONE) {
                 session_start();
             }
 
-            // Debugging: Check what data we are storing in the session
-            echo "<br>First Name: " . $user['first_name'];
-            echo "<br>Last Name: " . $user['last_name'];
-
-            // Store the values in the session
             $_SESSION['email'] = $user['email'];
             $_SESSION['first_name'] = $user['first_name'];
             $_SESSION['last_name'] = $user['last_name'];
+            $_SESSION['phone'] = $user['phone']; 
 
-            // Redirect to home page
+
             header('Location: http://localhost/MegaFood_DA1_N11/BackEnd/index.php?route=home');
             exit();
         } else {

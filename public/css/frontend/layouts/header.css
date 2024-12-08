@@ -105,6 +105,25 @@ body {
     color: var(--main-color);
 }
 
+.favorites {
+    position: relative;
+}
+
+.favorites .num_favorites {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-size: 8px;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
 
 
 .list_item_menu_tab {
@@ -621,7 +640,7 @@ ul.List_bread_crumb {
     height: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+   font-size: 13px;
 }
 
 .List_bread_crumb li {

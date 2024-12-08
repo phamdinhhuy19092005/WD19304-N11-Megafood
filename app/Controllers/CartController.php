@@ -12,9 +12,6 @@ class CartController
 
     public function add()
     {
-
-
-        // Retrieve product details from the GET request
         $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
         $name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : '';
         $image_url = isset($_GET['image_url']) ? htmlspecialchars($_GET['image_url']) : '';
@@ -68,10 +65,8 @@ class CartController
         $title = "MegaFood - Giỏ hàng";
         $page = "cart";
 
-        // Get cart items
         $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
-        // Include layout and page files
         include __DIR__ . '/../Views/layouts/header.php';
         include __DIR__ . '/../Views/pages/cart.php';
         include __DIR__ . '/../Views/layouts/footer.php';
@@ -105,16 +100,13 @@ class CartController
         $title = "MegaFood - Thanh toán";
         $page = "payment";
 
-        // Lấy danh sách sản phẩm từ giỏ hàng
         $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
-        // Tính tổng tiền
         $totalPrice = 0;
         foreach ($cart as $item) {
             $totalPrice += $item['price'] * $item['quantity'];
         }
 
-        // Hiển thị giao diện thanh toán
         include __DIR__ . '/../Views/layouts/header.php';
         include __DIR__ . '/../Views/pages/payment.php';
         include __DIR__ . '/../Views/layouts/footer.php';

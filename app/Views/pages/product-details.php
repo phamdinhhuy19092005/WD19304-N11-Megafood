@@ -43,14 +43,25 @@
                                     Mô tả món ăn
                                 </h3>
                             </div>
-                            <hr>
-
+                            <hr style="margin-top: 20px ; border: 1px solid #eee">
                             <div class="description_product">
-                                <div class="row_contnet">
+                                <div class="row_content">
                                     <span><?= htmlspecialchars($product['description']); ?></span>
-                                    <hr>
+                                </div>
+                                <hr style="margin-top: 20px ; border: 1px solid #eee">
+                                <div class="description_store" style="margin-top: 20px ;">
+                                    <h4>🌟 Mega Food - Vị Ngon Từng Khoảnh Khắc! 🌟</h4>
+                                    <p>Mega Food là thương hiệu đồ ăn nhanh nổi bật với:</p>
+                                    <ul>
+                                        <li>🍔 Hương vị đậm đà: Các món ăn được chế biến từ nguyên liệu tươi sạch và công thức đặc biệt.</li>
+                                        <li>🚀 Phục vụ nhanh chóng: Đáp ứng mọi nhu cầu ăn uống dù bạn đang ở đâu.</li>
+                                        <li>💬 Đa dạng lựa chọn: Thực đơn phong phú, phù hợp mọi sở thích và khẩu vị.</li>
+                                        <li>🛒 Dễ dàng đặt hàng: Đặt món chỉ với vài cú chạm trên ứng dụng hoặc website.</li>
+                                    </ul>
+                                    <p>👉 Mega Food - Đưa niềm vui đến mọi bữa ăn của bạn!</p>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
@@ -73,8 +84,7 @@
                                     <!-- Ghi chú -->
                                     <div class="note">
                                         <label>Ghi chú</label>
-                                        <textarea class="note_content"
-                                            placeholder="Nhập ghi chú của bạn tại đây..."></textarea>
+                                        <textarea class="note_content" placeholder="Nhập ghi chú của bạn tại đây..."></textarea>
                                     </div>
 
                                     <!-- Số lượng -->
@@ -82,11 +92,11 @@
                                         <div class="custom_btn_number">
                                             <label class="sl">Số lượng:</label>
                                             <div class="input_number_product">
-                                                <button class="btn_num btn_minus">
+                                                <button type="button" class="btn_num btn_minus" onclick="changeQuantity(-1)">
                                                     <i class="bi bi-dash-lg"></i>
                                                 </button>
                                                 <span class="show_num" id="quantity_display">1</span>
-                                                <button class="btn_num btn_plus" >
+                                                <button type="button" class="btn_num btn_plus" onclick="changeQuantity(1)">
                                                     <i class="bi bi-plus-lg"></i>
                                                 </button>
                                             </div>
@@ -98,20 +108,39 @@
                                         <button type="submit" title="Mua ngay" class="btn_by_now">
                                             <a href="#"> MUA NGAY </a>
                                         </button>
-                                        <button title="Thêm vào yêu thích" class="btn_wishlist">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="group-button">
-                                        <button title="Thêm vào giỏ hàng" class="btn_add_to_cart">
-                                            <a href="<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=1">THÊM VÀO GIỎ HÀNG</a>
-                                        </button>
-                                        <button title="Đặt bàn ngay" class="btn_phone">
-                                            <a href="#">ĐẶT BÀN NGAY</a>
-                                        </button>
+
+                                        <a class="btn_favorites" href="<?= BASE_URL; ?>index.php?route=favorites&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&description=<?= urlencode($product['description']); ?>">
+                                            <i class="fa-regular fa-heart add_to_favorites" title="Thêm vào yêu thích"></i>
+                                        </a>
                                     </div>
 
+                                    <div class="group-button">
+                                        <button type="button" title="Thêm vào giỏ hàng" class="btn_add_to_cart" onclick="addToCart(<?= $product['id']; ?>, '<?= $product['name']; ?>', <?= $product['price']; ?>, '<?= $product['image_url']; ?>')">
+                                            Thêm vào giỏ hàng
+                                        </button>
+
+                                        <button title="Đặt bàn ngay" class="btn_phone">
+                                            <a href="<?php echo BASE_URL; ?>index.php?route=booking">ĐẶT BÀN NGAY</a>
+                                        </button>
+                                    </div>
                                 </form>
+
+                                <script>
+                                    function changeQuantity(amount) {
+                                        let quantityDisplay = document.getElementById('quantity_display');
+                                        let currentQuantity = parseInt(quantityDisplay.textContent);
+                                        currentQuantity += amount;
+                                        if (currentQuantity < 1) currentQuantity = 1;
+                                        quantityDisplay.textContent = currentQuantity;
+                                    }
+
+                                    function addToCart() {
+                                        let quantity = document.getElementById('quantity_display').textContent;
+                                        let url = "<?= BASE_URL; ?>index.php?route=cart&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&quantity=" + quantity;
+                                        window.location.href = url;
+                                    }
+                                </script>
+
                             </div>
                             <div class="voucher_product">
                                 <div class="title_voucher">
@@ -123,7 +152,7 @@
                                 <div class="row_voucher">
                                     <div class="content_voucher">
                                         <span>
-                                            Nhập mã <b>DOLA20</b> để giảm ngay 20.000đ.
+                                            Nhập mã <b>MEGAFOOD20</b> để giảm ngay 20.000đ.
                                             Áp dụng cho đơn hàng từ 200k trở lên.
                                             Không đi kèm với chương trình khác
                                         </span>
@@ -132,7 +161,7 @@
 
                                     <div class="content_voucher">
                                         <span>
-                                            Nhập mã <b>DOLA50</b> để giảm ngay 50.000đ.
+                                            Nhập mã <b>MEGAFOOD50</b> để giảm ngay 50.000đ.
                                             Áp dụng cho đơn hàng từ 500k trở lên.
                                             Không đi kèm với chương trình khác
                                         </span>
@@ -171,10 +200,15 @@
                                             <?php if ($relatedProduct['id'] != $product['id']): ?>
                                                 <li>
                                                     <div class="product_topSelling_thumbnail">
-                                                        <i class="fa-regular fa-heart add_to_favorites" data-name="<?= htmlspecialchars($relatedProduct['name']); ?>" data-image="<?= htmlspecialchars($relatedProduct['image_url']); ?>"></i>
+
+                                                        <a href="<?= BASE_URL; ?>index.php?route=favorites&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&description=<?= urlencode($product['description']); ?>">
+                                                            <i class="fa-regular fa-heart add_to_favorites" title="Thêm vào yêu thích"></i>
+                                                        </a>
+
                                                         <a href="<?= BASE_URL; ?>index.php?route=product-detail&id=<?= $relatedProduct['id']; ?>">
                                                             <img src="<?= IMG_BASE_URL . htmlspecialchars($relatedProduct['image_url']); ?>" alt="<?= htmlspecialchars($relatedProduct['name']); ?>" />
                                                         </a>
+
                                                     </div>
 
                                                     <div class="product_topSelling_info">
@@ -280,87 +314,6 @@
                     </div>
                 </div>
 
-                <div class="row_reviews">
-                    <div class="title_reviews">
-                        <h1>Đánh giá sản phẩm</h1>
-                    </div>
-
-                    <section class="product_reviews">
-                        <div class="user_rating">
-                            <div class="info_user">
-                                <div class="user_avatar">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png"
-                                        alt="">
-                                </div>
-                                <div class="user_name star">
-                                    <span>HuyPham</span>
-                                    <ul class="list_star">
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="reviews">
-                                <span>Đồ ăn giao nhanh, mà còn rẻ nữa</span>
-                            </div>
-                        </div>
-
-                        <div class="user_rating">
-                            <div class="info_user">
-                                <div class="user_avatar">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png"
-                                        alt="">
-                                </div>
-                                <div class="user_name star">
-                                    <span>Tuấn anh</span>
-                                    <ul class="list_star">
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="reviews">
-                                <span>Đồ ăn giao nhanh, mà còn rẻ nữa</span>
-                            </div>
-                        </div>
-
-                        <div class="user_ratings">
-                            <form action="">
-                                <div class="form_group_rating">
-                                    <textarea id="rating" name="rating"
-                                        placeholder="Viết đánh giá của bạn tại đây..."></textarea>
-                                    <button type="submit">Gửi đánh giá</button>
-                                </div>
-                            </form>
-                        </div>
-                    </section>
-                </div>
             </div>
     </section>
 </div>

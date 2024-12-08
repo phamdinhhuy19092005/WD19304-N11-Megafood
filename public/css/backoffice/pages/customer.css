@@ -59,11 +59,12 @@
     background-color: #dc3545;
 }
 
-.status_badge.pending{
+.status_badge.pending, .status_badge.Pending{
     background-color: #ffc107;
 }
 
 /* --- */
+
 
 .k-content__head-breadcrumb-link:hover {
     color: #6982FF;

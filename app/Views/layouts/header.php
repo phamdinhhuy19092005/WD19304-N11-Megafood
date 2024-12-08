@@ -25,7 +25,7 @@ $products = $productModel->getAllProducts();
 
     <!-- Page-specific CSS -->
     <?php
-    $styles = [ 
+    $styles = [
         'home' => ['home.css'],
         'products' => ['products.css', '',],
         'product-details' => ['product-details.css'],
@@ -144,7 +144,7 @@ $products = $productModel->getAllProducts();
                         </div>
                     </div>
                     <div class="user">
-                        <a href="<?php echo BASE_URL; ?>index.php?route=account"><i class="bi bi-person-circle"></i></a>
+                        <a href="<?php echo BASE_URL; ?>index.php?route=account&action=account"><i class="bi bi-person-circle"></i></a>
                         <div class="subnav_user">
                             <span class="icon_up">
                                 <i class="bi bi-caret-up-fill"></i>
@@ -166,11 +166,23 @@ $products = $productModel->getAllProducts();
                                     echo "<li><a href='" . BASE_URL . "index.php?route=register'><i class='bi bi-person-plus'></i><span>Đăng kí</span></a></li>";
                                 }
                                 ?>
-                                <li>
+                                <li class="favorites">
                                     <a href="<?php echo BASE_URL; ?>index.php?route=favorites">
+                                        <span class="num_favorites">
+                                            <?php
+                                            $totalQuantity = 0;
+                                            if (isset($_SESSION['favorites']) && !empty($_SESSION['favorites'])) {
+                                                foreach ($_SESSION['favorites'] as $product) {
+                                                    $totalQuantity += 1;
+                                                }
+                                            }
+                                            echo $totalQuantity;
+                                            ?>
+                                        </span>
                                         <i class="bi bi-heart"></i>
                                         <span>Danh sách yêu thích</span>
                                     </a>
+
                                 </li>
                             </ul>
 
@@ -183,7 +195,7 @@ $products = $productModel->getAllProducts();
                             $totalQuantity = 0;
                             if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                                 foreach ($_SESSION['cart'] as $product) {
-                                    $totalQuantity += $product['quantity']; // Cộng dồn số lượng
+                                    $totalQuantity += $product['quantity'];
                                 }
                             }
                             echo $totalQuantity;
@@ -192,7 +204,7 @@ $products = $productModel->getAllProducts();
                         <a href="<?php echo BASE_URL; ?>index.php?route=cart"><i class="bi bi-basket2"></i></a>
                     </div>
                     <a href="<?php echo BASE_URL; ?>index.php?route=booking"><button class="btn_1">Đặt món online</button></a>
-                    <a href="<?php echo BASE_URL; ?>index.php?route=booking"><button  class="btn_2">Đặt bàn</button></a>
+                    <a href="<?php echo BASE_URL; ?>index.php?route=booking"><button class="btn_2">Đặt bàn</button></a>
                 </div>
             </div>
         </div>
@@ -206,7 +218,7 @@ $products = $productModel->getAllProducts();
                                     class="bi bi-caret-down-fill"></i></a>
                             <ul class="list_subnav">
                                 <div class="logo_brand">
-                                <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
+                                    <img src="<?php echo IMG_BASE_URL; ?>header/logo-mobile.png" alt="">
                                 </div>
                                 <hr>
                                 <li><a href="<?php echo BASE_URL; ?>index.php?route=detailCategories&category_id=1">Pizza</a></li>
