@@ -7,7 +7,7 @@ function btnProducts(){
   let currentScrollPosition = 0;
   
   const updateButtons = () => {
-    const productWidth = document.querySelector('.product_topSelling_li').offsetWidth + 21.5; // Bao gồm margin
+    const productWidth = document.querySelector('.product_topSelling_li').offsetWidth + 847; // Bao gồm margin
     const maxScroll = productList.scrollWidth - productList.parentElement.offsetWidth;
   
     // Vô hiệu hóa nút nếu đạt giới hạn
@@ -16,7 +16,7 @@ function btnProducts(){
   };
   
   const scrollList = (direction) => {
-    const productWidth = document.querySelector('.product_topSelling_li').offsetWidth + 21.5; // Bao gồm margin
+    const productWidth = document.querySelector('.product_topSelling_li').offsetWidth + 847 ; // Bao gồm margin
     const maxScroll = productList.scrollWidth - productList.parentElement.offsetWidth;
   
     // Tính toán vị trí tiếp theo

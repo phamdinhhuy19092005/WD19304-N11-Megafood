@@ -282,6 +282,42 @@
             <ul class="product_topSelling_list">
 
 
+                <?php
+                if (is_array($products) && !empty($products)) {
+                    foreach ($products as $product): ?>
+
+                        <li class="product_topSelling_li">
+                            <div class="product_topSelling_thumbnail">
+                                <a href="<?= BASE_URL; ?>index.php?route=favorites&action=add&id=<?= $product['id']; ?>&name=<?= urlencode($product['name']); ?>&image_url=<?= urlencode($product['image_url']); ?>&price=<?= $product['price']; ?>&description=<?= urlencode($product['description']); ?>">
+                                    <i class="fa-regular fa-heart add_to_favorites" title="Thêm vào yêu thích"></i>
+                                </a> <a href="">
+                                    <img src="<?= IMG_BASE_URL . htmlspecialchars($product['image_url']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" />
+                                </a>
+                            </div>
+
+                            <div class="product_topSelling_info">
+                                <h3 class="product_topSelling_name"><?= htmlspecialchars($product['name']); ?></h3>
+                                <span class="product_topSelling_content">
+                                    <?= $product['description']; ?>
+                                </span>
+                                <a href="products?id=<?= $product['id']; ?>">Xem thêm</a>
+
+                            </div>
+
+                            <div class="product_topSelling_form">
+                                <div class="product_topSelling_priceBox">
+                                    <span>Giá chỉ từ</span>
+                                    <p><?= number_format($product['price'], 0, ',', '.'); ?></p>
+                                </div>
+                                <a href="">Thêm</a>
+                            </div>
+                        </li>
+
+                    <?php endforeach; ?>
+                <?php } else {
+                    echo 'Không có sản phẩm nào.';
+                }
+                ?>
 
                 <li class="product_topSelling_li">
                     <div class="product_topSelling_thumbnail">

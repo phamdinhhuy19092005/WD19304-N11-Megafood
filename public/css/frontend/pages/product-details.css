@@ -347,7 +347,13 @@ ul.list_img_prd {
     border-radius: 5px;
 }
 
-.btn_favorites i{
+.row_content {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dashed var(--main-color);
+}
+
+.btn_favorites i {
     color: var(--white-color);
 }
 
