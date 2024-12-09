@@ -376,4 +376,15 @@ class AdminController
             die('Không có ID khách hàng');
         }
     }
+
+    public function editCategory()
+    {
+        $title = "Admin - Chỉnh sửa danh mục";
+        $page = "bo-EditCategory";
+
+
+        include __DIR__ . '/../Views/backoffice/layouts/dashboard-bo.php';
+        include __DIR__ . '/../Views/backoffice/pages/bo-EditCategory.php';
+        include __DIR__ . '/../Views/backoffice/layouts/footer.php';
+    }
 }
