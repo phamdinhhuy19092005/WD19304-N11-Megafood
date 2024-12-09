@@ -40,14 +40,11 @@
                         <div class="product-tab">
                             <div class="title_description_prd">
                                 <h3 class="title_dct">
-                                    Mô tả món ăn
+                                    Mega Food
                                 </h3>
                             </div>
                             <hr style="margin-top: 20px ; border: 1px solid #eee">
                             <div class="description_product">
-                                <div class="row_content">
-                                    <span><?= htmlspecialchars($product['description']); ?></span>
-                                </div>
                                 <hr style="margin-top: 20px ; border: 1px solid #eee">
                                 <div class="description_store" style="margin-top: 20px ;">
                                     <h4>🌟 Mega Food - Vị Ngon Từng Khoảnh Khắc! 🌟</h4>
@@ -79,12 +76,9 @@
                                                 <?= number_format($product['price'], 0, ',', '.'); ?> VNĐ
                                             </span>
                                         </span>
-                                    </div>
-
-                                    <!-- Ghi chú -->
-                                    <div class="note">
-                                        <label>Ghi chú</label>
-                                        <textarea class="note_content" placeholder="Nhập ghi chú của bạn tại đây..."></textarea>
+                                        <div class="row_content">
+                                            <span><?= htmlspecialchars($product['description']); ?></span>
+                                        </div>
                                     </div>
 
                                     <!-- Số lượng -->

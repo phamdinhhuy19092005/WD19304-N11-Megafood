@@ -70,19 +70,7 @@
             <div class="k-form_actions">
                 <button type="submit" name="updateCustomer" class="btn-save">Lưu</button>
                 <button type="button" class="btn-cancel" onclick="window.history.back();">Hủy</button>
-                <button type="button" class="btn-delete" onclick="deleteAccount(<?= htmlspecialchars($user['id'] ?? '') ?>)">Xóa tài khoản</button>
             </div>
         </div>
     </form>
-
-    <script>
-        function deleteAccount(userId) {
-            if (confirm('Bạn có chắc chắn muốn xóa tài khoản này?')) {
-                window.location.href = "<?= BASE_URL . '?route=admin&action=deleteCustomer&id=' ?>" + userId;
-            }
-        }
-    </script>
-
-
-
 </div>
