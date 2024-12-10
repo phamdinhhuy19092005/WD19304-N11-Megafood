@@ -1659,61 +1659,35 @@ body {
         display: none;
     }
 
-    .category_title {
-        padding: 15px 0px;
+    .category{
+        margin: 0 auto;
+        max-width: 376px;
+        /* padding: 10px; */
+        margin-bottom: 50px;
     }
+    .category ul {
+        overflow-x: auto; 
+        margin: 0 auto;
+      }
+      
+      
+      .category_item{
+        min-width: 100%;
+      }
 
-    .category_list {
-        overflow: hidden;
-    }
-
-    .category_list .category_item {
-        width: 100%;
-        margin-right: 10px;
-    }
-    .category_wrapper {
-        padding: 10px;
-    }
-
-    .category_list {
-        flex-direction: column; /* Chuyển danh sách sang dọc */
-        align-items: center;
-        gap: 10px; /* Khoảng cách giữa các mục */
-    }
-
-    .category_list .category_item {
-        width: 90%; /* Chiều rộng chiếm 90% khung màn hình */
-        min-height: 100px; /* Điều chỉnh chiều cao nhỏ hơn */
-    }
-
-    .category_list .category_item a {
-        width: 100%; /* Đảm bảo liên kết chiếm toàn bộ chiều rộng */
-        text-align: center; /* Căn giữa nội dung */
-        padding: 10px;
-    }
-
-    .category_list .category_item a p {
-        margin: 10px 0;
-        font-size: var(--font-text-14); /* Giảm kích thước chữ */
-    }
-
-    .category_list .category_item a img {
-        width: 80px; /* Giảm kích thước ảnh */
-        height: 60px;
-    }
-
-    .category_prev_btn,
-    .category_next_btn {
+      .category_item a{
+        min-width: 100%;
+      }
+    
+    .category ul::-webkit-scrollbar {
+        display: none; /* Ẩn scrollbar cho trải nghiệm tốt hơn */
+      }
+      .category_prev_btn{
         display: none;
-    }
-
-    .category_prev_btn {
-        left: 10px; /* Khoảng cách nút trái */
-    }
-
-    .category_next_btn {
-        right: 10px; /* Khoảng cách nút phải */
-    }
+      }
+      .category_next_btn{
+        display: none;
+      }
     .product_action {
         display: flex;
         flex-wrap: wrap;
