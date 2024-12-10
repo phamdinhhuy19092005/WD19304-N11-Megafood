@@ -13,7 +13,7 @@ if (isset($styles[$page])) {
 <div class="body_wrap">
 
 
-  <form action="<?php echo BASE_URL; ?>index.php?route=cart&action=payment" method="post">
+  <form action="<?php echo BASE_URL; ?>" method="POST">
     <!-- main -->
     <div class="main">
       <header class="main_header">

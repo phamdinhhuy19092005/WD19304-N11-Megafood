@@ -21,18 +21,20 @@
                     <h3 class="k-portlet_head-title">Danh sách danh mục</h3>
                 </div>
                 <div class="k-portlet_head-toolbar">
-                    <div class="k-portlet_head-toolbar-wrapper">
-                        <a class="btn-brand"><i class="fa-solid fa-plus"></i>Tạo mới </a>
+                    <div class="k-portlet_head-toolbar">
+                        <div class="k-portlet_head-toolbar-wrapper">
+                            <a href="<?php echo BASE_URL . '?route=admin&action=bo-CreateCategory'; ?>" class="btn-brand"><i class="fa-solid fa-plus"></i>Tạo mới </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="search_container">
-                    <label for="">Search:</label>
-                    <input type="text"  name="" id="searchInput">
-                        
-                </div>
+            <label for="">Search:</label>
+            <input type="text" name="" id="searchInput">
+
+        </div>
 
         <div class="k-portlet_body">
             <div class="datatable_wrapper">

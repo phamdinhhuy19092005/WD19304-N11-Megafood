@@ -187,7 +187,6 @@ class AdminController
         include __DIR__ . '/../Views/backoffice/layouts/footer.php';
     }
 
-
     // ============================= EDIT ============================= //
     // ===== PRODUCT ===== //
     public function editProduct()
@@ -358,22 +357,4 @@ class AdminController
         }
     }
 
-    public function deleteCustomer()
-    {
-        if (isset($_GET['id'])) {
-            $userId = intval($_GET['id']);
-
-            $userModel = new Users();
-            $result = $userModel->deleteCustomer($userId);
-
-            if ($result) {
-                header('Location: ' . BASE_URL . '?route=admin&action=bo-Customer');
-                exit;
-            } else {
-                echo "Xóa khách hàng thất bại! Vui lòng thử lại.";
-            }
-        } else {
-            die('Không có ID khách hàng');
-        }
-    }
 }

@@ -22,13 +22,14 @@
         'bo-Order' => ['customer.css', 'bo-Order.css'],
         'bo-Customer' => ['customer.css'],
 
-        'bo-CreateCategory' => ['customer.css', 'bo-createcategory.css'],
+        'bo-CreateCategory' => ['customer.css', 'bo-createCustomer.css'],
         'bo-CreateAdministrator' => ['customer.css', 'bo-createAdministrator.css', 'bo-adminitrastor.css'],
         'bo-CreateCustomer' => ['bo-createCustomer.css'],
         'bo-CreateProduct' => ['customer.css', 'bo-createProduct.css', 'bo-createcategory.css'],
 
         'bo-EditProduct' => ['customer.css', 'bo-editProduct.css'],
         'bo-EditCustomer' => ['customer.css', 'bo-createCustomer.css'],
+        'bo-EditCategory' => ['customer.css', 'bo-createCustomer.css', 'bo-createcategory.css'],
 
     ];
 

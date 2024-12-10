@@ -81,9 +81,6 @@ switch ($route) {
             case 'bo-Administrator':
                 $controller->adminitrastor();
                 break;
-            // case 'bo-Access':
-            //     $controller->access();
-            //     break;
             case 'bo-Category':
                 $controller->adminCategory();
                 break;
@@ -114,15 +111,15 @@ switch ($route) {
             case 'updateProduct':
                 $controller->updateProduct();
                 break;
+            case 'bo-EditCategory':
+                $controller->editCategory();
+                break;
                 // ==== CUSTOMER ==== //
             case 'bo-EditCustomer':
                 $controller->editCustomer();
                 break;
             case 'updateCustomer':
                 $controller->updateCustomer();
-                break;
-            case 'deleteCustomer':
-                $controller->deleteCustomer();
                 break;
             default:
                 echo "404 - Admin Page Not Found";

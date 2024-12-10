@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Lỗi khi tạo đơn hàng: " . $errorInfo[2];
         }
     } else {
-        echo "Lỗi: Nút btnPayment không được gửi.";
+        // echo "Lỗi: Nút btnPayment không được gửi.";
     }
 }
 

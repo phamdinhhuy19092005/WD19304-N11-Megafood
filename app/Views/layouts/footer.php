@@ -116,7 +116,7 @@
 
 <script src="<?php echo JS_BASE_URL; ?>search.js"></script>
 <script src="<?php echo JS_BASE_URL; ?>header.js"></script>
-<!-- <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script> -->
+<script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
 <script src="<?php echo JS_PAGES_URL; ?>btn_product.js"></script>
 <script src="<?php echo JS_PAGES_URL; ?>display_sudMenu.js"></script>
 
@@ -126,7 +126,7 @@
     <script src="<?php echo JS_PAGES_URL; ?>scrollToTop.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>menuItem.js"></script>
     <script src="<?php echo JS_PAGES_URL; ?>slider.js"></script>
-    <!-- <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script> -->
+    <script src="<?php echo JS_PAGES_URL; ?>notification.js"></script>
 
 
 

@@ -73,17 +73,17 @@ class Users
         ]);
     }
 
-    public function deleteCustomer($id)
-    {
-        if (!$id || !is_numeric($id)) {
-            return false;
-        }
+    // public function deleteCustomer($id)
+    // {
+    //     if (!$id || !is_numeric($id)) {
+    //         return false;
+    //     }
 
-        $query = "DELETE FROM " . $this->table . " WHERE id = :id LIMIT 1";
-        $stmt = $this->conn->prepare($query);
+    //     $query = "DELETE FROM " . $this->table . " WHERE id = :id LIMIT 1";
+    //     $stmt = $this->conn->prepare($query);
 
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    //     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-        return $stmt->execute();
-    }
+    //     return $stmt->execute();
+    // }
 }

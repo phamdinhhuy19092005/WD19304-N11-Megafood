@@ -23,19 +23,19 @@
             <div class="form-group">
                 <label for="">Họ</label>
                 <input type="text" id="firstName" name="first_name" class="form-control"
-                    placeholder="Nhập họ" value="<?= htmlspecialchars($user['first_name'] ?? '') ?>">
+                    placeholder="Nhập họ" value="<?= htmlspecialchars($user['first_name'] ?? '') ?>" readonly >
             </div>
             <div class="form-group">
                 <label for="">Tên</label>
-                <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Nhập tên" value="<?= htmlspecialchars($user['last_name'] ?? '') ?>">
+                <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Nhập tên" value="<?= htmlspecialchars($user['last_name'] ?? '') ?>" readonly >
             </div>
             <div class="form-group">
                 <label for="">E-mail</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Nhập E-mail" value="<?= htmlspecialchars($user['email'] ?? '') ?>">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Nhập E-mail" value="<?= htmlspecialchars($user['email'] ?? '') ?>" readonly >
             </div>
             <div class="form-group">
                 <label for="">Số điện thoại</label>
-                <input type="text" id="phone" name="phone" class="form-control" placeholder="Nhập số điện thoại" value="<?= htmlspecialchars($user['phone'] ?? '') ?>">
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Nhập số điện thoại" value="<?= htmlspecialchars($user['phone'] ?? '') ?>" readonly >
             </div>
             <div class="box-group">
 
