@@ -1,3 +1,6 @@
+.k-form-cate{
+    padding: 10px;
+}
 
 .k-portlet_mobile-head-title h3{
     font-size: 1.3rem;
@@ -10,7 +13,11 @@
 }
 
 .form-group {
-    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.k-form_foot{
+    padding: 10px;
 }
 
 .dropdown-checkbox {
@@ -70,4 +77,66 @@
 /* Hiển thị dropdown khi checkbox được chọn */
 .dropdown-checkbox:checked+.dropdown-btn+.dropdown-content {
     display: block;
+}
+
+.k-form_foot {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 20px;
+    border-bottom: 1px solid #EBEDF2;
+}
+
+.k-form_actions {
+    padding: 5px 10px;
+}
+
+.k-form_actions .btn-save {
+    width: 10%;
+    padding: 10px;
+    border: none;
+    background-color: #5867DD;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.9;
+
+}
+
+.k-form_actions .btn-save:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.k-form_actions .btn-cancel {
+    padding: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #dbdcdc;
+
+}
+
+.k-form_actions .btn-cancel:hover {
+    cursor: pointer;
+    background-color: #F4F5F8;
+}
+
+.k-form_actions .btn-delete {
+    padding: 10px;
+    border: none;
+    background-color: #FFEBF1;
+    border-radius: 5px;
+    border: 1px solid #FD397A;
+    color: #FD397A;
+    float: right;
+}
+
+.k-form_actions .btn-delete:hover {
+    cursor: pointer;
+    color: #FFEBF1;
+    background-color: #FD397A;
+}
+
+.k-form_head-title{
+    padding: 10px;
 }
