@@ -358,3 +358,149 @@ form h4 {
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 376px) {
+    .cartwrap {
+        flex-direction: column; /* Chuyển từ bố cục ngang sang dọc */
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* cartwrap_left */
+    .cartwrap_left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* productCart_header */
+    .productCart_header  {
+        display: none;
+    }
+
+    .productCart_header ul li {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+    }
+
+    /* productCart_body */
+    .productCart_body {
+        width: 100%;
+    }
+
+    .productCart_thumbnail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .productCart_thumbnail a img {
+        max-width: 120px; /* Hình ảnh nhỏ lại trên màn hình nhỏ */
+        max-height: 120px;
+    }
+
+    .productCart_info {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .productCart_info span {
+        font-size: 14px; /* Giảm kích thước font */
+    }
+
+    .cart_price, .cart_btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .cart_select {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cart_select button, .cart_select input {
+        width: 30%; /* Chỉnh lại kích thước các nút và input */
+        font-size: 16px;
+    }
+
+    .cart_total {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .cart_subtotal {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .subtotal {
+        font-size: 16px;
+        display: block;
+        text-align: center;
+    }
+
+    .pay {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .pay a button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* cartwrap_right */
+    .cartwrap_right {
+        width: 100%;
+        margin-top: 20px;
+        background-color: var(--main-color);
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    form h4 {
+        font-size: 16px;
+    }
+
+    .timedeli_modal {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input_group_date_pick, .input_group_date_time {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .input_group_date_pick input, .input_group_date_time select {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .bill {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .bill input {
+        width: 18px;
+        height: 18px;
+    }
+
+    .bill label {
+        font-size: 14px;
+    }
+}
