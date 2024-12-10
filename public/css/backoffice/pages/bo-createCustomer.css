@@ -317,7 +317,7 @@ header {
 .k-content_head-main {
     display: flex;
     align-items: center;
-    margin: 25px 0 25px 0;
+    margin: 25px 0 25px 25px;
 }
 
 .k-content_head-title {
