@@ -111,6 +111,9 @@ switch ($route) {
             case 'updateProduct':
                 $controller->updateProduct();
                 break;
+            case 'bo-EditCategory':
+                $controller->editCategory();
+                break;
                 // ==== CUSTOMER ==== //
             case 'bo-EditCustomer':
                 $controller->editCustomer();
