@@ -488,7 +488,9 @@ ul.breadcrumb {
         margin-bottom: 50px;
     }
     
-    
+    .category{
+        display: none;
+    }
 
     .product_topSelling {
         max-width: 376px;
