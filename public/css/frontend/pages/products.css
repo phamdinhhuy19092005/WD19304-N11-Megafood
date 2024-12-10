@@ -488,35 +488,7 @@ ul.breadcrumb {
         margin-bottom: 50px;
     }
     
-    .category{
-        margin: 0 auto;
-        max-width: 376px;
-        /* padding: 10px; */
-        margin-bottom: 50px;
-    }
-    .category ul {
-        overflow-x: auto; 
-        margin: 0 auto;
-      }
-      
-      
-      .category_item{
-        min-width: 100%;
-      }
-
-      .category_item a{
-        min-width: 100%;
-      }
     
-    .category ul::-webkit-scrollbar {
-        display: none; /* Ẩn scrollbar cho trải nghiệm tốt hơn */
-      }
-      .category_prev_btn{
-        display: none;
-      }
-      .category_next_btn{
-        display: none;
-      }
 
     .product_topSelling {
         max-width: 376px;
