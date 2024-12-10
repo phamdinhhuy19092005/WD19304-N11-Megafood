@@ -358,3 +358,77 @@ form h4 {
     align-items: center;
     justify-content: center;
 }
+
+@media(max-width:376px){
+    .bodywrap {
+        max-width: 376px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .productCart_header{
+        display: none;
+    }
+
+    .productCart_body{
+        width: 100%;
+    }
+
+    .productCart_thumbnail{
+        position: relative;
+        width: 100%;
+    }
+
+    .cart_subtotal{
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    .cartwrap_left{
+        width: 100%;
+    }
+    .cartwrap{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .productCart_info{
+        position: absolute;
+        left: 115px;
+        top: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .productCart_info span a{
+        font-size: 14px;
+    }
+
+    .delete{
+        text-align: left;
+    }
+
+    .cart_btn{
+        position: absolute;
+        left: 140px;
+        top: 100px;
+    }
+
+    .cart_price{
+        position: absolute;
+        left: 290px;
+        top: 85px;
+    }
+
+    .cart_total{
+        display: none;
+    }
+
+    .cartwrap_right{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+}
