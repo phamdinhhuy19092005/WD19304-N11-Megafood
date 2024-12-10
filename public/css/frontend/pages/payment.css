@@ -583,3 +583,59 @@ form {
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media(max-width: 376px){
+    header{
+        display: none;
+    }
+
+    body{
+        max-width: 376px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    .main_header{
+        width: 100%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .logo a{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .logo a img{
+        width: 70%;
+    }
+
+    form{
+        flex-direction: column;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .row_article{
+        flex-direction: column;
+    }
+
+    .main_content{
+        width: 100%;
+    }
+
+    .col_1, .col_2{
+        width: 100%;
+    }
+
+    .section_pay_1{
+        padding: 0;
+    }
+}
