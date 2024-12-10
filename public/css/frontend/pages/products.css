@@ -487,6 +487,13 @@ ul.breadcrumb {
         /* padding: 10px; */
         margin-bottom: 50px;
     }
+    
+    .category{
+        margin: 0 auto;
+        max-width: 376px;
+        /* padding: 10px; */
+        margin-bottom: 50px;
+    }
     .category ul {
         overflow-x: auto; 
         margin: 0 auto;
@@ -510,23 +517,6 @@ ul.breadcrumb {
       .category_next_btn{
         display: none;
       }
-
-      body {
-        overflow-x: hidden; /* Chặn cuộn ngang */
-      }
-      .product_topSelling{
-        overflow-x: auto;
-      }
-      .category_title b {
-        font-size: var(--font-text-20);
-    }
-    .category_title a {
-        /* font-family: 'Lobster', sans-serif; */
-        font-weight: 700;
-        text-decoration: none;
-        color: var(--main-color);
-        font-size: var(--font-text-30);
-    }
 
     .product_topSelling {
         max-width: 376px;
